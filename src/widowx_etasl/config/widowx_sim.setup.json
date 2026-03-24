@@ -1,0 +1,57 @@
+{
+  "$schema": "path/to/crospi_schema.json",
+
+  "event_topic": "/crospi/events",
+  "sample_time": 0.01,
+
+  "initializer": {
+    "full": true,
+    "sample_time": 0.001,
+    "duration": 5.0,
+    "convergence_criterion": 1e-6,
+    "weightfactor": 1e-6
+  },
+
+  "solver": {
+    "is-qpoases": true,
+    "nWSR": 300,
+    "regularization_factor": 1e-4,
+    "cputime": 0.005
+  },
+
+  "default_robot_specification": {
+    "urdf_path": "$[trossen_arm_description]/urdf/wxai.urdf",
+    "tcp_frame": "gripper_link",
+    "additional_frames": ["world", "wrist_3_link"],
+    "robot_joints": [
+      "waist", "shoulder", "elbow",
+      "forearm_roll", "wrist_angle", "wrist_rotate"
+    ]
+  },
+
+  "robot_driver": {
+    "is-simulationrobotdriver": true
+  },
+
+  "io_handlers": {
+    "output_handlers": [
+      {
+        "is-jointstateoutputhandler": true,
+        "topic-name": "/crospi/joint_states"
+      },
+      {
+        "is-topicoutputhandler": true,
+        "varname": "dist_to_target",
+        "topic-name": "/crospi/debug/dist"
+      }
+    ],
+    "input_handlers": [
+      {
+        "is-twistinputhandler": true,
+        "topic-name": "/crospi/target_pos",
+        "varname": "target",
+        "default_twist": [0.3, 0.0, 0.2, 0.0, 0.0, 0.0]
+      }
+    ]
+  }
+}
