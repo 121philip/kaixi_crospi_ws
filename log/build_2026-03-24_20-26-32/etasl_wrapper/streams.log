@@ -1,0 +1,671 @@
+[0.017s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper -- -j16 -l16
+[0.053s] [35m[1mConsolidate compiler generated dependencies of target gtest[0m
+[0.057s] [35m[1mConsolidate compiler generated dependencies of target qpOASES[0m
+[0.064s] [35m[1mConsolidate compiler generated dependencies of target luabind[0m
+[0.065s] [  1%] Built target gtest
+[0.070s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph[0m
+[0.077s] [  6%] Built target qpOASES
+[0.077s] [35m[1mConsolidate compiler generated dependencies of target gmock[0m
+[0.079s] [35m[1mConsolidate compiler generated dependencies of target gtest_main[0m
+[0.092s] [  7%] Built target gmock
+[0.093s] [  7%] Built target gtest_main
+[0.103s] [35m[1mConsolidate compiler generated dependencies of target gmock_main[0m
+[0.105s] [35m[1mConsolidate compiler generated dependencies of target test_velestim[0m
+[0.107s] [ 15%] Built target luabind
+[0.114s] [ 15%] Built target gmock_main
+[0.117s] [35m[1mConsolidate compiler generated dependencies of target test_main[0m
+[0.117s] [35m[1mConsolidate compiler generated dependencies of target benchmark[0m
+[0.119s] [ 16%] Built target test_velestim
+[0.120s] [35m[1mConsolidate compiler generated dependencies of target readline_c[0m
+[0.123s] [ 21%] Built target expressiongraph
+[0.129s] [ 23%] Built target test_main
+[0.131s] [ 24%] Built target readline_c
+[0.131s] [ 24%] Built target benchmark
+[0.136s] [35m[1mConsolidate compiler generated dependencies of target solving_and_cloning[0m
+[0.136s] [35m[1mConsolidate compiler generated dependencies of target mptrap_tst[0m
+[0.136s] [35m[1mConsolidate compiler generated dependencies of target matrix_traits[0m
+[0.137s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_function2[0m
+[0.137s] [35m[1mConsolidate compiler generated dependencies of target geometry[0m
+[0.138s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example3[0m
+[0.139s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example[0m
+[0.139s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example2[0m
+[0.140s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_trait[0m
+[0.140s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_function1[0m
+[0.145s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_variabletype[0m
+[0.146s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example5[0m
+[0.150s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example7[0m
+[0.153s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example6[0m
+[0.153s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example4[0m
+[0.155s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example8[0m
+[0.157s] [ 24%] Built target geometry
+[0.159s] [ 25%] Built target mptrap_tst
+[0.159s] [ 26%] Built target solving_and_cloning
+[0.165s] [ 26%] Built target expressiontree_example
+[0.165s] [ 26%] Built target matrix_traits
+[0.166s] [ 26%] Built target expressiontree_example3
+[0.172s] [ 27%] Built target expressiontree_function2
+[0.172s] [ 28%] Built target expressiontree_trait
+[0.172s] [ 29%] Built target expressiontree_example2
+[0.172s] [ 29%] Built target expressiontree_function1
+[0.174s] [ 30%] Built target expressiontree_variabletype
+[0.174s] [ 31%] Built target expressiontree_example7
+[0.177s] [ 31%] Built target expressiontree_example5
+[0.178s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example9[0m
+[0.180s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example11[0m
+[0.180s] [ 32%] Built target expressiontree_example4
+[0.181s] [ 34%] Built target expressiontree_example6
+[0.181s] [ 34%] Built target expressiontree_example8
+[0.185s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example10[0m
+[0.185s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_example12[0m
+[0.185s] [35m[1mConsolidate compiler generated dependencies of target conversions_example[0m
+[0.186s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_perpendicular[0m
+[0.187s] [35m[1mConsolidate compiler generated dependencies of target resolved_motion_rate_control[0m
+[0.192s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_mimo_ex[0m
+[0.193s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_optimizer[0m
+[0.194s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_cached_named[0m
+[0.195s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_sensor[0m
+[0.195s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_conditional[0m
+[0.198s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_distance_to_line[0m
+[0.199s] [35m[1mConsolidate compiler generated dependencies of target initial_value[0m
+[0.207s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_motion_profile[0m
+[0.207s] [ 35%] Built target expressiontree_example9
+[0.208s] [35m[1mConsolidate compiler generated dependencies of target expressiontree_motion_profile2[0m
+[0.212s] [ 35%] Built target conversions_example
+[0.218s] [ 37%] Built target expressiontree_example10
+[0.218s] [ 37%] Built target expressiontree_example11
+[0.218s] [ 37%] Built target resolved_motion_rate_control
+[0.218s] [ 37%] Built target expressiontree_example12
+[0.220s] [ 38%] Built target expressiontree_cached_named
+[0.221s] [ 39%] Built target expressiontree_mimo_ex
+[0.222s] [35m[1mConsolidate compiler generated dependencies of target tutorial1[0m
+[0.223s] [ 39%] Built target expressiontree_optimizer
+[0.226s] [ 39%] Built target expressiontree_sensor
+[0.227s] [ 40%] Built target expressiontree_perpendicular
+[0.229s] [35m[1mConsolidate compiler generated dependencies of target saturate[0m
+[0.230s] [ 41%] Built target initial_value
+[0.231s] [35m[1mConsolidate compiler generated dependencies of target tutorial3[0m
+[0.232s] [ 41%] Built target expressiontree_conditional
+[0.233s] [35m[1mConsolidate compiler generated dependencies of target debug1[0m
+[0.234s] [35m[1mConsolidate compiler generated dependencies of target tutorial2[0m
+[0.235s] [35m[1mConsolidate compiler generated dependencies of target quat[0m
+[0.235s] [35m[1mConsolidate compiler generated dependencies of target test_expressiongraph[0m
+[0.236s] [ 42%] Built target expressiontree_distance_to_line
+[0.239s] [ 43%] Built target expressiontree_motion_profile2
+[0.239s] [ 43%] Built target expressiontree_motion_profile
+[0.239s] [35m[1mConsolidate compiler generated dependencies of target rlcompleter_c[0m
+[0.246s] [35m[1mConsolidate compiler generated dependencies of target test_adopt_wrapper[0m
+[0.246s] [35m[1mConsolidate compiler generated dependencies of target test_abstract_base[0m
+[0.246s] [35m[1mConsolidate compiler generated dependencies of target test_adopt[0m
+[0.251s] [35m[1mConsolidate compiler generated dependencies of target test_attributes[0m
+[0.251s] [35m[1mConsolidate compiler generated dependencies of target test_automatic_smart_ptr[0m
+[0.257s] [ 43%] Built target tutorial1
+[0.257s] [ 45%] Built target tutorial3
+[0.259s] [ 46%] Built target tutorial2
+[0.259s] [35m[1mConsolidate compiler generated dependencies of target test_back_reference[0m
+[0.259s] [ 45%] Built target saturate
+[0.259s] [ 47%] Built target debug1
+[0.259s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_context[0m
+[0.261s] [ 48%] Built target quat
+[0.261s] [ 49%] Built target rlcompleter_c
+[0.268s] [ 49%] Built target test_abstract_base
+[0.268s] [ 50%] Built target test_adopt
+[0.269s] [ 50%] Built target test_expressiongraph
+[0.269s] [35m[1mConsolidate compiler generated dependencies of target test_builtin_converters[0m
+[0.269s] [ 51%] Built target test_adopt_wrapper
+[0.269s] [35m[1mConsolidate compiler generated dependencies of target test_class_info[0m
+[0.272s] [35m[1mConsolidate compiler generated dependencies of target test_collapse_converter[0m
+[0.272s] [ 51%] Built target test_attributes
+[0.272s] [ 52%] Built target test_automatic_smart_ptr
+[0.273s] [35m[1mConsolidate compiler generated dependencies of target test_construction[0m
+[0.274s] [35m[1mConsolidate compiler generated dependencies of target test_def_from_base[0m
+[0.276s] [35m[1mConsolidate compiler generated dependencies of target test_const[0m
+[0.276s] [35m[1mConsolidate compiler generated dependencies of target test_create_in_thread[0m
+[0.277s] [35m[1mConsolidate compiler generated dependencies of target test_destruction[0m
+[0.277s] [35m[1mConsolidate compiler generated dependencies of target test_dynamic_type[0m
+[0.278s] [ 52%] Built target test_back_reference
+[0.282s] [35m[1mConsolidate compiler generated dependencies of target test_extend_class_in_lua[0m
+[0.284s] [35m[1mConsolidate compiler generated dependencies of target test_free_functions[0m
+[0.284s] [35m[1mConsolidate compiler generated dependencies of target test_exception_handlers[0m
+[0.285s] [35m[1mConsolidate compiler generated dependencies of target test_exceptions[0m
+[0.287s] [35m[1mConsolidate compiler generated dependencies of target test_function_converter[0m
+[0.290s] [ 53%] Built target test_collapse_converter
+[0.290s] [ 54%] Built target test_builtin_converters
+[0.292s] [35m[1mConsolidate compiler generated dependencies of target test_function_introspection[0m
+[0.292s] [ 54%] Built target test_construction
+[0.294s] [ 54%] Built target test_class_info
+[0.296s] [ 56%] Built target test_def_from_base
+[0.296s] [ 56%] Built target test_const
+[0.296s] [ 57%] Built target test_dynamic_type
+[0.296s] [ 58%] Built target test_create_in_thread
+[0.302s] [ 60%] Built target test_extend_class_in_lua
+[0.302s] [ 60%] Built target test_destruction
+[0.303s] [35m[1mConsolidate compiler generated dependencies of target test_function_object[0m
+[0.307s] [35m[1mConsolidate compiler generated dependencies of target test_held_type[0m
+[0.307s] [35m[1mConsolidate compiler generated dependencies of target test_function_overload_overflow[0m
+[0.307s] [ 62%] Built target test_function_converter
+[0.307s] [ 62%] Built target test_exception_handlers
+[0.307s] [ 62%] Built target test_exceptions
+[0.309s] [35m[1mConsolidate compiler generated dependencies of target test_implicit_cast[0m
+[0.309s] [ 62%] Built target test_free_functions
+[0.310s] [35m[1mConsolidate compiler generated dependencies of target test_implicit_raw[0m
+[0.312s] [ 63%] Built target test_function_introspection
+[0.317s] [35m[1mConsolidate compiler generated dependencies of target test_intrusive_ptr[0m
+[0.317s] [35m[1mConsolidate compiler generated dependencies of target test_object[0m
+[0.318s] [35m[1mConsolidate compiler generated dependencies of target test_null_pointer[0m
+[0.318s] [35m[1mConsolidate compiler generated dependencies of target test_iterator[0m
+[0.318s] [35m[1mConsolidate compiler generated dependencies of target test_lua_classes[0m
+[0.320s] [35m[1mConsolidate compiler generated dependencies of target test_operators[0m
+[0.321s] [35m[1mConsolidate compiler generated dependencies of target test_package_preload[0m
+[0.322s] [35m[1mConsolidate compiler generated dependencies of target test_policies[0m
+[0.323s] [ 63%] Built target test_held_type
+[0.324s] [ 68%] Built target test_function_object
+[0.324s] [ 68%] Built target expressiongraph_context
+[0.324s] [ 69%] Built target test_function_overload_overflow
+[0.326s] [35m[1mConsolidate compiler generated dependencies of target test_private_destructors[0m
+[0.331s] [35m[1mConsolidate compiler generated dependencies of target test_properties[0m
+[0.331s] [ 70%] Built target test_implicit_raw
+[0.333s] [ 71%] Built target test_implicit_cast
+[0.337s] [ 71%] Built target test_lua_classes
+[0.337s] [ 72%] Built target test_null_pointer
+[0.338s] [ 73%] Built target test_iterator
+[0.338s] [35m[1mConsolidate compiler generated dependencies of target test_scope[0m
+[0.338s] [ 73%] Built target test_object
+[0.341s] [ 74%] Built target test_operators
+[0.341s] [35m[1mConsolidate compiler generated dependencies of target test_shadow[0m
+[0.341s] [ 74%] Built target test_intrusive_ptr
+[0.341s] [35m[1mConsolidate compiler generated dependencies of target test_set_instance_value[0m
+[0.341s] [35m[1mConsolidate compiler generated dependencies of target test_separation[0m
+[0.341s] [ 75%] Built target test_policies
+[0.342s] [ 75%] Built target test_package_preload
+[0.347s] [ 76%] Built target test_private_destructors
+[0.348s] [ 76%] Built target test_properties
+[0.353s] [35m[1mConsolidate compiler generated dependencies of target test_shared_ptr[0m
+[0.353s] [35m[1mConsolidate compiler generated dependencies of target test_simple_class[0m
+[0.353s] [35m[1mConsolidate compiler generated dependencies of target test_smart_ptr_attributes[0m
+[0.353s] [35m[1mConsolidate compiler generated dependencies of target test_super_leak[0m
+[0.353s] [35m[1mConsolidate compiler generated dependencies of target test_table[0m
+[0.354s] [35m[1mConsolidate compiler generated dependencies of target test_typetraits[0m
+[0.355s] [35m[1mConsolidate compiler generated dependencies of target test_tag_function[0m
+[0.356s] [35m[1mConsolidate compiler generated dependencies of target test_unsigned_int[0m
+[0.356s] [35m[1mConsolidate compiler generated dependencies of target test_user_defined_converter[0m
+[0.358s] [35m[1mConsolidate compiler generated dependencies of target test_value_wrapper[0m
+[0.359s] [35m[1mConsolidate compiler generated dependencies of target test_unchecked[0m
+[0.362s] [ 78%] Built target test_set_instance_value
+[0.362s] [ 79%] Built target test_scope
+[0.362s] [35m[1mConsolidate compiler generated dependencies of target test_vector_of_object[0m
+[0.367s] [ 79%] Built target test_shadow
+[0.371s] [ 80%] Built target test_simple_class
+[0.371s] [ 80%] Built target test_smart_ptr_attributes
+[0.371s] [ 80%] Built target test_separation
+[0.371s] [ 81%] Built target test_typetraits
+[0.371s] [ 82%] Built target test_super_leak
+[0.371s] [ 83%] Built target test_shared_ptr
+[0.373s] [ 83%] Built target test_table
+[0.374s] [ 84%] Built target test_unsigned_int
+[0.375s] [35m[1mConsolidate compiler generated dependencies of target test_vector_of_number[0m
+[0.375s] [ 84%] Built target test_unchecked
+[0.376s] [ 85%] Built target test_value_wrapper
+[0.376s] [ 86%] Built target test_tag_function
+[0.378s] [ 86%] Built target test_user_defined_converter
+[0.379s] [35m[1mConsolidate compiler generated dependencies of target test_virtual_inheritance[0m
+[0.379s] [35m[1mConsolidate compiler generated dependencies of target test_yield[0m
+[0.379s] [ 87%] Built target test_vector_of_object
+[0.382s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_lua[0m
+[0.384s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_solver_qpoases[0m
+[0.389s] [ 87%] Built target test_vector_of_number
+[0.390s] [ 89%] Built target test_yield
+[0.391s] [ 89%] Built target test_virtual_inheritance
+[0.401s] [ 90%] Built target expressiongraph_lua
+[0.408s] [ 91%] Built target expressiongraph_solver_qpoases
+[0.412s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_collision[0m
+[0.413s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_spline[0m
+[0.415s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_context_lua[0m
+[0.435s] [ 92%] Built target expressiongraph_collision
+[0.438s] [ 93%] Built target expressiongraph_spline
+[0.450s] [ 95%] Built target expressiongraph_context_lua
+[0.457s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_velocities[0m
+[0.458s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_manip_lua[0m
+[0.459s] [35m[1mConsolidate compiler generated dependencies of target expressiongraph_bspline[0m
+[0.473s] [ 96%] Built target expressiongraph_velocities
+[0.478s] [ 97%] Built target expressiongraph_bspline
+[0.481s] [ 98%] Built target expressiongraph_manip_lua
+[0.485s] [35m[1mConsolidate compiler generated dependencies of target bspline_test[0m
+[0.495s] [100%] Built target bspline_test
+[0.505s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper' returned '0': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper -- -j16 -l16
+[0.506s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper
+[0.512s] -- Install configuration: ""
+[0.513s] -- Execute custom install script
+[0.513s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/etasl_wrapper.sh
+[0.513s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/Luabind/FindLuabind.cmake
+[0.513s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/Lua52/FindLua52.cmake
+[0.513s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/build_information.hpp
+[0.513s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/pkgconfig/expressiongraph.pc
+[0.514s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/conversions_example
+[0.514s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/debug1
+[0.514s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_cached_named
+[0.515s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_conditional
+[0.515s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_distance_to_line
+[0.516s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example
+[0.516s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example10
+[0.516s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example11
+[0.517s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example12
+[0.517s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example2
+[0.517s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example3
+[0.518s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example4
+[0.518s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example5
+[0.519s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example6
+[0.519s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example7
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example8
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example9
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_mimo_ex
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile2
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_optimizer
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_perpendicular
+[0.521s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_sensor
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_trait
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function1
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function2
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_variabletype
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/geometry
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/initial_value
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/matrix_traits
+[0.522s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/mptrap_tst
+[0.523s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/resolved_motion_rate_control
+[0.523s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/saturate
+[0.523s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/solving_and_cloning
+[0.523s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial1
+[0.523s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial2
+[0.523s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial3
+[0.523s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/quat
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/LICENSE
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/license_EUPL_v1_1_en.pdf
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/COPYING
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/README.md
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphConfig.cmake
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphConfigVersion.cmake
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/LICENSE
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/readme.md
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/CMakeLists.txt
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_context.cpp
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_inputchannels.cpp
+[0.524s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_itasc.cpp
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_output.cpp
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_outputchannels.cpp
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_solver.cpp
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_variables.cpp
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/readme.md
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/doc_ilua.md
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/LICENSE
+[0.525s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex1.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex2.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex3.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex4.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/motionprofile_ex.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/rpy_ex.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/ilua.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/rlcompleter.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/expressiongraph_lua.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/ilua.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/argcheck.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/context.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/etasl.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/geometric.lua
+[0.526s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/output_utils.lua
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/output_utils_rtt.lua
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/pretty.lua
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/task_library.lua
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/type_checking.lua
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/urdf_utils.lua
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context_lua/readme.md
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context_lua/LICENSE
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES.hpp
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Bounds.hpp
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Bounds.ipp
+[0.527s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Constants.hpp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/ConstraintProduct.hpp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Constraints.hpp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Constraints.ipp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Flipper.hpp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Indexlist.hpp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Indexlist.ipp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/LapackBlasReplacement.hpp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Matrices.hpp
+[0.528s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/MessageHandling.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/MessageHandling.ipp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Options.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblem.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblem.ipp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblemB.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblemB.ipp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblem.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblem.ipp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblemSchur.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblemSchur.ipp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SparseSolver.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SubjectTo.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SubjectTo.ipp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Types.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/UnitTesting.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Utils.hpp
+[0.529s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Utils.ipp
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/extras/OQPinterface.hpp
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/extras/SolutionAnalysis.hpp
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/extras/SolutionAnalysis.ipp
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_spline.so
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_bspline.so
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/examples/bspline_test
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/examples/bspline_test.cpp
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/bspline.lua
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/pprint.lua
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bspline.hpp
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bspline_expr.hpp
+[0.530s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bspline_scripting.hpp
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/py_bspline.hpp
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/readme.rst
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/LICENSE
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_velocities.so
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_velocities/readme.rst
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_velocities/LICENSE
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_velocities/examples/example_velocities.lua
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/velocities.lua
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/worldmodel.rst
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/taskframe_formalism.rst
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/LICENSE.txt
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/graphviz.md
+[0.531s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_fixed.svg
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_revolute.svg
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_prismatic.svg
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_trajectory.svg
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/robots/pr2.urdf
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/robots/ur10_robot.urdf
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/basic_usage.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/basic_usage2.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/dependencies.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/generate_graph.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/generate_expr.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/manipulation.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/saving_loading.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/JSON.lua
+[0.532s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/contour.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/motions.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/taskframe_formalism.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/trajectories.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/urdfreader.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/worldmodel.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/.git
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/.gitignore
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/.travis.yml
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/LICENSE
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/Makefile
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/README.adoc
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/XmlParser.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/_config.yml
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/books.xml
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/conversion-ways.png
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example1.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example2.lua
+[0.533s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example3.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example4-table2xml.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/people.xml
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/testxml.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xml2lua-1.3-4.rockspec
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xml2lua.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/README.md
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/dom.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/print.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/tree.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/worldmodel_dir.lua
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/urdf_to_wm
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_to_dot
+[0.534s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_create
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_insert
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_delete
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_collision.so
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/collision.lua
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/funnel.lua
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/to_stl.sh
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_collision/readme.md
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_collision/LICENSE
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_manip_lua.so
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_manip_lua/readme.md
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_manip_lua/LICENSE
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_manip_lua/examples/manip_example.lua
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/manipulability.lua
+[0.535s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/set_etasl_paths.sh
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/remove_etasl_paths.sh
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/ietasl
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl_py_install
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl_version
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl_mkvirtualenv
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/readme_scripts.rst
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslConfig.cmake
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslConfigVersion.cmake
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/ament_index/resource_index/package_run_dependencies/etasl_wrapper
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/ament_index/resource_index/parent_prefix_path/etasl_wrapper
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/ament_prefix_path.sh
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/ament_prefix_path.dsv
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/path.sh
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/path.dsv
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.bash
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.sh
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.zsh
+[0.536s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.dsv
+[0.536s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/package.dsv
+[0.542s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/ament_index/resource_index/packages/etasl_wrapper
+[0.542s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/cmake/etasl_wrapperConfig.cmake
+[0.542s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/cmake/etasl_wrapperConfig-version.cmake
+[0.542s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/package.xml
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslTargets.cmake
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslTargets-noconfig.cmake
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/adopt_policy.hpp
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/back_reference_fwd.hpp
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/back_reference.hpp
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/class.hpp
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/class_info.hpp
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/config.hpp
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/container_policy.hpp
+[0.543s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/copy_policy.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/dependency_policy.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/discard_result_policy.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/error_callback_fun.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/error.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/exception_handler.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/from_stack.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/function_converter.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/function.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/function_introspection.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/get_main_thread.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/get_pointer.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/handle.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/intrusive_ptr_converter.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/iterator_policy.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/luabind.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/lua_include.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/lua_state_fwd.hpp
+[0.544s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/make_function.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/nil.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/no_dependency.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/object_fwd.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/object.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/open.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/operator.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/out_value_policy.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/prefix.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/raw_policy.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/return_reference_to_policy.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/scope.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/set_package_preload.hpp
+[0.545s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/shared_ptr_converter.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/stack.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/std_shared_ptr_converter.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/tag_function.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/typeid.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/value_wrapper.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/version.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/weak_ref.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/wrapper_base.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/yield_policy.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call_function.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call_member.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call_operator_iterate.hpp
+[0.546s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/class_registry.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/class_rep.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/constructor.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/convert_to_lua.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/debug.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/decorate_type.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/deduce_signature.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/enum_maker.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/format_signature.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/garbage_collector.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/has_get_pointer.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/inheritance.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/instance_holder.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/link_compatibility.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/make_instance.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/most_derived.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/object_call.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/object.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/object_rep.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/operator_id.hpp
+[0.547s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/other.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/pcall.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/pointee_sizeof.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/policy.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/primitives.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/property.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/signature_match.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/stack_utils.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/typetraits.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/yes_no.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libluabind09.a
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph.so
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_integral.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_double.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_function.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_rotation.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_twist.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_mimo.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_frame.hpp
+[0.548s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_exceptions.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/quat_io.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_quaternion.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_var.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_motionprofiles.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_traits.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_wrench.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_matrix.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/conversions.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_euler.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/quat.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_n_ary.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/integrator.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/mptrap.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_vector.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_expressions.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_chain.hpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/resolved_motion_rate_control.cpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/debug1.cpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/mptrap_tst.cpp
+[0.549s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example12.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example3.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_conditional.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_cb.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial2.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_distance_to_line.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/conversions_example.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example11.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/saturate.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile2.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example5.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_optimizer.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example7.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/matrix_traits.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example2.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example4.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_perpendicular.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_sensor.cpp
+[0.550s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_trait.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/quat.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/initial_value.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function1.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_variabletype.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example9.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_mimo_ex.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example6.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example10.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_cached_named.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial3.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/solving_and_cloning.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example8.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/geometry.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial1.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function2.cpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphTargets.cmake
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphTargets-noconfig.cmake
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_context.so
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/context.hpp
+[0.551s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/controller.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/itasc_adaptor.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/context_aux.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/defaultvelocityestimator.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/outputs_csv.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver_registry.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/defaultobserver.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/fileutils.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/itasc_task.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver_factory.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/velocityestimator.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/outputs_matlab.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/groupingobserver.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_lua.so
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/librlcompleter_c.so
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libreadline_c.so
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/bind_kdl.hpp
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_context_lua.so
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[0.552s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/context_scripting.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/rfsm_observer.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/luabind_util.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/breakobserver.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_solver_qpoases.so
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libqpOASES.so
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/qpoases_solver.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/qpoases_messages.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver_factory_qpoases.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/splines.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/spline_scripting.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/motionmodel.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/cubicspline.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiongraph_velocities.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/convex_object.hpp
+[0.553s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bullet_collision_lua.hpp
+[0.554s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bullet_collision.hpp
+[0.554s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[0.554s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[0.554s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/manipulability_dir.hpp
+[0.554s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/manip_scripting.hpp
+[0.573s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper' returned '0': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper

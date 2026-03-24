@@ -1,0 +1,7 @@
+setup.py
+skill_specifications/__init__.py
+skill_specifications.egg-info/PKG-INFO
+skill_specifications.egg-info/SOURCES.txt
+skill_specifications.egg-info/dependency_links.txt
+skill_specifications.egg-info/top_level.txt
+skill_specifications/libraries/__init__.py

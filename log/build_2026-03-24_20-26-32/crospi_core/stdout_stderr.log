@@ -1,0 +1,174 @@
+[35m[1mConsolidate compiler generated dependencies of target amentlua[0m
+[35m[1mConsolidate compiler generated dependencies of target robot_interfacing_utils[0m
+[35m[1mConsolidate compiler generated dependencies of target etasl_misc_lib[0m
+[35m[1mConsolidate compiler generated dependencies of target crospi_utils[0m
+[  9%] Built target robot_interfacing_utils
+[ 19%] Built target amentlua
+[ 19%] Built target ament_cmake_python_symlink_crospi_py
+[ 61%] Built target etasl_misc_lib
+[ 71%] Built target crospi_utils
+[35m[1mConsolidate compiler generated dependencies of target crospi_node_utils[0m
+[ 90%] Built target crospi_node_utils
+[35m[1mConsolidate compiler generated dependencies of target crospi_node[0m
+[100%] Built target crospi_node
+running egg_info
+writing crospi_py.egg-info/PKG-INFO
+writing dependency_links to crospi_py.egg-info/dependency_links.txt
+writing top-level names to crospi_py.egg-info/top_level.txt
+reading manifest file 'crospi_py.egg-info/SOURCES.txt'
+writing manifest file 'crospi_py.egg-info/SOURCES.txt'
+[100%] Built target ament_cmake_python_build_crospi_py_egg
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/lib/jsonschema.lua
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/lib/task_requirements.lua
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/blackboard-schema.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/default_robot_specification.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/etasl.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/fileoutputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/frame.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/general.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/initializer.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/inline_robotspecification.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/inputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/iohandlers.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/jointstateinputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/jointstateoutputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/kuka_iiwa_driver.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/lua_robotspecification.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/default-task.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/etasl-task-instance.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/etasl-task.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/input-topic.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/moveto-parameters.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/moveto-schema.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/number.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/robot-configuration.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/robot.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/robotsimulator.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/orientation-quaternion.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/orientation-rpy.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/orientation.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/output-topic.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/outputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/qpoasessolver.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/robot.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/robotdriver.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/screw_angular.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/screw_linear.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/simple_kinematic_simulation.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tasks/four_bar_mechanism-schema.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tasks/move-circle.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tasks/moveto-jointspace.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tfoutputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/topicinputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/topicoutputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/twist.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/twistinputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/ur10erobotdriver.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/vector.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/ball_joint.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/connection.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/contour.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/cubicspline.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/fixed_joint.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/jointstates.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/node.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/prismatic_joint.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/revolute_joint.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/sensor.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/single_variable.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/taskframeconstraint.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/taskframeconstraints.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/taskspecification.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/variables.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/worldmodel.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/wrench.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/wrenchinputhandler.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/IO_handlers_deleteme.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/io_handler_manager.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/multiple_drivers_manager.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/robot_driver_manager_DELETEME.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/robot_driver_manager_lockfree.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_abstracttask.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_buffers.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_fileoutputhandler.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_fileoutputhandlerfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_inputhandlerfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_loghandler.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_outputhandlerfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_printobserver.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_robot.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_robotfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_task.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/blackboard.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/etasl_error.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/featurevariableinitializer.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/flowstatus.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/inputhandler.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/json_checker.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robot copy.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotfactory copy.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulator copy.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulator.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulatorfactory copy.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulatorfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/outputhandler.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/qpoasessolverfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/registry.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/solverfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/solverfactory_qpoases.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/string_interpolate.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/timestatistics.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/featurevariableinitializer.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/port_observer.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/DELETEME_robotdriverfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/controlmodes_enum.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/feedback_struct_deleteme.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/robot_data_structures.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/robotdriver.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/robotsimulator.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/shared_mem_struct.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/shared_mem_struct_mutex.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/simulationrobotdriver.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/simulationrobotdriverfactory.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/thread_manager.hpp
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/package_crospi_core_lua_configure_paths.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/crospi_core/libetasl_misc_lib.a
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libamentlua.so
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/crospi_core/crospi_node
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/pythonpath.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/pythonpath.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/PKG-INFO
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/top_level.txt
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py/__init__.py
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py/etasl_params.py
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/ament_index/resource_index/package_run_dependencies/crospi_core
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/ament_index/resource_index/parent_prefix_path/crospi_core
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/path.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/path.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.bash
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.zsh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/package.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/ament_index/resource_index/packages/crospi_core
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/crospi_coreConfig.cmake
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/crospi_coreConfig-version.cmake
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/package.xml
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py'...
+-- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_node_utils.so
+-- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_utils.so
+-- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/librobot_interfacing_utils.so

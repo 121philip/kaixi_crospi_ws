@@ -1,0 +1,305 @@
+[0.015s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_core': AMENT_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib LUA_CPATH=${LUA_CPATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/?.so LUA_PATH=${LUA_PATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/?.lua;/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/?.lua PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin:${PATH} PYTHONPATH=/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/crospi_core
+[0.060s] -- The C compiler identification is GNU 11.4.0
+[0.100s] -- The CXX compiler identification is GNU 11.4.0
+[0.105s] -- Detecting C compiler ABI info
+[0.151s] -- Detecting C compiler ABI info - done
+[0.157s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.157s] -- Detecting C compile features
+[0.157s] -- Detecting C compile features - done
+[0.160s] -- Detecting CXX compiler ABI info
+[0.213s] -- Detecting CXX compiler ABI info - done
+[0.219s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.219s] -- Detecting CXX compile features
+[0.219s] -- Detecting CXX compile features - done
+[0.220s] [0mCompiling package /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core[0m
+[0.220s] -- Using Boost 1.89 from BOOST_189_ROOT=/opt/boost_1.89.0
+[0.220s] -- CMAKE_PREFIX_PATH before: 
+[0.220s] -- CMAKE_PREFIX_PATH after: /opt/boost_1.89.0
+[0.220s] -- Using Boost version 
+[0.224s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found suitable version "1.89.0", minimum required is "1.89")  
+[0.225s] -- Boost include dirs after find_package: /opt/boost_1.89.0/include
+[0.232s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.359s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.413s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.477s] -- Found std_msgs: 4.9.1 (/opt/ros/humble/share/std_msgs/cmake)
+[0.534s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.544s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.557s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.574s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.597s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.629s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.648s] [0mCompiling misc libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc[0m
+[0.672s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: random 
+[0.677s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: chrono 
+[0.682s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[0.746s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.752s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.847s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.883s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.939s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.957s] -- Looking for pthread.h
+[1.006s] -- Looking for pthread.h - found
+[1.007s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.059s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.059s] -- Found Threads: TRUE  
+[1.118s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.154s] [0mCompiling misc/crospi_node_utils libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc/crospi_node_utils[0m
+[1.158s] -- Found rclcpp_lifecycle: 16.0.18 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.186s] -- Found rclcpp_action: 16.0.18 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.230s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: random 
+[1.233s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: chrono 
+[1.238s] -- Found resource_retriever: 3.1.3 (/opt/ros/humble/share/resource_retriever/cmake)
+[1.306s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.307s] -- Found crospi_interfaces: 0.0.0 (/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/share/crospi_interfaces/cmake)
+[1.329s] -- Found Lua51: /usr/lib/x86_64-linux-gnu/liblua5.1.so;/usr/lib/x86_64-linux-gnu/libm.so (found version "5.1.5") 
+[1.341s] -- Found tf2: 0.25.19 (/opt/ros/humble/share/tf2/cmake)
+[1.360s] -- Found tf2_geometry_msgs: 0.25.19 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.371s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.372s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.372s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.446s] -- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)
+[1.480s] [0mCompiling misc/crospi_utils libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc/crospi_utils[0m
+[1.480s] -- Found rclcpp_lifecycle: 16.0.18 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.492s] -- Found rclcpp_action: 16.0.18 (/opt/ros/humble/share/rclcpp_action/cmake)
+[1.521s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: random 
+[1.524s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: chrono 
+[1.525s] -- Found resource_retriever: 3.1.3 (/opt/ros/humble/share/resource_retriever/cmake)
+[1.555s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.556s] -- Found crospi_interfaces: 0.0.0 (/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/share/crospi_interfaces/cmake)
+[1.573s] -- Found tf2: 0.25.19 (/opt/ros/humble/share/tf2/cmake)
+[1.576s] -- Found tf2_geometry_msgs: 0.25.19 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.579s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.580s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.619s] -- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)
+[1.652s] [0mCompiling misc/robot_interfacing_utils libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc/robot_interfacing_utils[0m
+[1.655s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found suitable version "1.89.0", minimum required is "1.89")  
+[1.655s] -- Using Boost version 1.89.0
+[1.657s] [0mCompiling node located in /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/ros2_nodes/crospi_node[0m
+[1.657s] -- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+[1.677s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.679s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.801s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.837s] -- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)
+[1.850s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.873s] -- Found rclcpp_lifecycle: 16.0.18 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+[1.890s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: random 
+[1.894s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: chrono 
+[1.895s] -- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)
+[1.922s] -- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found suitable version "1.89.0", minimum required is "1.89")  
+[1.922s] -- Using Boost version 1.89.0
+[1.922s] -- Boost include dirs: /opt/boost_1.89.0/include
+[2.059s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter Development Development.Module Development.Embed 
+[2.153s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.271s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.272s] -- Configured cppcheck include dirs: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/include
+[2.272s] -- Configured cppcheck exclude dirs and/or files: 
+[2.273s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.275s] -- Added test 'lint_cmake' to check CMake code style
+[2.276s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.281s] -- Added test 'uncrustify' to check C / C++ code style
+[2.281s] -- Configured uncrustify additional arguments: 
+[2.283s] -- Added test 'xmllint' to check XML markup files
+[2.285s] -- Configuring done
+[2.326s] -- Generating done
+[2.339s] -- Build files have been written to: /home/masterthesis/kaixi_crospi_ws/build/crospi_core
+[2.350s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_core' returned '0': AMENT_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib LUA_CPATH=${LUA_CPATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/?.so LUA_PATH=${LUA_PATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/?.lua;/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/?.lua PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin:${PATH} PYTHONPATH=/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/crospi_core
+[2.352s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_core': AMENT_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib LUA_CPATH=${LUA_CPATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/?.so LUA_PATH=${LUA_PATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/?.lua;/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/?.lua PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin:${PATH} PYTHONPATH=/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/crospi_core -- -j16 -l16
+[2.390s] [  4%] [32mBuilding CXX object src/misc/CMakeFiles/etasl_misc_lib.dir/featurevariableinitializer.cpp.o[0m
+[2.391s] [ 14%] [32mBuilding CXX object src/misc/crospi_utils/CMakeFiles/crospi_utils.dir/blackboard.cpp.o[0m
+[2.391s] [ 14%] [32mBuilding CXX object src/misc/crospi_utils/CMakeFiles/crospi_utils.dir/outputhandler.cpp.o[0m
+[2.391s] [ 19%] [32mBuilding CXX object src/misc/crospi_utils/CMakeFiles/crospi_utils.dir/featurevariableinitializer.cpp.o[0m
+[2.391s] [ 23%] [32mBuilding CXX object src/misc/CMakeFiles/etasl_misc_lib.dir/IO_handlers_deleteme.cpp.o[0m
+[2.392s] [ 28%] [32mBuilding CXX object src/misc/crospi_utils/CMakeFiles/amentlua.dir/amentlua.cpp.o[0m
+[2.392s] [ 33%] [32mBuilding CXX object src/misc/CMakeFiles/etasl_misc_lib.dir/port_observer.cpp.o[0m
+[2.392s] [ 38%] [32mBuilding CXX object src/misc/robot_interfacing_utils/CMakeFiles/robot_interfacing_utils.dir/thread_manager.cpp.o[0m
+[2.393s] [ 42%] [32mBuilding CXX object src/misc/crospi_utils/CMakeFiles/crospi_utils.dir/string_interpolate.cpp.o[0m
+[2.394s] [ 47%] [32mBuilding CXX object src/misc/crospi_utils/CMakeFiles/crospi_utils.dir/qpoasessolverfactory.cpp.o[0m
+[2.394s] [ 52%] [32mBuilding CXX object src/misc/crospi_utils/CMakeFiles/crospi_utils.dir/json_checker.cpp.o[0m
+[2.399s] [ 52%] Built target ament_cmake_python_symlink_crospi_py
+[2.742s] running egg_info
+[2.742s] creating crospi_py.egg-info
+[2.742s] writing crospi_py.egg-info/PKG-INFO
+[2.742s] writing dependency_links to crospi_py.egg-info/dependency_links.txt
+[2.743s] writing top-level names to crospi_py.egg-info/top_level.txt
+[2.743s] writing manifest file 'crospi_py.egg-info/SOURCES.txt'
+[2.745s] reading manifest file 'crospi_py.egg-info/SOURCES.txt'
+[2.746s] writing manifest file 'crospi_py.egg-info/SOURCES.txt'
+[2.779s] [ 52%] Built target ament_cmake_python_build_crospi_py_egg
+[3.485s] [ 57%] [32m[1mLinking CXX shared library librobot_interfacing_utils.so[0m
+[3.591s] [ 57%] Built target robot_interfacing_utils
+[4.901s] [ 61%] [32m[1mLinking CXX shared library libamentlua.so[0m
+[5.081s] [ 61%] Built target amentlua
+[6.304s] [ 66%] [32m[1mLinking CXX shared library libcrospi_utils.so[0m
+[6.536s] [ 66%] Built target crospi_utils
+[6.553s] [ 80%] [32mBuilding CXX object src/misc/crospi_node_utils/CMakeFiles/crospi_node_utils.dir/robot_driver_manager_lockfree.cpp.o[0m
+[6.553s] [ 80%] [32mBuilding CXX object src/misc/crospi_node_utils/CMakeFiles/crospi_node_utils.dir/io_handler_manager.cpp.o[0m
+[6.553s] [ 80%] [32mBuilding CXX object src/misc/crospi_node_utils/CMakeFiles/crospi_node_utils.dir/multiple_drivers_manager.cpp.o[0m
+[8.743s] [ 85%] [32m[1mLinking CXX static library libetasl_misc_lib.a[0m
+[8.780s] [ 85%] Built target etasl_misc_lib
+[15.106s] [ 90%] [32m[1mLinking CXX shared library libcrospi_node_utils.so[0m
+[15.479s] [ 90%] Built target crospi_node_utils
+[15.494s] [ 95%] [32mBuilding CXX object src/ros2_nodes/crospi_node/CMakeFiles/crospi_node.dir/crospi_node.cpp.o[0m
+[26.190s] [100%] [32m[1mLinking CXX executable crospi_node[0m
+[26.835s] /usr/bin/ld: warning: libboost_chrono.so.1.74.0, needed by /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_solver_qpoases.so, may conflict with libboost_chrono.so.1.89.0
+[27.055s] [100%] Built target crospi_node
+[27.062s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_core' returned '0': AMENT_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib LUA_CPATH=${LUA_CPATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/?.so LUA_PATH=${LUA_PATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/?.lua;/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/?.lua PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin:${PATH} PYTHONPATH=/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/crospi_core -- -j16 -l16
+[27.064s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_core': AMENT_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib LUA_CPATH=${LUA_CPATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/?.so LUA_PATH=${LUA_PATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/?.lua;/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/?.lua PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin:${PATH} PYTHONPATH=/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/crospi_core
+[27.069s] -- Install configuration: ""
+[27.069s] -- Execute custom install script
+[27.070s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/lib/jsonschema.lua
+[27.076s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/lib/task_requirements.lua
+[27.082s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/blackboard-schema.json
+[27.088s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/default_robot_specification.json
+[27.094s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/etasl.json
+[27.099s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/fileoutputhandler.json
+[27.105s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/frame.json
+[27.110s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/general.json
+[27.116s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/initializer.json
+[27.121s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/inline_robotspecification.json
+[27.127s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/inputhandler.json
+[27.132s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/iohandlers.json
+[27.137s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/jointstateinputhandler.json
+[27.142s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/jointstateoutputhandler.json
+[27.148s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/kuka_iiwa_driver.json
+[27.153s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/lua_robotspecification.json
+[27.159s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/default-task.json
+[27.164s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/etasl-task-instance.json
+[27.170s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/etasl-task.json
+[27.176s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/input-topic.json
+[27.181s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/moveto-parameters.json
+[27.187s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/moveto-schema.json
+[27.192s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/number.json
+[27.198s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/robot-configuration.json
+[27.203s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/robot.json
+[27.209s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/old_schemas/robotsimulator.json
+[27.214s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/orientation-quaternion.json
+[27.219s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/orientation-rpy.json
+[27.225s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/orientation.json
+[27.230s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/output-topic.json
+[27.235s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/outputhandler.json
+[27.241s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/qpoasessolver.json
+[27.246s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/robot.json
+[27.251s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/robotdriver.json
+[27.257s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/screw_angular.json
+[27.262s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/screw_linear.json
+[27.268s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/simple_kinematic_simulation.json
+[27.274s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tasks/four_bar_mechanism-schema.json
+[27.280s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tasks/move-circle.json
+[27.285s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tasks/moveto-jointspace.json
+[27.291s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/tfoutputhandler.json
+[27.296s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/topicinputhandler.json
+[27.301s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/topicoutputhandler.json
+[27.307s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/twist.json
+[27.312s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/twistinputhandler.json
+[27.317s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/ur10erobotdriver.json
+[27.323s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/vector.json
+[27.328s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/ball_joint.json
+[27.333s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/connection.json
+[27.338s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/contour.json
+[27.344s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/cubicspline.json
+[27.349s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/fixed_joint.json
+[27.354s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/jointstates.json
+[27.359s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/node.json
+[27.365s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/prismatic_joint.json
+[27.371s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/revolute_joint.json
+[27.376s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/sensor.json
+[27.382s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/single_variable.json
+[27.387s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/taskframeconstraint.json
+[27.393s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/taskframeconstraints.json
+[27.398s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/taskspecification.json
+[27.403s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/variables.json
+[27.409s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/worldmodel/worldmodel.json
+[27.414s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/wrench.json
+[27.419s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/scripts/schema_DELETEME/wrenchinputhandler.json
+[27.425s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/IO_handlers_deleteme.hpp
+[27.431s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/io_handler_manager.hpp
+[27.436s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/multiple_drivers_manager.hpp
+[27.441s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/robot_driver_manager_DELETEME.hpp
+[27.446s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_node_utils/robot_driver_manager_lockfree.hpp
+[27.451s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_abstracttask.hpp
+[27.457s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_buffers.hpp
+[27.462s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_fileoutputhandler.hpp
+[27.467s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_fileoutputhandlerfactory.hpp
+[27.473s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_inputhandlerfactory.hpp
+[27.479s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_loghandler.hpp
+[27.484s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_outputhandlerfactory.hpp
+[27.490s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_printobserver.hpp
+[27.495s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_robot.hpp
+[27.501s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_robotfactory.hpp
+[27.506s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/DELETEME_task.hpp
+[27.512s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/blackboard.hpp
+[27.517s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/etasl_error.hpp
+[27.522s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/featurevariableinitializer.hpp
+[27.527s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/flowstatus.hpp
+[27.533s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/inputhandler.hpp
+[27.538s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/json_checker.hpp
+[27.543s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robot copy.hpp
+[27.548s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotfactory copy.hpp
+[27.554s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulator copy.hpp
+[27.559s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulator.hpp
+[27.564s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulatorfactory copy.hpp
+[27.570s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/old/robotsimulatorfactory.hpp
+[27.576s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/outputhandler.hpp
+[27.581s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/qpoasessolverfactory.hpp
+[27.587s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/registry.hpp
+[27.592s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/solverfactory.hpp
+[27.597s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/solverfactory_qpoases.hpp
+[27.603s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/string_interpolate.hpp
+[27.608s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/crospi_utils/timestatistics.hpp
+[27.614s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/featurevariableinitializer.hpp
+[27.619s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/port_observer.hpp
+[27.624s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/DELETEME_robotdriverfactory.hpp
+[27.629s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/controlmodes_enum.hpp
+[27.635s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/feedback_struct_deleteme.hpp
+[27.640s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/robot_data_structures.hpp
+[27.645s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/robotdriver.hpp
+[27.650s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/robotsimulator.hpp
+[27.655s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/shared_mem_struct.hpp
+[27.661s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/shared_mem_struct_mutex.hpp
+[27.666s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/simulationrobotdriver.hpp
+[27.672s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/simulationrobotdriverfactory.hpp
+[27.678s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/include/robot_interfacing_utils/thread_manager.hpp
+[27.683s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/package_crospi_core_lua_configure_paths.sh
+[27.689s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/crospi_core/libetasl_misc_lib.a
+[27.694s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.sh
+[27.700s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.dsv
+[27.706s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.sh
+[27.706s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.dsv
+[27.706s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libamentlua.so
+[27.711s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.sh
+[27.712s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/library_path.dsv
+[27.712s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/crospi_core/crospi_node
+[27.717s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/pythonpath.sh
+[27.723s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/pythonpath.dsv
+[27.728s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/PKG-INFO
+[27.733s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/SOURCES.txt
+[27.739s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/dependency_links.txt
+[27.744s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py-0.0.0-py3.10.egg-info/top_level.txt
+[27.749s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py/__init__.py
+[27.754s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py/etasl_params.py
+[27.760s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/ament_index/resource_index/package_run_dependencies/crospi_core
+[27.765s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/ament_index/resource_index/parent_prefix_path/crospi_core
+[27.771s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/ament_prefix_path.sh
+[27.777s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/ament_prefix_path.dsv
+[27.782s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/path.sh
+[27.788s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/environment/path.dsv
+[27.793s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.bash
+[27.799s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.sh
+[27.805s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.zsh
+[27.810s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/local_setup.dsv
+[27.816s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/package.dsv
+[27.821s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/ament_index/resource_index/packages/crospi_core
+[27.827s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.832s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.837s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/crospi_coreConfig.cmake
+[27.843s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake/crospi_coreConfig-version.cmake
+[27.848s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/package.xml
+[27.882s] Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py'...
+[27.882s] Compiling '/home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py/__init__.py'...
+[27.882s] Compiling '/home/masterthesis/kaixi_crospi_ws/install/crospi_core/local/lib/python3.10/dist-packages/crospi_py/etasl_params.py'...
+[27.885s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_node_utils.so
+[27.887s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_node_utils.so" to ""
+[27.887s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_utils.so
+[27.888s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_utils.so" to ""
+[27.888s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/librobot_interfacing_utils.so
+[27.890s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_core' returned '0': AMENT_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces:/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib:/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers/lib:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib LUA_CPATH=${LUA_CPATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/?.so LUA_PATH=${LUA_PATH};/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/?.lua;/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/?.lua PATH=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin:${PATH} PYTHONPATH=/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/crospi_core

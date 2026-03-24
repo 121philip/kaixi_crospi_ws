@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "../rosidl_generator_py/crospi_interfaces/_crospi_interfaces_s.ep.rosidl_typesupport_c.c"
+  "../rosidl_generator_py/crospi_interfaces/_crospi_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "../rosidl_generator_py/crospi_interfaces/_crospi_interfaces_s.ep.rosidl_typesupport_introspection_c.c"
+  "../rosidl_generator_py/crospi_interfaces/action/__init__.py"
+  "../rosidl_generator_py/crospi_interfaces/action/_run_task.py"
+  "../rosidl_generator_py/crospi_interfaces/action/_run_task_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/__init__.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_input.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_input_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_number_parameters.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_number_parameters_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_output.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_output_derivatives.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_output_derivatives_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_output_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_pose_parameters.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_pose_parameters_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_return_value.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_return_value_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_task_parameters.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_task_parameters_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_test.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_test_s.c"
+  "../rosidl_generator_py/crospi_interfaces/msg/_vector3_parameters.py"
+  "../rosidl_generator_py/crospi_interfaces/msg/_vector3_parameters_s.c"
+  "../rosidl_generator_py/crospi_interfaces/srv/__init__.py"
+  "../rosidl_generator_py/crospi_interfaces/srv/_lua_cmd.py"
+  "../rosidl_generator_py/crospi_interfaces/srv/_lua_cmd_s.c"
+  "../rosidl_generator_py/crospi_interfaces/srv/_task_specification_file.py"
+  "../rosidl_generator_py/crospi_interfaces/srv/_task_specification_file_s.c"
+  "../rosidl_generator_py/crospi_interfaces/srv/_task_specification_string.py"
+  "../rosidl_generator_py/crospi_interfaces/srv/_task_specification_string_s.c"
+  "CMakeFiles/crospi_interfaces__py"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/crospi_interfaces__py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

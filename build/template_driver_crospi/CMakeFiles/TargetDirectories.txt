@@ -1,0 +1,10 @@
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/uninstall.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/template_driver_crospi_uninstall.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/template_driver_crospi.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/test.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/edit_cache.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/rebuild_cache.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/list_install_components.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/install.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/install/local.dir
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/CMakeFiles/install/strip.dir

@@ -1,0 +1,199 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"_install",
+			"ament_cmake_symlink_install_files",
+			"install",
+			"ament_cmake_symlink_install_targets"
+		],
+		"files" : 
+		[
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_files.cmake",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/install.cmake",
+			"ThirdParty/etasl-cmake/etasl/luabind/src/CMakeLists.txt",
+			"/opt/ros/humble/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 177,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 31,
+				"parent" : 1
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 38,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 180,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 31,
+				"parent" : 4
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 38,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 183,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 37,
+				"parent" : 7
+			},
+			{
+				"command" : 0,
+				"file" : 3,
+				"line" : 50,
+				"parent" : 8
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 3,
+			"component" : "sdk",
+			"destination" : "include/luabind",
+			"paths" : 
+			[
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/adopt_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/back_reference_fwd.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/back_reference.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/class.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/class_info.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/config.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/container_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/copy_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/dependency_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/discard_result_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/error_callback_fun.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/error.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/exception_handler.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/from_stack.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/function_converter.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/function.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/function_introspection.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/get_main_thread.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/get_pointer.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/handle.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/intrusive_ptr_converter.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/iterator_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/luabind.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/lua_include.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/lua_state_fwd.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/make_function.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/nil.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/no_dependency.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/object_fwd.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/object.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/open.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/operator.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/out_value_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/prefix.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/raw_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/return_reference_to_policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/scope.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/set_package_preload.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/shared_ptr_converter.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/stack.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/std_shared_ptr_converter.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/tag_function.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/typeid.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/value_wrapper.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/version.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/weak_ref.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/wrapper_base.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/yield_policy.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 6,
+			"component" : "sdk",
+			"destination" : "include/luabind/detail",
+			"paths" : 
+			[
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/call_function.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/call.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/call_member.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/call_operator_iterate.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/class_registry.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/class_rep.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/constructor.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/convert_to_lua.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/debug.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/decorate_type.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/deduce_signature.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/enum_maker.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/format_signature.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/garbage_collector.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/has_get_pointer.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/inheritance.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/instance_holder.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/link_compatibility.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/make_instance.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/most_derived.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/object_call.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/object.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/object_rep.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/operator_id.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/other.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/pcall.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/pointee_sizeof.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/policy.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/primitives.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/property.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/signature_match.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/stack_utils.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/typetraits.hpp",
+				"ThirdParty/etasl-cmake/etasl/luabind/src/../luabind/detail/yes_no.hpp"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 9,
+			"component" : "sdk",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"ThirdParty/etasl-cmake/standalone-cmake/luabind/src/libluabind09.a"
+			],
+			"targetId" : "luabind::@15f7d8f23714998d9beb",
+			"targetIndex" : 75,
+			"type" : "target"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "ThirdParty/etasl-cmake/standalone-cmake/luabind/src",
+		"source" : "ThirdParty/etasl-cmake/etasl/luabind/src"
+	}
+}

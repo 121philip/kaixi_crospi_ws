@@ -1,0 +1,4 @@
+source;share/etasl_wrapper/local_setup.bash
+source;share/etasl_wrapper/local_setup.dsv
+source;share/etasl_wrapper/local_setup.sh
+source;share/etasl_wrapper/local_setup.zsh

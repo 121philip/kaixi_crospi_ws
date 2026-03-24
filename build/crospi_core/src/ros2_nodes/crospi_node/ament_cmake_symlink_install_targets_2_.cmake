@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/masterthesis/kaixi_crospi_ws/build/crospi_core/src/ros2_nodes/crospi_node/crospi_node" "TARGETS" "crospi_node" "DESTINATION" "lib/crospi_core")

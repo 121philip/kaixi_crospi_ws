@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "betfsm_interfaces__py",
+		"source" : "/home/masterthesis/kaixi_crospi_ws/build/betfsm_interfaces/betfsm_interfaces__py"
+	}
+}

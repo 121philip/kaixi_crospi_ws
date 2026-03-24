@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#
+# Creating of standard eTaSL environment when mkvirtualenv is available
+#
+INSTALLDIR="/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper"
+ETASLVERSION="1.5.0"
+
+echo " "
+echo "Install eTaSL in the mkvirtualenv python environment etasl${ETASLVERSION}"
+echo "----------------------------------------------------------------------"
+echo "optional arguments: " 
+echo " NOQUESTIONS : continue without confirmation"
+echo " "
+printf "Install directory of the eTaSL version belonging to this script :\n  ${INSTALLDIR}\n"
+
+if [ "$1" != "NOQUESTIONS" ]; then
+        read -p "Continue ? (Y/N) " -n 1 -r
+        printf    # (optional) move to a new line
+        if [[ $REPLY =~ ^[Yy]$ ]]
+        then
+            printf "continuing..."
+        else
+            exit 1
+        fi
+fi
+
+if [ "$VIRTUALENVWRAPPER_SCRIPT" == "" ]
+then
+    echo "Creation of standard eTaSL environment skipped (mkvirtualenv does not exists)"
+else
+    echo "Check if an eTaSL environment exists"
+    source "${VIRTUALENVWRAPPER_SCRIPT}"
+    result=$(lsvirtualenv | grep "etasl${ETASLVERSION}")
+    if [ "$result" == "" ]; then
+    	echo "Creation of standard eTaSL environment"
+   	mkvirtualenv --python=/usr/bin/python3 "etasl${ETASLVERSION}" 
+    fi
+    echo "Go inside the environment and install etasl in this environment:"
+    workon "etasl${ETASLVERSION}"
+    "${INSTALLDIR}/bin/etasl_py_install" NOQUESTIONS
+    deactivate
+    #deactivate not really necessary, in case somebody sources this script
+fi
+
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#
+# Creating of standard eTaSL environment when mkvirtualenv is available
+#
+INSTALLDIR="/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper"
+ETASLVERSION="1.5.0"
+
+echo "eTaSL ${ETASLVERSION} "
+echo "installed in ${INSTALLDIR}"
+echo "documentation in ${INSTALLDIR}/share/doc/etasl"
+

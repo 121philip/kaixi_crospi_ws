@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ThirdParty/etasl-cmake/standalone-cmake/3rd_party/google-test",
+		"source" : "ThirdParty/etasl-cmake/standalone-cmake/3rd_party/google-test"
+	}
+}

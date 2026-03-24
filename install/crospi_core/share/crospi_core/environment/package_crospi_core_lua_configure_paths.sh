@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/crospi_core/ament_cmake_environment_hooks/package_crospi_core_lua_configure_paths.sh

@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ament_cmake_environment_hooks/local_setup.sh

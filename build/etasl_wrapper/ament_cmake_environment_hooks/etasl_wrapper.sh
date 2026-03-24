@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+
+if [ "x{$LUA_PATH}x" = "xx" ]; then
+   LUA_PATH=";"
+fi
+if [ "x{$LUA_CPATH}x" = "xx" ]; then
+   LUA_CPATH=";"
+fi
+
+
+
+luapath_append ()
+{
+    if echo "$LUA_PATH" | grep -Eq "(;)${1}(;|$)"
+    then
+        return 0
+    fi
+    export LUA_PATH="$LUA_PATH;${1}"
+}
+
+
+luacpath_append ()
+{
+    if echo "$LUA_CPATH" | grep -Eq "(;)${1}(;|$)"
+    then
+        return 0
+    fi
+    export LUA_CPATH="$LUA_CPATH;${1}"
+}
+
+luapath_append "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/?.lua"
+luapath_append "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/?.lua"
+
+luacpath_append "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/?.so"
+
+

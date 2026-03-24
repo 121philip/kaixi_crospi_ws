@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/ament_cmake_core/crospi_interfacesConfig-version.cmake

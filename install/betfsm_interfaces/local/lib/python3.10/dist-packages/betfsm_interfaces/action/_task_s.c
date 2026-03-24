@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/betfsm_interfaces/rosidl_generator_py/betfsm_interfaces/action/_task_s.c

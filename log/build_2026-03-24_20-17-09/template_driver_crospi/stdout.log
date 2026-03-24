@@ -1,0 +1,60 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)
+-- Found crospi_core: 0.0.0 (/home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake)
+-- Found Boost: /home/masterthesis/.local/lib/boost/1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found suitable version "1.89.0", minimum required is "1.89")  
+-- Using Boost version 1.89.0
+-- Boost include dirs: /home/masterthesis/.local/lib/boost/1.89.0/include
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/masterthesis/kaixi_crospi_ws/src/crospi/robot_drivers_crospi/template_driver_crospi/include;$<BUILD_INTERFACE:/home/masterthesis/kaixi_crospi_ws/src/crospi/robot_drivers_crospi/template_driver_crospi/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi
+[ 50%] [32mBuilding CXX object CMakeFiles/template_driver_crospi.dir/src/template_driver_crospi.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libtemplate_driver_crospi.so[0m
+[100%] Built target template_driver_crospi
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi//plugins.xml
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/environment/library_path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/environment/library_path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/lib/libtemplate_driver_crospi.so
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/include/template_driver_crospi/template_driver_crospi.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/json_schemas/template_driver_crospi.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/ament_index/resource_index/package_run_dependencies/template_driver_crospi
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/ament_index/resource_index/parent_prefix_path/template_driver_crospi
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/environment/ament_prefix_path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/environment/ament_prefix_path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/environment/path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/environment/path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/local_setup.bash
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/local_setup.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/local_setup.zsh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/local_setup.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/package.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/ament_index/resource_index/packages/template_driver_crospi
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/ament_index/resource_index/crospi_core__pluginlib__plugin/template_driver_crospi
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/cmake/template_driver_crospiConfig.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/cmake/template_driver_crospiConfig-version.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/package.xml

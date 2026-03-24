@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/ament_cmake_environment_hooks/local_setup.zsh

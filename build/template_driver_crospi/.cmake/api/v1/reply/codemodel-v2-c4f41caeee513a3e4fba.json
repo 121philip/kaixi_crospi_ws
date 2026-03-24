@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7689dcd24a0006cfa053.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "template_driver_crospi",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "template_driver_crospi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-template_driver_crospi-a0c412d1ae032d11b5c2.json",
+					"name" : "template_driver_crospi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "template_driver_crospi_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-template_driver_crospi_uninstall-af0f52084f3772ec740f.json",
+					"name" : "template_driver_crospi_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-09f0a3494d26cbbd0a40.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi",
+		"source" : "/home/masterthesis/kaixi_crospi_ws/src/crospi/robot_drivers_crospi/template_driver_crospi"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

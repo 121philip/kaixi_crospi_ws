@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing betfsm.egg-info/PKG-INFO
+writing dependency_links to betfsm.egg-info/dependency_links.txt
+writing entry points to betfsm.egg-info/entry_points.txt
+writing requirements to betfsm.egg-info/requires.txt
+writing top-level names to betfsm.egg-info/top_level.txt
+reading manifest file 'betfsm.egg-info/SOURCES.txt'
+writing manifest file 'betfsm.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/masterthesis/kaixi_crospi_ws/install/betfsm/lib/python3.10/site-packages/betfsm.egg-link (link to .)
+Installing web_server script to /home/masterthesis/kaixi_crospi_ws/install/betfsm/lib/betfsm
+
+Installed /home/masterthesis/kaixi_crospi_ws/build/betfsm
+running symlink_data

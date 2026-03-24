@@ -1,0 +1,1267 @@
+[0.013s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper
+[0.051s] -- The C compiler identification is GNU 11.4.0
+[0.091s] -- The CXX compiler identification is GNU 11.4.0
+[0.096s] -- Detecting C compiler ABI info
+[0.145s] -- Detecting C compiler ABI info - done
+[0.151s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.151s] -- Detecting C compile features
+[0.151s] -- Detecting C compile features - done
+[0.153s] -- Detecting CXX compiler ABI info
+[0.209s] -- Detecting CXX compiler ABI info - done
+[0.215s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.215s] -- Detecting CXX compile features
+[0.215s] -- Detecting CXX compile features - done
+[0.224s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.355s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.410s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.470s] [0meTaSL version: 1.5.0[0m
+[0.471s] -- [1;32mThe (e)xpression-based (Ta)sk specification (L)anguage eTaSL for constraint-based robot task specification and control[m
+[0.471s] -- [1;32mBuilding eTaSL version 1.5.0[m
+[0.471s] -- [1;32meTaSL 1.5.0 (-) () (Stack trace)  (Platform:)[m
+[0.494s] -- Configuring done
+[0.496s] -- Generating done
+[0.496s] -- Build files have been written to: /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/3rd_party/google-test/googletest-download
+[0.533s] [ 11%] Creating directories for 'googletest'
+[0.583s] [ 22%] Performing download step (git clone) for 'googletest'
+[0.596s] 正克隆到 'googletest-src'...
+[1.870s] 已经位于 'main'
+[1.870s] 您的分支与上游分支 'origin/main' 一致。
+[1.909s] [ 33%] Performing update step for 'googletest'
+[2.244s] HEAD 目前位于 015950a9 Add an implmenetation of Notification for MinGW
+[2.269s] [ 44%] No patch step for 'googletest'
+[2.287s] [ 55%] No configure step for 'googletest'
+[2.308s] [ 66%] No build step for 'googletest'
+[2.328s] [ 77%] No install step for 'googletest'
+[2.348s] [ 88%] No test step for 'googletest'
+[2.368s] [100%] Completed 'googletest'
+[2.397s] [100%] Built target googletest
+[2.415s] -- Looking for pthread.h
+[2.476s] -- Looking for pthread.h - found
+[2.476s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.535s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.536s] -- Found Threads: TRUE  
+[2.555s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0")  
+[2.578s] -- Could NOT find Lua52 (missing: LUA_INCLUDE_DIR LUA_LIBRARIES) 
+[2.582s] -- Found Lua51: /usr/lib/x86_64-linux-gnu/liblua5.1.so;/usr/lib/x86_64-linux-gnu/libm.so (found version "5.1.5") 
+[2.582s] -- Performing Test LUABIND_HAS_CXX11
+[2.647s] -- Performing Test LUABIND_HAS_CXX11 - Success
+[2.648s] -- Performing Test SUPPORTS_Wall_FLAG
+[2.708s] -- Performing Test SUPPORTS_Wall_FLAG - Success
+[2.708s] -- Performing Test SUPPORTS_Wextra_FLAG
+[2.767s] -- Performing Test SUPPORTS_Wextra_FLAG - Success
+[2.768s] -- Performing Test SUPPORTS_Wno_deprecated_declarations_FLAG
+[2.827s] -- Performing Test SUPPORTS_Wno_deprecated_declarations_FLAG - Success
+[2.828s] -- Performing Test SUPPORTS_Wno_unused_macros_FLAG
+[2.886s] -- Performing Test SUPPORTS_Wno_unused_macros_FLAG - Success
+[2.886s] -- Performing Test SUPPORTS_Wlogical_op_FLAG
+[2.947s] -- Performing Test SUPPORTS_Wlogical_op_FLAG - Success
+[2.948s] -- Performing Test SUPPORTS_Wmissing_declarations_FLAG
+[3.010s] -- Performing Test SUPPORTS_Wmissing_declarations_FLAG - Success
+[3.010s] -- Performing Test SUPPORTS_Wsign_conversion_FLAG
+[3.066s] -- Performing Test SUPPORTS_Wsign_conversion_FLAG - Success
+[3.067s] -- Performing Test SUPPORTS_pedantic_FLAG
+[3.127s] -- Performing Test SUPPORTS_pedantic_FLAG - Success
+[3.127s] -- Performing Test SUPPORTS_Wcast_align_FLAG
+[3.190s] -- Performing Test SUPPORTS_Wcast_align_FLAG - Success
+[3.191s] -- Performing Test SUPPORTS_Wcast_qual_FLAG
+[3.282s] -- Performing Test SUPPORTS_Wcast_qual_FLAG - Success
+[3.285s] -- Performing Test SUPPORTS_Wctor_dtor_privacy_FLAG
+[3.363s] -- Performing Test SUPPORTS_Wctor_dtor_privacy_FLAG - Success
+[3.364s] -- Performing Test SUPPORTS_Winit_self_FLAG
+[3.421s] -- Performing Test SUPPORTS_Winit_self_FLAG - Success
+[3.422s] -- Performing Test SUPPORTS_Wdisabled_optimizations_FLAG
+[3.443s] -- Performing Test SUPPORTS_Wdisabled_optimizations_FLAG - Failed
+[3.444s] -- Performing Test SUPPORTS_Wformat_2_FLAG
+[3.502s] -- Performing Test SUPPORTS_Wformat_2_FLAG - Success
+[3.503s] -- Performing Test SUPPORTS_Wmissing_include_dirs_FLAG
+[3.562s] -- Performing Test SUPPORTS_Wmissing_include_dirs_FLAG - Success
+[3.563s] -- Performing Test SUPPORTS_Wold_style_cast_FLAG
+[3.621s] -- Performing Test SUPPORTS_Wold_style_cast_FLAG - Success
+[3.622s] -- Performing Test SUPPORTS_Woverloaded_virtual_FLAG
+[3.679s] -- Performing Test SUPPORTS_Woverloaded_virtual_FLAG - Success
+[3.680s] -- Performing Test SUPPORTS_Wredundant_decls_FLAG
+[3.739s] -- Performing Test SUPPORTS_Wredundant_decls_FLAG - Success
+[3.739s] -- Performing Test SUPPORTS_Wshadow_FLAG
+[3.797s] -- Performing Test SUPPORTS_Wshadow_FLAG - Success
+[3.798s] -- Performing Test SUPPORTS_Wsign_promo_FLAG
+[3.857s] -- Performing Test SUPPORTS_Wsign_promo_FLAG - Success
+[3.858s] -- Performing Test SUPPORTS_Wstrict_null_sentinel_FLAG
+[3.938s] -- Performing Test SUPPORTS_Wstrict_null_sentinel_FLAG - Success
+[3.938s] -- Performing Test SUPPORTS_Wstrict_overflow_5_FLAG
+[4.078s] -- Performing Test SUPPORTS_Wstrict_overflow_5_FLAG - Success
+[4.078s] -- Performing Test SUPPORTS_Wno_cast_function_type_FLAG
+[4.255s] -- Performing Test SUPPORTS_Wno_cast_function_type_FLAG - Success
+[4.256s] -- Performing Test SUPPORTS_Wno_sign_conversion_FLAG
+[4.423s] -- Performing Test SUPPORTS_Wno_sign_conversion_FLAG - Success
+[4.425s] -- Performing Test SUPPORTS_Wnoexcept_FLAG
+[4.566s] -- Performing Test SUPPORTS_Wnoexcept_FLAG - Success
+[4.739s] -- Found Bullet: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so  
+[4.902s] -- Configuring done
+[5.184s] -- Generating done
+[5.266s] -- Build files have been written to: /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper
+[5.279s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper' returned '0': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper
+[5.285s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper -- -j16 -l16
+[5.424s] [  1%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/3rd_party/google-test/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[5.426s] [  1%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/class.cpp.o[0m
+[5.427s] [  1%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/create_class.cpp.o[0m
+[5.428s] [  2%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/class_info.cpp.o[0m
+[5.428s] [  2%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Bounds.cpp.o[0m
+[5.428s] [  2%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/BLASReplacement.cpp.o[0m
+[5.431s] [  3%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Constraints.cpp.o[0m
+[5.431s] [  3%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/class_rep.cpp.o[0m
+[5.432s] [  3%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/class_registry.cpp.o[0m
+[5.432s] [  3%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Indexlist.cpp.o[0m
+[5.435s] [  4%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/LAPACKReplacement.cpp.o[0m
+[5.438s] [  4%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Matrices.cpp.o[0m
+[5.446s] [  4%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/MessageHandling.cpp.o[0m
+[5.446s] [  4%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Flipper.cpp.o[0m
+[5.446s] [  5%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/error.cpp.o[0m
+[5.453s] [  5%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_quaternion.cpp.o[0m
+[5.751s] [  6%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_expressions.cpp.o[0m
+[5.774s] [  6%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_motionprofiles.cpp.o[0m
+[5.800s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Matrices.cpp:[m[K In member function ‘[01m[Kvirtual qpOASES::returnValue qpOASES::SparseMatrix::getRowNorm(qpOASES::real_t*, qpOASES::int_t) const[m[K’:
+[5.800s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Matrices.cpp:853:33:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kfor[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[5.800s]   853 |                                 [01;35m[Kfor[m[K (i = jc[j]; i < jc[j+1]; i++);
+[5.801s]       |                                 [01;35m[K^~~[m[K
+[5.801s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Matrices.cpp:854:35:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kfor[m[K’
+[5.801s]   854 |                                   [01;36m[Knorm[m[K[ir[i]] += getAbs( val[i] );
+[5.801s]       |                                   [01;36m[K^~~~[m[K
+[5.847s] [  6%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/exception_handler.cpp.o[0m
+[5.967s] [  6%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/function.cpp.o[0m
+[6.073s] [  6%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/OQPinterface.cpp.o[0m
+[6.084s] [  6%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_rotation.cpp.o[0m
+[6.135s] [  7%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_wrench.cpp.o[0m
+[6.181s] [  8%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/function_introspection.cpp.o[0m
+[6.387s] [  9%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Options.cpp.o[0m
+[6.443s] [  9%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblem.cpp.o[0m
+[6.613s] [  9%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_chain.cpp.o[0m
+[6.626s] [  9%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/inheritance.cpp.o[0m
+[6.692s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblem.cpp:[m[K In member function ‘[01m[KqpOASES::returnValue qpOASES::QProblem::updateFarBounds(qpOASES::real_t, qpOASES::int_t, const real_t*, qpOASES::real_t*, const real_t*, qpOASES::real_t*, const real_t*, qpOASES::real_t*, const real_t*, qpOASES::real_t*) const[m[K’:
+[6.692s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblem.cpp:5513:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[6.692s]  5513 |     [01;35m[Kif[m[K ( returnvalue != SUCCESSFUL_RETURN )
+[6.692s]       |     [01;35m[K^~[m[K
+[6.693s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblem.cpp:5516:9:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[6.693s]  5516 |         [01;36m[Kif[m[K ( options.enableRamping == BT_TRUE )
+[6.693s]       |         [01;36m[K^~[m[K
+[6.721s] [  9%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblemB.cpp.o[0m
+[7.038s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblemB.cpp:[m[K In member function ‘[01m[KqpOASES::returnValue qpOASES::QProblemB::changeActiveSet(qpOASES::int_t, qpOASES::SubjectToStatus)[m[K’:
+[7.038s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblemB.cpp:3387:25:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kelse[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[7.039s]  3387 |                         [01;35m[Kelse[m[K
+[7.039s]       |                         [01;35m[K^~~~[m[K
+[7.039s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/QProblemB.cpp:3389:33:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kelse[m[K’
+[7.039s]  3389 |                                 [01;36m[KgetGlobalMessageHandler[m[K( )->throwInfo( RET_ADD_TO_ACTIVESET,messageString,__FUNC__,__FILE__,__LINE__,VS_VISIBLE );
+[7.039s]       |                                 [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[7.264s] [  9%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_frame.cpp.o[0m
+[7.459s] [ 10%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblem.cpp.o[0m
+[7.647s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblem.cpp:[m[K In member function ‘[01m[KqpOASES::returnValue qpOASES::SQProblem::hotstart(qpOASES::SymmetricMatrix*, const real_t*, qpOASES::Matrix*, const real_t*, const real_t*, const real_t*, const real_t*, qpOASES::int_t&, qpOASES::real_t*, const qpOASES::Bounds*, const qpOASES::Constraints*)[m[K’:
+[7.648s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblem.cpp:117:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[7.648s]   117 |     [01;35m[Kif[m[K ( cputime != 0 )
+[7.648s]       |     [01;35m[K^~[m[K
+[7.648s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblem.cpp:122:9:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[7.648s]   122 |         [01;36m[Kif[m[K ( setupNewAuxiliaryQP( H_new,A_new,lb_new,ub_new,lbA_new,ubA_new ) != SUCCESSFUL_RETURN )
+[7.648s]       |         [01;36m[K^~[m[K
+[7.649s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblem.cpp:[m[K In member function ‘[01m[KqpOASES::returnValue qpOASES::SQProblem::hotstart(const real_t*, const real_t*, const real_t*, const real_t*, const real_t*, const real_t*, const real_t*, qpOASES::int_t&, qpOASES::real_t*, const qpOASES::Bounds*, const qpOASES::Constraints*)[m[K’:
+[7.652s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblem.cpp:166:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[7.652s]   166 |     [01;35m[Kif[m[K ( cputime != 0 )
+[7.652s]       |     [01;35m[K^~[m[K
+[7.653s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblem.cpp:171:9:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[7.653s]   171 |         [01;36m[Kif[m[K ( setupNewAuxiliaryQP( H_new,A_new,lb_new,ub_new,lbA_new,ubA_new ) != SUCCESSFUL_RETURN )
+[7.653s]       |         [01;36m[K^~[m[K
+[7.780s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_motionprofiles.cpp:[m[K In member function ‘[01m[Kvoid KDL::MotionProfileTrapezoidal::compute()[m[K’:
+[7.780s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_motionprofiles.cpp:179:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::MPTrap>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[7.780s]   179 |     for (int i=0;[01;35m[Ki<mp.size()[m[K;++i) {
+[7.780s]       |                  [01;35m[K~^~~~~~~~~~[m[K
+[7.781s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_motionprofiles.cpp:194:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::MPTrap>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[7.781s]   194 |     for (int i=0;[01;35m[Ki<mp.size()[m[K;++i) {
+[7.781s]       |                  [01;35m[K~^~~~~~~~~~[m[K
+[7.826s] [ 10%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SQProblemSchur.cpp.o[0m
+[7.934s] [ 10%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_twist.cpp.o[0m
+[8.469s] [ 10%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SolutionAnalysis.cpp.o[0m
+[8.722s] [ 10%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/link_compatibility.cpp.o[0m
+[8.810s] [ 12%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SparseSolver.cpp.o[0m
+[8.849s] [ 13%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/mptrap.cpp.o[0m
+[9.090s] [ 13%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/SubjectTo.cpp.o[0m
+[9.149s] [ 13%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_double.cpp.o[0m
+[9.458s] [ 13%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/qpOASES.dir/__/__/etasl/expressiongraph_solver_qpoases/external/qpOASES/qpOASES-3.2.1/src/Utils.cpp.o[0m
+[9.726s] [ 13%] [32m[1mLinking CXX shared library libqpOASES.so[0m
+[9.938s] [ 14%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/lua51compat.cpp.o[0m
+[9.938s] [ 14%] Built target qpOASES
+[9.962s] [ 14%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_mimo.cpp.o[0m
+[9.994s] [ 15%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_vector.cpp.o[0m
+[10.007s] [ 15%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/object_rep.cpp.o[0m
+[10.616s] [ 15%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_function.cpp.o[0m
+[10.709s] [ 15%] [32m[1mLinking CXX shared library ../../../../../../../lib/libgtest.so[0m
+[10.710s] [ 15%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/open.cpp.o[0m
+[10.758s] [ 15%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/operator.cpp.o[0m
+[11.009s] [ 15%] Built target gtest
+[11.029s] [ 16%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/pcall.cpp.o[0m
+[11.081s] [ 16%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/scope.cpp.o[0m
+[11.128s] [ 16%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/integrator.cpp.o[0m
+[11.319s] [ 16%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/set_package_preload.cpp.o[0m
+[11.362s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/shared_ptr_converter.cpp.o[0m
+[11.425s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiongraph.dir/__/__/etasl/expressiongraph/src/expressiontree_integral.cpp.o[0m
+[11.478s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/3rd_party/google-test/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o[0m
+[11.551s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/3rd_party/google-test/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[11.613s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/stack_content_by_name.cpp.o[0m
+[11.688s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/weak_ref.cpp.o[0m
+[11.823s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/src/CMakeFiles/luabind.dir/wrapper_base.cpp.o[0m
+[12.684s] [ 17%] [32m[1mLinking CXX shared library ../../../../../../../lib/libgtest_main.so[0m
+[12.778s] [ 17%] Built target gtest_main
+[12.797s] [ 17%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/test_velestim.dir/__/__/etasl/expressiongraph_context/test/test_velestim.cpp.o[0m
+[12.880s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/integrator.hpp:23[m[K,
+[12.880s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/integrator.cpp:2[m[K:
+[12.880s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[KKDL::FunctionEvaluation<T>::FunctionEvaluation(KDL::FunctionDefinition::Ptr, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >) [with T = double; KDL::FunctionDefinition::Ptr = boost::shared_ptr<KDL::FunctionDefinition>][m[K’:
+[12.880s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/integrator.cpp:117:62:[m[K   required from here
+[12.880s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:325:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[12.880s]   325 |                 if ([01;35m[Klist.size() != definition->getNrOfParam()[m[K) {
+[12.880s]       |                     [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[12.984s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/integrator.hpp:24[m[K,
+[12.984s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/integrator.cpp:2[m[K:
+[12.984s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = double][m[K’:
+[12.984s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[12.984s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[12.984s]   129 |             for (int i=0;[01;35m[Ki<deriv.size()[m[K;++i) {
+[12.984s]       |                          [01;35m[K~^~~~~~~~~~~~~[m[K
+[12.989s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/integrator.hpp:23[m[K,
+[12.989s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/integrator.cpp:2[m[K:
+[12.989s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = double; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<double> >][m[K’:
+[12.990s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[12.990s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[12.990s]   381 |                 for (int i=0;[01;35m[Ki<arguments.size()[m[K;++i) {
+[12.990s]       |                              [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[13.487s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:[m[K In member function ‘[01m[Kvoid KDL::IntegralNode::ensure_computed()[m[K’:
+[13.487s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:222:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[13.487s]   222 |             for (int i=1;[01;35m[Ki<index_map.size()+1[m[K;++i) {
+[13.487s]       |                          [01;35m[K~^~~~~~~~~~~~~~~~~~~[m[K
+[13.493s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:[m[K In member function ‘[01m[Kvirtual void KDL::IntegralNode::setInputValues(const std::vector<double>&)[m[K’:
+[13.493s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:309:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[13.493s]   309 |             for (int i =0;[01;35m[Ki<values.size()[m[K;++i) {
+[13.493s]       |                           [01;35m[K~^~~~~~~~~~~~~~[m[K
+[13.562s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:21[m[K:
+[13.562s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[KKDL::FunctionEvaluation<T>::FunctionEvaluation(KDL::FunctionDefinition::Ptr, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >) [with T = double; KDL::FunctionDefinition::Ptr = boost::shared_ptr<KDL::FunctionDefinition>][m[K’:
+[13.562s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:153:72:[m[K   required from here
+[13.563s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:325:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[13.563s]   325 |                 if ([01;35m[Klist.size() != definition->getNrOfParam()[m[K) {
+[13.563s]       |                     [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.703s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/integrator.hpp:24[m[K,
+[13.704s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:23[m[K:
+[13.704s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = double][m[K’:
+[13.704s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[13.704s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[13.704s]   129 |             for (int i=0;[01;35m[Ki<deriv.size()[m[K;++i) {
+[13.704s]       |                          [01;35m[K~^~~~~~~~~~~~~[m[K
+[13.708s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/src/expressiontree_integral.cpp:21[m[K:
+[13.708s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = double; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<double> >][m[K’:
+[13.708s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[13.708s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[13.708s]   381 |                 for (int i=0;[01;35m[Ki<arguments.size()[m[K;++i) {
+[13.708s]       |                              [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[13.816s] [ 18%] [32m[1mLinking CXX shared library ../../../../../../../lib/libgmock.so[0m
+[13.912s] [ 18%] Built target gmock
+[13.928s] [ 18%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/3rd_party/google-test/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o[0m
+[14.236s] [ 19%] [32m[1mLinking CXX shared library libexpressiongraph.so[0m
+[14.268s] [ 20%] [32m[1mLinking CXX executable test_velestim[0m
+[14.364s] [ 21%] [32m[1mLinking CXX static library libluabind09.a[0m
+[14.368s] [ 21%] Built target test_velestim
+[14.402s] [ 21%] Built target luabind
+[14.417s] [ 21%] [32mBuilding C object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_lua/CMakeFiles/readline_c.dir/__/__/etasl/expressiongraph_lua/src/readline.c.o[0m
+[14.417s] [ 21%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_main.dir/test_has_get_pointer.cpp.o[0m
+[14.417s] [ 21%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/benchmark.dir/benchmark.cpp.o[0m
+[14.417s] [ 23%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_main.dir/main.cpp.o[0m
+[14.421s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand-line option ‘[01m[K-Wno-reorder[m[K’ is valid for C++/ObjC++ but not for C
+[14.446s] [ 24%] [32m[1mLinking CXX shared library libreadline_c.so[0m
+[14.484s] [ 24%] Built target readline_c
+[14.500s] [ 24%] [32mBuilding C object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_lua/CMakeFiles/rlcompleter_c.dir/__/__/etasl/expressiongraph_lua/src/rlcompleter.c.o[0m
+[14.504s] [01m[Kcc1:[m[K [01;35m[Kwarning: [m[Kcommand-line option ‘[01m[K-Wno-reorder[m[K’ is valid for C++/ObjC++ but not for C
+[14.533s] [ 25%] [32m[1mLinking CXX shared library librlcompleter_c.so[0m
+[14.572s] [ 25%] Built target rlcompleter_c
+[14.589s] [ 25%] Built target expressiongraph
+[14.610s] [ 26%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/solving_and_cloning.dir/__/__/etasl/expressiongraph/examples/solving_and_cloning.cpp.o[0m
+[14.611s] [ 27%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/matrix_traits.dir/__/__/etasl/expressiongraph/examples/matrix_traits.cpp.o[0m
+[14.611s] [ 27%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/mptrap_tst.dir/__/__/etasl/expressiongraph/examples/mptrap_tst.cpp.o[0m
+[14.611s] [ 27%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/geometry.dir/__/__/etasl/expressiongraph/examples/geometry.cpp.o[0m
+[14.614s] [ 28%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_function1.dir/__/__/etasl/expressiongraph/examples/expressiontree_function1.cpp.o[0m
+[14.614s] [ 28%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_trait.dir/__/__/etasl/expressiongraph/examples/expressiontree_trait.cpp.o[0m
+[14.614s] [ 29%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_function2.dir/__/__/etasl/expressiongraph/examples/expressiontree_function2.cpp.o[0m
+[14.615s] [ 29%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_variabletype.dir/__/__/etasl/expressiongraph/examples/expressiontree_variabletype.cpp.o[0m
+[14.615s] [ 29%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example.dir/__/__/etasl/expressiongraph/examples/expressiontree_example.cpp.o[0m
+[14.615s] [ 29%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example2.dir/__/__/etasl/expressiongraph/examples/expressiontree_example2.cpp.o[0m
+[14.615s] [ 30%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example4.dir/__/__/etasl/expressiongraph/examples/expressiontree_example4.cpp.o[0m
+[14.615s] [ 30%] [32m[1mLinking CXX static library libtest_main.a[0m
+[14.615s] [ 30%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example5.dir/__/__/etasl/expressiongraph/examples/expressiontree_example5.cpp.o[0m
+[14.616s] [ 30%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example3.dir/__/__/etasl/expressiongraph/examples/expressiontree_example3.cpp.o[0m
+[14.652s] [ 30%] Built target test_main
+[14.676s] [ 31%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example6.dir/__/__/etasl/expressiongraph/examples/expressiontree_example6.cpp.o[0m
+[14.963s] [ 31%] [32m[1mLinking CXX shared library ../../../../../../../lib/libgmock_main.so[0m
+[15.112s] [ 31%] Built target gmock_main
+[15.137s] [ 31%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example7.dir/__/__/etasl/expressiongraph/examples/expressiontree_example7.cpp.o[0m
+[15.969s] [ 31%] [32m[1mLinking CXX executable geometry[0m
+[16.102s] [ 31%] Built target geometry
+[16.127s] [ 31%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example8.dir/__/__/etasl/expressiongraph/examples/expressiontree_example8.cpp.o[0m
+[16.866s] [ 31%] [32m[1mLinking CXX executable mptrap_tst[0m
+[17.029s] [ 31%] Built target mptrap_tst
+[17.059s] [ 31%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example9.dir/__/__/etasl/expressiongraph/examples/expressiontree_example9.cpp.o[0m
+[17.341s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example6.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[17.343s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example6.cpp:109:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.343s]   109 |         for (int i=0;[01;35m[Ki<joints.size()[m[K;++i) {
+[17.343s]       |                      [01;35m[K~^~~~~~~~~~~~~~[m[K
+[17.386s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example5.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[17.387s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example5.cpp:110:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.387s]   110 |         for (int i=0;[01;35m[Ki<joints.size()[m[K;++i) {
+[17.387s]       |                      [01;35m[K~^~~~~~~~~~~~~~[m[K
+[17.563s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree.hpp:30[m[K,
+[17.563s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example.cpp:24[m[K:
+[17.563s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Vector][m[K’:
+[17.563s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[17.563s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Vector, std::allocator<KDL::Vector> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.563s]   129 |             for (int i=0;[01;35m[Ki<deriv.size()[m[K;++i) {
+[17.563s]       |                          [01;35m[K~^~~~~~~~~~~~~[m[K
+[17.566s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Rotation][m[K’:
+[17.566s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[17.566s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Vector, std::allocator<KDL::Vector> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.579s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree.hpp:30[m[K,
+[17.579s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_variabletype.cpp:24[m[K:
+[17.579s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Vector][m[K’:
+[17.579s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[17.580s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Vector, std::allocator<KDL::Vector> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.580s]   129 |             for (int i=0;[01;35m[Ki<deriv.size()[m[K;++i) {
+[17.580s]       |                          [01;35m[K~^~~~~~~~~~~~~[m[K
+[17.580s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_function1.cpp:25[m[K:
+[17.580s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[KKDL::FunctionEvaluation<T>::FunctionEvaluation(KDL::FunctionDefinition::Ptr, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >) [with T = double; KDL::FunctionDefinition::Ptr = boost::shared_ptr<KDL::FunctionDefinition>][m[K’:
+[17.581s] [01m[K/usr/include/boost/smart_ptr/make_shared_object.hpp:256:5:[m[K   required from ‘[01m[Ktypename boost::detail::sp_if_not_array<T>::type boost::make_shared(Args&& ...) [with T = KDL::FunctionEvaluation<double>; Args = {boost::shared_ptr<KDL::FunctionDefinition>&, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >&}; typename boost::detail::sp_if_not_array<T>::type = boost::shared_ptr<KDL::FunctionEvaluation<double> >][m[K’
+[17.581s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:611:56:[m[K   required from ‘[01m[Ktypename KDL::FunctionEvaluation<T>::Ptr KDL::make_FunctionEvaluation(KDL::FunctionDefinition::Ptr, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >) [with T = double; typename KDL::FunctionEvaluation<T>::Ptr = boost::shared_ptr<KDL::FunctionEvaluation<double> >; KDL::FunctionDefinition::Ptr = boost::shared_ptr<KDL::FunctionDefinition>][m[K’
+[17.581s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_function1.cpp:56:57:[m[K   required from here
+[17.581s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:325:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.581s]   325 |                 if ([01;35m[Klist.size() != definition->getNrOfParam()[m[K) {
+[17.581s]       |                     [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[17.583s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Rotation][m[K’:
+[17.583s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[17.583s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Vector, std::allocator<KDL::Vector> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.585s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[KKDL::FunctionEvaluation<T>::FunctionEvaluation(KDL::FunctionDefinition::Ptr, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >) [with T = KDL::Rotation; KDL::FunctionDefinition::Ptr = boost::shared_ptr<KDL::FunctionDefinition>][m[K’:
+[17.585s] [01m[K/usr/include/boost/smart_ptr/make_shared_object.hpp:256:5:[m[K   required from ‘[01m[Ktypename boost::detail::sp_if_not_array<T>::type boost::make_shared(Args&& ...) [with T = KDL::FunctionEvaluation<KDL::Rotation>; Args = {boost::shared_ptr<KDL::FunctionDefinition>&, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >&}; typename boost::detail::sp_if_not_array<T>::type = boost::shared_ptr<KDL::FunctionEvaluation<KDL::Rotation> >][m[K’
+[17.585s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:611:56:[m[K   required from ‘[01m[Ktypename KDL::FunctionEvaluation<T>::Ptr KDL::make_FunctionEvaluation(KDL::FunctionDefinition::Ptr, std::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >) [with T = KDL::Rotation; typename KDL::FunctionEvaluation<T>::Ptr = boost::shared_ptr<KDL::FunctionEvaluation<KDL::Rotation> >; KDL::FunctionDefinition::Ptr = boost::shared_ptr<KDL::FunctionDefinition>][m[K’
+[17.585s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_function1.cpp:85:58:[m[K   required from here
+[17.585s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:325:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::initializer_list<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.624s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_function2.cpp:26[m[K:
+[17.624s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = double; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<double> >][m[K’:
+[17.624s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[17.624s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.624s]   381 |                 for (int i=0;[01;35m[Ki<arguments.size()[m[K;++i) {
+[17.625s]       |                              [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[17.670s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = KDL::Rotation; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<KDL::Rotation> >][m[K’:
+[17.670s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[17.670s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.670s]   381 |                 for (int i=0;[01;35m[Ki<arguments.size()[m[K;++i) {
+[17.670s]       |                              [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[17.683s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = double; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<double> >][m[K’:
+[17.685s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[17.685s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.695s] [ 32%] [32m[1mLinking CXX executable expressiontree_example2[0m
+[17.723s] [ 32%] [32m[1mLinking CXX executable expressiontree_example3[0m
+[17.756s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example7.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[17.756s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example7.cpp:100:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[17.756s]   100 |         for (int i=0;[01;35m[Ki<joints.size()[m[K;++i) {
+[17.756s]       |                      [01;35m[K~^~~~~~~~~~~~~~[m[K
+[17.805s] [ 32%] [32m[1mLinking CXX executable expressiontree_trait[0m
+[17.843s] [ 32%] [32m[1mLinking CXX executable expressiontree_example4[0m
+[17.873s] [ 32%] Built target expressiontree_example2
+[17.902s] [ 34%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example10.dir/__/__/etasl/expressiongraph/examples/expressiontree_example10.cpp.o[0m
+[17.935s] [ 34%] Built target expressiontree_example3
+[17.966s] [ 34%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example11.dir/__/__/etasl/expressiongraph/examples/expressiontree_example11.cpp.o[0m
+[18.007s] [ 34%] Built target expressiontree_trait
+[18.024s] [ 34%] Built target expressiontree_example4
+[18.024s] [ 34%] [32m[1mLinking CXX executable expressiontree_example6[0m
+[18.030s] [ 34%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_example12.dir/__/__/etasl/expressiongraph/examples/expressiontree_example12.cpp.o[0m
+[18.030s] [ 34%] [32m[1mLinking CXX executable expressiontree_example5[0m
+[18.049s] [ 34%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/resolved_motion_rate_control.dir/__/__/etasl/expressiongraph/examples/resolved_motion_rate_control.cpp.o[0m
+[18.120s] [ 34%] [32m[1mLinking CXX executable expressiontree_example[0m
+[18.179s] [ 35%] [32m[1mLinking CXX executable expressiontree_variabletype[0m
+[18.212s] [ 35%] Built target expressiontree_example5
+[18.220s] [ 35%] Built target expressiontree_example6
+[18.239s] [ 36%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_perpendicular.dir/__/__/etasl/expressiongraph/examples/expressiontree_perpendicular.cpp.o[0m
+[18.246s] [ 36%] [32m[1mLinking CXX executable expressiontree_function2[0m
+[18.249s] [ 36%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/conversions_example.dir/__/__/etasl/expressiongraph/examples/conversions_example.cpp.o[0m
+[18.323s] [ 36%] Built target expressiontree_example
+[18.371s] [ 37%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_distance_to_line.dir/__/__/etasl/expressiongraph/examples/expressiontree_distance_to_line.cpp.o[0m
+[18.375s] [ 37%] Built target expressiontree_variabletype
+[18.403s] [ 37%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_conditional.dir/__/__/etasl/expressiongraph/examples/expressiontree_conditional.cpp.o[0m
+[18.431s] [ 38%] [32m[1mLinking CXX executable expressiontree_example7[0m
+[18.467s] [ 38%] Built target expressiontree_function2
+[18.502s] [ 38%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_cached_named.dir/__/__/etasl/expressiongraph/examples/expressiontree_cached_named.cpp.o[0m
+[18.523s] [ 38%] [32m[1mLinking CXX executable expressiontree_function1[0m
+[18.613s] [ 38%] Built target expressiontree_example7
+[18.638s] [ 38%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_optimizer.dir/__/__/etasl/expressiongraph/examples/expressiontree_optimizer.cpp.o[0m
+[18.708s] [ 38%] Built target expressiontree_function1
+[18.733s] [ 38%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_mimo_ex.dir/__/__/etasl/expressiongraph/examples/expressiontree_mimo_ex.cpp.o[0m
+[18.796s] [ 38%] [32m[1mLinking CXX executable matrix_traits[0m
+[18.818s] [ 38%] [32m[1mLinking CXX executable benchmark[0m
+[18.833s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example8.cpp:[m[K In function ‘[01m[KKDL::Twist numerical_timederivative_jacobian(boost::shared_ptr<KDL::Expression_Chain>&, std::vector<double>, std::vector<double>, int, double)[m[K’:
+[18.833s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example8.cpp:50:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[18.833s]    50 |     for (int i=0;[01;35m[Ki<val.size()[m[K;++i) {
+[18.833s]       |                  [01;35m[K~^~~~~~~~~~~[m[K
+[18.834s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_example8.cpp:59:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[18.836s]    59 |     for (int i=0;[01;35m[Ki<val.size()[m[K;++i) {
+[18.836s]       |                  [01;35m[K~^~~~~~~~~~~[m[K
+[19.001s] [ 38%] Built target benchmark
+[19.012s] [ 38%] Built target matrix_traits
+[19.026s] [ 38%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_sensor.dir/__/__/etasl/expressiongraph/examples/expressiontree_sensor.cpp.o[0m
+[19.038s] [ 38%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_motion_profile.dir/__/__/etasl/expressiongraph/examples/expressiontree_motion_profile.cpp.o[0m
+[19.413s] [ 38%] [32m[1mLinking CXX executable expressiontree_example8[0m
+[19.589s] [ 38%] Built target expressiontree_example8
+[19.626s] [ 38%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/expressiontree_motion_profile2.dir/__/__/etasl/expressiongraph/examples/expressiontree_motion_profile2.cpp.o[0m
+[20.378s] [ 39%] [32m[1mLinking CXX executable expressiontree_example9[0m
+[20.410s] [ 39%] [32m[1mLinking CXX executable conversions_example[0m
+[20.546s] [ 39%] Built target expressiontree_example9
+[20.552s] [ 39%] Built target conversions_example
+[20.572s] [ 40%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/initial_value.dir/__/__/etasl/expressiongraph/examples/initial_value.cpp.o[0m
+[20.576s] [ 40%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/tutorial1.dir/__/__/etasl/expressiongraph/examples/tutorial1.cpp.o[0m
+[21.116s] [ 41%] [32m[1mLinking CXX executable expressiontree_example11[0m
+[21.175s] [ 41%] [32m[1mLinking CXX executable expressiontree_example10[0m
+[21.190s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_optimizer.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[21.191s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_optimizer.cpp:84:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.191s]    84 |     for (int i=0;[01;35m[Ki<jval.size()[m[K;++i) jval[i] = 0.05;
+[21.191s]       |                  [01;35m[K~^~~~~~~~~~~~[m[K
+[21.191s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/expressiontree_optimizer.cpp:88:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.191s]    88 |     for (int i=0;[01;35m[Ki<jval.size()[m[K;++i) jval[i] = 0.05;
+[21.191s]       |                  [01;35m[K~^~~~~~~~~~~~[m[K
+[21.287s] [ 41%] Built target expressiontree_example11
+[21.314s] [ 42%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/tutorial2.dir/__/__/etasl/expressiongraph/examples/tutorial2.cpp.o[0m
+[21.349s] [ 42%] Built target expressiontree_example10
+[21.358s] [ 42%] [32m[1mLinking CXX executable expressiontree_example12[0m
+[21.375s] [ 42%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/tutorial3.dir/__/__/etasl/expressiongraph/examples/tutorial3.cpp.o[0m
+[21.389s] [ 42%] [32m[1mLinking CXX executable expressiontree_motion_profile[0m
+[21.534s] [ 42%] Built target expressiontree_example12
+[21.557s] [ 42%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/saturate.dir/__/__/etasl/expressiongraph/examples/saturate.cpp.o[0m
+[21.572s] [ 42%] Built target expressiontree_motion_profile
+[21.573s] [ 42%] [32m[1mLinking CXX executable expressiontree_conditional[0m
+[21.578s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree.hpp:30[m[K,
+[21.578s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/examples/solving_and_cloning.cpp:36[m[K:
+[21.578s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = double][m[K’:
+[21.578s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[21.578s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[21.578s]   129 |             for (int i=0;[01;35m[Ki<deriv.size()[m[K;++i) {
+[21.579s]       |                          [01;35m[K~^~~~~~~~~~~~~[m[K
+[21.600s] [ 43%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/debug1.dir/__/__/etasl/expressiongraph/examples/debug1.cpp.o[0m
+[21.629s] [ 43%] [32m[1mLinking CXX executable expressiontree_perpendicular[0m
+[21.694s] [ 45%] [32m[1mLinking CXX executable expressiontree_cached_named[0m
+[21.733s] [ 45%] [32m[1mLinking CXX executable expressiontree_distance_to_line[0m
+[21.755s] [ 45%] Built target expressiontree_conditional
+[21.784s] [ 46%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/quat.dir/__/__/etasl/expressiongraph/examples/quat.cpp.o[0m
+[21.823s] [ 46%] Built target expressiontree_perpendicular
+[21.851s] [ 46%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/CMakeFiles/test_expressiongraph.dir/__/__/etasl/expressiongraph/tests/test_expressiongraph.cpp.o[0m
+[21.863s] [ 47%] [32m[1mLinking CXX executable expressiontree_motion_profile2[0m
+[21.883s] [ 47%] Built target expressiontree_cached_named
+[21.912s] [ 47%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/variables.cpp.o[0m
+[21.929s] [ 47%] Built target expressiontree_distance_to_line
+[21.942s] [ 48%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/constraints.cpp.o[0m
+[21.953s] [ 48%] [32m[1mLinking CXX executable expressiontree_optimizer[0m
+[22.036s] [ 48%] Built target expressiontree_motion_profile2
+[22.046s] [ 48%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/controller.cpp.o[0m
+[22.124s] [ 48%] Built target expressiontree_optimizer
+[22.135s] [ 48%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/groupingobserver.cpp.o[0m
+[22.140s] [ 49%] [32m[1mLinking CXX executable expressiontree_mimo_ex[0m
+[22.278s] [ 49%] [32m[1mLinking CXX executable expressiontree_sensor[0m
+[22.316s] [ 49%] Built target expressiontree_mimo_ex
+[22.326s] [ 50%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/monitors.cpp.o[0m
+[22.458s] [ 50%] Built target expressiontree_sensor
+[22.471s] [ 50%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/outputs.cpp.o[0m
+[23.718s] [ 50%] [32m[1mLinking CXX executable tutorial1[0m
+[23.775s] [ 50%] [32m[1mLinking CXX executable initial_value[0m
+[23.903s] [ 50%] Built target tutorial1
+[23.914s] [ 50%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/outputs_matlab.cpp.o[0m
+[23.951s] [ 50%] Built target initial_value
+[23.965s] [ 50%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/outputs_csv.cpp.o[0m
+[24.582s] [ 50%] [32m[1mLinking CXX executable tutorial2[0m
+[24.753s] [ 51%] [32m[1mLinking CXX executable tutorial3[0m
+[24.805s] [ 51%] Built target tutorial2
+[24.818s] [ 52%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/context.cpp.o[0m
+[24.847s] [ 52%] [32m[1mLinking CXX executable debug1[0m
+[24.890s] [ 52%] [32m[1mLinking CXX executable saturate[0m
+[24.961s] [ 52%] Built target tutorial3
+[24.976s] [ 52%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/fileutils.cpp.o[0m
+[25.038s] [ 52%] Built target debug1
+[25.051s] [ 52%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/defaultobserver.cpp.o[0m
+[25.086s] [ 52%] Built target saturate
+[25.096s] [ 53%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context/CMakeFiles/expressiongraph_context.dir/__/__/etasl/expressiongraph_context/src/solver_registry.cpp.o[0m
+[25.259s] [ 53%] [32m[1mLinking CXX executable resolved_motion_rate_control[0m
+[25.398s] [ 53%] [32m[1mLinking CXX executable quat[0m
+[25.427s] [ 53%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_lua/CMakeFiles/expressiongraph_lua.dir/__/__/etasl/expressiongraph_lua/src/bind_kdl.cpp.o[0m
+[25.543s] [ 53%] Built target resolved_motion_rate_control
+[25.553s] [ 53%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_lua/CMakeFiles/expressiongraph_lua.dir/__/__/etasl/expressiongraph_lua/src/init.cpp.o[0m
+[25.587s] [ 53%] [32m[1mLinking CXX executable solving_and_cloning[0m
+[25.587s] [ 53%] Built target quat
+[25.615s] [ 53%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_abstract_base.dir/test_abstract_base.cpp.o[0m
+[25.686s] [ 54%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_adopt.dir/test_adopt.cpp.o[0m
+[25.952s] [ 54%] Built target solving_and_cloning
+[25.981s] [ 54%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_adopt_wrapper.dir/test_adopt_wrapper.cpp.o[0m
+[26.249s] [ 54%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_attributes.dir/test_attributes.cpp.o[0m
+[26.582s] [ 54%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_automatic_smart_ptr.dir/test_automatic_smart_ptr.cpp.o[0m
+[26.695s] [ 54%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_back_reference.dir/test_back_reference.cpp.o[0m
+[26.745s] [ 56%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_builtin_converters.dir/test_builtin_converters.cpp.o[0m
+[26.929s] [ 56%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_class_info.dir/test_class_info.cpp.o[0m
+[28.079s] [ 57%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_collapse_converter.dir/test_collapse_converter.cpp.o[0m
+[28.103s] [ 57%] [32m[1mLinking CXX executable test_expressiongraph[0m
+[28.136s] [ 57%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_const.dir/test_const.cpp.o[0m
+[28.410s] [ 57%] Built target test_expressiongraph
+[28.463s] [ 57%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_construction.dir/test_construction.cpp.o[0m
+[28.897s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver_factory.hpp:19[m[K,
+[28.897s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver_registry.hpp:16[m[K,
+[28.897s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/src/solver_registry.cpp:10[m[K:
+[28.897s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver.hpp:[m[K In member function ‘[01m[Kvirtual int KDL::solver::prepareInitializationFull(KDL::Context::Ptr, double)[m[K’:
+[28.897s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver.hpp:125:72:[m[K [01;35m[Kwarning: [m[Kparameter ‘[01m[Kweight_factor[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-parameter-Wunused-but-set-parameter]8;;[m[K]
+[28.897s]   125 |         virtual int prepareInitializationFull(Context::Ptr ctx, [01;35m[Kdouble weight_factor[m[K) {
+[28.898s]       |                                                                 [01;35m[K~~~~~~~^~~~~~~~~~~~~[m[K
+[28.945s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/context.hpp:5[m[K,
+[28.945s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/src/context.cpp:4[m[K:
+[28.945s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = double][m[K’:
+[28.945s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[28.945s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[28.946s]   129 |             for (int i=0;[01;35m[Ki<deriv.size()[m[K;++i) {
+[28.946s]       |                          [01;35m[K~^~~~~~~~~~~~~[m[K
+[29.270s] [ 58%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_create_in_thread.dir/test_create_in_thread.cpp.o[0m
+[29.746s] [ 58%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_def_from_base.dir/test_def_from_base.cpp.o[0m
+[30.572s] [ 58%] [32m[1mLinking CXX shared library libexpressiongraph_context.so[0m
+[30.917s] [ 58%] Built target expressiongraph_context
+[30.949s] [ 59%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_destruction.dir/test_destruction.cpp.o[0m
+[31.010s] [ 59%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_dynamic_type.dir/test_dynamic_type.cpp.o[0m
+[31.180s] [ 59%] [32m[1mLinking CXX executable test_adopt[0m
+[31.338s] [ 59%] Built target test_adopt
+[31.367s] [ 59%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_exception_handlers.dir/test_exception_handlers.cpp.o[0m
+[31.421s] [ 59%] [32m[1mLinking CXX executable test_abstract_base[0m
+[31.536s] [ 60%] [32m[1mLinking CXX executable test_adopt_wrapper[0m
+[31.585s] [ 60%] Built target test_abstract_base
+[31.613s] [ 60%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_exceptions.dir/test_exceptions.cpp.o[0m
+[31.701s] [ 60%] Built target test_adopt_wrapper
+[31.731s] [ 61%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_extend_class_in_lua.dir/test_extend_class_in_lua.cpp.o[0m
+[32.165s] [ 61%] [32m[1mLinking CXX executable test_builtin_converters[0m
+[32.298s] [ 62%] [32m[1mLinking CXX executable test_automatic_smart_ptr[0m
+[32.317s] [ 62%] Built target test_builtin_converters
+[32.345s] [ 62%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_free_functions.dir/test_free_functions.cpp.o[0m
+[32.455s] [ 62%] Built target test_automatic_smart_ptr
+[32.484s] [ 63%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_function_converter.dir/test_function_converter.cpp.o[0m
+[32.535s] [ 63%] [32m[1mLinking CXX executable test_back_reference[0m
+[32.669s] [ 63%] [32m[1mLinking CXX executable test_class_info[0m
+[32.729s] [ 63%] Built target test_back_reference
+[32.759s] [ 63%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_function_introspection.dir/test_function_introspection.cpp.o[0m
+[32.848s] [ 63%] Built target test_class_info
+[32.874s] [ 63%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_function_object.dir/test_function_object.cpp.o[0m
+[33.028s] [ 63%] [32m[1mLinking CXX executable test_attributes[0m
+[33.191s] [ 63%] Built target test_attributes
+[33.219s] [ 63%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_function_overload_overflow.dir/test_function_overload_overflow.cpp.o[0m
+[33.560s] [ 63%] [32m[1mLinking CXX executable test_collapse_converter[0m
+[33.712s] [ 63%] Built target test_collapse_converter
+[33.740s] [ 63%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_held_type.dir/test_held_type.cpp.o[0m
+[33.792s] [ 64%] [32m[1mLinking CXX executable test_const[0m
+[33.950s] [ 64%] Built target test_const
+[33.978s] [ 65%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_implicit_cast.dir/test_implicit_cast.cpp.o[0m
+[34.254s] [ 65%] [32m[1mLinking CXX executable test_construction[0m
+[34.412s] [ 65%] Built target test_construction
+[34.440s] [ 65%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_implicit_raw.dir/test_implicit_raw.cpp.o[0m
+[34.938s] [ 65%] [32m[1mLinking CXX executable test_create_in_thread[0m
+[35.087s] [ 65%] Built target test_create_in_thread
+[35.110s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_lua/src/bind_kdl.cpp:3[m[K:
+[35.110s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = KDL::Quaternion; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<KDL::Quaternion> >][m[K’:
+[35.110s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[35.110s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[35.110s]   381 |                 for (int i=0;[01;35m[Ki<arguments.size()[m[K;++i) {
+[35.111s]       |                              [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[35.117s] [ 65%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_intrusive_ptr.dir/test_intrusive_ptr.cpp.o[0m
+[35.117s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = KDL::Wrench; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<KDL::Wrench> >][m[K’:
+[35.117s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[35.118s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[35.124s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = KDL::Twist; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<KDL::Twist> >][m[K’:
+[35.125s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[35.125s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[35.132s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = KDL::Frame; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<KDL::Frame> >][m[K’:
+[35.132s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[35.132s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[35.139s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = KDL::Rotation; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<KDL::Rotation> >][m[K’:
+[35.139s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[35.139s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[35.146s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = KDL::Vector; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<KDL::Vector> >][m[K’:
+[35.146s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[35.146s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[35.219s] [ 65%] [32m[1mLinking CXX executable test_def_from_base[0m
+[35.241s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp: In instantiation of ‘[01m[Ktypename KDL::Expression<T>::Ptr KDL::FunctionEvaluation<T>::clone() [with T = double; typename KDL::Expression<T>::Ptr = boost::shared_ptr<KDL::Expression<double> >][m[K’:
+[35.241s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:378:49:[m[K   required from here
+[35.241s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_function.hpp:381:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<KDL::ExpressionBase> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[35.377s] [ 65%] Built target test_def_from_base
+[35.406s] [ 65%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_iterator.dir/test_iterator.cpp.o[0m
+[36.397s] [ 65%] [32m[1mLinking CXX executable test_destruction[0m
+[36.558s] [ 65%] Built target test_destruction
+[36.585s] [ 65%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_lua_classes.dir/test_lua_classes.cpp.o[0m
+[36.650s] [ 67%] [32m[1mLinking CXX executable test_dynamic_type[0m
+[36.759s] [ 67%] [32m[1mLinking CXX executable test_exception_handlers[0m
+[36.847s] [ 67%] Built target test_dynamic_type
+[36.897s] [ 67%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_null_pointer.dir/test_null_pointer.cpp.o[0m
+[36.930s] [ 67%] Built target test_exception_handlers
+[36.957s] [ 67%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_object.dir/test_object.cpp.o[0m
+[37.307s] [ 68%] [32m[1mLinking CXX executable test_exceptions[0m
+[37.332s] [ 68%] [32m[1mLinking CXX executable test_extend_class_in_lua[0m
+[37.471s] [ 68%] Built target test_exceptions
+[37.498s] [ 69%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_operators.dir/test_operators.cpp.o[0m
+[37.501s] [ 69%] Built target test_extend_class_in_lua
+[37.529s] [ 69%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_package_preload.dir/test_package_preload.cpp.o[0m
+[38.030s] [ 70%] [32m[1mLinking CXX executable test_function_introspection[0m
+[38.058s] [ 70%] [32m[1mLinking CXX executable test_function_converter[0m
+[38.149s] [ 70%] [32m[1mLinking CXX executable test_free_functions[0m
+[38.220s] [ 70%] Built target test_function_converter
+[38.231s] [ 71%] [32m[1mLinking CXX executable test_function_overload_overflow[0m
+[38.246s] [ 72%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_policies.dir/test_policies.cpp.o[0m
+[38.273s] [ 72%] Built target test_function_introspection
+[38.311s] [ 72%] Built target test_free_functions
+[38.317s] [ 72%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_private_destructors.dir/test_private_destructors.cpp.o[0m
+[38.341s] [ 72%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_properties.dir/test_properties.cpp.o[0m
+[38.465s] [ 72%] Built target test_function_overload_overflow
+[38.515s] [ 72%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_scope.dir/test_scope.cpp.o[0m
+[38.608s] [ 72%] [32m[1mLinking CXX executable test_function_object[0m
+[38.765s] [ 72%] Built target test_function_object
+[38.769s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_lua/src/bind_kdl.cpp:136:17:[m[K [01;35m[Kwarning: [m[K‘[01m[KKDL::Rotation l_compose(const KDL::Rotation&, const KDL::Rotation&)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[38.770s]   136 | static Rotation [01;35m[Kl_compose[m[K(const Rotation& R1,const Rotation& R2) {
+[38.770s]       |                 [01;35m[K^~~~~~~~~[m[K
+[38.795s] [ 72%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_separation.dir/test_separation.cpp.o[0m
+[39.852s] [ 73%] [32m[1mLinking CXX executable test_implicit_raw[0m
+[39.906s] [ 73%] [32m[1mLinking CXX executable test_held_type[0m
+[40.016s] [ 73%] Built target test_implicit_raw
+[40.043s] [ 73%] [32m[1mLinking CXX executable test_implicit_cast[0m
+[40.050s] [ 74%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_set_instance_value.dir/test_set_instance_value.cpp.o[0m
+[40.072s] [ 74%] Built target test_held_type
+[40.102s] [ 74%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_shadow.dir/test_shadow.cpp.o[0m
+[40.207s] [ 74%] Built target test_implicit_cast
+[40.237s] [ 75%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_shared_ptr.dir/test_shared_ptr.cpp.o[0m
+[40.823s] [ 75%] [32m[1mLinking CXX executable test_intrusive_ptr[0m
+[40.900s] [ 76%] [32m[1mLinking CXX executable test_iterator[0m
+[40.978s] [ 76%] Built target test_intrusive_ptr
+[41.006s] [ 76%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_simple_class.dir/test_simple_class.cpp.o[0m
+[41.057s] [ 76%] Built target test_iterator
+[41.087s] [ 76%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_smart_ptr_attributes.dir/test_smart_ptr_attributes.cpp.o[0m
+[42.392s] [ 78%] [32m[1mLinking CXX executable test_null_pointer[0m
+[42.553s] [ 78%] Built target test_null_pointer
+[42.581s] [ 79%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_super_leak.dir/test_super_leak.cpp.o[0m
+[43.100s] [ 79%] [32m[1mLinking CXX executable test_package_preload[0m
+[43.270s] [ 79%] Built target test_package_preload
+[43.312s] [ 79%] [32m[1mLinking CXX executable test_lua_classes[0m
+[43.320s] [ 79%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_table.dir/test_table.cpp.o[0m
+[43.489s] [ 79%] Built target test_lua_classes
+[43.520s] [ 80%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_tag_function.dir/test_tag_function.cpp.o[0m
+[43.765s] [ 80%] [32m[1mLinking CXX executable test_properties[0m
+[43.920s] [ 81%] [32m[1mLinking CXX executable test_private_destructors[0m
+[43.932s] [ 81%] Built target test_properties
+[43.976s] [ 81%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_typetraits.dir/test_typetraits.cpp.o[0m
+[44.086s] [ 81%] Built target test_private_destructors
+[44.112s] [ 81%] [32m[1mLinking CXX executable test_object[0m
+[44.114s] [ 81%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_unchecked.dir/test_unchecked.cpp.o[0m
+[44.291s] [ 81%] [32m[1mLinking CXX executable test_operators[0m
+[44.303s] [ 82%] [32m[1mLinking CXX executable test_typetraits[0m
+[44.322s] [ 82%] Built target test_object
+[44.354s] [ 82%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_unsigned_int.dir/test_unsigned_int.cpp.o[0m
+[44.427s] [ 82%] [32m[1mLinking CXX executable test_separation[0m
+[44.459s] [ 82%] Built target test_typetraits
+[44.462s] [ 82%] Built target test_operators
+[44.485s] [ 82%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_user_defined_converter.dir/test_user_defined_converter.cpp.o[0m
+[44.492s] [ 83%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_value_wrapper.dir/test_value_wrapper.cpp.o[0m
+[44.579s] [ 83%] Built target test_separation
+[44.605s] [ 84%] [32m[1mLinking CXX executable test_scope[0m
+[44.613s] [ 85%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_vector_of_object.dir/test_vector_of_object.cpp.o[0m
+[44.656s] [ 85%] [32m[1mLinking CXX executable test_policies[0m
+[44.778s] [ 85%] Built target test_scope
+[44.813s] [ 85%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_vector_of_number.dir/test_vector_of_number.cpp.o[0m
+[44.852s] [ 85%] Built target test_policies
+[44.880s] [ 85%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_virtual_inheritance.dir/test_virtual_inheritance.cpp.o[0m
+[45.349s] [ 85%] [32m[1mLinking CXX executable test_set_instance_value[0m
+[45.474s] [ 85%] [32m[1mLinking CXX executable test_value_wrapper[0m
+[45.503s] [ 85%] Built target test_set_instance_value
+[45.533s] [ 85%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/luabind/test/CMakeFiles/test_yield.dir/test_yield.cpp.o[0m
+[45.546s] [ 85%] Built target test_value_wrapper
+[45.573s] [ 85%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/expressiongraph_solver_qpoases.dir/__/__/etasl/expressiongraph_solver_qpoases/src/qpoases_messages.cpp.o[0m
+[45.602s] [ 85%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/expressiongraph_solver_qpoases.dir/__/__/etasl/expressiongraph_solver_qpoases/src/qpoases_solver.cpp.o[0m
+[45.700s] [ 85%] [32m[1mLinking CXX executable test_vector_of_object[0m
+[45.749s] [ 85%] [32m[1mLinking CXX executable test_shadow[0m
+[45.861s] [ 85%] Built target test_vector_of_object
+[45.873s] [ 85%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_solver_qpoases/CMakeFiles/expressiongraph_solver_qpoases.dir/__/__/etasl/expressiongraph_solver_qpoases/src/solver_factory_qpoases.cpp.o[0m
+[45.915s] [ 85%] Built target test_shadow
+[46.456s] [ 85%] [32m[1mLinking CXX executable test_shared_ptr[0m
+[46.463s] [ 86%] [32m[1mLinking CXX executable test_simple_class[0m
+[46.623s] [ 86%] Built target test_simple_class
+[46.631s] [ 86%] Built target test_shared_ptr
+[46.879s] [ 86%] [32m[1mLinking CXX executable test_smart_ptr_attributes[0m
+[47.060s] [ 86%] Built target test_smart_ptr_attributes
+[47.932s] [ 86%] [32m[1mLinking CXX executable test_super_leak[0m
+[48.089s] [ 86%] Built target test_super_leak
+[48.181s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/include/expressiongraph/qpoases_solver.hpp:8[m[K,
+[48.181s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/src/qpoases_solver.cpp:1[m[K:
+[48.181s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver.hpp:[m[K In member function ‘[01m[Kvirtual int KDL::solver::prepareInitializationFull(KDL::Context::Ptr, double)[m[K’:
+[48.181s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver.hpp:125:72:[m[K [01;35m[Kwarning: [m[Kparameter ‘[01m[Kweight_factor[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-parameter-Wunused-but-set-parameter]8;;[m[K]
+[48.181s]   125 |         virtual int prepareInitializationFull(Context::Ptr ctx, [01;35m[Kdouble weight_factor[m[K) {
+[48.181s]       |                                                                 [01;35m[K~~~~~~~^~~~~~~~~~~~~[m[K
+[48.406s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/src/qpoases_solver.cpp:[m[K In member function ‘[01m[Kvirtual int KDL::qpOASESSolver::solve()[m[K’:
+[48.406s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/src/qpoases_solver.cpp:253:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[48.406s]   253 |     for (int i=0;[01;35m[Ki<optim_ndx.size()[m[K;++i) {
+[48.406s]       |                  [01;35m[K~^~~~~~~~~~~~~~~~~[m[K
+[48.500s] [ 86%] [32m[1mLinking CXX executable test_user_defined_converter[0m
+[48.512s] [ 87%] [32m[1mLinking CXX executable test_unsigned_int[0m
+[48.603s] [ 87%] Built target test_user_defined_converter
+[48.616s] [ 87%] Built target test_unsigned_int
+[48.736s] [ 87%] [32m[1mLinking CXX executable test_table[0m
+[48.834s] [ 87%] Built target test_table
+[48.884s] [ 87%] [32m[1mLinking CXX executable test_tag_function[0m
+[48.979s] [ 87%] Built target test_tag_function
+[49.041s] [ 87%] [32m[1mLinking CXX executable test_unchecked[0m
+[49.062s] [ 89%] [32m[1mLinking CXX executable test_yield[0m
+[49.131s] [ 89%] Built target test_unchecked
+[49.155s] [ 89%] Built target test_yield
+[49.237s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver_factory.hpp:19[m[K,
+[49.237s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver_registry.hpp:16[m[K,
+[49.237s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/include/expressiongraph/solver_factory_qpoases.hpp:14[m[K,
+[49.237s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_solver_qpoases/src/solver_factory_qpoases.cpp:9[m[K:
+[49.237s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver.hpp:[m[K In member function ‘[01m[Kvirtual int KDL::solver::prepareInitializationFull(KDL::Context::Ptr, double)[m[K’:
+[49.237s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/solver.hpp:125:72:[m[K [01;35m[Kwarning: [m[Kparameter ‘[01m[Kweight_factor[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-parameter-Wunused-but-set-parameter]8;;[m[K]
+[49.237s]   125 |         virtual int prepareInitializationFull(Context::Ptr ctx, [01;35m[Kdouble weight_factor[m[K) {
+[49.237s]       |                                                                 [01;35m[K~~~~~~~^~~~~~~~~~~~~[m[K
+[49.603s] [ 89%] [32m[1mLinking CXX executable test_vector_of_number[0m
+[49.639s] [ 90%] [32m[1mLinking CXX shared library libexpressiongraph_lua.so[0m
+[49.664s] [ 90%] [32m[1mLinking CXX executable test_virtual_inheritance[0m
+[49.686s] [ 90%] Built target test_vector_of_number
+[49.746s] [ 90%] Built target test_virtual_inheritance
+[49.755s] [ 91%] [32m[1mLinking CXX shared library libexpressiongraph_solver_qpoases.so[0m
+[49.853s] [ 91%] Built target expressiongraph_solver_qpoases
+[50.049s] [ 91%] Built target expressiongraph_lua
+[50.067s] [ 91%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_collision/CMakeFiles/expressiongraph_collision.dir/__/__/etasl/expressiongraph_collision/src/convex_object.cpp.o[0m
+[50.067s] [ 91%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context_lua/CMakeFiles/expressiongraph_context_lua.dir/__/__/etasl/expressiongraph_context_lua/src/rfsm_observer.cpp.o[0m
+[50.068s] [ 91%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context_lua/CMakeFiles/expressiongraph_context_lua.dir/__/__/etasl/expressiongraph_context_lua/src/scripting.cpp.o[0m
+[50.068s] [ 91%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/CMakeFiles/expressiongraph_spline.dir/__/__/etasl/expressiongraph_spline/src/cubicspline.cpp.o[0m
+[50.068s] [ 91%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_collision/CMakeFiles/expressiongraph_collision.dir/__/__/etasl/expressiongraph_collision/src/bullet_collision_lua.cpp.o[0m
+[50.068s] [ 91%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context_lua/CMakeFiles/expressiongraph_context_lua.dir/__/__/etasl/expressiongraph_context_lua/src/context_scripting.cpp.o[0m
+[50.068s] [ 91%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/CMakeFiles/expressiongraph_spline.dir/__/__/etasl/expressiongraph_spline/src/init.cpp.o[0m
+[50.069s] [ 92%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context_lua/CMakeFiles/expressiongraph_context_lua.dir/__/__/etasl/expressiongraph_context_lua/src/breakobserver.cpp.o[0m
+[50.069s] [ 92%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/CMakeFiles/expressiongraph_spline.dir/__/__/etasl/expressiongraph_spline/src/scripting.cpp.o[0m
+[50.069s] [ 94%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_collision/CMakeFiles/expressiongraph_collision.dir/__/__/etasl/expressiongraph_collision/src/init.cpp.o[0m
+[50.069s] [ 94%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/CMakeFiles/expressiongraph_spline.dir/__/__/etasl/expressiongraph_spline/src/splines.cpp.o[0m
+[50.069s] [ 94%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context_lua/CMakeFiles/expressiongraph_context_lua.dir/__/__/etasl/expressiongraph_context_lua/src/init.cpp.o[0m
+[50.069s] [ 95%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_context_lua/CMakeFiles/expressiongraph_context_lua.dir/__/__/etasl/expressiongraph_context_lua/src/luabind_util.cpp.o[0m
+[50.069s] [ 95%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/CMakeFiles/expressiongraph_spline.dir/__/__/etasl/expressiongraph_spline/src/motionmodel.cpp.o[0m
+[52.050s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_collision/src/convex_object.cpp:[m[K In function ‘[01m[KbtConvexShapePtr KDL::create_convex_scale(std::string, double, double, double)[m[K’:
+[52.051s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_collision/src/convex_object.cpp:116:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<btVector3>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[52.051s]   116 |     for (int i=0;[01;35m[Ki<v.size()[m[K;++i) {
+[52.051s]       |                  [01;35m[K~^~~~~~~~~[m[K
+[52.051s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_collision/src/convex_object.cpp:144:19:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<btVector3>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[52.051s]   144 |     for (int i=0;[01;35m[Ki<v.size()[m[K;++i) {
+[52.051s]       |                  [01;35m[K~^~~~~~~~~[m[K
+[56.398s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:[m[K In function ‘[01m[Kvoid register_context(lua_State*)[m[K’:
+[56.398s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:480:21:[m[K [01;35m[Kwarning: [m[Kcast between incompatible pointer to member types from ‘[01m[KKDL::Expression<double>::Ptr (KDL::Context::*)(const string&, const string&, double, KDL::Expression<double>::Ptr)[m[K’ {aka ‘[01m[Kboost::shared_ptr<KDL::Expression<double> > (KDL::Context::*)(const std::__cxx11::basic_string<char>&, const std::__cxx11::basic_string<char>&, double, boost::shared_ptr<KDL::Expression<double> >)[m[K’} to ‘[01m[KKDL::Expression<double>::Ptr (KDL::Context::*)(const string&, const string&, double, double)[m[K’ {aka ‘[01m[Kboost::shared_ptr<KDL::Expression<double> > (KDL::Context::*)(const std::__cxx11::basic_string<char>&, const std::__cxx11::basic_string<char>&, double, double)[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[56.398s]   480 |                     [01;35m[K( Expression<double>::Ptr (Context::*)[m[K
+[56.399s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.399s]   481 | [01;35m[K                        (const std::string&, const std::string&, double, double)[m[K
+[56.399s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.399s]   482 | [01;35m[K                    )& Context::addScalarVariable[m[K
+[56.399s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.399s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:485:21:[m[K [01;35m[Kwarning: [m[Kcast between incompatible pointer to member types from ‘[01m[KKDL::Expression<double>::Ptr (KDL::Context::*)(const string&, const string&, double, KDL::Expression<double>::Ptr)[m[K’ {aka ‘[01m[Kboost::shared_ptr<KDL::Expression<double> > (KDL::Context::*)(const std::__cxx11::basic_string<char>&, const std::__cxx11::basic_string<char>&, double, boost::shared_ptr<KDL::Expression<double> >)[m[K’} to ‘[01m[KKDL::Expression<double>::Ptr (KDL::Context::*)(const string&, const string&, double)[m[K’ {aka ‘[01m[Kboost::shared_ptr<KDL::Expression<double> > (KDL::Context::*)(const std::__cxx11::basic_string<char>&, const std::__cxx11::basic_string<char>&, double)[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[56.399s]   485 |                     [01;35m[K( Expression<double>::Ptr (Context::*)[m[K
+[56.399s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.399s]   486 | [01;35m[K                        (const std::string&, const std::string&, double)[m[K
+[56.399s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.399s]   487 | [01;35m[K                    )& Context::addScalarVariable[m[K
+[56.399s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.399s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:490:21:[m[K [01;35m[Kwarning: [m[Kcast between incompatible pointer to member types from ‘[01m[KKDL::Expression<double>::Ptr (KDL::Context::*)(const string&, const string&, double, KDL::Expression<double>::Ptr)[m[K’ {aka ‘[01m[Kboost::shared_ptr<KDL::Expression<double> > (KDL::Context::*)(const std::__cxx11::basic_string<char>&, const std::__cxx11::basic_string<char>&, double, boost::shared_ptr<KDL::Expression<double> >)[m[K’} to ‘[01m[KKDL::Expression<double>::Ptr (KDL::Context::*)(const string&, const string&, double)[m[K’ {aka ‘[01m[Kboost::shared_ptr<KDL::Expression<double> > (KDL::Context::*)(const std::__cxx11::basic_string<char>&, const std::__cxx11::basic_string<char>&, double)[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[56.400s]   490 |                     [01;35m[K( Expression<double>::Ptr (Context::*)[m[K
+[56.400s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.400s]   491 | [01;35m[K                        (const std::string&, const std::string&, double)[m[K
+[56.400s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.400s]   492 | [01;35m[K                    )& Context::addScalarVariable[m[K
+[56.400s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.400s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:518:21:[m[K [01;35m[Kwarning: [m[Kcast between incompatible pointer to member types from ‘[01m[Kint (KDL::Context::*)(const string&, int, double, double)[m[K’ {aka ‘[01m[Kint (KDL::Context::*)(const std::__cxx11::basic_string<char>&, int, double, double)[m[K’} to ‘[01m[Kint (KDL::Context::*)(const string&, int, double, double, const string&)[m[K’ {aka ‘[01m[Kint (KDL::Context::*)(const std::__cxx11::basic_string<char>&, int, double, double, const std::__cxx11::basic_string<char>&)[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcast-function-type-Wcast-function-type]8;;[m[K]
+[56.400s]   518 |                     [01;35m[K( int (Context::*) (const std::string &, int, double, double, const std::string&)) &Context::addBoxConstraint[m[K)
+[56.400s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[56.832s] In file included from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context/include/expressiongraph/context.hpp:5[m[K,
+[56.832s]                  from [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:1[m[K:
+[56.832s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Wrench][m[K’:
+[56.832s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[56.832s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Wrench, std::allocator<KDL::Wrench> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[56.832s]   129 |             for (int i=0;[01;35m[Ki<deriv.size()[m[K;++i) {
+[56.832s]       |                          [01;35m[K~^~~~~~~~~~~~~[m[K
+[56.834s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Twist][m[K’:
+[56.834s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[56.834s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Twist, std::allocator<KDL::Twist> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[56.835s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Frame][m[K’:
+[56.835s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[56.835s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Twist, std::allocator<KDL::Twist> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[56.836s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Rotation][m[K’:
+[56.837s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[56.837s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Vector, std::allocator<KDL::Vector> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[56.838s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = KDL::Vector][m[K’:
+[56.838s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[56.838s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<KDL::Vector, std::allocator<KDL::Vector> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[56.839s] /home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp: In instantiation of ‘[01m[Kvoid KDL::VariableType<ResultType>::update_variabletype_from_original() [with ResultType = double][m[K’:
+[56.839s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:126:18:[m[K   required from here
+[56.839s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include/expressiongraph/expressiontree_var.hpp:129:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[56.936s] [ 95%] [32m[1mLinking CXX shared library libexpressiongraph_collision.so[0m
+[57.110s] [ 95%] Built target expressiongraph_collision
+[57.241s] [ 95%] [32m[1mLinking CXX shared library libexpressiongraph_spline.so[0m
+[57.355s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:[m[K At global scope:
+[57.355s] [01m[K/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_context_lua/src/scripting.cpp:306:17:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid stackDump(lua_State*)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+[57.355s]   306 |     static void [01;35m[KstackDump[m[K (lua_State *L) {
+[57.355s]       |                 [01;35m[K^~~~~~~~~[m[K
+[57.415s] [ 95%] Built target expressiongraph_spline
+[59.592s] [ 95%] [32m[1mLinking CXX shared library libexpressiongraph_context_lua.so[0m
+[59.836s] [ 95%] Built target expressiongraph_context_lua
+[59.852s] [ 96%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_bspline/CMakeFiles/expressiongraph_bspline.dir/__/__/etasl/expressiongraph_bspline/src/bspline_scripting.cpp.o[0m
+[59.852s] [ 96%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_manip_lua/CMakeFiles/expressiongraph_manip_lua.dir/__/__/etasl/expressiongraph_manip_lua/src/manipulability_dir.cpp.o[0m
+[59.852s] [ 96%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_manip_lua/CMakeFiles/expressiongraph_manip_lua.dir/__/__/etasl/expressiongraph_manip_lua/src/scripting.cpp.o[0m
+[59.852s] [ 96%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_bspline/CMakeFiles/expressiongraph_bspline.dir/__/__/etasl/expressiongraph_bspline/src/bspline.cpp.o[0m
+[59.853s] [ 96%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_velocities/CMakeFiles/expressiongraph_velocities.dir/__/__/etasl/expressiongraph_velocities/src/init.cpp.o[0m
+[59.853s] [ 97%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_bspline/CMakeFiles/expressiongraph_bspline.dir/__/__/etasl/expressiongraph_bspline/src/init.cpp.o[0m
+[64.090s] [ 97%] [32m[1mLinking CXX shared library libexpressiongraph_bspline.so[0m
+[64.228s] [ 97%] Built target expressiongraph_bspline
+[64.245s] [ 97%] [32mBuilding CXX object ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_bspline/CMakeFiles/bspline_test.dir/__/__/etasl/expressiongraph_bspline/src/bspline_test.cpp.o[0m
+[64.722s] [ 97%] [32m[1mLinking CXX shared library libexpressiongraph_velocities.so[0m
+[64.868s] [ 97%] Built target expressiongraph_velocities
+[65.174s] [ 98%] [32m[1mLinking CXX executable bspline_test[0m
+[65.299s] [ 98%] Built target bspline_test
+[65.585s] [100%] [32m[1mLinking CXX shared library libexpressiongraph_manip_lua.so[0m
+[65.799s] [100%] Built target expressiongraph_manip_lua
+[65.807s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper' returned '0': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper -- -j16 -l16
+[65.809s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper
+[65.815s] -- Install configuration: ""
+[65.815s] -- Execute custom install script
+[65.816s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/etasl_wrapper.sh
+[65.821s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/Luabind/FindLuabind.cmake
+[65.827s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/Lua52/FindLua52.cmake
+[65.833s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/build_information.hpp
+[65.838s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/pkgconfig/expressiongraph.pc
+[65.846s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/conversions_example
+[65.852s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/debug1
+[65.858s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_cached_named
+[65.864s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_conditional
+[65.870s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_distance_to_line
+[65.875s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example
+[65.881s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example10
+[65.886s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example11
+[65.892s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example12
+[65.897s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example2
+[65.903s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example3
+[65.909s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example4
+[65.914s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example5
+[65.920s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example6
+[65.925s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example7
+[65.931s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example8
+[65.937s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example9
+[65.943s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_mimo_ex
+[65.949s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile
+[65.955s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile2
+[65.960s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_optimizer
+[65.966s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_perpendicular
+[65.972s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_sensor
+[65.977s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_trait
+[65.983s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function1
+[65.989s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function2
+[65.994s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_variabletype
+[66.000s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/geometry
+[66.006s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/initial_value
+[66.011s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/matrix_traits
+[66.017s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/mptrap_tst
+[66.022s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/resolved_motion_rate_control
+[66.028s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/saturate
+[66.033s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/solving_and_cloning
+[66.039s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial1
+[66.046s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial2
+[66.052s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial3
+[66.057s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/quat
+[66.063s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/LICENSE
+[66.069s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/license_EUPL_v1_1_en.pdf
+[66.075s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/COPYING
+[66.080s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/README.md
+[66.086s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphConfig.cmake
+[66.091s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphConfigVersion.cmake
+[66.097s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/LICENSE
+[66.103s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/readme.md
+[66.108s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/CMakeLists.txt
+[66.114s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_context.cpp
+[66.119s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_inputchannels.cpp
+[66.125s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_itasc.cpp
+[66.130s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_output.cpp
+[66.136s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_outputchannels.cpp
+[66.142s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_solver.cpp
+[66.148s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context/examples/test_variables.cpp
+[66.154s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/readme.md
+[66.160s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/doc_ilua.md
+[66.166s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/LICENSE
+[66.171s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex1.lua
+[66.177s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex2.lua
+[66.183s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex3.lua
+[66.188s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/binding_ex4.lua
+[66.194s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/motionprofile_ex.lua
+[66.199s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_lua/examples/rpy_ex.lua
+[66.205s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/ilua.lua
+[66.211s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/rlcompleter.lua
+[66.216s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/expressiongraph_lua.lua
+[66.221s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/ilua.lua
+[66.227s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/argcheck.lua
+[66.233s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/context.lua
+[66.238s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/etasl.lua
+[66.245s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/geometric.lua
+[66.251s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/output_utils.lua
+[66.257s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/output_utils_rtt.lua
+[66.262s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/pretty.lua
+[66.268s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/task_library.lua
+[66.274s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/type_checking.lua
+[66.279s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/urdf_utils.lua
+[66.285s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context_lua/readme.md
+[66.290s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_context_lua/LICENSE
+[66.296s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES.hpp
+[66.302s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Bounds.hpp
+[66.307s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Bounds.ipp
+[66.313s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Constants.hpp
+[66.318s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/ConstraintProduct.hpp
+[66.323s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Constraints.hpp
+[66.329s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Constraints.ipp
+[66.334s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Flipper.hpp
+[66.340s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Indexlist.hpp
+[66.346s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Indexlist.ipp
+[66.352s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/LapackBlasReplacement.hpp
+[66.358s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Matrices.hpp
+[66.364s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/MessageHandling.hpp
+[66.369s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/MessageHandling.ipp
+[66.375s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Options.hpp
+[66.380s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblem.hpp
+[66.386s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblem.ipp
+[66.392s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblemB.hpp
+[66.397s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/QProblemB.ipp
+[66.403s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblem.hpp
+[66.408s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblem.ipp
+[66.413s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblemSchur.hpp
+[66.419s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SQProblemSchur.ipp
+[66.425s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SparseSolver.hpp
+[66.430s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SubjectTo.hpp
+[66.435s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/SubjectTo.ipp
+[66.441s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Types.hpp
+[66.448s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/UnitTesting.hpp
+[66.454s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Utils.hpp
+[66.459s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/Utils.ipp
+[66.465s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/extras/OQPinterface.hpp
+[66.471s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/extras/SolutionAnalysis.hpp
+[66.476s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//qpOASES/extras/SolutionAnalysis.ipp
+[66.482s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_spline.so
+[66.488s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_bspline.so
+[66.494s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/examples/bspline_test
+[66.500s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/examples/bspline_test.cpp
+[66.506s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/bspline.lua
+[66.511s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/pprint.lua
+[66.517s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bspline.hpp
+[66.522s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bspline_expr.hpp
+[66.528s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bspline_scripting.hpp
+[66.533s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/py_bspline.hpp
+[66.539s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/readme.rst
+[66.545s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_bspline/LICENSE
+[66.551s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_velocities.so
+[66.557s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_velocities/readme.rst
+[66.563s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_velocities/LICENSE
+[66.569s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_velocities/examples/example_velocities.lua
+[66.575s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/velocities.lua
+[66.581s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/worldmodel.rst
+[66.587s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/taskframe_formalism.rst
+[66.593s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/LICENSE.txt
+[66.598s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/graphviz.md
+[66.604s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_fixed.svg
+[66.609s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_revolute.svg
+[66.615s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_prismatic.svg
+[66.620s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/figures/plainsvg_trajectory.svg
+[66.626s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/robots/pr2.urdf
+[66.631s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/robots/ur10_robot.urdf
+[66.637s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/basic_usage.lua
+[66.643s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/basic_usage2.lua
+[66.650s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/dependencies.lua
+[66.655s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/generate_graph.lua
+[66.661s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/generate_expr.lua
+[66.666s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/manipulation.lua
+[66.672s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/worldmodel/examples/saving_loading.lua
+[66.678s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/JSON.lua
+[66.683s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/contour.lua
+[66.689s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/motions.lua
+[66.694s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/taskframe_formalism.lua
+[66.700s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/trajectories.lua
+[66.705s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/urdfreader.lua
+[66.711s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/worldmodel.lua
+[66.717s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/.git
+[66.722s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/.gitignore
+[66.728s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/.travis.yml
+[66.733s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/LICENSE
+[66.739s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/Makefile
+[66.745s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/README.adoc
+[66.751s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/XmlParser.lua
+[66.757s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/_config.yml
+[66.763s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/books.xml
+[66.768s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/conversion-ways.png
+[66.774s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example1.lua
+[66.779s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example2.lua
+[66.785s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example3.lua
+[66.790s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/example4-table2xml.lua
+[66.796s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/people.xml
+[66.801s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/testxml.lua
+[66.807s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xml2lua-1.3-4.rockspec
+[66.812s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xml2lua.lua
+[66.818s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/README.md
+[66.823s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/dom.lua
+[66.829s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/print.lua
+[66.834s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/xml2lua/xmlhandler/tree.lua
+[66.840s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/worldmodel_dir.lua
+[66.846s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/urdf_to_wm
+[66.852s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_to_dot
+[66.858s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_create
+[66.864s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_insert
+[66.869s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/wm_delete
+[66.875s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_collision.so
+[66.881s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/collision.lua
+[66.887s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/funnel.lua
+[66.892s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/to_stl.sh
+[66.898s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_collision/readme.md
+[66.903s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_collision/LICENSE
+[66.909s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_manip_lua.so
+[66.915s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_manip_lua/readme.md
+[66.920s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_manip_lua/LICENSE
+[66.925s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph_manip_lua/examples/manip_example.lua
+[66.931s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/etasl1.5/manipulability.lua
+[66.936s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/set_etasl_paths.sh
+[66.943s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/remove_etasl_paths.sh
+[66.949s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/ietasl
+[66.955s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl
+[66.960s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl_py_install
+[66.966s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl_version
+[66.971s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/bin/etasl_mkvirtualenv
+[66.977s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/readme_scripts.rst
+[66.982s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslConfig.cmake
+[66.988s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslConfigVersion.cmake
+[66.994s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/ament_index/resource_index/package_run_dependencies/etasl_wrapper
+[66.999s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/ament_index/resource_index/parent_prefix_path/etasl_wrapper
+[67.005s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/ament_prefix_path.sh
+[67.011s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/ament_prefix_path.dsv
+[67.016s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/path.sh
+[67.022s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/environment/path.dsv
+[67.027s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.bash
+[67.033s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.sh
+[67.038s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.zsh
+[67.044s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/local_setup.dsv
+[67.051s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/package.dsv
+[67.056s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/ament_index/resource_index/packages/etasl_wrapper
+[67.062s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/cmake/etasl_wrapperConfig.cmake
+[67.067s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/cmake/etasl_wrapperConfig-version.cmake
+[67.073s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/etasl_wrapper/package.xml
+[67.079s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslTargets.cmake
+[67.079s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/etasl/etaslTargets-noconfig.cmake
+[67.081s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/adopt_policy.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/back_reference_fwd.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/back_reference.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/class.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/class_info.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/config.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/container_policy.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/copy_policy.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/dependency_policy.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/discard_result_policy.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/error_callback_fun.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/error.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/exception_handler.hpp
+[67.082s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/from_stack.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/function_converter.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/function.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/function_introspection.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/get_main_thread.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/get_pointer.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/handle.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/intrusive_ptr_converter.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/iterator_policy.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/luabind.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/lua_include.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/lua_state_fwd.hpp
+[67.083s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/make_function.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/nil.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/no_dependency.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/object_fwd.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/object.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/open.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/operator.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/out_value_policy.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/prefix.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/raw_policy.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/return_reference_to_policy.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/scope.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/set_package_preload.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/shared_ptr_converter.hpp
+[67.084s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/stack.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/std_shared_ptr_converter.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/tag_function.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/typeid.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/value_wrapper.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/version.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/weak_ref.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/wrapper_base.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/yield_policy.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call_function.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call_member.hpp
+[67.085s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/call_operator_iterate.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/class_registry.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/class_rep.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/constructor.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/convert_to_lua.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/debug.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/decorate_type.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/deduce_signature.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/enum_maker.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/format_signature.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/garbage_collector.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/has_get_pointer.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/inheritance.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/instance_holder.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/link_compatibility.hpp
+[67.086s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/make_instance.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/most_derived.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/object_call.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/object.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/object_rep.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/operator_id.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/other.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/pcall.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/pointee_sizeof.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/policy.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/primitives.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/property.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/signature_match.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/stack_utils.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/typetraits.hpp
+[67.087s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/luabind/detail/yes_no.hpp
+[67.088s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libluabind09.a
+[67.089s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph.so
+[67.091s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.091s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[67.091s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_integral.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_double.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_function.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_rotation.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_twist.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_mimo.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_frame.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_exceptions.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/quat_io.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_quaternion.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_var.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_motionprofiles.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_traits.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_wrench.hpp
+[67.092s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_matrix.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/conversions.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_euler.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/quat.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_n_ary.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/integrator.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/mptrap.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_vector.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_expressions.hpp
+[67.093s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiontree_chain.hpp
+[67.093s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples
+[67.094s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/resolved_motion_rate_control.cpp
+[67.094s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/debug1.cpp
+[67.094s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/mptrap_tst.cpp
+[67.094s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile.cpp
+[67.094s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example12.cpp
+[67.094s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example3.cpp
+[67.095s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_conditional.cpp
+[67.095s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_cb.cpp
+[67.095s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial2.cpp
+[67.095s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_distance_to_line.cpp
+[67.095s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/conversions_example.cpp
+[67.095s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example11.cpp
+[67.095s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/saturate.cpp
+[67.096s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example.cpp
+[67.096s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_motion_profile2.cpp
+[67.096s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example5.cpp
+[67.096s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_optimizer.cpp
+[67.096s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example7.cpp
+[67.096s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/matrix_traits.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example2.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example4.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_perpendicular.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_sensor.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_trait.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/quat.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/initial_value.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function1.cpp
+[67.097s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_variabletype.cpp
+[67.098s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example9.cpp
+[67.098s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_mimo_ex.cpp
+[67.098s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example6.cpp
+[67.098s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example10.cpp
+[67.098s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_cached_named.cpp
+[67.098s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial3.cpp
+[67.098s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/solving_and_cloning.cpp
+[67.099s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_example8.cpp
+[67.099s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/geometry.cpp
+[67.099s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/tutorial1.cpp
+[67.099s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/share/doc/etasl/expressiongraph/examples/expressiontree_function2.cpp
+[67.099s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphTargets.cmake
+[67.099s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/cmake/expressiongraph/expressiongraphTargets-noconfig.cmake
+[67.100s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_context.so
+[67.101s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_context.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.101s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[67.101s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[67.101s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/context.hpp
+[67.101s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/controller.hpp
+[67.101s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/itasc_adaptor.hpp
+[67.101s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/context_aux.hpp
+[67.101s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/defaultvelocityestimator.hpp
+[67.101s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/outputs_csv.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver_registry.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/defaultobserver.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/fileutils.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/itasc_task.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver_factory.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/velocityestimator.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/outputs_matlab.hpp
+[67.102s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/groupingobserver.hpp
+[67.103s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_lua.so
+[67.107s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_lua.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.108s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/librlcompleter_c.so
+[67.108s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/librlcompleter_c.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.108s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libreadline_c.so
+[67.108s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libreadline_c.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.108s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[67.108s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[67.108s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/bind_kdl.hpp
+[67.108s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_context_lua.so
+[67.110s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_context_lua.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.110s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[67.110s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[67.110s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/context_scripting.hpp
+[67.110s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/rfsm_observer.hpp
+[67.111s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/luabind_util.hpp
+[67.111s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/breakobserver.hpp
+[67.111s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_solver_qpoases.so
+[67.111s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_solver_qpoases.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.112s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libqpOASES.so
+[67.112s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libqpOASES.so" to "/home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib"
+[67.112s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[67.112s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[67.112s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/qpoases_solver.hpp
+[67.112s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/qpoases_messages.hpp
+[67.112s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/solver_factory_qpoases.hpp
+[67.112s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/
+[67.113s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph
+[67.113s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/splines.hpp
+[67.113s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/spline_scripting.hpp
+[67.113s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/motionmodel.hpp
+[67.113s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include//expressiongraph/cubicspline.hpp
+[67.113s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[67.113s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[67.113s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/expressiongraph_velocities.hpp
+[67.114s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[67.114s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[67.114s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/convex_object.hpp
+[67.114s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bullet_collision_lua.hpp
+[67.114s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/bullet_collision.hpp
+[67.114s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include
+[67.114s] -- Up-to-date: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph
+[67.114s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/manipulability_dir.hpp
+[67.114s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/include/expressiongraph/manip_scripting.hpp
+[67.116s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper' returned '0': CMAKE_PREFIX_PATH=/home/masterthesis/workspaces_ros2/kaixi_ws/install/ur_description:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_ros:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_moveit:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_controllers:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_bringup:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_hardware:/home/masterthesis/workspaces_ros2/kaixi_ws/install/trossen_arm_description:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble:/home/masterthesis/workspaces_ros2/kaixi_ws/install/libtrossen_arm:/home/masterthesis/workspaces_ros2/kaixi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper

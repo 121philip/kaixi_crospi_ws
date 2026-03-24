@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/doc"
+  "Makefile"
+  "_build"
+  "acknowledgments.rst"
+  "basic-usage.rst"
+  "build-options.rst"
+  "building.rst"
+  "classes.rst"
+  "conf.py"
+  "errors.rst"
+  "exceptions.rst"
+  "faq.rst"
+  "functions.rst"
+  "impl-notes.rst"
+  "index.rst"
+  "intro.rst"
+  "issues.rst"
+  "lua-classes.rst"
+  "object.rst"
+  "policies.rst"
+  "policies/adopt.rst"
+  "policies/copy.rst"
+  "policies/dependency.rst"
+  "policies/discard_result.rst"
+  "policies/out_value.rst"
+  "policies/pure_out_value.rst"
+  "policies/raw.rst"
+  "policies/return_reference_to.rst"
+  "policies/return_stl_iterator.rst"
+  "policies/yield.rst"
+  "scopes.rst"
+  "split-registration.rst"
+  "userdefined-converters.rst"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/doc.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

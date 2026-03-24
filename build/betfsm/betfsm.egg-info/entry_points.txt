@@ -1,0 +1,3 @@
+[console_scripts]
+web_server = betfsm.web_server:main
+

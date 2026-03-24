@@ -1,0 +1,13 @@
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/Output.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/OutputDerivatives.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:srv/LuaCmd.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:action/RunTask.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/TaskParameters.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/PoseParameters.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/Vector3Parameters.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/NumberParameters.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/ReturnValue.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/Input.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:msg/Test.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:srv/TaskSpecificationString.idl
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_adapter/crospi_interfaces:srv/TaskSpecificationFile.idl

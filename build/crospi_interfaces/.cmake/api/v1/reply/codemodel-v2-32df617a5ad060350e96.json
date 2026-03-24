@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-5812d8802586035de36e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "crospi_interfaces__py",
+					"jsonFile" : "directory-crospi_interfaces__py-7790d221e9acfb16faf5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/crospi_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "crospi_interfaces__rs",
+					"jsonFile" : "directory-crospi_interfaces__rs-700fe620cf443684e29e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/crospi_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "crospi_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_crospi_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_crospi_interfaces_egg-634d7f766cf5bcfc21d0.json",
+					"name" : "ament_cmake_python_build_crospi_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_crospi_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_crospi_interfaces-2e1e3b7a56096bfa5314.json",
+					"name" : "ament_cmake_python_symlink_crospi_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces-730cc189228ab6146c15.json",
+					"name" : "crospi_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__cpp-9f09139640436b2bd0f0.json",
+					"name" : "crospi_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "crospi_interfaces__py::@0f170cbb826fea3cbcb4",
+					"jsonFile" : "target-crospi_interfaces__py-649677fe8f0e3ef1e01b.json",
+					"name" : "crospi_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_generator_c-e9cd1a05a61b2fa7a05c.json",
+					"name" : "crospi_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_generator_py-f761da3a6b2c9a8238d9.json",
+					"name" : "crospi_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_c-54e9af37e55f594d6616.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_c__pyext-9188da2017b0e3370aab.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_cpp-1fa7d0b6fa4cbdf9326b.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_fastrtps_c-86b216ab347f39c71fd7.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_fastrtps_c__pyext-07587e11dc3bdef4d792.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_fastrtps_cpp-05e713c63995ce217412.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_introspection_c-2e1d8c4850876a53a2d8.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_introspection_c__pyext-69ca6a0f8d9d489fd9c9.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces__rosidl_typesupport_introspection_cpp-ba9fa637521db14115ec.json",
+					"name" : "crospi_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "crospi_interfaces__rs::@f918222f5ced1227b606",
+					"jsonFile" : "target-crospi_interfaces__rs-1b8dfdb251ac6b10656e.json",
+					"name" : "crospi_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crospi_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crospi_interfaces_uninstall-69398365337908b430f3.json",
+					"name" : "crospi_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-b6fb679d968106985cbb.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces",
+		"source" : "/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

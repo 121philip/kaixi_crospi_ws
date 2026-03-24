@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from crospi_interfaces/srv/TaskSpecificationFile.srv
+// generated code does not contain a copyright notice
+
+
+module crospi_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Can be used to pass a file_path to a service" "\n"
+      "as absolute or relative to the shared ament directory" "\n"
+      "file path a task specification file")
+    struct TaskSpecificationFile_Request {
+      string file_path;
+    };
+    struct TaskSpecificationFile_Response {
+      boolean success;
+    };
+  };
+};

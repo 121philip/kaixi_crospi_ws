@@ -1,0 +1,24 @@
+################################################
+# Running an eTaSL task
+################################################
+
+
+################## GOAL definition ##################
+
+# JSON description of the task:
+string task
+
+
+---
+################## RESULT definition ##################
+
+# Name of the event that terminated the controller
+string terminating_event
+
+# Argument of the event
+string event_argument
+
+---
+################## FEEDBACK definition ##################
+# Name of an event that is triggered intermediately.
+string event

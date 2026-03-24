@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from crospi_interfaces/msg/ReturnValue.msg
+// generated code does not contain a copyright notice
+
+
+module crospi_interfaces {
+  module msg {
+    module ReturnValue_Constants {
+      const uint32 SUCCESS = 0;
+      @verbatim (language="comment", text=
+        "LoadTask errors")
+      const uint32 SYNTAX_ERROR = 1;
+      @verbatim (language="comment", text=
+        "InitializeTask errors:")
+      const uint32 FEATUREVAR_DID_NOT_CONVERGE = 1000;
+      @verbatim (language="comment", text=
+        "RunTask errors:")
+      const uint32 SOLVER_DID_NOT_CONVERGE = 2000;
+      const uint32 CANCELLED = 2;
+    };
+    @verbatim (language="comment", text=
+      "error messages returned by eTaSL")
+    struct ReturnValue {
+      @verbatim (language="comment", text=
+        "error code returned")
+      uint32 errorcode;
+
+      @verbatim (language="comment", text=
+        "string given additional description of the error")
+      string description;
+    };
+  };
+};

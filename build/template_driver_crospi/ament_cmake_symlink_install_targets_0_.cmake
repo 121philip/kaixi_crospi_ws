@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/libtemplate_driver_crospi.so" "TARGETS" "template_driver_crospi" "LIBRARY_DESTINATION" "lib" "ARCHIVE_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

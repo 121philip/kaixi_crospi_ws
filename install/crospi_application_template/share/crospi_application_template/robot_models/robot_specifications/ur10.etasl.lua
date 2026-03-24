@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/robot_models/robot_specifications/ur10.etasl.lua

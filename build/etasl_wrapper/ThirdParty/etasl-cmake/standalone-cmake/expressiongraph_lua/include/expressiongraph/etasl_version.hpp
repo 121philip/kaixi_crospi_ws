@@ -1,0 +1,6 @@
+#ifndef EXPRESSIONGRAPH_LUA_VERSION_HPP_0908080234
+#define EXPRESSIONGRAPH_LUA_VERSION_HPP_0908080234
+
+#define ETASL_VERSION "eTaSL 1.5.0 (-) () (Stack trace)  (Platform:)";
+
+#endif

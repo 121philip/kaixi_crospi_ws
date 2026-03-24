@@ -1,0 +1,58 @@
+#!/bin/sh
+#
+
+#  Copyright (c) 2025 KU Leuven, Belgium
+#
+#  Author: Santiago Iregui
+#  email: <santiago.iregui@kuleuven.be>
+#
+#  GNU Lesser General Public License Usage
+#  Alternatively, this file may be used under the terms of the GNU Lesser
+#  General Public License version 3 as published by the Free Software
+#  Foundation and appearing in the file LICENSE.LGPLv3 included in the
+#  packaging of this file. Please review the following information to
+#  ensure the GNU Lesser General Public License version 3 requirements
+#  will be met: https://www.gnu.org/licenses/lgpl.html.
+# 
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Lesser General Public License for more details.
+
+if [ "x{$LUA_PATH}x" = "xx" ]; then
+   LUA_PATH=";"
+fi
+if [ "x{$LUA_CPATH}x" = "xx" ]; then
+   LUA_CPATH=";"
+fi
+
+
+
+luapath_append ()
+{
+    if echo "$LUA_PATH" | grep -Eq "(;)${1}(;|$)"
+    then
+        return 0
+    fi
+    export LUA_PATH="$LUA_PATH;${1}"
+}
+
+
+luacpath_append ()
+{
+    if echo "$LUA_CPATH" | grep -Eq "(;)${1}(;|$)"
+    then
+        return 0
+    fi
+    export LUA_CPATH="$LUA_CPATH;${1}"
+}
+
+
+export LUA_PATH="?.lua;$LUA_PATH" #First tries to find file in local dir
+
+luapath_append "/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/scripts/lib/?.lua"
+luapath_append "/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/?.lua"
+luapath_append "/usr/local/share/lua/5.1/?.lua"
+
+
+luacpath_append "/home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/?.so"

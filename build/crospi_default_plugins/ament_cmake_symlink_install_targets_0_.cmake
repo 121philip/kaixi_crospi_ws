@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/masterthesis/kaixi_crospi_ws/build/crospi_default_plugins/libcrospi_default_plugins.so" "TARGETS" "crospi_default_plugins" "LIBRARY_DESTINATION" "lib" "ARCHIVE_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

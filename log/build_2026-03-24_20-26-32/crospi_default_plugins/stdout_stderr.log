@@ -1,0 +1,110 @@
+[0m-------------- crospi_default_plugins compiling ----------------[0m
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found pluginlib: 5.1.3 (/opt/ros/humble/share/pluginlib/cmake)
+-- Found crospi_core: 0.0.0 (/home/masterthesis/kaixi_crospi_ws/install/crospi_core/share/crospi_core/cmake)
+-- Found crospi_interfaces: 0.0.0 (/home/masterthesis/kaixi_crospi_ws/install/crospi_interfaces/share/crospi_interfaces/cmake)
+-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rclcpp: 16.0.18 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_lifecycle: 16.0.18 (/opt/ros/humble/share/rclcpp_lifecycle/cmake)
+-- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: random 
+-- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found version "1.89.0") found components: chrono 
+-- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found tf2: 0.25.19 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_geometry_msgs: 0.25.19 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Using Boost 1.89 from BOOST_189_ROOT=/opt/boost_1.89.0
+-- CMAKE_PREFIX_PATH before: 
+-- CMAKE_PREFIX_PATH after: /opt/boost_1.89.0
+-- Using Boost version 1.89.0
+-- Found Boost: /opt/boost_1.89.0/lib/cmake/Boost-1.89.0/BoostConfig.cmake (found suitable version "1.89.0", minimum required is "1.89")  
+-- Using Boost version 1.89.0
+-- Boost include dirs: /opt/boost_1.89.0/include
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_default_plugins/include;$<BUILD_INTERFACE:/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_default_plugins/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/masterthesis/kaixi_crospi_ws/build/crospi_default_plugins
+[35m[1mConsolidate compiler generated dependencies of target crospi_default_plugins[0m
+[  9%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/simulators/simple_kinematic_simulation.cpp.o[0m
+[ 18%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/inputhandlers/topicinputhandler.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/inputhandlers/twistinputhandler.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/inputhandlers/wrenchinputhandler.cpp.o[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/inputhandlers/tfinputhandler.cpp.o[0m
+[ 54%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/inputhandlers/poseinputhandler.cpp.o[0m
+[ 63%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/inputhandlers/vectorinputhandler.cpp.o[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/outputhandlers/jointstateoutputhandler.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/outputhandlers/topicoutputhandler.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/crospi_default_plugins.dir/src/outputhandlers/topicoutputderivativeshandler.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libcrospi_default_plugins.so[0m
+[100%] Built target crospi_default_plugins
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins//plugins.xml
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/environment/library_path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/environment/library_path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/lib/libcrospi_default_plugins.so
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/DELETEME_fileoutputhandlerfactory.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/DELETEME_jointstateoutputhandlerfactory.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/DELETEME_tfoutputhandlerfactory.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/DELETEME_topicoutputhandlerfactory.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/inputhandlers/poseinputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/inputhandlers/tfinputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/inputhandlers/topicinputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/inputhandlers/twistinputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/inputhandlers/vectorinputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/inputhandlers/wrenchinputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/outputhandlers/DELETEME_fileoutputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/outputhandlers/jointstateoutputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/outputhandlers/tfoutputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/outputhandlers/topicoutputderivativeshandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/outputhandlers/topicoutputhandler.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/include/simulators/simple_kinematic_simulation.hpp
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/JointStateOutputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/PoseInputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TFInputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TFOutputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TopicInputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TopicOutputDerivativesHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TopicOutputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TwistInputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/VectorInputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/WrenchInputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/deleteme/FileOutputHandler.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/simple_kinematic_simulation.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/ament_index/resource_index/package_run_dependencies/crospi_default_plugins
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/ament_index/resource_index/parent_prefix_path/crospi_default_plugins
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/environment/ament_prefix_path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/environment/ament_prefix_path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/environment/path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/environment/path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/local_setup.bash
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/local_setup.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/local_setup.zsh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/local_setup.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/package.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/ament_index/resource_index/packages/crospi_default_plugins
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/ament_index/resource_index/crospi_core__pluginlib__plugin/crospi_default_plugins
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/cmake/crospi_default_pluginsConfig.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/cmake/crospi_default_pluginsConfig-version.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/package.xml

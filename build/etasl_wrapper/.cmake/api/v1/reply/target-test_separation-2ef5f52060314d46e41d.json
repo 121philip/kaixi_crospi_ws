@@ -1,0 +1,255 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "ThirdParty/etasl-cmake/standalone-cmake/luabind/test/test_separation"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"target_link_libraries",
+			"add_compile_options",
+			"add_compile_definitions",
+			"add_definitions"
+		],
+		"files" : 
+		[
+			"ThirdParty/etasl-cmake/etasl/luabind/test/CMakeLists.txt",
+			"CMakeLists.txt",
+			"ThirdParty/etasl-cmake/etasl/luabind/CMakeLists.txt",
+			"ThirdParty/etasl-cmake/standalone-cmake/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 82,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 83,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 13,
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 54,
+				"parent" : 5
+			},
+			{
+				"command" : 2,
+				"file" : 2,
+				"line" : 55,
+				"parent" : 5
+			},
+			{
+				"file" : 3
+			},
+			{
+				"command" : 3,
+				"file" : 3,
+				"line" : 57,
+				"parent" : 8
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 111,
+				"parent" : 5
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " -std=c++11 -Wall -Wextra -Wno-deprecated-declarations -Wno-unused-macros -Wlogical-op -Wmissing-declarations -Wsign-conversion -pedantic -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Winit-self -Wformat=2 -Wmissing-include-dirs -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=5 -Wno-cast-function-type -Wno-sign-conversion -Wnoexcept"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-deprecated"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-unused-but-set-variable"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-unused-parameter"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-unused-variable"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-reorder"
+				},
+				{
+					"backtrace" : 6,
+					"fragment" : "-Wno-strict-overflow"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-Wno-maybe-uninitialized"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 9,
+					"define" : "BOOST_BIND_GLOBAL_PLACEHOLDERS"
+				},
+				{
+					"backtrace" : 10,
+					"define" : "BOOST_DISABLE_PRAGMA_MESSAGE"
+				},
+				{
+					"backtrace" : 11,
+					"define" : "LUABIND_USE_CXX11"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 2,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/luabind"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/luabind"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/usr/include/lua5.1"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "luabind::@15f7d8f23714998d9beb"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "test_main::@64903d4ca5076a92c841"
+		}
+	],
+	"folder" : 
+	{
+		"name" : "Tests"
+	},
+	"id" : "test_separation::@64903d4ca5076a92c841",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-std=c++11 -Wall -Wextra -Wno-deprecated-declarations -Wno-unused-macros -Wlogical-op -Wmissing-declarations -Wsign-conversion -pedantic -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Winit-self -Wformat=2 -Wmissing-include-dirs -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wshadow -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=5 -Wno-cast-function-type -Wno-sign-conversion -Wnoexcept",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "libtest_main.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../src/libluabind09.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/liblua5.1.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "test_separation",
+	"nameOnDisk" : "test_separation",
+	"paths" : 
+	{
+		"build" : "ThirdParty/etasl-cmake/standalone-cmake/luabind/test",
+		"source" : "ThirdParty/etasl-cmake/etasl/luabind/test"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ThirdParty/etasl-cmake/etasl/luabind/test/test_separation.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}

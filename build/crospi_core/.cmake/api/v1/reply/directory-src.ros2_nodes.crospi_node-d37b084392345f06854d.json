@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "src/ros2_nodes/crospi_node",
+		"source" : "src/ros2_nodes/crospi_node"
+	}
+}

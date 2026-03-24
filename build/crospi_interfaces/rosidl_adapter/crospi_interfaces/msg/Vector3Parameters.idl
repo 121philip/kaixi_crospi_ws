@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from crospi_interfaces/msg/Vector3Parameters.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Vector3.idl"
+
+module crospi_interfaces {
+  module msg {
+    struct Vector3Parameters {
+      string name;
+
+      geometry_msgs::msg::Vector3 value;
+    };
+  };
+};

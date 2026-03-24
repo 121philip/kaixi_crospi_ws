@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_generator_py/crospi_interfaces/srv/_task_specification_file_s.c

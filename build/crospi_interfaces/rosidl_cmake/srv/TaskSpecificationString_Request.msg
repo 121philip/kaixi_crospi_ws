@@ -1,0 +1,5 @@
+##
+## Can be used to pass a string to a service (e.g. a task specification line)
+##
+
+string str

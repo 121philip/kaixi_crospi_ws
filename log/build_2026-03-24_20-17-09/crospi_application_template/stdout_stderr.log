@@ -1,0 +1,262 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template
+[100%] [34m[1mconstructing tasks-schema.json file[0m
+[100%] [34m[1mconstructing json schema files for the setup configuration[0m
+[100%] [34m[1mconstructing json schema bundled file from /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/schemas/blackboard-schema.json to /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/schemas/generated/blackboard-schema-bundled.json[0m
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/follow_spline.etasl.lua...
+[100%] Built target ament_cmake_python_symlink_skill_specifications
+Generating JSON schema for robotdriver.json with 1 the following detected installed plugins:
+--template_driver_crospi.schema.json: a json schema with the exact name (case-sensitive) was found!
+JSON schema successfully generated and saved to schemas/generated/robotdriver.json
+ 
+Generating JSON schema for inputhandler.json with 6 the following detected installed plugins:
+--TwistInputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+--WrenchInputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+--TopicInputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+--PoseInputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+--VectorInputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+--TFInputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+JSON schema successfully generated and saved to schemas/generated/inputhandler.json
+ 
+Generating JSON schema for outputhandler.json with 3 the following detected installed plugins:
+--JointStateOutputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+--TopicOutputHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+--TopicOutputDerivativesHandler.schema.json: a json schema with the exact name (case-sensitive) was found!
+JSON schema successfully generated and saved to schemas/generated/outputhandler.json
+ 
+Generating JSON schema for robotsimulator.json with 1 the following detected installed plugins:
+--simple_kinematic_simulation.schema.json: a json schema with the exact name (case-sensitive) was found!
+JSON schema successfully generated and saved to schemas/generated/robotsimulator.json
+ 
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/idle.etasl.lua...
+[100%] Built target PLUGIN_SCHEMA_JSON
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/keep_relative_initial_pose.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_admittance.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_cartesianspace_absolute_pose.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_cartesianspace_relative.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_jointspace_trap.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_jointspace_trap_subset.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_joystick.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/debug_lib/task_specifications/move_joystick_reading_sensor_vals_driver.etasl.lua...
+running egg_info
+creating skill_specifications.egg-info
+writing skill_specifications.egg-info/PKG-INFO
+writing dependency_links to skill_specifications.egg-info/dependency_links.txt
+writing top-level names to skill_specifications.egg-info/top_level.txt
+writing manifest file 'skill_specifications.egg-info/SOURCES.txt'
+reading manifest file 'skill_specifications.egg-info/SOURCES.txt'
+writing manifest file 'skill_specifications.egg-info/SOURCES.txt'
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/debug_lib/task_specifications/move_sine_waves_jointspace.etasl.lua...
+[100%] Built target ament_cmake_python_build_skill_specifications_egg
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/dummy_lib/task_specifications/follow_external_frame.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/dummy_lib/task_specifications/follow_external_vector.etasl.lua...
+Code was exited after generating the JSON Schema file, since this should not be done during execution but only in the generation phase.
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/robot_models/robot_specifications/kuka_iiwa.etasl.lua...
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/robot_models/robot_specifications/ur10.etasl.lua...
+-------------------
+Generating JSON-SCHEMA file for task specification: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/robot_models/robot_specifications/ur10e.etasl.lua...
+Generating JSON-SCHEMA general file for defining instances of task specifications
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+-------------------
+JSON schema generated at ../tasks-schema.json
+[100%] Built target TASKS_SCHEMA_JSON
+Compiled schema saved to: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/schemas/generated/blackboard-schema-bundled.json
+[100%] Built target BUNDLE_SCHEMA_JSON
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_tutorials/application_example_tutorials.launch.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_tutorials/application_example_tutorials.setup.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_ur10/application_example_ur10.launch.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_ur10/application_example_ur10.setup.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_ur10/application_example_ur10.skills.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_ur10e/application_example_ur10e.launch.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_ur10e/application_example_ur10e.setup.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/applications/application_example_ur10e/application_example_ur10e.skills.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/.git
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/.github/workflows/gitlab-mirror.yml
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/LICENSE
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/README.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/follow_spline.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/idle.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/keep_relative_initial_pose.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/move_admittance.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/move_cartesianspace_absolute_pose.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/move_cartesianspace_relative.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/move_jointspace_trap.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/move_jointspace_trap_subset.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/move_joystick.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/readme.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_library.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/follow_spline.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/idle.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/keep_relative_initial_pose.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/misc/example_spline.csv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_admittance.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_cartesianspace_absolute_pose.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_cartesianspace_relative.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_jointspace_trap.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_jointspace_trap_subset.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/move_joystick.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/core_task_lib/task_specifications/utilities/utils_ts.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/.git
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/.github/workflows/gitlab-mirror.yml
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/LICENSE
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/README.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/task_json_schemas/move_joystick_reading_sensor_vals_driver.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/task_json_schemas/move_sine_waves_jointspace.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/task_json_schemas/readme.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/task_library.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/task_specifications/move_joystick_reading_sensor_vals_driver.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/task_specifications/move_sine_waves_jointspace.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/debug_lib/task_specifications/utilities/utils_ts.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/.git
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/.github/workflows/gitlab-mirror.yml
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/LICENSE
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/README.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/task_json_schemas/follow_external_frame.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/task_json_schemas/follow_external_vector.etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/task_json_schemas/readme.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/task_library.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/task_specifications/follow_external_frame.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/dummy_lib/task_specifications/follow_external_vector.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/libraries/task_library.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/task_specifications/tasks-schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/__init__.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/CMakeLists.txt
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/__init__.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/skill_lib_example/.git
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/skill_lib_example/.github/workflows/gitlab-mirror.yml
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/skill_lib_example/README.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/skill_lib_example/skill_library.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/skill_lib_example/skill_specifications/skill_example.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/skill_lib_example/tasks/skill_example.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/skill_specifications/libraries/skill_library.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/robot_specifications/kuka_iiwa.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/robot_specifications/ur10.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/robot_specifications/ur10e.etasl.lua
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/meshes/adaptor.stl
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/meshes/load_cell_67.stl
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/kuka_iiwa/rviz_config.rviz
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/kuka_iiwa/use_case_setup_iiwa.urdf
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/kuka_iiwa/use_case_setup_iiwa.urdf.xacro
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10/environment.urdf.xacro
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10/robot_tools.urdf.xacro
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10/rviz_config.rviz
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10/use_case_setup_ur10.urdf
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10/use_case_setup_ur10.urdf.xacro
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10e/environment.urdf.xacro
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10e/robot_tools.urdf.xacro
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10e/rviz_config.rviz
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10e/use_case_setup_ur10e.urdf
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/robot_models/urdf_models/robot_setups/ur10e/use_case_setup_ur10e.urdf.xacro
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/blackboard-schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/etasl.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/generated/blackboard-schema-bundled.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/generated/inputhandler.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/generated/outputhandler.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/generated/robotdriver.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/generated/robotsimulator.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/iohandlers.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/schemas/robot.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib/crospi_application_template/pose_msg_to_tf.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib/crospi_application_template/sine_wave_tf.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/environment/pythonpath.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/environment/pythonpath.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications-0.0.0-py3.10.egg-info/PKG-INFO
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications-0.0.0-py3.10.egg-info/SOURCES.txt
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications-0.0.0-py3.10.egg-info/dependency_links.txt
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications-0.0.0-py3.10.egg-info/top_level.txt
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/__init__.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/CMakeLists.txt
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/__init__.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/.git
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/.github/workflows/gitlab-mirror.yml
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/README.md
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/skill_library.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/skill_specifications/skill_example.py
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/tasks/skill_example.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_library.schema.json
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/ament_index/resource_index/package_run_dependencies/crospi_application_template
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/ament_index/resource_index/parent_prefix_path/crospi_application_template
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/environment/ament_prefix_path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/environment/ament_prefix_path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/environment/path.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/environment/path.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/local_setup.bash
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/local_setup.sh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/local_setup.zsh
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/local_setup.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/ament_index/resource_index/packages/crospi_application_template
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/cmake/crospi_application_templateConfig.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/cmake/crospi_application_templateConfig-version.cmake
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.xml
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications'...
+Compiling '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/__init__.py'...
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries'...
+Compiling '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/__init__.py'...
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example'...
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/.github'...
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/.github/workflows'...
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/skill_specifications'...
+Compiling '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/skill_specifications/skill_example.py'...
+Listing '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/local/lib/python3.10/dist-packages/skill_specifications/libraries/skill_lib_example/tasks'...

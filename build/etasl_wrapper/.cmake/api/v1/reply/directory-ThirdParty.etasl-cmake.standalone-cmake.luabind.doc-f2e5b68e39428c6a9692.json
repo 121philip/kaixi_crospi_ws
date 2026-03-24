@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "ThirdParty/etasl-cmake/standalone-cmake/luabind/doc",
+		"source" : "ThirdParty/etasl-cmake/etasl/luabind/doc"
+	}
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>crospi_core</name>
+  <version>0.0.0</version>
+  <description>Package that allows running eTaSL task specifications in a ROS2 environment</description>
+  <maintainer email="santiago.iregui@kuleuven.be">santiregui</maintainer>
+  <license>LGPL-3.0-only</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <depend>std_msgs</depend>
+  <depend>etasl_wrapper</depend>
+  <depend>crospi_interfaces</depend>
+  <depend>lua-dev</depend>
+  <depend>tree</depend>
+  <depend>cmake</depend>
+
+  <depend>python-jsonref-pip</depend>
+  <depend>python-jsonschema-pip</depend>
+  
+  <exec_depend>python3-colorama</exec_depend>
+
+  <!-- <build_depend>crospi_interfaces</build_depend> -->
+
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <!-- <exec_depend>crospi_core_default_plugins</exec_depend> -->
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <!-- For python library: -->
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
+  <exec_depend>python3</exec_depend>
+
+  
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

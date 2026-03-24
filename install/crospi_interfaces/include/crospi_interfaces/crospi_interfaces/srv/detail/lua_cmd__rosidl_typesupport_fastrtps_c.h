@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_typesupport_fastrtps_c/crospi_interfaces/srv/detail/lua_cmd__rosidl_typesupport_fastrtps_c.h

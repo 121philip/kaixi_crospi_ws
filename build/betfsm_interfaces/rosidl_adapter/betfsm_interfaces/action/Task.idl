@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from betfsm_interfaces/action/Task.action
+// generated code does not contain a copyright notice
+
+
+module betfsm_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "only from the perspective of the state-machine" "\n"
+      "we can have generic handling of the parameters." "\n"
+      "(perhaps needing adaptation of your handling of eTaSL parameters, such that they can also take parameters that are set beforehand" "\n"
+      "in the blackboard, i.e. not overwritten by defaults if they exist)" "\n"
+      "" "\n"
+      "goal")
+    struct Task_Goal {
+      string task;
+
+      string parameters;
+    };
+    @verbatim (language="comment", text=
+      "result")
+    struct Task_Result {
+      string outcome;
+
+      string parameters;
+    };
+    @verbatim (language="comment", text=
+      "feedback")
+    struct Task_Feedback {
+      string state;
+
+      string parameters;
+    };
+  };
+};

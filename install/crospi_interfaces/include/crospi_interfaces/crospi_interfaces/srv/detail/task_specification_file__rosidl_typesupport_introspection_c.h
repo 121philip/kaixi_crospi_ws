@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_typesupport_introspection_c/crospi_interfaces/srv/detail/task_specification_file__rosidl_typesupport_introspection_c.h

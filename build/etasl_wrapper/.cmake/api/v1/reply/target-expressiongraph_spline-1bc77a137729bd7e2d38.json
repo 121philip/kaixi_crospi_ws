@@ -1,0 +1,364 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/libexpressiongraph_spline.so"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"add_compile_options",
+			"add_compile_definitions",
+			"add_definitions",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/CMakeLists.txt",
+			"CMakeLists.txt",
+			"ThirdParty/etasl-cmake/standalone-cmake/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 13,
+				"parent" : 3
+			},
+			{
+				"file" : 2
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 57,
+				"parent" : 5
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 15,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 26,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-fPIC"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-deprecated"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-unused-but-set-variable"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-unused-parameter"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-unused-variable"
+				},
+				{
+					"backtrace" : 4,
+					"fragment" : "-Wno-reorder"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "BOOST_ALL_NO_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "BOOST_BIND_GLOBAL_PLACEHOLDERS"
+				},
+				{
+					"backtrace" : 7,
+					"define" : "BOOST_DISABLE_PRAGMA_MESSAGE"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "BOOST_RANDOM_DYN_LINK"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "BOOST_SYSTEM_DYN_LINK"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "EXPRESSIONGRAPH_STACKTRACE"
+				},
+				{
+					"define" : "expressiongraph_spline_EXPORTS"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 8,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline/../../etasl/expressiongraph_spline/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/luabind"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/luabind"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/usr/include/lua5.1"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/etasl/expressiongraph_lua/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_lua/include"
+				},
+				{
+					"backtrace" : 2,
+					"isSystem" : true,
+					"path" : "/usr/include/eigen3"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "luabind::@15f7d8f23714998d9beb"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "expressiongraph::@d2205884a832e075667a"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "rlcompleter_c::@1530bb2ecfb73cbe0001"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "readline_c::@1530bb2ecfb73cbe0001"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "expressiongraph_lua::@1530bb2ecfb73cbe0001"
+		}
+	],
+	"id" : "expressiongraph_spline::@420830f7273081462867",
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_lua:/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/expressiongraph",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../luabind/src/libluabind09.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../expressiongraph_lua/libexpressiongraph_lua.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../expressiongraph/libexpressiongraph.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lorocos-kdl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_random.so.1.74.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_system.so.1.74.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lbacktrace",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../expressiongraph_lua/librlcompleter_c.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../expressiongraph_lua/libreadline_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "../luabind/src/libluabind09.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/liblua5.1.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lreadline",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lhistory",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lreadline",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lhistory",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "expressiongraph_spline",
+	"nameOnDisk" : "libexpressiongraph_spline.so",
+	"paths" : 
+	{
+		"build" : "ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline",
+		"source" : "ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_spline"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ThirdParty/etasl-cmake/etasl/expressiongraph_spline/src/cubicspline.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ThirdParty/etasl-cmake/etasl/expressiongraph_spline/src/init.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ThirdParty/etasl-cmake/etasl/expressiongraph_spline/src/scripting.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ThirdParty/etasl-cmake/etasl/expressiongraph_spline/src/splines.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "ThirdParty/etasl-cmake/etasl/expressiongraph_spline/src/motionmodel.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "SHARED_LIBRARY"
+}

@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_generator_py/crospi_interfaces/_crospi_interfaces_s.ep.rosidl_typesupport_introspection_c.c

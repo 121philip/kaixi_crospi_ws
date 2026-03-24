@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from crospi_interfaces/srv/LuaCmd.srv
+// generated code does not contain a copyright notice
+
+
+module crospi_interfaces {
+  module srv {
+    struct LuaCmd_Request {
+      string cmd;
+    };
+    struct LuaCmd_Response {
+      string response;
+    };
+  };
+};
