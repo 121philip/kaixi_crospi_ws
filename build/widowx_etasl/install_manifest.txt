@@ -1,0 +1,2 @@
+/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib/widowx_etasl/crospi_bridge
+/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib/widowx_etasl/crospi_starter

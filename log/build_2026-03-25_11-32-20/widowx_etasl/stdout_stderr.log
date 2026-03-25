@@ -1,0 +1,22 @@
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/tasks/move_to_target.lua
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/tasks/pick_ball.lua
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/config/widowx_sim.setup.json
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/launch/pick_ball_sim.launch.py
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/ament_index/resource_index/package_run_dependencies/widowx_etasl
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/ament_index/resource_index/parent_prefix_path/widowx_etasl
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/environment/path.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/environment/path.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/local_setup.bash
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/local_setup.sh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/local_setup.zsh
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/local_setup.dsv
+-- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.dsv
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/ament_index/resource_index/packages/widowx_etasl
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/cmake/widowx_etaslConfig.cmake
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/cmake/widowx_etaslConfig-version.cmake
+-- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.xml
+-- Installing: /home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib/widowx_etasl/crospi_bridge

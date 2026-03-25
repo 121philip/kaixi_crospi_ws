@@ -7,4 +7,14 @@ install(DIRECTORY tasks config launch
   DESTINATION share/${PROJECT_NAME}
 )
 
+install(PROGRAMS crospi_bridge.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME crospi_bridge
+)
+
+install(PROGRAMS crospi_starter.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME crospi_starter
+)
+
 ament_package()
