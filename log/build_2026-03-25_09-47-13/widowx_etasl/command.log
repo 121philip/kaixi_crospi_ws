@@ -1,2 +1,0 @@
-Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/widowx_etasl': /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/widowx_etasl -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl
-Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/widowx_etasl' returned '1': /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/widowx_etasl -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl

@@ -1,7 +1,0 @@
-[0mCompiling package /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core[0m
-[0mCompiling misc libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc[0m
-[0mCompiling misc/crospi_node_utils libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc/crospi_node_utils[0m
-[0mCompiling misc/crospi_utils libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc/crospi_utils[0m
-[0mCompiling misc/robot_interfacing_utils libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/misc/robot_interfacing_utils[0m
-[0mCompiling node located in /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/src/ros2_nodes/crospi_node[0m
-/usr/bin/ld: warning: libboost_chrono.so.1.74.0, needed by /home/masterthesis/kaixi_crospi_ws/install/etasl_wrapper/lib/libexpressiongraph_solver_qpoases.so, may conflict with libboost_chrono.so.1.89.0
