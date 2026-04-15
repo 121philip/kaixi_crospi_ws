@@ -72,6 +72,42 @@
           "depth": 1,
           "number_of_tries": 10,
           "when_unpublished": "use_default"
+        },
+        {
+          "is-ScalarInputHandler": true,
+          "topic-name": "/crospi/ball_x",
+          "varname": "ball_x",
+          "default_value": 0.25,
+          "depth": 1,
+          "number_of_tries": 10,
+          "when_unpublished": "use_default"
+        },
+        {
+          "is-ScalarInputHandler": true,
+          "topic-name": "/crospi/ball_y",
+          "varname": "ball_y",
+          "default_value": 0.0,
+          "depth": 1,
+          "number_of_tries": 10,
+          "when_unpublished": "use_default"
+        },
+        {
+          "is-ScalarInputHandler": true,
+          "topic-name": "/crospi/ball_z",
+          "varname": "ball_z",
+          "default_value": 0.05,
+          "depth": 1,
+          "number_of_tries": 10,
+          "when_unpublished": "use_default"
+        },
+        {
+          "is-ScalarInputHandler": true,
+          "topic-name": "/crospi/pick_phase",
+          "varname": "pick_phase",
+          "default_value": 0.0,
+          "depth": 1,
+          "number_of_tries": 10,
+          "when_unpublished": "use_default"
         }
       ]
     }

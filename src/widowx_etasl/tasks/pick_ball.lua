@@ -60,10 +60,28 @@ Constraint{
 
 -- Orientation constraint: keep end-effector pointing downward
 -- rotate_x(-pi/2) is the desired orientation (gripper pointing down)
+-- getRotVec returns a 3D vector, so we split into 3 scalar constraints
+local ori_err = ee_rot * inv(rotate_x(-math.pi / 2))
 Constraint{
     context  = ctx,
-    name     = "orientation",
-    expr     = getRotVec(ee_rot * inv(rotate_x(-math.pi / 2))),
+    name     = "ori_rx",
+    expr     = coord_x(getRotVec(ori_err)),
+    K        = 2.0,
+    weight   = 0.5,
+    priority = 2
+}
+Constraint{
+    context  = ctx,
+    name     = "ori_ry",
+    expr     = coord_y(getRotVec(ori_err)),
+    K        = 2.0,
+    weight   = 0.5,
+    priority = 2
+}
+Constraint{
+    context  = ctx,
+    name     = "ori_rz",
+    expr     = coord_z(getRotVec(ori_err)),
     K        = 2.0,
     weight   = 0.5,
     priority = 2
