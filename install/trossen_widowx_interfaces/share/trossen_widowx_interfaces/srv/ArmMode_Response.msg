@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_cmake/srv/ArmMode_Response.msg

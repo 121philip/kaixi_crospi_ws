@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-72b0897a03221107615b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "trossen_widowx_driver_crospi",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "trossen_widowx_driver_crospi::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trossen_widowx_driver_crospi-e1cfd8c5387ed7d2944d.json",
+					"name" : "trossen_widowx_driver_crospi",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trossen_widowx_driver_crospi_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trossen_widowx_driver_crospi_uninstall-921ea4ec2efa9b269dd4.json",
+					"name" : "trossen_widowx_driver_crospi_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-46b0dae24eb7493554b4.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi",
+		"source" : "/home/masterthesis/kaixi_crospi_ws/src/robot_drivers/trossen_widowx_driver_crospi"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

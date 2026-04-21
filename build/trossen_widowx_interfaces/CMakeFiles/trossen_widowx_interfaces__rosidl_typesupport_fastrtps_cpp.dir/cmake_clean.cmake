@@ -1,0 +1,21 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/arm_mode__type_support.cpp.o"
+  "CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/arm_mode__type_support.cpp.o.d"
+  "CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/control_gripper__type_support.cpp.o"
+  "CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/control_gripper__type_support.cpp.o.d"
+  "CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/joint_modes__type_support.cpp.o"
+  "CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/joint_modes__type_support.cpp.o.d"
+  "libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.pdb"
+  "libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/arm_mode__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/control_gripper__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/arm_mode__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/control_gripper__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/joint_modes__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/joint_modes__rosidl_typesupport_fastrtps_cpp.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

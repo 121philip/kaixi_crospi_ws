@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/betfsm_demos/scripts/send_up_and_down.sh

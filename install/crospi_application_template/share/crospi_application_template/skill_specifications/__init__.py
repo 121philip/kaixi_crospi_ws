@@ -1,1 +1,1 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/skill_specifications/__init__.py
+/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/skill_specifications/__init__.py

@@ -316,61 +316,61 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "applications" "task_specifications" "skill_specifications" "robot_models" "schemas" "DESTINATION" "share/crospi_application_template")
-ament_cmake_symlink_install_directory("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" DIRECTORY "applications" "task_specifications" "skill_specifications" "robot_models" "schemas" "DESTINATION" "share/crospi_application_template")
+ament_cmake_symlink_install_directory("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" DIRECTORY "applications" "task_specifications" "skill_specifications" "robot_models" "schemas" "DESTINATION" "share/crospi_application_template")
 
 # install(PROGRAMS "example_nodes/pose_msg_to_tf.py" "example_nodes/sine_wave_tf.py" "DESTINATION" "lib/crospi_application_template")
-ament_cmake_symlink_install_programs("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" PROGRAMS "example_nodes/pose_msg_to_tf.py" "example_nodes/sine_wave_tf.py" "DESTINATION" "lib/crospi_application_template")
+ament_cmake_symlink_install_programs("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" PROGRAMS "example_nodes/pose_msg_to_tf.py" "example_nodes/sine_wave_tf.py" "DESTINATION" "lib/crospi_application_template")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/crospi_application_template/environment")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/crospi_application_template/environment")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/pythonpath.sh" "DESTINATION" "share/crospi_application_template/environment")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/crospi_application_template/environment")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/crospi_application_template/environment")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/pythonpath.dsv" "DESTINATION" "share/crospi_application_template/environment")
 
 # install(DIRECTORY "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_python/skill_specifications/skill_specifications.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/skill_specifications-0.0.0-py3.10.egg-info")
-ament_cmake_symlink_install_directory("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" DIRECTORY "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_python/skill_specifications/skill_specifications.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/skill_specifications-0.0.0-py3.10.egg-info")
+ament_cmake_symlink_install_directory("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" DIRECTORY "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_python/skill_specifications/skill_specifications.egg-info/" "DESTINATION" "local/lib/python3.10/dist-packages/skill_specifications-0.0.0-py3.10.egg-info")
 
-# install(DIRECTORY "/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/skill_specifications/" "DESTINATION" "local/lib/python3.10/dist-packages/skill_specifications" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
-ament_cmake_symlink_install_directory("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" DIRECTORY "/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/skill_specifications/" "DESTINATION" "local/lib/python3.10/dist-packages/skill_specifications" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+# install(DIRECTORY "/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/skill_specifications/" "DESTINATION" "local/lib/python3.10/dist-packages/skill_specifications" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
+ament_cmake_symlink_install_directory("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" DIRECTORY "/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/skill_specifications/" "DESTINATION" "local/lib/python3.10/dist-packages/skill_specifications" "PATTERN_EXCLUDE" "*.pyc" "PATTERN_EXCLUDE" "__pycache__")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/crospi_application_template/environment")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/crospi_application_template/environment")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/crospi_application_template/environment")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/crospi_application_template/environment")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/crospi_application_template/environment")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/ament_prefix_path.dsv" "DESTINATION" "share/crospi_application_template/environment")
 
 # install(FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/crospi_application_template/environment")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/crospi_application_template/environment")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/opt/ros/humble/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/crospi_application_template/environment")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/crospi_application_template/environment")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/crospi_application_template/environment")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/path.dsv" "DESTINATION" "share/crospi_application_template/environment")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/crospi_application_template")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/crospi_application_template")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/crospi_application_template")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/crospi_application_template")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/crospi_application_template")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/crospi_application_template")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/crospi_application_template")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/crospi_application_template")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/crospi_application_template")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/crospi_application_template")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/crospi_application_template")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/local_setup.dsv" "DESTINATION" "share/crospi_application_template")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/crospi_application_template")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/crospi_application_template")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_environment_hooks/package.dsv" "DESTINATION" "share/crospi_application_template")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/packages/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/packages/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_index/share/ament_index/resource_index/packages/crospi_application_template" "DESTINATION" "share/ament_index/resource_index/packages")
 
 # install(FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_core/crospi_application_templateConfig.cmake" "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_core/crospi_application_templateConfig-version.cmake" "DESTINATION" "share/crospi_application_template/cmake")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_core/crospi_application_templateConfig.cmake" "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_core/crospi_application_templateConfig-version.cmake" "DESTINATION" "share/crospi_application_template/cmake")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_core/crospi_application_templateConfig.cmake" "/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_core/crospi_application_templateConfig-version.cmake" "DESTINATION" "share/crospi_application_template/cmake")
 
-# install(FILES "/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/package.xml" "DESTINATION" "share/crospi_application_template")
-ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/package.xml" "DESTINATION" "share/crospi_application_template")
+# install(FILES "/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/package.xml" "DESTINATION" "share/crospi_application_template")
+ament_cmake_symlink_install_files("/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template" FILES "/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/package.xml" "DESTINATION" "share/crospi_application_template")

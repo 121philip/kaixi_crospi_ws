@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_generator_py/crospi_interfaces/msg/_pose_parameters_s.c

@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_typesupport_fastrtps_cpp/crospi_interfaces/msg/detail/pose_parameters__rosidl_typesupport_fastrtps_cpp.hpp

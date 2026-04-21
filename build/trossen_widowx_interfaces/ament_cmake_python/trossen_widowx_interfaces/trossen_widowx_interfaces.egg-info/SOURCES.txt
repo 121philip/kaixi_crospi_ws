@@ -1,0 +1,10 @@
+setup.py
+trossen_widowx_interfaces/__init__.py
+trossen_widowx_interfaces.egg-info/PKG-INFO
+trossen_widowx_interfaces.egg-info/SOURCES.txt
+trossen_widowx_interfaces.egg-info/dependency_links.txt
+trossen_widowx_interfaces.egg-info/top_level.txt
+trossen_widowx_interfaces/srv/__init__.py
+trossen_widowx_interfaces/srv/_arm_mode.py
+trossen_widowx_interfaces/srv/_control_gripper.py
+trossen_widowx_interfaces/srv/_joint_modes.py

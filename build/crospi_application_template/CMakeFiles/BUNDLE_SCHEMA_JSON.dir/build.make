@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template
+CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template
@@ -67,8 +67,8 @@ include CMakeFiles/BUNDLE_SCHEMA_JSON.dir/compiler_depend.make
 include CMakeFiles/BUNDLE_SCHEMA_JSON.dir/progress.make
 
 CMakeFiles/BUNDLE_SCHEMA_JSON:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "constructing json schema bundled file from /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/schemas/blackboard-schema.json to /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/schemas/generated/blackboard-schema-bundled.json"
-	cd /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries && python3 /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/json_schema_bundler.py /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/schemas/blackboard-schema.json /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/schemas/generated/blackboard-schema-bundled.json 2>&1 | tee /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/blackboard-schema-bundled.log
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "constructing json schema bundled file from /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/schemas/blackboard-schema.json to /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/schemas/generated/blackboard-schema-bundled.json"
+	cd /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/task_specifications/libraries && python3 /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/json_schema_bundler.py /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/schemas/blackboard-schema.json /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/schemas/generated/blackboard-schema-bundled.json 2>&1 | tee /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/blackboard-schema-bundled.log
 
 BUNDLE_SCHEMA_JSON: CMakeFiles/BUNDLE_SCHEMA_JSON
 BUNDLE_SCHEMA_JSON: CMakeFiles/BUNDLE_SCHEMA_JSON.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/BUNDLE_SCHEMA_JSON.dir/clean:
 .PHONY : CMakeFiles/BUNDLE_SCHEMA_JSON.dir/clean
 
 CMakeFiles/BUNDLE_SCHEMA_JSON.dir/depend:
-	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/BUNDLE_SCHEMA_JSON.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/BUNDLE_SCHEMA_JSON.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/BUNDLE_SCHEMA_JSON.dir/depend
 

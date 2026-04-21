@@ -1,1 +1,1 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/example_nodes/sine_wave_tf.py
+/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/example_nodes/sine_wave_tf.py

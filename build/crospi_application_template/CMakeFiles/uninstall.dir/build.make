@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template
+CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

@@ -1,5 +1,0 @@
-if(EXISTS "/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/test_expressiongraph[1]_tests.cmake")
-  include("/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/expressiongraph/test_expressiongraph[1]_tests.cmake")
-else()
-  add_test(test_expressiongraph_NOT_BUILT test_expressiongraph_NOT_BUILT)
-endif()

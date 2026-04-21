@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from trossen_widowx_interfaces/srv/ControlGripper.srv
+// generated code does not contain a copyright notice
+
+
+module trossen_widowx_interfaces {
+  module srv {
+    struct ControlGripper_Request {
+      double position;
+
+      double time;
+    };
+    struct ControlGripper_Response {
+      boolean success;
+    };
+  };
+};

@@ -1,0 +1,421 @@
+[0.086s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.086s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x72b0a4313340>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72b0a43129b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72b0a43129b0>>, mixin_verb=('build',))
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.231s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/masterthesis/kaixi_crospi_ws'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(src/crospi_application_template) by extension 'ros'
+[0.262s] DEBUG:colcon.colcon_core.package_identification:Package 'src/crospi_application_template' with type 'ros.ament_cmake' and name 'crospi_application_template'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'ignore'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'ignore_ament_install'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extensions ['colcon_pkg']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'colcon_pkg'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extensions ['colcon_meta']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'colcon_meta'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'ros'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extensions ['cmake', 'python']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'cmake'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'python'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extensions ['python_setup_py']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers) by extension 'python_setup_py'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extensions ['ignore', 'ignore_ament_install']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extension 'ignore'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extension 'ignore_ament_install'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extensions ['colcon_pkg']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extension 'colcon_pkg'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extensions ['colcon_meta']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extension 'colcon_meta'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extensions ['ros']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_drivers/trossen_widowx_driver_crospi) by extension 'ros'
+[0.263s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_drivers/trossen_widowx_driver_crospi' with type 'ros.ament_cmake' and name 'trossen_widowx_driver_crospi'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extension 'ignore'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extension 'ignore_ament_install'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extensions ['colcon_pkg']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extension 'colcon_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extensions ['colcon_meta']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extension 'colcon_meta'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extensions ['ros']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_arm_description) by extension 'ros'
+[0.264s] DEBUG:colcon.colcon_core.package_identification:Package 'src/trossen_arm_description' with type 'ros.ament_cmake' and name 'trossen_arm_description'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extension 'ignore'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extension 'ignore_ament_install'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extensions ['colcon_pkg']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extension 'colcon_pkg'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extensions ['colcon_meta']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extension 'colcon_meta'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extensions ['ros']
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/trossen_widowx_interfaces) by extension 'ros'
+[0.265s] DEBUG:colcon.colcon_core.package_identification:Package 'src/trossen_widowx_interfaces' with type 'ros.ament_cmake' and name 'trossen_widowx_interfaces'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extensions ['ignore', 'ignore_ament_install']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extension 'ignore'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extension 'ignore_ament_install'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extensions ['colcon_pkg']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extension 'colcon_pkg'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extensions ['colcon_meta']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extension 'colcon_meta'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(src/widowx_etasl) by extension 'ros'
+[0.266s] DEBUG:colcon.colcon_core.package_identification:Package 'src/widowx_etasl' with type 'ros.ament_cmake' and name 'widowx_etasl'
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.266s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.281s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'cmake_args' from command line to 'None'
+[0.281s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'cmake_target' from command line to 'None'
+[0.281s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.281s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'cmake_clean_cache' from command line to 'False'
+[0.281s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'cmake_clean_first' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'cmake_force_configure' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'ament_cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'catkin_cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'crospi_application_template' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.282s] DEBUG:colcon.colcon_core.verb:Building package 'crospi_application_template' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template', 'merge_install': False, 'path': '/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template', 'symlink_install': True, 'test_result_base': None}
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'cmake_target' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_arm_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.282s] DEBUG:colcon.colcon_core.verb:Building package 'trossen_arm_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description', 'merge_install': False, 'path': '/home/masterthesis/kaixi_crospi_ws/src/trossen_arm_description', 'symlink_install': True, 'test_result_base': None}
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.282s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.283s] DEBUG:colcon.colcon_core.verb:Building package 'trossen_widowx_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces', 'merge_install': False, 'path': '/home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'cmake_target' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'cmake_clean_cache' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'cmake_clean_first' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'cmake_force_configure' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'ament_cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'catkin_cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'widowx_etasl' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.283s] DEBUG:colcon.colcon_core.verb:Building package 'widowx_etasl' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/masterthesis/kaixi_crospi_ws/build/widowx_etasl', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl', 'merge_install': False, 'path': '/home/masterthesis/kaixi_crospi_ws/src/widowx_etasl', 'symlink_install': True, 'test_result_base': None}
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'cmake_args' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'cmake_target' from command line to 'None'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'cmake_clean_cache' from command line to 'False'
+[0.283s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'cmake_clean_first' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'cmake_force_configure' from command line to 'False'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'ament_cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'catkin_cmake_args' from command line to 'None'
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'trossen_widowx_driver_crospi' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.284s] DEBUG:colcon.colcon_core.verb:Building package 'trossen_widowx_driver_crospi' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi', 'merge_install': False, 'path': '/home/masterthesis/kaixi_crospi_ws/src/robot_drivers/trossen_widowx_driver_crospi', 'symlink_install': True, 'test_result_base': None}
+[0.284s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.285s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.285s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces' with build type 'ament_cmake'
+[0.285s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces'
+[0.287s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.287s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.287s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.292s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template' with build type 'ament_cmake'
+[0.292s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template'
+[0.292s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.292s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.296s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/masterthesis/kaixi_crospi_ws/src/trossen_arm_description' with build type 'ament_cmake'
+[0.296s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/masterthesis/kaixi_crospi_ws/src/trossen_arm_description'
+[0.296s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.296s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.300s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/masterthesis/kaixi_crospi_ws/src/widowx_etasl' with build type 'ament_cmake'
+[0.300s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/masterthesis/kaixi_crospi_ws/src/widowx_etasl'
+[0.300s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.300s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.308s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces -- -j16 -l16
+[0.310s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template -- -j16 -l16
+[0.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description -- -j16 -l16
+[0.315s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/widowx_etasl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/widowx_etasl -- -j16 -l16
+[0.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description -- -j16 -l16
+[0.353s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description
+[0.354s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/widowx_etasl' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/widowx_etasl -- -j16 -l16
+[0.356s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/widowx_etasl': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/widowx_etasl
+[0.379s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(widowx_etasl)
+[0.380s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/widowx_etasl' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/widowx_etasl
+[0.382s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl' for CMake module files
+[0.382s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl' for CMake config files
+[0.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('widowx_etasl', 'cmake_prefix_path')
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/hook/cmake_prefix_path.ps1'
+[0.383s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/hook/cmake_prefix_path.dsv'
+[0.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/hook/cmake_prefix_path.sh'
+[0.384s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib'
+[0.384s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/bin'
+[0.385s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib/pkgconfig/widowx_etasl.pc'
+[0.385s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib/python3.10/site-packages'
+[0.386s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/bin'
+[0.386s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.ps1'
+[0.387s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.dsv'
+[0.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.sh'
+[0.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.bash'
+[0.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.zsh'
+[0.389s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/colcon-core/packages/widowx_etasl)
+[0.389s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(widowx_etasl)
+[0.390s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl' for CMake module files
+[0.391s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl' for CMake config files
+[0.392s] Level 1:colcon.colcon_core.shell:create_environment_hook('widowx_etasl', 'cmake_prefix_path')
+[0.392s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/hook/cmake_prefix_path.ps1'
+[0.393s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/hook/cmake_prefix_path.dsv'
+[0.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/hook/cmake_prefix_path.sh'
+[0.394s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib'
+[0.394s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/bin'
+[0.394s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib/pkgconfig/widowx_etasl.pc'
+[0.394s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/lib/python3.10/site-packages'
+[0.395s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/bin'
+[0.395s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.ps1'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.dsv'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.sh'
+[0.396s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.bash'
+[0.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/widowx_etasl/package.zsh'
+[0.397s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl/share/colcon-core/packages/widowx_etasl)
+[0.398s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(trossen_arm_description)
+[0.398s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description' for CMake module files
+[0.399s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description
+[0.399s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description' for CMake config files
+[0.399s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_arm_description', 'cmake_prefix_path')
+[0.399s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/hook/cmake_prefix_path.ps1'
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/hook/cmake_prefix_path.dsv'
+[0.400s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/hook/cmake_prefix_path.sh'
+[0.401s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/bin'
+[0.401s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/lib/pkgconfig/trossen_arm_description.pc'
+[0.401s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/lib/python3.10/site-packages'
+[0.402s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/bin'
+[0.402s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.ps1'
+[0.403s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.dsv'
+[0.403s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.sh'
+[0.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.bash'
+[0.404s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.zsh'
+[0.404s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/colcon-core/packages/trossen_arm_description)
+[0.404s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(trossen_arm_description)
+[0.405s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description' for CMake module files
+[0.405s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description' for CMake config files
+[0.405s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_arm_description', 'cmake_prefix_path')
+[0.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/hook/cmake_prefix_path.ps1'
+[0.406s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/hook/cmake_prefix_path.dsv'
+[0.406s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/hook/cmake_prefix_path.sh'
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/bin'
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/lib/pkgconfig/trossen_arm_description.pc'
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/lib/python3.10/site-packages'
+[0.407s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/bin'
+[0.407s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.ps1'
+[0.407s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.dsv'
+[0.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.sh'
+[0.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.bash'
+[0.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/trossen_arm_description/package.zsh'
+[0.409s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description/share/colcon-core/packages/trossen_arm_description)
+[0.623s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces -- -j16 -l16
+[0.625s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces
+[0.696s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(trossen_widowx_interfaces)
+[0.696s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces' for CMake module files
+[0.696s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces
+[0.697s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces' for CMake config files
+[0.697s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_interfaces', 'cmake_prefix_path')
+[0.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/cmake_prefix_path.ps1'
+[0.698s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/cmake_prefix_path.dsv'
+[0.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/cmake_prefix_path.sh'
+[0.699s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib'
+[0.699s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_interfaces', 'ld_library_path_lib')
+[0.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/ld_library_path_lib.ps1'
+[0.699s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/ld_library_path_lib.dsv'
+[0.699s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/ld_library_path_lib.sh'
+[0.700s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/bin'
+[0.700s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/pkgconfig/trossen_widowx_interfaces.pc'
+[0.700s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/python3.10/site-packages'
+[0.700s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/bin'
+[0.700s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.ps1'
+[0.701s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.dsv'
+[0.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.sh'
+[0.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.bash'
+[0.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.zsh'
+[0.702s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/colcon-core/packages/trossen_widowx_interfaces)
+[0.702s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(trossen_widowx_interfaces)
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces' for CMake module files
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces' for CMake config files
+[0.704s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_interfaces', 'cmake_prefix_path')
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/cmake_prefix_path.ps1'
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/cmake_prefix_path.dsv'
+[0.704s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/cmake_prefix_path.sh'
+[0.705s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib'
+[0.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_interfaces', 'ld_library_path_lib')
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/ld_library_path_lib.ps1'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/ld_library_path_lib.dsv'
+[0.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/hook/ld_library_path_lib.sh'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/bin'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/pkgconfig/trossen_widowx_interfaces.pc'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/python3.10/site-packages'
+[0.706s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/bin'
+[0.706s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.ps1'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.dsv'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.sh'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.bash'
+[0.708s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.zsh'
+[0.708s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/colcon-core/packages/trossen_widowx_interfaces)
+[0.708s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/masterthesis/kaixi_crospi_ws/src/robot_drivers/trossen_widowx_driver_crospi' with build type 'ament_cmake'
+[0.709s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/masterthesis/kaixi_crospi_ws/src/robot_drivers/trossen_widowx_driver_crospi'
+[0.709s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.709s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.720s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi': CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces:/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi:/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description:/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi -- -j16 -l16
+[0.772s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi' returned '0': CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces:/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi:/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description:/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi -- -j16 -l16
+[0.774s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi': CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces:/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi:/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description:/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi
+[0.789s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(trossen_widowx_driver_crospi)
+[0.789s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi' for CMake module files
+[0.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi' returned '0': CMAKE_PREFIX_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces:/home/masterthesis/kaixi_crospi_ws/install/widowx_etasl:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi:/home/masterthesis/kaixi_crospi_ws/install/trossen_arm_description:/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template:/opt/ros2_crospi_ws/install/template_driver_crospi:/opt/ros2_crospi_ws/install/crospi_default_plugins:/opt/ros2_crospi_ws/install/crospi_core:/opt/ros2_crospi_ws/install/etasl_wrapper:/opt/ros2_crospi_ws/install/crospi_interfaces:/opt/ros2_crospi_ws/install/betfsm_interfaces:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble LD_LIBRARY_PATH=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib:/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib:/opt/ros2_crospi_ws/install/template_driver_crospi/lib:/opt/ros2_crospi_ws/install/crospi_default_plugins/lib:/opt/ros2_crospi_ws/install/crospi_core/lib:/opt/ros2_crospi_ws/install/etasl_wrapper/lib:/opt/ros2_crospi_ws/install/crospi_interfaces/lib:/opt/ros2_crospi_ws/install/betfsm_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/opt/boost_1.89.0/lib /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi
+[0.790s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi' for CMake config files
+[0.790s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_driver_crospi', 'cmake_prefix_path')
+[0.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.ps1'
+[0.791s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.dsv'
+[0.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.sh'
+[0.791s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib'
+[0.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_driver_crospi', 'ld_library_path_lib')
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.ps1'
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.dsv'
+[0.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.sh'
+[0.792s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/bin'
+[0.792s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib/pkgconfig/trossen_widowx_driver_crospi.pc'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib/python3.10/site-packages'
+[0.793s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/bin'
+[0.793s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.ps1'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.dsv'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.sh'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.bash'
+[0.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.zsh'
+[0.795s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/colcon-core/packages/trossen_widowx_driver_crospi)
+[0.795s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(trossen_widowx_driver_crospi)
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi' for CMake module files
+[0.796s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi' for CMake config files
+[0.796s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_driver_crospi', 'cmake_prefix_path')
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.ps1'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.dsv'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.sh'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib'
+[0.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('trossen_widowx_driver_crospi', 'ld_library_path_lib')
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.ps1'
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.dsv'
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.sh'
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/bin'
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib/pkgconfig/trossen_widowx_driver_crospi.pc'
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/lib/python3.10/site-packages'
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/bin'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.ps1'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.dsv'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.sh'
+[0.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.bash'
+[0.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/package.zsh'
+[0.800s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/colcon-core/packages/trossen_widowx_driver_crospi)
+[2.073s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template -- -j16 -l16
+[2.074s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template
+[2.131s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(crospi_application_template)
+[2.132s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template' for CMake module files
+[2.132s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template
+[2.132s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template' for CMake config files
+[2.133s] Level 1:colcon.colcon_core.shell:create_environment_hook('crospi_application_template', 'cmake_prefix_path')
+[2.133s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/hook/cmake_prefix_path.ps1'
+[2.133s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/hook/cmake_prefix_path.dsv'
+[2.134s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/hook/cmake_prefix_path.sh'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/bin'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib/pkgconfig/crospi_application_template.pc'
+[2.134s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib/python3.10/site-packages'
+[2.135s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/bin'
+[2.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.ps1'
+[2.135s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.dsv'
+[2.135s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.sh'
+[2.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.bash'
+[2.136s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.zsh'
+[2.136s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/colcon-core/packages/crospi_application_template)
+[2.137s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(crospi_application_template)
+[2.137s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template' for CMake module files
+[2.137s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template' for CMake config files
+[2.138s] Level 1:colcon.colcon_core.shell:create_environment_hook('crospi_application_template', 'cmake_prefix_path')
+[2.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/hook/cmake_prefix_path.ps1'
+[2.138s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/hook/cmake_prefix_path.dsv'
+[2.138s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/hook/cmake_prefix_path.sh'
+[2.139s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib'
+[2.139s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/bin'
+[2.139s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib/pkgconfig/crospi_application_template.pc'
+[2.139s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/lib/python3.10/site-packages'
+[2.139s] Level 1:colcon.colcon_core.environment:checking '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/bin'
+[2.139s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.ps1'
+[2.140s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.dsv'
+[2.140s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.sh'
+[2.140s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.bash'
+[2.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/crospi_application_template/package.zsh'
+[2.141s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/masterthesis/kaixi_crospi_ws/install/crospi_application_template/share/colcon-core/packages/crospi_application_template)
+[2.141s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.141s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.141s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.142s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.145s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[2.145s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.145s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.145s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.158s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.158s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/masterthesis/kaixi_crospi_ws/install/local_setup.ps1'
+[2.159s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/masterthesis/kaixi_crospi_ws/install/_local_setup_util_ps1.py'
+[2.160s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/masterthesis/kaixi_crospi_ws/install/setup.ps1'
+[2.161s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/masterthesis/kaixi_crospi_ws/install/local_setup.sh'
+[2.162s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/masterthesis/kaixi_crospi_ws/install/_local_setup_util_sh.py'
+[2.162s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/masterthesis/kaixi_crospi_ws/install/setup.sh'
+[2.163s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/masterthesis/kaixi_crospi_ws/install/local_setup.bash'
+[2.164s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/masterthesis/kaixi_crospi_ws/install/setup.bash'
+[2.165s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/masterthesis/kaixi_crospi_ws/install/local_setup.zsh'
+[2.165s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/masterthesis/kaixi_crospi_ws/install/setup.zsh'

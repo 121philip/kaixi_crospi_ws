@@ -1,0 +1,23 @@
+{
+  "package_name": "trossen_widowx_interfaces",
+  "output_dir": "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_typesupport_introspection_c/trossen_widowx_interfaces",
+  "template_dir": "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource",
+  "idl_tuples": [
+    "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_adapter/trossen_widowx_interfaces:srv/ArmMode.idl",
+    "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_adapter/trossen_widowx_interfaces:srv/JointModes.idl",
+    "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_adapter/trossen_widowx_interfaces:srv/ControlGripper.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/humble/lib/rosidl_typesupport_introspection_c/rosidl_typesupport_introspection_c",
+    "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_introspection_c/__init__.py",
+    "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/idl__rosidl_typesupport_introspection_c.h.em",
+    "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/idl__type_support.c.em",
+    "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/msg__rosidl_typesupport_introspection_c.h.em",
+    "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/msg__type_support.c.em",
+    "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__rosidl_typesupport_introspection_c.h.em",
+    "/opt/ros/humble/share/rosidl_typesupport_introspection_c/resource/srv__type_support.c.em",
+    "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_adapter/trossen_widowx_interfaces/srv/ArmMode.idl",
+    "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_adapter/trossen_widowx_interfaces/srv/JointModes.idl",
+    "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_adapter/trossen_widowx_interfaces/srv/ControlGripper.idl"
+  ]
+}

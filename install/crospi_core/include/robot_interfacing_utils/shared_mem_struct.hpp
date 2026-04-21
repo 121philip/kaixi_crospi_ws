@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_core/include/robot_interfacing_utils/shared_mem_struct.hpp

@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -shared -Wl,-soname,librobot_interfacing_utils.so -o librobot_interfacing_utils.so CMakeFiles/robot_interfacing_utils.dir/thread_manager.cpp.o  -lfmt -ljsoncpp 

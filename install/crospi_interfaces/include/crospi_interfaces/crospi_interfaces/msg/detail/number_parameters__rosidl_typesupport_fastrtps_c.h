@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_typesupport_fastrtps_c/crospi_interfaces/msg/detail/number_parameters__rosidl_typesupport_fastrtps_c.h

@@ -1,0 +1,271 @@
+[0.020s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces
+[0.067s] -- The C compiler identification is GNU 11.4.0
+[0.108s] -- The CXX compiler identification is GNU 11.4.0
+[0.115s] -- Detecting C compiler ABI info
+[0.166s] -- Detecting C compiler ABI info - done
+[0.171s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.172s] -- Detecting C compile features
+[0.172s] -- Detecting C compile features - done
+[0.174s] -- Detecting CXX compiler ABI info
+[0.234s] -- Detecting CXX compiler ABI info - done
+[0.240s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.240s] -- Detecting CXX compile features
+[0.240s] -- Detecting CXX compile features - done
+[0.245s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.377s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.431s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.495s] -- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[0.547s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.558s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.572s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.589s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.612s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.633s] -- Found rcl_interfaces: 1.2.2 (/opt/ros/humble/share/rcl_interfaces/cmake)
+[0.647s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.907s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.164s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.262s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.282s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.289s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.312s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.313s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.313s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.313s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.332s] -- Found PythonExtra: .so  
+[1.416s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.454s] -- Added test 'lint_cmake' to check CMake code style
+[1.456s] -- Added test 'xmllint' to check XML markup files
+[1.459s] -- Configuring done
+[1.485s] -- Generating done
+[1.493s] -- Build files have been written to: /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces
+[1.499s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake /home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces
+[1.501s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces -- -j16 -l16
+[1.530s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.537s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.537s] [  6%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[1.543s] [  6%] Built target ament_cmake_python_symlink_trossen_widowx_interfaces
+[1.736s] [  6%] Built target trossen_widowx_interfaces__rs
+[1.763s] running egg_info
+[1.764s] creating trossen_widowx_interfaces.egg-info
+[1.764s] writing trossen_widowx_interfaces.egg-info/PKG-INFO
+[1.764s] writing dependency_links to trossen_widowx_interfaces.egg-info/dependency_links.txt
+[1.764s] writing top-level names to trossen_widowx_interfaces.egg-info/top_level.txt
+[1.764s] writing manifest file 'trossen_widowx_interfaces.egg-info/SOURCES.txt'
+[1.765s] reading manifest file 'trossen_widowx_interfaces.egg-info/SOURCES.txt'
+[1.766s] writing manifest file 'trossen_widowx_interfaces.egg-info/SOURCES.txt'
+[1.784s] [  6%] Built target ament_cmake_python_build_trossen_widowx_interfaces_egg
+[1.865s] [ 12%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_generator_c.dir/rosidl_generator_c/trossen_widowx_interfaces/srv/detail/arm_mode__functions.c.o[0m
+[1.865s] [ 12%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_generator_c.dir/rosidl_generator_c/trossen_widowx_interfaces/srv/detail/joint_modes__functions.c.o[0m
+[1.865s] [ 12%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_generator_c.dir/rosidl_generator_c/trossen_widowx_interfaces/srv/detail/control_gripper__functions.c.o[0m
+[1.893s] [ 12%] Built target trossen_widowx_interfaces__cpp
+[1.901s] [ 18%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.901s] [ 18%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.901s] [ 18%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.910s] [ 20%] [32m[1mLinking C shared library libtrossen_widowx_interfaces__rosidl_generator_c.so[0m
+[1.938s] [ 20%] Built target trossen_widowx_interfaces__rosidl_generator_c
+[1.946s] [ 27%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.947s] [ 27%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.947s] [ 27%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.129s] [ 29%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/trossen_widowx_interfaces/srv/arm_mode__type_support.cpp.o[0m
+[2.131s] [ 31%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/trossen_widowx_interfaces/srv/joint_modes__type_support.cpp.o[0m
+[2.132s] [ 33%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/trossen_widowx_interfaces/srv/control_gripper__type_support.cpp.o[0m
+[2.171s] [ 35%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/trossen_widowx_interfaces/srv/detail/control_gripper__type_support.cpp.o[0m
+[2.173s] [ 37%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/trossen_widowx_interfaces/srv/detail/arm_mode__type_support.cpp.o[0m
+[2.173s] [ 39%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/trossen_widowx_interfaces/srv/detail/joint_modes__type_support.cpp.o[0m
+[2.214s] [ 45%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/control_gripper__type_support.cpp.o[0m
+[2.214s] [ 45%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/joint_modes__type_support.cpp.o[0m
+[2.214s] [ 45%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/trossen_widowx_interfaces/srv/detail/dds_fastrtps/arm_mode__type_support.cpp.o[0m
+[2.242s] [ 52%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/trossen_widowx_interfaces/srv/joint_modes__type_support.cpp.o[0m
+[2.242s] [ 52%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/trossen_widowx_interfaces/srv/control_gripper__type_support.cpp.o[0m
+[2.242s] [ 52%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/trossen_widowx_interfaces/srv/arm_mode__type_support.cpp.o[0m
+[2.255s] [ 54%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/trossen_widowx_interfaces/srv/detail/arm_mode__type_support.c.o[0m
+[2.258s] [ 56%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/trossen_widowx_interfaces/srv/detail/joint_modes__type_support.c.o[0m
+[2.266s] [ 58%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/trossen_widowx_interfaces/srv/detail/control_gripper__type_support.c.o[0m
+[2.277s] [ 60%] [32m[1mLinking CXX shared library libtrossen_widowx_interfaces__rosidl_typesupport_c.so[0m
+[2.309s] [ 66%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/trossen_widowx_interfaces/srv/detail/control_gripper__type_support_c.cpp.o[0m
+[2.309s] [ 66%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/trossen_widowx_interfaces/srv/detail/arm_mode__type_support_c.cpp.o[0m
+[2.310s] [ 66%] [32mBuilding CXX object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/trossen_widowx_interfaces/srv/detail/joint_modes__type_support_c.cpp.o[0m
+[2.316s] [ 68%] [32m[1mLinking C shared library libtrossen_widowx_interfaces__rosidl_typesupport_introspection_c.so[0m
+[2.329s] [ 68%] Built target trossen_widowx_interfaces__rosidl_typesupport_c
+[2.358s] [ 68%] Built target trossen_widowx_interfaces__rosidl_typesupport_introspection_c
+[2.455s] [ 70%] [32m[1mLinking CXX shared library libtrossen_widowx_interfaces__rosidl_typesupport_cpp.so[0m
+[2.491s] [ 70%] Built target trossen_widowx_interfaces__rosidl_typesupport_cpp
+[2.649s] [ 72%] [32m[1mLinking CXX shared library libtrossen_widowx_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[2.692s] [ 75%] [32m[1mLinking CXX shared library libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.708s] [ 75%] Built target trossen_widowx_interfaces__rosidl_typesupport_introspection_cpp
+[2.714s] [ 77%] [32m[1mLinking CXX shared library libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[2.752s] [ 77%] Built target trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp
+[2.769s] [ 77%] Built target trossen_widowx_interfaces__rosidl_typesupport_fastrtps_c
+[2.784s] [ 77%] Built target trossen_widowx_interfaces
+[2.799s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.278s] [ 79%] Built target trossen_widowx_interfaces__py
+[3.293s] [ 85%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_generator_py.dir/rosidl_generator_py/trossen_widowx_interfaces/srv/_control_gripper_s.c.o[0m
+[3.293s] [ 85%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_generator_py.dir/rosidl_generator_py/trossen_widowx_interfaces/srv/_arm_mode_s.c.o[0m
+[3.293s] [ 85%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_generator_py.dir/rosidl_generator_py/trossen_widowx_interfaces/srv/_joint_modes_s.c.o[0m
+[3.372s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/trossen_widowx_interfaces/libtrossen_widowx_interfaces__rosidl_generator_py.so[0m
+[3.400s] [ 87%] Built target trossen_widowx_interfaces__rosidl_generator_py
+[3.415s] [ 93%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/trossen_widowx_interfaces/_trossen_widowx_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[3.415s] [ 93%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/trossen_widowx_interfaces/_trossen_widowx_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[3.415s] [ 93%] [32mBuilding C object CMakeFiles/trossen_widowx_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/trossen_widowx_interfaces/_trossen_widowx_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[3.494s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.494s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.497s] [100%] [32m[1mLinking C shared library rosidl_generator_py/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[3.518s] [100%] Built target trossen_widowx_interfaces__rosidl_typesupport_introspection_c__pyext
+[3.518s] [100%] Built target trossen_widowx_interfaces__rosidl_typesupport_c__pyext
+[3.521s] [100%] Built target trossen_widowx_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[3.530s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --build /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces -- -j16 -l16
+[3.531s] Invoking command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces
+[3.536s] -- Install configuration: ""
+[3.537s] -- Execute custom install script
+[3.537s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/ament_index/resource_index/rosidl_interfaces/trossen_widowx_interfaces
+[3.543s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/msg/rosidl_generator_c__visibility_control.h
+[3.550s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/arm_mode.h
+[3.556s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/control_gripper.h
+[3.563s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__functions.h
+[3.570s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__struct.h
+[3.576s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__type_support.h
+[3.582s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__functions.h
+[3.588s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__struct.h
+[3.593s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__type_support.h
+[3.599s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__functions.h
+[3.605s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__struct.h
+[3.612s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__type_support.h
+[3.618s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/joint_modes.h
+[3.624s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/library_path.sh
+[3.631s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/library_path.dsv
+[3.637s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[3.643s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__rosidl_typesupport_fastrtps_c.h
+[3.649s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__rosidl_typesupport_fastrtps_c.h
+[3.655s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__rosidl_typesupport_fastrtps_c.h
+[3.662s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.668s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/arm_mode.hpp
+[3.673s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/control_gripper.hpp
+[3.680s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__builder.hpp
+[3.686s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__struct.hpp
+[3.692s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__traits.hpp
+[3.698s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__type_support.hpp
+[3.704s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__builder.hpp
+[3.709s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__struct.hpp
+[3.716s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__traits.hpp
+[3.722s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__type_support.hpp
+[3.727s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__builder.hpp
+[3.733s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__struct.hpp
+[3.739s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__traits.hpp
+[3.745s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__type_support.hpp
+[3.751s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/joint_modes.hpp
+[3.757s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.762s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[3.768s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__rosidl_typesupport_fastrtps_cpp.hpp
+[3.773s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__rosidl_typesupport_fastrtps_cpp.hpp
+[3.779s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.785s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__rosidl_typesupport_introspection_c.h
+[3.791s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__rosidl_typesupport_introspection_c.h
+[3.797s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__rosidl_typesupport_introspection_c.h
+[3.803s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/arm_mode__rosidl_typesupport_introspection_cpp.hpp
+[3.809s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/control_gripper__rosidl_typesupport_introspection_cpp.hpp
+[3.815s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/include/trossen_widowx_interfaces/trossen_widowx_interfaces/srv/detail/joint_modes__rosidl_typesupport_introspection_cpp.hpp
+[3.821s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/pythonpath.sh
+[3.827s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/pythonpath.dsv
+[3.833s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[3.838s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.844s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.849s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[3.855s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/__init__.py
+[3.861s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/_trossen_widowx_interfaces_s.ep.rosidl_typesupport_c.c
+[3.867s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/_trossen_widowx_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.872s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/_trossen_widowx_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[3.878s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/libtrossen_widowx_interfaces__rosidl_generator_py.so
+[3.885s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/__init__.py
+[3.890s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_arm_mode.py
+[3.896s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_arm_mode_s.c
+[3.902s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_control_gripper.py
+[3.908s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_control_gripper_s.c
+[3.913s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_joint_modes.py
+[3.919s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_joint_modes_s.c
+[3.925s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.930s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.936s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.942s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.942s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.942s] -- Up-to-date symlink: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/trossen_widowx_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.942s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/ament_index/resource_index/rust_packages/trossen_widowx_interfaces
+[3.948s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/rust/Cargo.toml
+[3.954s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/rust/build.rs
+[3.959s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/rust/src/lib.rs
+[3.966s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/rust/src/srv.rs
+[3.972s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/rust/src/srv/rmw.rs
+[3.977s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ArmMode.idl
+[3.983s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/JointModes.idl
+[3.989s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ControlGripper.idl
+[3.995s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ArmMode.srv
+[4.000s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ArmMode_Request.msg
+[4.006s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ArmMode_Response.msg
+[4.012s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/JointModes.srv
+[4.017s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/JointModes_Request.msg
+[4.023s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/JointModes_Response.msg
+[4.029s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ControlGripper.srv
+[4.035s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ControlGripper_Request.msg
+[4.040s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/srv/ControlGripper_Response.msg
+[4.046s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/ament_index/resource_index/package_run_dependencies/trossen_widowx_interfaces
+[4.053s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/ament_index/resource_index/parent_prefix_path/trossen_widowx_interfaces
+[4.059s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/ament_prefix_path.sh
+[4.064s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/ament_prefix_path.dsv
+[4.070s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/path.sh
+[4.076s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/environment/path.dsv
+[4.082s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/local_setup.bash
+[4.087s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/local_setup.sh
+[4.093s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/local_setup.zsh
+[4.099s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/local_setup.dsv
+[4.104s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.dsv
+[4.110s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/ament_index/resource_index/packages/trossen_widowx_interfaces
+[4.116s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/rosidl_cmake-extras.cmake
+[4.122s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[4.128s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[4.134s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[4.140s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[4.146s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[4.152s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[4.158s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfacesConfig.cmake
+[4.163s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfacesConfig-version.cmake
+[4.169s] -- Symlinking: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/package.xml
+[4.175s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_generator_c.so
+[4.175s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_generator_c.so" to ""
+[4.175s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_c.so
+[4.175s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[4.175s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[4.175s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[4.175s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_introspection_c.so
+[4.176s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[4.176s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_c.so
+[4.176s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_c.so" to ""
+[4.176s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_introspection_cpp.so
+[4.176s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[4.176s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_cpp.so
+[4.176s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_typesupport_cpp.so" to ""
+[4.206s] Listing '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces'...
+[4.206s] Compiling '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/__init__.py'...
+[4.206s] Listing '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv'...
+[4.206s] Compiling '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/__init__.py'...
+[4.207s] Compiling '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_arm_mode.py'...
+[4.207s] Compiling '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_control_gripper.py'...
+[4.207s] Compiling '/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/local/lib/python3.10/dist-packages/trossen_widowx_interfaces/srv/_joint_modes.py'...
+[4.209s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_generator_py.so
+[4.210s] -- Set runtime path of "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/lib/libtrossen_widowx_interfaces__rosidl_generator_py.so" to ""
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_generator_cExport.cmake
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_generator_cExport-noconfig.cmake
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_generator_cppExport.cmake
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[4.210s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_cExport.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_cppExport.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/trossen_widowx_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_generator_pyExport.cmake
+[4.211s] -- Installing: /home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_interfaces/share/trossen_widowx_interfaces/cmake/export_trossen_widowx_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[4.214s] Invoked command in '/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros2_crospi_ws/install/betfsm_demos:/opt/ros2_crospi_ws/install/betfsm:/opt/ros/humble /usr/bin/cmake --install /home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces

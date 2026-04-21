@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_generator_c/trossen_widowx_interfaces/srv/detail/control_gripper__struct.h

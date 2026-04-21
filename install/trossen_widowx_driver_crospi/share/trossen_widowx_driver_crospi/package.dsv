@@ -1,0 +1,11 @@
+source;share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.ps1
+source;share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.dsv
+source;share/trossen_widowx_driver_crospi/hook/cmake_prefix_path.sh
+source;share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.ps1
+source;share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.dsv
+source;share/trossen_widowx_driver_crospi/hook/ld_library_path_lib.sh
+source;share/trossen_widowx_driver_crospi/local_setup.bash
+source;share/trossen_widowx_driver_crospi/local_setup.dsv
+source;share/trossen_widowx_driver_crospi/local_setup.ps1
+source;share/trossen_widowx_driver_crospi/local_setup.sh
+source;share/trossen_widowx_driver_crospi/local_setup.zsh

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libetasl_misc_lib.a CMakeFiles/etasl_misc_lib.dir/featurevariableinitializer.cpp.o CMakeFiles/etasl_misc_lib.dir/IO_handlers_deleteme.cpp.o CMakeFiles/etasl_misc_lib.dir/port_observer.cpp.o
-/usr/bin/ranlib libetasl_misc_lib.a

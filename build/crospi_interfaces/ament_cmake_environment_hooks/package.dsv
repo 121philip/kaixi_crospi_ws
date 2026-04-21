@@ -1,4 +1,0 @@
-source;share/crospi_interfaces/local_setup.bash
-source;share/crospi_interfaces/local_setup.dsv
-source;share/crospi_interfaces/local_setup.sh
-source;share/crospi_interfaces/local_setup.zsh

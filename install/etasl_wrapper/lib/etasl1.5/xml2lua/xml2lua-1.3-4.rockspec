@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/worldmodel/../../etasl/worldmodel/xml2lua/xml2lua-1.3-4.rockspec

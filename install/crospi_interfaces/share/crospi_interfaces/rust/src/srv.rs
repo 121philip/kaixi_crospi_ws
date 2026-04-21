@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_generator_rs/crospi_interfaces/rust/src/srv.rs

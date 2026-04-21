@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/betfsm_interfaces/ament_cmake_python/betfsm_interfaces/betfsm_interfaces.egg-info/top_level.txt

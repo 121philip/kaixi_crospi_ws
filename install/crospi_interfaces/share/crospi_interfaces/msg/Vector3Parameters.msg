@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_interfaces/msg/Vector3Parameters.msg

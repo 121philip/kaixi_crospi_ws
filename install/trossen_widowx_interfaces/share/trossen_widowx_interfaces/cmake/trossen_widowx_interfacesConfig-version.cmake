@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/ament_cmake_core/trossen_widowx_interfacesConfig-version.cmake

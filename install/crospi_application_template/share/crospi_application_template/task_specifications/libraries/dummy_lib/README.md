@@ -1,1 +1,1 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/dummy_lib/README.md
+/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/task_specifications/libraries/dummy_lib/README.md

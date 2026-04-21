@@ -1,4 +1,4 @@
-# Install script for directory: /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template
+# Install script for directory: /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

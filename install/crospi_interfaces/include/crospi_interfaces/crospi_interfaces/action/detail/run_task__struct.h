@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/crospi_interfaces/rosidl_generator_c/crospi_interfaces/action/detail/run_task__struct.h

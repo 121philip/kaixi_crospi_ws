@@ -1,4 +1,0 @@
-# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
-
-set(crospi_interfaces_IDL_FILES "msg/Output.idl;msg/OutputDerivatives.idl;srv/LuaCmd.idl;action/RunTask.idl;msg/TaskParameters.idl;msg/PoseParameters.idl;msg/Vector3Parameters.idl;msg/NumberParameters.idl;msg/ReturnValue.idl;msg/Input.idl;msg/Test.idl;srv/TaskSpecificationString.idl;srv/TaskSpecificationFile.idl")
-set(crospi_interfaces_INTERFACE_FILES "msg/Output.msg;msg/OutputDerivatives.msg;srv/LuaCmd.srv;srv/LuaCmd_Request.msg;srv/LuaCmd_Response.msg;action/RunTask.action;msg/TaskParameters.msg;msg/PoseParameters.msg;msg/Vector3Parameters.msg;msg/NumberParameters.msg;msg/ReturnValue.msg;msg/Input.msg;msg/Test.msg;srv/TaskSpecificationString.srv;srv/TaskSpecificationString_Request.msg;srv/TaskSpecificationString_Response.msg;srv/TaskSpecificationFile.srv;srv/TaskSpecificationFile_Request.msg;srv/TaskSpecificationFile_Response.msg")

@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_driver_crospi/libtrossen_widowx_driver_crospi.so" "TARGETS" "trossen_widowx_driver_crospi" "LIBRARY_DESTINATION" "lib" "ARCHIVE_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

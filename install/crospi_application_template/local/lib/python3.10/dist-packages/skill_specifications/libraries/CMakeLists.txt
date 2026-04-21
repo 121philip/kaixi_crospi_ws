@@ -1,1 +1,1 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/skill_specifications/libraries/CMakeLists.txt
+/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/skill_specifications/libraries/CMakeLists.txt

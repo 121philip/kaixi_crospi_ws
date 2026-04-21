@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template
+CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template
@@ -68,7 +68,7 @@ include CMakeFiles/TASKS_SCHEMA_JSON.dir/progress.make
 
 CMakeFiles/TASKS_SCHEMA_JSON:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "constructing tasks-schema.json file"
-	cd /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries && bash /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/generate_json_schemas_tasks.bash /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/robot_models/robot_specifications "\$$[crospi_application_template]/robot_models/robot_specifications" 2>&1 | tee /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/tasks-schema.log
+	cd /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/task_specifications/libraries && bash /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/generate_json_schemas_tasks.bash /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/task_specifications/libraries /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/robot_models/robot_specifications "\$$[crospi_application_template]/robot_models/robot_specifications" 2>&1 | tee /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/tasks-schema.log
 
 TASKS_SCHEMA_JSON: CMakeFiles/TASKS_SCHEMA_JSON
 TASKS_SCHEMA_JSON: CMakeFiles/TASKS_SCHEMA_JSON.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/TASKS_SCHEMA_JSON.dir/clean:
 .PHONY : CMakeFiles/TASKS_SCHEMA_JSON.dir/clean
 
 CMakeFiles/TASKS_SCHEMA_JSON.dir/depend:
-	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/TASKS_SCHEMA_JSON.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/TASKS_SCHEMA_JSON.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TASKS_SCHEMA_JSON.dir/depend
 

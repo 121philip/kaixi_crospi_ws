@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/betfsm_interfaces/rosidl_typesupport_introspection_c/betfsm_interfaces/msg/detail/trace__rosidl_typesupport_introspection_c.h

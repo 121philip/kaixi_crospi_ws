@@ -1,7 +1,0 @@
-##
-## Can be used to pass a file_path to a service
-## as absolute or relative to the shared ament directory
-## file path a task specification file
-##
-
-string file_path

@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/template_driver_crospi/ament_cmake_core/template_driver_crospiConfig-version.cmake

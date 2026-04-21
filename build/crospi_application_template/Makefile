@@ -57,7 +57,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template
+CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template

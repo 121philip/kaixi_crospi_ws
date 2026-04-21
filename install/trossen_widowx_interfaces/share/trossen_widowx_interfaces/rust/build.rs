@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_generator_rs/trossen_widowx_interfaces/rust/build.rs

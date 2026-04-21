@@ -1,3 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_node_utils.so
-/home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/libcrospi_utils.so
-/home/masterthesis/kaixi_crospi_ws/install/crospi_core/lib/librobot_interfacing_utils.so

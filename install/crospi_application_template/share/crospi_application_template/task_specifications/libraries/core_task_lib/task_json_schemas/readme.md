@@ -1,1 +1,1 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/readme.md
+/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/task_specifications/libraries/core_task_lib/task_json_schemas/readme.md

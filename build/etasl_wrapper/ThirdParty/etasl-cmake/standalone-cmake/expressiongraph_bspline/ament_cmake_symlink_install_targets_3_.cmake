@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/masterthesis/kaixi_crospi_ws/build/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/expressiongraph_bspline/bspline_test" "TARGETS" "bspline_test" "DESTINATION" "share/doc/etasl/expressiongraph_bspline/examples")

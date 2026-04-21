@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template
+CMAKE_SOURCE_DIR = /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template
@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/compiler_
 include CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/progress.make
 
 CMakeFiles/ament_cmake_python_symlink_skill_specifications:
-	/usr/bin/cmake -E create_symlink /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/skill_specifications /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_python/skill_specifications/skill_specifications
+	/usr/bin/cmake -E create_symlink /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/skill_specifications /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_python/skill_specifications/skill_specifications
 
 ament_cmake_python_symlink_skill_specifications: CMakeFiles/ament_cmake_python_symlink_skill_specifications
 ament_cmake_python_symlink_skill_specifications: CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/clean:
 .PHONY : CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/clean
 
 CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/depend:
-	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/src/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template /home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ament_cmake_python_symlink_skill_specifications.dir/depend
 

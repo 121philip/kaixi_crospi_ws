@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/etasl_wrapper/ThirdParty/etasl-cmake/standalone-cmake/scripts/readme_scripts.rst

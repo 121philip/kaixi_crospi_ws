@@ -1,1 +1,1 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/crospi_application_template/applications/application_example_tutorials/application_example_tutorials.launch.py
+/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/applications/application_example_tutorials/application_example_tutorials.launch.py

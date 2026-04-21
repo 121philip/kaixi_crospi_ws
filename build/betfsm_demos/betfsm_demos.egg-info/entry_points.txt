@@ -1,6 +1,0 @@
-[console_scripts]
-example_action_server = betfsm_demos.example_action_server:main
-example_action_server2 = betfsm_demos.example_action_server2:main
-example_graphviz = betfsm_demos.example_graphviz:main
-test_ea = betfsm_demos.test_ea:main
-

@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/betfsm/betfsm_interfaces/msg/Trace.msg

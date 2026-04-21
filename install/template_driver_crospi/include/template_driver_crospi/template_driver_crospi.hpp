@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi/robot_drivers_crospi/template_driver_crospi/include/template_driver_crospi/template_driver_crospi.hpp

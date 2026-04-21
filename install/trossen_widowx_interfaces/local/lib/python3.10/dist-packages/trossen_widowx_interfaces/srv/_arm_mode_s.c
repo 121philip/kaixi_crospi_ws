@@ -1,0 +1,1 @@
+/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_generator_py/trossen_widowx_interfaces/srv/_arm_mode_s.c

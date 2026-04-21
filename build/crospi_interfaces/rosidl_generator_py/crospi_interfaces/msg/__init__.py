@@ -1,9 +1,0 @@
-from crospi_interfaces.msg._input import Input  # noqa: F401
-from crospi_interfaces.msg._number_parameters import NumberParameters  # noqa: F401
-from crospi_interfaces.msg._output import Output  # noqa: F401
-from crospi_interfaces.msg._output_derivatives import OutputDerivatives  # noqa: F401
-from crospi_interfaces.msg._pose_parameters import PoseParameters  # noqa: F401
-from crospi_interfaces.msg._return_value import ReturnValue  # noqa: F401
-from crospi_interfaces.msg._task_parameters import TaskParameters  # noqa: F401
-from crospi_interfaces.msg._test import Test  # noqa: F401
-from crospi_interfaces.msg._vector3_parameters import Vector3Parameters  # noqa: F401

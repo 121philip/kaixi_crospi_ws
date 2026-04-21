@@ -1,7 +1,0 @@
-setup.py
-crospi_py/__init__.py
-crospi_py/etasl_params.py
-crospi_py.egg-info/PKG-INFO
-crospi_py.egg-info/SOURCES.txt
-crospi_py.egg-info/dependency_links.txt
-crospi_py.egg-info/top_level.txt
