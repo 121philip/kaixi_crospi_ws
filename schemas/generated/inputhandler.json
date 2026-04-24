@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema",
+    "$id": "generated/inputhandler.json",
+    "title": "Inputhandler",
+    "description": "An inputhandler get information from the outside world and put it into eTaSL, e.g. via ROS2 topics or other types of communication",
+    "oneOf": [
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TwistInputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/WrenchInputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TopicInputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/PoseInputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/VectorInputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TFInputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/JointStateInputHandler.schema.json"
+        }
+    ]
+}
