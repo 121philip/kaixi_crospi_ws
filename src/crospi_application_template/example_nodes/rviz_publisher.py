@@ -1,4 +1,9 @@
 """
+DEPRECATED (2026-04-26):
+This CroSPI-side copy of RVizPublisher is not used by the current runtime path.
+The active UDP sender lives in lerobot_trossen/important_code/inference/rviz_publisher.py.
+Keep CroSPI as the UDP receiver/ROS bridge via vla_ros_bridge_node.py.
+
 RViz 可视化发布器（UDP 发送端）。
 
 架构：venv 中的 Python 3.12 无法直接 import rclpy（rclpy 编译目标为系统 Python 3.10）。
@@ -33,6 +38,7 @@ _UDP_HOST = "127.0.0.1"
 _UDP_PORT = 9788
 _MSG_ACTUAL    = b"\x00"
 _MSG_PREDICTED = b"\x01"
+_MSG_ALPHA     = b"\x02"
 
 
 class RVizPublisher:
@@ -53,6 +59,11 @@ class RVizPublisher:
     def put_predicted(self, chunk: np.ndarray):
         """inference_thread 每块调用，传入 shape=[N, 7] 的预测动作数组。"""
         self._enqueue(_MSG_PREDICTED, chunk)
+
+    def put_alpha(self, alpha: float):
+        """Send the final shared-control alpha to the CroSPI bridge."""
+        alpha_array = np.array([float(np.clip(alpha, 0.0, 1.0))], dtype=np.float64)
+        self._enqueue(_MSG_ALPHA, alpha_array)
 
     def _enqueue(self, msg_type: bytes, array: np.ndarray):
         try:

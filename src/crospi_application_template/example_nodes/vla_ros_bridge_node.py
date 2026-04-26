@@ -95,6 +95,7 @@ _UDP_HOST      = "127.0.0.1"
 _UDP_PORT      = 9788
 _MSG_ACTUAL    = 0   # shape [7,]  — VLA current action
 _MSG_PREDICTED = 1   # shape [N,7] — VLA predicted chunk
+_MSG_ALPHA     = 2   # shape [1,]  — final shared-control alpha
 
 # ---------------------------------------------------------------------------
 # Joint names
@@ -222,6 +223,8 @@ class VLABridgeNode(Node):
                 self._publish_vla_cmd(array, now)
             elif data[0] == _MSG_PREDICTED:
                 self._latest_chunk = array
+            elif data[0] == _MSG_ALPHA:
+                self._update_alpha_from_udp(array)
 
         if self._latest_actual_joints is not None:
             self._publish_actual_viz(now)
@@ -247,6 +250,13 @@ class VLABridgeNode(Node):
         self._alpha_monitor_pub.publish(monitor)
 
     # Publishers
+
+    def _update_alpha_from_udp(self, array: np.ndarray):
+        alpha_array = np.asarray(array, dtype=np.float64).reshape(-1)
+        if alpha_array.size < 1:
+            return
+        self._alpha = float(np.clip(alpha_array[0], 0.0, 1.0))
+        self.get_logger().info(f"[vla_bridge] alpha udp {self._alpha:.3f}")
 
     def _publish_vla_cmd(self, q7: np.ndarray, now):
         msg = JointState()
