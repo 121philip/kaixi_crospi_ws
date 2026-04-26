@@ -1,0 +1,65 @@
+{
+    "$schema": "../../../../task_specifications/tasks-schema.json",
+    "tasks": [
+        {
+            "name": "MovingHome",
+            "task_specification": {
+                "from-core_task_lib-version-0.1.0": true,
+                "is-move_jointspace_trap": true,
+                "file_path": "$[crospi_application_template]/task_specifications/libraries/core_task_lib/task_specifications/move_jointspace_trap.etasl.lua",
+                "parameters": {
+                    "maxacc": 0.1,
+                    "maxvel": 0.3,
+                    "target_joints": [0, 1.57, 1.57, 0, 0, 0],
+                    "units": "radians"
+                }
+            }
+        },
+
+
+        {
+            "name": "spacemouse_control",
+            "task_specification":{
+                "from-core_task_lib-version-0.1.0": true,
+                "is-move_joystick": true,
+                "file_path": "$[crospi_application_template]/task_specifications/libraries/core_task_lib/task_specifications/move_joystick.etasl.lua",
+                "parameters": {
+                    "task_frame": "tcp_frame",
+                    "activate_angular": true,
+                    "activate_linear": true,
+                    "angular_scale": 0.3,
+                    "linear_scale": 0.3,
+                    "execution_time": 0
+                }
+            }
+        },
+        {
+            "name": "spacemouse_shared_control_vla",
+            "task_specification":{
+                "from-dummy_lib-version-0.1.0": true,
+                "is-vla_spacemouse_blend": true,
+                "file_path": "$[crospi_application_template]/task_specifications/libraries/dummy_lib/task_specifications/vla_spacemouse_blend.etasl.lua",
+                "parameters": {
+                    "task_frame": "tcp_frame",
+                    "activate_angular": true,
+                    "activate_linear": true,
+                    "angular_scale": 0.3,
+                    "linear_scale": 0.3,
+                    "execution_time": 0
+                }
+
+            }
+        },
+        {
+            "name": "idle",
+            "task_specification":{
+                "from-core_task_lib-version-0.1.0": true,
+                "is-idle": true,
+                "file_path": "$[crospi_application_template]/task_specifications/libraries/core_task_lib/task_specifications/idle.etasl.lua",
+                "parameters": {
+
+                }
+            }
+        }
+    ]
+}
