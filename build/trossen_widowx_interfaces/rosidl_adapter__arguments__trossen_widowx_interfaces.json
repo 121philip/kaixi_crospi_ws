@@ -1,8 +1,0 @@
-{
-  "package_name": "trossen_widowx_interfaces",
-  "non_idl_tuples": [
-    "/home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces:srv/ArmMode.srv",
-    "/home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces:srv/JointModes.srv",
-    "/home/masterthesis/kaixi_crospi_ws/src/trossen_widowx_interfaces:srv/ControlGripper.srv"
-  ]
-}
