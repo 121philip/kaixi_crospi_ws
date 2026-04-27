@@ -1,0 +1,49 @@
+{
+    "$schema":"http://json-schema.org/draft-06/schema",
+    "$id":"task-schema.json",
+    "title":"Schema for configuration of tasks",
+    "type":"object",
+    "description":"Schema that enables all etasl task specifications in all the libraries installed within this application package for the creation of tasks",
+    "properties": {
+          "tasks": {
+              "title":"Tasks",
+              "description":"Tasks (i.e. instances of task specifications) with specific parameters based on the application at hand.",
+              "type" : "array",
+              "items" : {
+                "type": "object",
+                "properties": {
+                    "name":{
+                        "description":"Name of the task (unique to the task instance)",
+                        "type":"string"
+                      },
+                    "robot_specification_file":{
+                        "description":"(optional) If overriding the default_robot_specification, provide the name of the etasl lua file containing the robot specification.",
+                        "type": "string",
+                        "pattern": ".*\\.lua$",
+                        "examples":  ["$[crospi_application_template]/robot_models/robot_specifications/kuka_iiwa.etasl.lua", "$[crospi_application_template]/robot_models/robot_specifications/ur10.etasl.lua", "$[crospi_application_template]/robot_models/robot_specifications/ur10e.etasl.lua" ] 
+                      },
+                    "task_specification":{
+                        "oneOf": [
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/follow_spline.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/idle.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/keep_relative_initial_pose.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/move_admittance.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/move_cartesianspace_absolute_pose.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/move_cartesianspace_relative.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/move_jointspace_trap.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/move_jointspace_trap_subset.etasl.json"},
+                            {"$ref": "libraries/core_task_lib/task_json_schemas/move_joystick.etasl.json"},
+                            {"$ref": "libraries/debug_lib/task_json_schemas/move_joystick_reading_sensor_vals_driver.etasl.json"},
+                            {"$ref": "libraries/debug_lib/task_json_schemas/move_sine_waves_jointspace.etasl.json"},
+                            {"$ref": "libraries/dummy_lib/task_json_schemas/follow_external_frame.etasl.json"},
+                            {"$ref": "libraries/dummy_lib/task_json_schemas/follow_external_vector.etasl.json"},
+                            {"$ref": "libraries/dummy_lib/task_json_schemas/move_joystick_with_jointstate_test.etasl.json"}
+                        ]
+                    }
+                },
+                "required": ["name","task_specification"]
+            }
+        }
+    },
+    "required": ["tasks"]
+}

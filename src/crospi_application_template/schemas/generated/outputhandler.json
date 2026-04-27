@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema",
+    "$id": "generated/outputhandler.json",
+    "title": "Outputhandler",
+    "description": "An outputhandler extract data from eTaSL and communicate this in some way to the outside world, e.g. writing to a ROS2 Topic or other types of communication",
+    "oneOf": [
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/JointStateOutputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TopicOutputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TopicOutputDerivativesHandler.schema.json"
+        }
+    ]
+}

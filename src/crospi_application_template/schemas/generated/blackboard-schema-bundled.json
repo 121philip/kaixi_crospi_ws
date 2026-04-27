@@ -1,0 +1,1643 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema",
+  "$id": "blackboard-schema-bundled.json",
+  "title": "Blackboard",
+  "type": "object",
+  "description": "Schema defining configuration properties for the crospi_node",
+  "properties": {
+    "blackboard": {
+      "type": "object",
+      "properties": {
+        "etasl": {
+          "$schema": "http://json-schema.org/draft-06/schema",
+          "$id": "etasl.json",
+          "title": "eTaSL Parameters",
+          "type": "object",
+          "description": "Parameters needed to run eTaSL",
+          "required": [
+            "general",
+            "initializer",
+            "solver"
+          ],
+          "properties": {
+            "general": {
+              "$id": "general.json",
+              "title": "General parameters",
+              "type": "object",
+              "description": "General parameters to be used to configure the ROS node.",
+              "properties": {
+                "sample_time": {
+                  "description": "At each sample_time in seconds, eTaSL computes new robot joint velocities",
+                  "type": "number",
+                  "default": 0.01
+                },
+                "event_topic": {
+                  "description": "Name of the topic in which string events are going to be published (e.g. when a task finishes)",
+                  "type": "string",
+                  "pattern": "^[a-zA-Z0-9_]+(\\/([a-zA-Z0-9_]+))*$",
+                  "default": "etasl/events"
+                }
+              },
+              "required": [
+                "sample_time",
+                "event_topic"
+              ],
+              "additionalProperties": false
+            },
+            "initializer": {
+              "$id": "initializer.json",
+              "title": "Initialization parameters",
+              "type": "object",
+              "description": "Parameters to be used in the initialization phase of eTaSL",
+              "properties": {
+                "full": {
+                  "type": "boolean",
+                  "description": "full initialization for constraints of all priorities",
+                  "default": true
+                },
+                "sample_time": {
+                  "type": "number",
+                  "description": "sample time for the simulation during initialization",
+                  "default": 0.01
+                },
+                "duration": {
+                  "type": "number",
+                  "description": "duration of the simulation during initialization",
+                  "default": 3.0
+                },
+                "convergence_criterion": {
+                  "type": "number",
+                  "description": "stop the simulation during initialization of this criterion is reached",
+                  "default": 0.0001
+                },
+                "weightfactor": {
+                  "type": "number",
+                  "dscription": "weightfactor used to deal with the multiple priorities during initialization",
+                  "default": 10000.0
+                }
+              },
+              "required": [
+                "full",
+                "sample_time",
+                "duration",
+                "convergence_criterion",
+                "weightfactor"
+              ],
+              "additionalProperties": false
+            },
+            "solver": {
+              "oneOf": [
+                {
+                  "$id": "qpoasessolver.json",
+                  "title": "QPOases Parameters",
+                  "type": "object",
+                  "description": "eTaSL constraints are translated into a quadratic problem.  This specifies that the QPOases solver will be used to solve this numeric problem",
+                  "properties": {
+                    "is-qpoasessolver": {
+                      "description": "key to indicate the QPOases solver will be used (boolean, but value is of no importance)",
+                      "type": "boolean",
+                      "const": true
+                    }
+                  },
+                  "required": [
+                    "is-qpoasessolver"
+                  ],
+                  "additionalProperties": true,
+                  "dependencies": {
+                    "is-qpoasessolver": {
+                      "required": [
+                        "nWSR",
+                        "regularization_factor",
+                        "cputime"
+                      ],
+                      "properties": {
+                        "nWSR": {
+                          "description": "maximum number of working set recalcuations to be performed during initial homiotopy",
+                          "type": "number",
+                          "default": 100
+                        },
+                        "regularization_factor": {
+                          "description": "regularization factor used in the transcription to a numeric problem.  A higher value lowers joint velocities in the neighbourhoud of singularities, but decreases the adherence to the soft constraints",
+                          "type": "number",
+                          "default": 0.0001
+                        },
+                        "cputime": {
+                          "description": "maximum allowed CPU time in seconds for the initialisation of QPOases",
+                          "type": "number",
+                          "default": 100.0
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "robot": {
+          "$schema": "http://json-schema.org/draft-06/schema",
+          "$id": "robot.json",
+          "title": "eTaSL robot configuration",
+          "type": "object",
+          "description": "Configuration to setup the robot kinematic model and robot driver",
+          "required": [
+            "default_robot_specification"
+          ],
+          "properties": {
+            "robotsimulators": {
+              "title": "RobotSimulators",
+              "description": "A RobotSimulator interfaces simulated robot hardware with eTaSL and runs in a separate thread (one per each RobotSimulator), communicating via shared memory (lock-free and wait-free) with the eTaSL thread for reduced latency.",
+              "type": "array",
+              "items": {
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "$id": "generated/robotsimulator.json",
+                "title": "Robotsimulator",
+                "description": "RobotSimulator interfaces simulated robot hardware with eTaSL and runs in a separate thread, communicating with shared memory for reduced latency.",
+                "oneOf": [
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "simple_kinematic_simulation.schema.json",
+                    "type": "object",
+                    "properties": {
+                      "is-simple_kinematic_simulation": {
+                        "description": "To indicate that the task will be executed in simulation, with a virtual robot that integrates joint velocities and gives back joint positions to eTaSL.",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-simple_kinematic_simulation"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-simple_kinematic_simulation": {
+                        "required": [
+                          "robot_joints",
+                          "initial_joints",
+                          "periodicity"
+                        ],
+                        "properties": {
+                          "robot_joints": {
+                            "description": "Names of the joints that will be simulated through this robotsimulator. This names need to be consistent with the ones declared in the URDF file of the robot and must exist also in the robot_joints declared in the default_robot_specification.",
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "default": [
+                              "joint1",
+                              "joint2",
+                              "joint3",
+                              "etc..."
+                            ],
+                            "examples": [
+                              [
+                                "shoulder_pan_joint",
+                                "shoulder_lift_joint",
+                                "elbow_joint",
+                                "wrist_1_joint",
+                                "wrist_2_joint",
+                                "wrist_3_joint"
+                              ],
+                              [
+                                "joint1",
+                                "joint2",
+                                "joint3",
+                                "joint4",
+                                "joint5",
+                                "joint6",
+                                "joint7"
+                              ]
+                            ]
+                          },
+                          "initial_joints": {
+                            "description": "Initial joint values in [rad] for rotational joints or [m] for prismatic joints. The size must coincide with the length of the robot_joints of the specified robot.",
+                            "type": "array",
+                            "items": {
+                              "type": "number"
+                            },
+                            "default": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ]
+                          },
+                          "periodicity": {
+                            "description": "Periodicity in which the integration will be performed in seconds. 1/periodicity is the update frequency in Hz.",
+                            "type": "number",
+                            "default": 0.01
+                          },
+                          "name_expr_joint_vel": {
+                            "description": "If defined, the simulator will generate a ramp. Defines the name of the expression that will be used to put the joint velocities coming from this simulator. This name can be then used in etasl with selected_name_0 = ctx:createInputChannelScalar('selected_name_0') for each joint",
+                            "type": "string",
+                            "default": "joint_vel"
+                          },
+                          "name_expr_joint_torque": {
+                            "description": "If defined, the simulator will generate a ramp. Defines the name of the expression that will be used to put the joint torques coming from this simulator. This name can be then used in etasl with selected_name_0 = ctx:createInputChannelScalar('selected_name_0') for each joint",
+                            "type": "string",
+                            "default": "joint_torque"
+                          },
+                          "name_expr_joint_current": {
+                            "description": "If defined, the simulator will generate a ramp. Defines the name of the expression that will be used to put the joint currents coming from this simulator. This name can be then used in etasl with selected_name_0 = ctx:createInputChannelScalar('selected_name_0') for each joint",
+                            "type": "string",
+                            "default": "joint_current"
+                          },
+                          "name_expr_cartesian_pos": {
+                            "description": "If defined, the simulator will generate a ramp. Name of the expression that will be used to put the cartesian positions coming from this simulator. This name can be then used in etasl with selected_name = ctx:createInputChannelVector('selected_name')",
+                            "type": "string",
+                            "default": "task_frame_pos"
+                          },
+                          "name_expr_cartesian_quat": {
+                            "description": "If defined, the simulator will generate a ramp. Name of the expression that will be used to put the cartesian orientation coming from this simulator. This name can be then used in etasl with selected_name = ctx:createInputChannelRotation('selected_name')",
+                            "type": "string",
+                            "default": "task_frame_quat"
+                          },
+                          "name_expr_cartesian_twist": {
+                            "description": "If defined, the simulator will generate a ramp. Name of the expression that will be used to put the cartesian twist coming from this simulator. This name can be then used in etasl with selected_name = ctx:createInputChannelTwist('selected_name')",
+                            "type": "string",
+                            "default": "task_frame_twist"
+                          },
+                          "name_expr_cartesian_wrench": {
+                            "description": "If defined, the simulator will generate a ramp. Name of the expression that will be used to put the cartesian wrench coming from this simulator. This name can be then used in etasl with selected_name = ctx:createInputChannelWrench('selected_name')",
+                            "type": "string",
+                            "default": "task_frame_wrench"
+                          },
+                          "name_expr_base_pos": {
+                            "description": "If defined, the simulator will generate a ramp. Name of the expression that will be used to put the position of the base of the robot coming from this simulator. This name can be then used in etasl with selected_name = ctx:createInputChannelVector('selected_name')",
+                            "type": "string",
+                            "default": "base_pos"
+                          },
+                          "name_expr_base_quat": {
+                            "description": "If defined, the simulator will generate a ramp. Name of the expression that will be used to put the orientation of the base of the robot coming from this simulator. This name can be then used in etasl with selected_name = ctx:createInputChannelRotation('selected_name')",
+                            "type": "string",
+                            "default": "base_quat"
+                          },
+                          "name_expr_base_twist": {
+                            "description": "If defined, the simulator will generate a ramp. Name of the expression that will be used to put the twist of the base of the robot coming from this simulator. This name can be then used in etasl with selected_name = ctx:createInputChannelTwist('selected_name')",
+                            "type": "string",
+                            "default": "base_twist"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "robotdrivers": {
+              "title": "Robotdrivers",
+              "description": "A Robotdriver interfaces robot hardware with eTaSL and runs in a separate thread (one per Robotdriver), communicating via shared memory (lock-free and wait-free) with the eTaSL thread for reduced latency",
+              "type": "array",
+              "items": {
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "$id": "generated/robotdriver.json",
+                "title": "Robotdriver",
+                "description": "Robotdriver interfaces robot hardware with eTaSL and runs in a separate thread, communicating via shared memory for reduced latency",
+                "oneOf": [
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "trossen_widowx_driver_crospi.json",
+                    "type": "object",
+                    "properties": {
+                      "is-trossen_widowx_driver_crospi": {
+                        "description": "To indicate that the tasks will be executed using the trossen_widowx_driver_crospi driver when running on the real robot.",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-trossen_widowx_driver_crospi"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-trossen_widowx_driver_crospi": {
+                        "required": [
+                          "ip_address",
+                          "control_mode",
+                          "periodicity"
+                        ],
+                        "properties": {
+                          "ip_address": {
+                            "description": "IP address of the robot using Ipv4 format.",
+                            "type": "string",
+                            "pattern": "^(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])$",
+                            "default": "192.168.1.2"
+                          },
+                          "control_mode": {
+                            "description": "Control mode for the robot arm.",
+                            "type": "string",
+                            "enum": [
+                              "JOINT_POSITION",
+                              "JOINT_VELOCITY"
+                            ]
+                          },
+                          "periodicity": {
+                            "description": "Periodicity in which the integration will be performed in seconds. 1/periodicity is the update frequency in Hz.",
+                            "type": "number",
+                            "default": 0.005
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "template_driver_crospi.json",
+                    "type": "object",
+                    "properties": {
+                      "is-template_driver_crospi": {
+                        "description": "To indicate that the tasks will be executed using the template_driver_crospi driver when running on the real robot.",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-template_driver_crospi"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-template_driver_crospi": {
+                        "required": [
+                          "robot_joints",
+                          "initial_joints",
+                          "periodicity"
+                        ],
+                        "properties": {
+                          "robot_joints": {
+                            "description": "Names of the joints that will be interfaced through this robot driver. This names need to be consistent with the ones declared in the URDF file of the robot and must exist also in the robot_joints declared in the default_robot_specification.",
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "default": [
+                              "shoulder_pan_joint",
+                              "shoulder_lift_joint",
+                              "elbow_joint",
+                              "wrist_1_joint",
+                              "wrist_2_joint",
+                              "wrist_3_joint"
+                            ]
+                          },
+                          "initial_joints": {
+                            "description": "Initial joint values in [rad] for rotational joints or [m] for prismatic joints. The size must coincide with the length of the robot_joints of the specified robot.",
+                            "type": "array",
+                            "items": {
+                              "type": "number"
+                            },
+                            "default": [
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0,
+                              0.0
+                            ]
+                          },
+                          "periodicity": {
+                            "description": "Periodicity in which the integration will be performed in seconds. 1/periodicity is the update frequency in Hz.",
+                            "type": "number",
+                            "default": 0.01
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "default_robot_specification": {
+              "$schema": "http://json-schema.org/draft-06/schema",
+              "$id": "default_robot_specification.json",
+              "title": "Robot Specification",
+              "oneOf": [
+                {
+                  "$schema": "http://json-schema.org/draft-06/schema",
+                  "$id": "inline_robotspecification.json",
+                  "type": "object",
+                  "additionalProperties": true,
+                  "required": [
+                    "is-inline_robotspecification"
+                  ],
+                  "properties": {
+                    "is-inline_robotspecification": {
+                      "description": "To indicate that the robot specification will be declared inline within the JSON configuration file (and not in an external lua file).",
+                      "type": "boolean",
+                      "const": true
+                    }
+                  },
+                  "dependencies": {
+                    "is-inline_robotspecification": {
+                      "required": [
+                        "urdf_path",
+                        "robot_joints",
+                        "tcp_frame"
+                      ],
+                      "properties": {
+                        "urdf_path": {
+                          "description": "Path of the urdf. Use $[colcon_package] to make the path relative to a colcon package",
+                          "type": "string",
+                          "pattern": ".*\\.urdf$",
+                          "default": "$[etasl_ros2_application_template]/robot_description/urdf/ur10/use_case_setup_ur10.urdf"
+                        },
+                        "robot_joints": {
+                          "description": "Names of the joints in order from the world to the end effector. This names need to be consistent with the ones declared in the URDF file of the robot.",
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "default": [
+                            "joint1",
+                            "joint2",
+                            "joint3",
+                            "etc..."
+                          ],
+                          "examples": [
+                            [
+                              "shoulder_pan_joint",
+                              "shoulder_lift_joint",
+                              "elbow_joint",
+                              "wrist_1_joint",
+                              "wrist_2_joint",
+                              "wrist_3_joint"
+                            ],
+                            [
+                              "joint1",
+                              "joint2",
+                              "joint3",
+                              "joint4",
+                              "joint5",
+                              "joint6",
+                              "joint7"
+                            ]
+                          ]
+                        },
+                        "tcp_frame": {
+                          "description": "Tool center point frame that goes from parent_link to the child_link. A variable with the name tcp_frame will be available in each LUA task specification.",
+                          "type": "object",
+                          "properties": {
+                            "parent_link": {
+                              "description": "Name of the frame parent_link (i.e. base link), which should exist as a link in the URDF.",
+                              "type": "string",
+                              "default": "my_parent_link"
+                            },
+                            "child_link": {
+                              "description": "Name of the frame child_link (i.e. link of interest), which should exist as a link in the URDF.",
+                              "type": "string",
+                              "default": "my_child_link"
+                            }
+                          }
+                        },
+                        "additional_frames": {
+                          "title": "additional_frames",
+                          "description": "List of additional frames that are declared with the purpose of imposing constraints over them in the task specification",
+                          "type": "array",
+                          "items": {
+                            "description": "Additional frame that is declared with the purpose of imposing constraints over it in the task specification",
+                            "type": "object",
+                            "properties": {
+                              "name": {
+                                "description": "Name of the frame that goes from parent_link to the child_link. A variable will be created in LUA with this name and will be available in each task specification.",
+                                "type": "string",
+                                "default": "my_frame",
+                                "pattern": "^[A-Za-z0-9_]+$"
+                              },
+                              "parent_link": {
+                                "description": "Name of the frame parent_link (i.e. base link), which should exist as a link in the URDF.",
+                                "type": "string",
+                                "default": "my_parent_link"
+                              },
+                              "child_link": {
+                                "description": "Name of the frame child_link (i.e. link of interest), which should exist as a link in the URDF.",
+                                "type": "string",
+                                "default": "my_child_link"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "$schema": "http://json-schema.org/draft-06/schema",
+                  "$id": "lua_robotspecification.json",
+                  "type": "object",
+                  "additionalProperties": true,
+                  "required": [
+                    "is-lua_robotspecification"
+                  ],
+                  "properties": {
+                    "is-lua_robotspecification": {
+                      "description": "To indicate that the robot specification will be declared in a lua file, which enables flexibility for more advanced applications.",
+                      "type": "boolean",
+                      "const": true
+                    }
+                  },
+                  "dependencies": {
+                    "is-lua_robotspecification": {
+                      "required": [
+                        "file_path",
+                        "robot_joints"
+                      ],
+                      "properties": {
+                        "file_path": {
+                          "description": "Path of the LUA file containing the robot specification. Start with $[colcon_package] to make the path relative to a colcon_package, or start with / to make it an absolute path.",
+                          "type": "string",
+                          "pattern": ".*\\.lua$",
+                          "default": "$[etasl_ros2_application_template]/robot_models/robot_specifications/ur10.etasl.lua"
+                        },
+                        "robot_joints": {
+                          "description": "Names of the joints in order from the world to the end effector. This names need to be consistent with the ones declared in the URDF file of the robot.",
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          },
+                          "default": [
+                            "joint1",
+                            "joint2",
+                            "joint3",
+                            "etc..."
+                          ],
+                          "examples": [
+                            [
+                              "shoulder_pan_joint",
+                              "shoulder_lift_joint",
+                              "elbow_joint",
+                              "wrist_1_joint",
+                              "wrist_2_joint",
+                              "wrist_3_joint"
+                            ],
+                            [
+                              "joint1",
+                              "joint2",
+                              "joint3",
+                              "joint4",
+                              "joint5",
+                              "joint6",
+                              "joint7"
+                            ]
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "iohandlers": {
+          "$schema": "http://json-schema.org/draft-06/schema",
+          "$id": "iohandlers.json",
+          "title": "IO Handler configuration",
+          "type": "object",
+          "description": "Configuration to setup input and output handlers to the etasl node (e.g. input/output ROS2 topics)",
+          "required": [],
+          "properties": {
+            "outputhandlers": {
+              "title": "Outputhandlers",
+              "description": "Outputhandlers extract data from eTaSL and communicate it in some way to the outside world, such as writing to a file or using a ROS Topic",
+              "type": "array",
+              "items": {
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "$id": "generated/outputhandler.json",
+                "title": "Outputhandler",
+                "description": "An outputhandler extract data from eTaSL and communicate this in some way to the outside world, e.g. writing to a ROS2 Topic or other types of communication",
+                "oneOf": [
+                  {
+                    "$id": "JointStateOutputHandler.schema.json",
+                    "type": "object",
+                    "title": "JointStateOutputHandler",
+                    "description": "An outputhandler that outputs the joint state, i.e. position and values of the robot variables",
+                    "properties": {
+                      "is-JointStateOutputHandler": {
+                        "description": "A key value to flag that this describes a JointStateOutputHandler",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-JointStateOutputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-JointStateOutputHandler": {
+                        "required": [
+                          "topic-name"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "Name of the ROS topic that will serve as output",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "TopicOutputHandler.schema.json",
+                    "type": "object",
+                    "title": "TopicOutputHandler",
+                    "description": "An outputhandler that outputs to a topic scalar values defined as Output Expressions in eTaSL.",
+                    "properties": {
+                      "is-TopicOutputHandler": {
+                        "description": "A key to indicate that this describes a TopicOutputHandler which publishes scalar values defined as Output Expressions in eTaSL.",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-TopicOutputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-TopicOutputHandler": {
+                        "required": [
+                          "topic-name",
+                          "variable-names"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "Name of the ROS topic that will serve as output.",
+                            "type": "string"
+                          },
+                          "variable-names": {
+                            "description": "List of names of (scalar!) output expressions to output. \n The current scalar value and a boolean is_declared are published for each of these variables to indicate if the variable is declared as a scalar output expression within the currently running eTaSL task specification.",
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "TopicOutputDerivativesHandler.schema.json",
+                    "type": "object",
+                    "title": "TopicOutputDerivativesHandler",
+                    "description": "An outputhandler that outputs the derivatives of variables/expressions to a topic scalar values defined as Output Expressions in eTaSL.",
+                    "properties": {
+                      "is-TopicOutputDerivativesHandler": {
+                        "description": "A key to indicate that this describes a TopicOutputDerivativesHandler which publishes scalar values defined as Output Expressions in eTaSL.",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-TopicOutputDerivativesHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-TopicOutputDerivativesHandler": {
+                        "required": [
+                          "topic-name",
+                          "variable-names"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "Name of the ROS topic that will serve as output.",
+                            "type": "string"
+                          },
+                          "variable-names": {
+                            "description": "List of names of (scalar!) output expressions to output. \n The current scalar value and a boolean is_declared are published for each of these variables to indicate if the variable is declared as a scalar output expression within the currently running eTaSL task specification.",
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "inputhandlers": {
+              "title": "Inputhandlers",
+              "description": "Inputhandlers get information from the outside world and puts it into eTaSL",
+              "type": "array",
+              "items": {
+                "$schema": "http://json-schema.org/draft-06/schema",
+                "$id": "generated/inputhandler.json",
+                "title": "Inputhandler",
+                "description": "An inputhandler get information from the outside world and put it into eTaSL, e.g. via ROS2 topics or other types of communication",
+                "oneOf": [
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "TwistInputHandler.schema.json",
+                    "type": "object",
+                    "properties": {
+                      "is-TwistInputHandler": {
+                        "description": "To indicate that this describes a twist inputhandler which reads from a geometry_msgs/Twist Message topic and converts it into a twist etasl expression",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-TwistInputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-TwistInputHandler": {
+                        "required": [
+                          "topic-name",
+                          "number_of_tries",
+                          "depth",
+                          "default_twist",
+                          "when_unpublished",
+                          "varname"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "name of the topic to subscribe to",
+                            "type": "string"
+                          },
+                          "number_of_tries": {
+                            "description": "the number of times unsuccesfully initialize() can be called before throwing an error",
+                            "type": "number"
+                          },
+                          "depth": {
+                            "description": "Depth of the topic queue (i.e. buffer size storing incoming messages). Check ROS2 QoS policies for more information",
+                            "type": "number",
+                            "default": 1
+                          },
+                          "default_twist": {
+                            "$id": "twist.json",
+                            "type": "object",
+                            "required": [
+                              "linear",
+                              "angular"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "linear": {
+                                "$id": "screw_linear.json",
+                                "title": "Screw Linear",
+                                "description": "Linear term (i.e. angular velocity or torque) of a screw (i.e. twist or wrench) vector",
+                                "type": "object",
+                                "properties": {
+                                  "x": {
+                                    "type": "number"
+                                  },
+                                  "y": {
+                                    "type": "number"
+                                  },
+                                  "z": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "x",
+                                  "y",
+                                  "z"
+                                ],
+                                "additionalProperties": false,
+                                "transform_to": "vector"
+                              },
+                              "angular": {
+                                "$id": "screw_angular.json",
+                                "title": "Screw Angular",
+                                "description": "Angular term (i.e. angular velocity or torque) of a screw (i.e. twist or wrench) vector",
+                                "type": "object",
+                                "properties": {
+                                  "x": {
+                                    "type": "number"
+                                  },
+                                  "y": {
+                                    "type": "number"
+                                  },
+                                  "z": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "x",
+                                  "y",
+                                  "z"
+                                ],
+                                "additionalProperties": false,
+                                "transform_to": "vector"
+                              }
+                            },
+                            "transform_to": "twist"
+                          },
+                          "when_unpublished": {
+                            "description": "Defines the behavior of the node when nothing has been published to the topic defined in topic-name during activation time of the node",
+                            "enum": [
+                              "use_default",
+                              "throw_error"
+                            ],
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "const": "use_default",
+                                "title": "Use default value",
+                                "description": "Uses the defined default value in the default_twist field while nothing has been published to the subscribed topic defined in topic-name. An INFO message will be logged."
+                              },
+                              {
+                                "type": "string",
+                                "const": "throw_error",
+                                "title": "Throw error",
+                                "description": "Throws an error if nothing has been published to the subscribed topic defined in topic-name at the time of activation of the node, preventing its activation. "
+                              }
+                            ]
+                          },
+                          "varname": {
+                            "description": "Name of the expression variable that was created in the task specification with createInputChannelTwist. The data coming from the topic will be available in the task specification through this variable",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-04/schema",
+                    "$id": "WrenchInputHandler.schema.json",
+                    "type": "object",
+                    "properties": {
+                      "is-WrenchInputHandler": {
+                        "description": "To indicate that this describes a wrench inputhandler which reads from a geometry_msgs/Wrench Message topic and converts it into a wrench etasl expression",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-WrenchInputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-WrenchInputHandler": {
+                        "required": [
+                          "is-WrenchInputHandler",
+                          "topic-name",
+                          "number_of_tries",
+                          "depth",
+                          "default_wrench",
+                          "varname"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "name of the topic to subscribe to",
+                            "type": "string"
+                          },
+                          "number_of_tries": {
+                            "description": "the number of times unsuccesfully initialize() can be called before throwing an error",
+                            "type": "number"
+                          },
+                          "depth": {
+                            "description": "Depth of the topic queue (i.e. buffer size storing incoming messages). Check ROS2 QoS policies for more information",
+                            "type": "number",
+                            "default": 1
+                          },
+                          "default_wrench": {
+                            "$id": "wrench.json",
+                            "type": "object",
+                            "required": [
+                              "force",
+                              "torque"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "force": {
+                                "$id": "screw_linear.json",
+                                "title": "Screw Linear",
+                                "description": "Linear term (i.e. angular velocity or torque) of a screw (i.e. twist or wrench) vector",
+                                "type": "object",
+                                "properties": {
+                                  "x": {
+                                    "type": "number"
+                                  },
+                                  "y": {
+                                    "type": "number"
+                                  },
+                                  "z": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "x",
+                                  "y",
+                                  "z"
+                                ],
+                                "additionalProperties": false,
+                                "transform_to": "vector"
+                              },
+                              "torque": {
+                                "$id": "screw_angular.json",
+                                "title": "Screw Angular",
+                                "description": "Angular term (i.e. angular velocity or torque) of a screw (i.e. twist or wrench) vector",
+                                "type": "object",
+                                "properties": {
+                                  "x": {
+                                    "type": "number"
+                                  },
+                                  "y": {
+                                    "type": "number"
+                                  },
+                                  "z": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "x",
+                                  "y",
+                                  "z"
+                                ],
+                                "additionalProperties": false,
+                                "transform_to": "vector"
+                              }
+                            },
+                            "transform_to": "wrench"
+                          },
+                          "when_unpublished": {
+                            "description": "Defines the behavior of the node when nothing has been published to the topic defined in topic-name during activation time of the node",
+                            "enum": [
+                              "use_default",
+                              "throw_error"
+                            ],
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "const": "use_default",
+                                "title": "Use default value",
+                                "description": "Uses the defined default value in the default_wrench field while nothing has been published to the subscribed topic defined in topic-name. An INFO message will be logged."
+                              },
+                              {
+                                "type": "string",
+                                "const": "throw_error",
+                                "title": "Throw error",
+                                "description": "Throws an error if nothing has been published to the subscribed topic defined in topic-name at the time of activation of the node, preventing its activation. "
+                              }
+                            ]
+                          },
+                          "varname": {
+                            "description": "Name of the expression variable that was created in the task specification with createInputChannelWrench. The data coming from the topic will be available in the task specification through this variable",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$id": "TopicInputHandler.schema.json",
+                    "type": "object",
+                    "title": "TopicInputHandler",
+                    "description": "An input handler that reads from a topic",
+                    "properties": {
+                      "is-TopicInputHandler": {
+                        "description": "A key to indicate that this describes a TopicInputHandler",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-TopicInputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-TopicInputHandler": {
+                        "required": [
+                          "topic-name"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "Name of the ROS topic that will serve as input",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "PoseInputHandler.schema.json",
+                    "type": "object",
+                    "properties": {
+                      "is-PoseInputHandler": {
+                        "description": "To indicate that this describes a Pose inputhandler which reads a Pose from a topic and converts it into a frame etasl expression",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-PoseInputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-PoseInputHandler": {
+                        "required": [
+                          "topic-name",
+                          "number_of_tries",
+                          "depth",
+                          "default_pose",
+                          "when_unpublished",
+                          "varname"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "name of the topic to subscribe to",
+                            "type": "string"
+                          },
+                          "number_of_tries": {
+                            "description": "the number of times unsuccesfully initialize() can be called before throwing an error",
+                            "type": "number",
+                            "default": 10
+                          },
+                          "depth": {
+                            "description": "Depth of the topic queue (i.e. buffer size storing incoming messages). Check ROS2 QoS policies for more information",
+                            "type": "number",
+                            "default": 1
+                          },
+                          "feedforward_input_topic": {
+                            "description": "(optional) If set, the inputhandler will read from the specified topic of type geometry_msgs/Twist and will be used as feedforward (i.e. time derivative of the pose)",
+                            "type": "string",
+                            "default": "/etasl/feedforward/twist_of_pose"
+                          },
+                          "default_pose": {
+                            "$id": "frame.json",
+                            "type": "object",
+                            "required": [
+                              "origin",
+                              "orientation"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "origin": {
+                                "$id": "vector.json",
+                                "title": "position",
+                                "description": "origin of frame",
+                                "type": "object",
+                                "properties": {
+                                  "x": {
+                                    "type": "number"
+                                  },
+                                  "y": {
+                                    "type": "number"
+                                  },
+                                  "z": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "x",
+                                  "y",
+                                  "z"
+                                ],
+                                "additionalProperties": false,
+                                "transform_to": "vector"
+                              },
+                              "orientation": {
+                                "$schema": "http://json-schema.org/draft-06/schema",
+                                "$id": "orientation.json",
+                                "title": "orientation",
+                                "description": "orientation of frame given my normalized quaternion",
+                                "oneOf": [
+                                  {
+                                    "$id": "orientation-quaternion.json",
+                                    "title": "Normalized quaternion",
+                                    "description": "orientation of frame given my normalized quaternion",
+                                    "type": "object",
+                                    "properties": {
+                                      "is-quaternion": {
+                                        "type": "boolean",
+                                        "const": true
+                                      }
+                                    },
+                                    "dependencies": {
+                                      "is-quaternion": {
+                                        "required": [
+                                          "x",
+                                          "y",
+                                          "z",
+                                          "w"
+                                        ],
+                                        "properties": {
+                                          "w": {
+                                            "type": "number",
+                                            "default": 1
+                                          },
+                                          "x": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "y": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "z": {
+                                            "type": "number",
+                                            "default": 0
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": [
+                                      "is-quaternion"
+                                    ],
+                                    "additionalProperties": true,
+                                    "transform_to": "quaternion"
+                                  },
+                                  {
+                                    "$id": "orientation-rpy.json",
+                                    "title": "Normalized orientation",
+                                    "description": "orientation of frame given by roll, pitch, yaw angles",
+                                    "type": "object",
+                                    "properties": {
+                                      "is-rpy": {
+                                        "type": "boolean",
+                                        "const": true
+                                      }
+                                    },
+                                    "dependencies": {
+                                      "is-rpy": {
+                                        "required": [
+                                          "roll",
+                                          "pitch",
+                                          "yaw"
+                                        ],
+                                        "properties": {
+                                          "roll": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "pitch": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "yaw": {
+                                            "type": "number",
+                                            "default": 0
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": [
+                                      "is-rpy"
+                                    ],
+                                    "additionalProperties": true,
+                                    "transform_to": "rpy"
+                                  }
+                                ]
+                              }
+                            },
+                            "transform_to": "frame"
+                          },
+                          "when_unpublished": {
+                            "description": "Defines the behavior of the node when nothing has been published to the topic defined in topic-name during activation time of the node",
+                            "enum": [
+                              "use_default",
+                              "throw_error"
+                            ],
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "const": "use_default",
+                                "title": "Use default value",
+                                "description": "Uses the defined default value in the default_pose field while nothing has been published to the subscribed topic defined in topic-name. An INFO message will be logged."
+                              },
+                              {
+                                "type": "string",
+                                "const": "throw_error",
+                                "title": "Throw error",
+                                "description": "Throws an error if nothing has been published to the subscribed topic defined in topic-name at the time of activation of the node, preventing its activation. "
+                              }
+                            ]
+                          },
+                          "varname": {
+                            "description": "Name of the expression variable in the task specification with createInputChannelFrame. The data coming from the topic will be available in the task specification through this variable",
+                            "type": "string",
+                            "examples": [
+                              "my_input_frame",
+                              "my_target_frame"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "VectorInputHandler.schema.json",
+                    "type": "object",
+                    "properties": {
+                      "is-VectorInputHandler": {
+                        "description": "To indicate that this describes a Vector inputhandler which reads a Vector3 or a Point message type from a topic and converts it into a vector etasl expression",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-VectorInputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-VectorInputHandler": {
+                        "required": [
+                          "topic-name",
+                          "msg_type",
+                          "number_of_tries",
+                          "depth",
+                          "default_vector",
+                          "when_unpublished",
+                          "varname"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "name of the topic to subscribe to",
+                            "type": "string"
+                          },
+                          "msg_type": {
+                            "description": "name of the topic to subscribe to",
+                            "enum": [
+                              "geometry_msgs/Vector3",
+                              "geometry_msgs/Point"
+                            ]
+                          },
+                          "number_of_tries": {
+                            "description": "the number of times unsuccesfully initialize() can be called before throwing an error",
+                            "type": "number",
+                            "default": 10
+                          },
+                          "depth": {
+                            "description": "Depth of the topic queue (i.e. buffer size storing incoming messages). Check ROS2 QoS policies for more information",
+                            "type": "number",
+                            "default": 1
+                          },
+                          "feedforward_input_topic": {
+                            "description": "(optional). Only use if the vector is a position (and not a velocity) vector. If set, the inputhandler will read from the specified topic of type geometry_msgs/Vector and will be used as feedforward (i.e. time derivative of the vector, if the vector is at a position level)",
+                            "type": "string",
+                            "default": "/etasl/feedforward/velocity_of_vector"
+                          },
+                          "default_vector": {
+                            "$id": "vector.json",
+                            "title": "position",
+                            "description": "origin of frame",
+                            "type": "object",
+                            "properties": {
+                              "x": {
+                                "type": "number"
+                              },
+                              "y": {
+                                "type": "number"
+                              },
+                              "z": {
+                                "type": "number"
+                              }
+                            },
+                            "required": [
+                              "x",
+                              "y",
+                              "z"
+                            ],
+                            "additionalProperties": false,
+                            "transform_to": "vector"
+                          },
+                          "when_unpublished": {
+                            "description": "Defines the behavior of the node when nothing has been published to the topic defined in topic-name during activation time of the node",
+                            "enum": [
+                              "use_default",
+                              "throw_error"
+                            ],
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "const": "use_default",
+                                "title": "Use default value",
+                                "description": "Uses the defined default value in the default_vector field while nothing has been published to the subscribed topic defined in topic-name. An INFO message will be logged."
+                              },
+                              {
+                                "type": "string",
+                                "const": "throw_error",
+                                "title": "Throw error",
+                                "description": "Throws an error if nothing has been published to the subscribed topic defined in topic-name at the time of activation of the node, preventing its activation. "
+                              }
+                            ]
+                          },
+                          "varname": {
+                            "description": "Name of the expression variable in the task specification with createInputChannelFrame. The data coming from the topic will be available in the task specification through this variable",
+                            "type": "string",
+                            "examples": [
+                              "my_input_frame",
+                              "my_target_frame"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "TFInputHandler.schema.json",
+                    "type": "object",
+                    "properties": {
+                      "is-TFInputHandler": {
+                        "description": "To indicate that this describes a TF inputhandler which reads a TF from a source frame to a target frame and converts it into a frame etasl expression",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-TFInputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-TFInputHandler": {
+                        "required": [
+                          "number_of_tries",
+                          "default_pose",
+                          "when_unpublished",
+                          "child_link",
+                          "parent_link",
+                          "varname"
+                        ],
+                        "properties": {
+                          "number_of_tries": {
+                            "description": "the number of times unsuccesfully initialize() can be called before throwing an error",
+                            "type": "number",
+                            "default": 10
+                          },
+                          "feedforward_input_topic": {
+                            "description": "(optional) If set, the inputhandler will read from the specified topic of type geometry_msgs/Twist and will be used as feedforward (i.e. time derivative of the frame generated from the TF transform)",
+                            "type": "string",
+                            "default": "/etasl/feedforward/twist_of_tf"
+                          },
+                          "default_pose": {
+                            "$id": "frame.json",
+                            "type": "object",
+                            "required": [
+                              "origin",
+                              "orientation"
+                            ],
+                            "additionalProperties": false,
+                            "properties": {
+                              "origin": {
+                                "$id": "vector.json",
+                                "title": "position",
+                                "description": "origin of frame",
+                                "type": "object",
+                                "properties": {
+                                  "x": {
+                                    "type": "number"
+                                  },
+                                  "y": {
+                                    "type": "number"
+                                  },
+                                  "z": {
+                                    "type": "number"
+                                  }
+                                },
+                                "required": [
+                                  "x",
+                                  "y",
+                                  "z"
+                                ],
+                                "additionalProperties": false,
+                                "transform_to": "vector"
+                              },
+                              "orientation": {
+                                "$schema": "http://json-schema.org/draft-06/schema",
+                                "$id": "orientation.json",
+                                "title": "orientation",
+                                "description": "orientation of frame given my normalized quaternion",
+                                "oneOf": [
+                                  {
+                                    "$id": "orientation-quaternion.json",
+                                    "title": "Normalized quaternion",
+                                    "description": "orientation of frame given my normalized quaternion",
+                                    "type": "object",
+                                    "properties": {
+                                      "is-quaternion": {
+                                        "type": "boolean",
+                                        "const": true
+                                      }
+                                    },
+                                    "dependencies": {
+                                      "is-quaternion": {
+                                        "required": [
+                                          "x",
+                                          "y",
+                                          "z",
+                                          "w"
+                                        ],
+                                        "properties": {
+                                          "w": {
+                                            "type": "number",
+                                            "default": 1
+                                          },
+                                          "x": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "y": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "z": {
+                                            "type": "number",
+                                            "default": 0
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": [
+                                      "is-quaternion"
+                                    ],
+                                    "additionalProperties": true,
+                                    "transform_to": "quaternion"
+                                  },
+                                  {
+                                    "$id": "orientation-rpy.json",
+                                    "title": "Normalized orientation",
+                                    "description": "orientation of frame given by roll, pitch, yaw angles",
+                                    "type": "object",
+                                    "properties": {
+                                      "is-rpy": {
+                                        "type": "boolean",
+                                        "const": true
+                                      }
+                                    },
+                                    "dependencies": {
+                                      "is-rpy": {
+                                        "required": [
+                                          "roll",
+                                          "pitch",
+                                          "yaw"
+                                        ],
+                                        "properties": {
+                                          "roll": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "pitch": {
+                                            "type": "number",
+                                            "default": 0
+                                          },
+                                          "yaw": {
+                                            "type": "number",
+                                            "default": 0
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "required": [
+                                      "is-rpy"
+                                    ],
+                                    "additionalProperties": true,
+                                    "transform_to": "rpy"
+                                  }
+                                ]
+                              }
+                            },
+                            "transform_to": "frame"
+                          },
+                          "when_unpublished": {
+                            "description": "Defines the behavior of the node when nothing has been published to the topic defined in topic-name during activation time of the node",
+                            "enum": [
+                              "use_default",
+                              "throw_error"
+                            ],
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "const": "use_default",
+                                "title": "Use default value",
+                                "description": "Uses the defined default value in the default_pose field while nothing has been published to the subscribed topic defined in topic-name. An INFO message will be logged."
+                              },
+                              {
+                                "type": "string",
+                                "const": "throw_error",
+                                "title": "Throw error",
+                                "description": "Throws an error if nothing has been published to the subscribed topic defined in topic-name at the time of activation of the node, preventing its activation. "
+                              }
+                            ]
+                          },
+                          "child_link": {
+                            "description": "Name of the child link whose frame will be used for the requested transformation (in TF notation is called target frame, since the equivalent transformation would transform the data TO this frame)",
+                            "type": "string",
+                            "default": "child_link"
+                          },
+                          "parent_link": {
+                            "description": "Name of the parent link whose frame will be used for the requested transformation (in TF notation is called source frame, since the equivalent transformation would transform the data FROM this frame)",
+                            "type": "string",
+                            "default": "parent_link"
+                          },
+                          "varname": {
+                            "description": "Name of the expression variable in the task specification with createInputChannelFrame. The data coming from the topic will be available in the task specification through this variable",
+                            "type": "string",
+                            "examples": [
+                              "my_input_frame",
+                              "my_target_frame"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "$schema": "http://json-schema.org/draft-06/schema",
+                    "$id": "JointStateInputHandler.schema.json",
+                    "type": "object",
+                    "properties": {
+                      "is-JointStateInputHandler": {
+                        "description": "To indicate that this describes a joint state inputhandler which reads from a sensor_msgs/JointState Message topic and converts it into an array of joint position etasl expression. Only joint positions are taken into account.",
+                        "type": "boolean",
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "is-JointStateInputHandler"
+                    ],
+                    "additionalProperties": true,
+                    "dependencies": {
+                      "is-JointStateInputHandler": {
+                        "required": [
+                          "topic-name",
+                          "number_of_tries",
+                          "depth",
+                          "number_of_joints",
+                          "default_joint_states",
+                          "when_unpublished",
+                          "varname_prefix"
+                        ],
+                        "properties": {
+                          "topic-name": {
+                            "description": "name of the topic to subscribe to",
+                            "type": "string"
+                          },
+                          "number_of_tries": {
+                            "description": "the number of times unsuccesfully initialize() can be called before throwing an error",
+                            "type": "number"
+                          },
+                          "depth": {
+                            "description": "Depth of the topic queue (i.e. buffer size storing incoming messages). Check ROS2 QoS policies for more information",
+                            "type": "number",
+                            "default": 1
+                          },
+                          "number_of_joints": {
+                            "description": "Number of joints for which to create input channels.",
+                            "type": "number",
+                            "default": 6,
+                            "minimum": 1
+                          },
+                          "default_joint_states": {
+                            "title": "default_joint_states",
+                            "description": "Default joint states (in the specified order) used in case that the topic defined in topic-name is not yet publishing. This field is required if the when_unpublished field is set to use_default.",
+                            "type": "array",
+                            "items": {
+                              "type": "number"
+                            }
+                          },
+                          "when_unpublished": {
+                            "description": "Defines the behavior of the node when nothing has been published to the topic defined in topic-name during activation time of the node",
+                            "enum": [
+                              "use_default",
+                              "throw_error"
+                            ],
+                            "oneOf": [
+                              {
+                                "type": "string",
+                                "const": "use_default",
+                                "title": "Use default value",
+                                "description": "Uses the defined default value in the default_joint_states field while nothing has been published to the subscribed topic defined in topic-name. An INFO message will be logged."
+                              },
+                              {
+                                "type": "string",
+                                "const": "throw_error",
+                                "title": "Throw error",
+                                "description": "Throws an error if nothing has been published to the subscribed topic defined in topic-name at the time of activation of the node, preventing its activation. "
+                              }
+                            ]
+                          },
+                          "varname_prefix": {
+                            "description": "Prefix of the expression variable that was created in the task specification with createInputChannel. The data coming from the topic will be available in the task specification through variables with this prefix, starting with 1 index (first joint). For example, if varname_prefix is set to 'joint', the data of the first joint will be available in the task specification through  createInputChannel('joint_1'), the second joint through createInputChannel('joint_2'), etc.",
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "etasl",
+        "robot"
+      ]
+    }
+  },
+  "required": [
+    "blackboard"
+  ],
+  "additionalProperties": true
+}

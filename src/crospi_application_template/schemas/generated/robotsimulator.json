@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema",
+    "$id": "generated/robotsimulator.json",
+    "title": "Robotsimulator",
+    "description": "RobotSimulator interfaces simulated robot hardware with eTaSL and runs in a separate thread, communicating with shared memory for reduced latency.",
+    "oneOf": [
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/simple_kinematic_simulation.schema.json"
+        }
+    ]
+}
