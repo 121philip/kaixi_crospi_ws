@@ -37,7 +37,7 @@
                             {"$ref": "libraries/debug_lib/task_json_schemas/move_sine_waves_jointspace.etasl.json"},
                             {"$ref": "libraries/dummy_lib/task_json_schemas/follow_external_frame.etasl.json"},
                             {"$ref": "libraries/dummy_lib/task_json_schemas/follow_external_vector.etasl.json"},
-                            {"$ref": "libraries/dummy_lib/task_json_schemas/move_joystick_with_jointstate_test.etasl.json"}
+                            {"$ref": "libraries/dummy_lib/task_json_schemas/vla_spacemouse_blend.etasl.json"}
                         ]
                     }
                 },
