@@ -1,1 +1,0 @@
-string arm_mode

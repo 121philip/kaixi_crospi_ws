@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/skill_specifications/libraries/test_trossen/skill_specifications/spacemouse_teleoperation_trossen.py

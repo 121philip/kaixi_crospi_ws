@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_generator_py/trossen_widowx_interfaces/srv/_joint_modes_s.c

@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/trossen_widowx_interfaces/rosidl_generator_cpp/trossen_widowx_interfaces/srv/arm_mode.hpp

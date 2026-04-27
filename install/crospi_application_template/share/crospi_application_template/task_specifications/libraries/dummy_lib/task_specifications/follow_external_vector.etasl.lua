@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/task_specifications/libraries/dummy_lib/task_specifications/follow_external_vector.etasl.lua
