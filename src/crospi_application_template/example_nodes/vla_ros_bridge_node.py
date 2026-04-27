@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 """
+Active CroSPI-side UDP receiver and ROS2 bridge.
+
+It consumes UDP packets from lerobot_trossen/important_code/inference/
+rviz_publisher.py and republishes the active runtime interfaces:
+  - /joint_states_VLA for eTaSL VLA target tracking
+  - /actual/joint_states_VLA and /predicted_ee_marker for RViz
+  - /shared_control/alpha as CrospiInput(names=["alpha_input"], data=[alpha])
+  - /shared_control/alpha_monitor as Float64 for quick debugging
+
+Important: /shared_control/alpha is final alpha only; it is not C_VLA.
+
 VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
 
 职责：
@@ -9,9 +20,13 @@ VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
   4. 管理 alpha → 发布 /shared_control/alpha（CrospiInput 格式，供 TopicInputHandler）
   5. SpaceMouse 按钮检测 → 夹爪 STUB
 
-启动方式：
-  终端 1: ros2 launch crospi_application_template trossen_follower_visualization.launch.py
-  终端 2: python run_inference_rtc.py --rviz ...
+完整启动顺序（本节点由步骤3启动，步骤1-2需先完成）：
+  步骤 1: ros2 run crospi_core crospi_node --ros-args \
+              -p config_file:="$[crospi_application_template]/.../trossen_vla_shared_control.setup.json"
+  步骤 2: python3 .../trossen_vla_shared_control_runner.py
+  步骤 3: ros2 launch crospi_application_template trossen_follower_visualization.launch.py  ← 本节点
+  步骤 4: ros2 launch spacenav classic-launch.py
+  步骤 5: python lerobot_trossen/important_code/inference/run_inference_rtc.py --rviz --alpha-mode constant --alpha-const 0.5
 """
 
 import pickle

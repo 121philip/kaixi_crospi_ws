@@ -1,4 +1,10 @@
 """
+Active CroSPI visualization launch for the VLA + SpaceMouse pipeline.
+
+Start this before the VLA process when using run_inference_rtc.py --rviz.
+The bridge receives UDP from the VLA side, republishes alpha/VLA targets for
+CroSPI, and publishes RViz markers for runtime debugging.
+
 VLA + SpaceMouse Shared Control — Visualisation Launch File
 
 Starts:
