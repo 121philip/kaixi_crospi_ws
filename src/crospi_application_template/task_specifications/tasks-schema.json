@@ -20,7 +20,7 @@
                         "description":"(optional) If overriding the default_robot_specification, provide the name of the etasl lua file containing the robot specification.",
                         "type": "string",
                         "pattern": ".*\\.lua$",
-                        "examples":  ["$[crospi_application_template]/robot_models/robot_specifications/kuka_iiwa.etasl.lua", "$[crospi_application_template]/robot_models/robot_specifications/ur10.etasl.lua", "$[crospi_application_template]/robot_models/robot_specifications/ur10e.etasl.lua" ] 
+                        "examples":  ["$[crospi_application_template]/robot_models/robot_specifications/kuka_iiwa.etasl.lua", "$[crospi_application_template]/robot_models/robot_specifications/ur10e.etasl.lua", "$[crospi_application_template]/robot_models/robot_specifications/ur10.etasl.lua" ] 
                       },
                     "task_specification":{
                         "oneOf": [
