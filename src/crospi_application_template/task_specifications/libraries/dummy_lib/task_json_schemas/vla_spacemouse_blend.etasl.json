@@ -35,7 +35,7 @@
                 }],
               "default":true,
               "examples":["$blackboard/output_param/my_task/activate_linear","$application_defined_parameter"],
-              "description":"If true, the linear velocities of the joystick will control the linear velocities of the defined frame. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
+              "description":"Enable linear velocity from spacemouse. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
             },
             "linear_scale":{
               "oneOf":[{
@@ -49,7 +49,7 @@
                 }],
               "default":0.3,
               "examples":["$blackboard/output_param/my_task/linear_scale","$application_defined_parameter"],
-              "description":"Scales the magnitude of the linear velocity coming from the joystick. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
+              "description":"Scales linear velocity from spacemouse. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
             },
             "activate_angular":{
               "oneOf":[{
@@ -63,7 +63,7 @@
                 }],
               "default":false,
               "examples":["$blackboard/output_param/my_task/activate_angular","$application_defined_parameter"],
-              "description":"If true, the angular velocities of the joystick will control the angular velocities of the defined frame. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
+              "description":"Enable angular velocity from spacemouse. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
             },
             "angular_scale":{
               "oneOf":[{
@@ -77,7 +77,7 @@
                 }],
               "default":0.3,
               "examples":["$blackboard/output_param/my_task/angular_scale","$application_defined_parameter"],
-              "description":"Scales the magnitude of the angular velocity coming from the joystick. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
+              "description":"Scales angular velocity from spacemouse. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
             },
             "execution_time":{
               "oneOf":[{
@@ -92,7 +92,7 @@
                 }],
               "default":0,
               "examples":["$blackboard/output_param/my_task/execution_time","$application_defined_parameter"],
-              "description":"Time (seconds) that the task should run before stopping. If zero, the execution will not stop automatically (i.e. no monitor will be triggered). \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
+              "description":"Task duration in seconds (0 = infinite). \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
             },
             "task_frame":{
               "oneOf":[{
@@ -106,7 +106,7 @@
                 }],
               "default":"tcp_frame",
               "examples":["$blackboard/output_param/my_task/task_frame","$application_defined_parameter"],
-              "description":"Name of frame used to control the robot in cartesian space. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
+              "description":"Frame for Cartesian spacemouse control. \nSet as a string beginning with $blackboard such as `$blackboard/output_param/my_task/my_param` if the value is not yet known and thus will be set externally at runtime (only once) depending on e.g. the outcome of a previous action or the outcome of another module.\nSet as $application_defined_parameter to indicate that the parameter is defined by the application and not by the skill specification."
             }
           },
           "additionalProperties":false,
@@ -120,7 +120,7 @@
         "is-vla_spacemouse_blend":{
           "const":true,
           "type":"boolean",
-          "description":"Task Specification: vla_spacemouse_blend.etasl.lua\nSet to true to indicate that the task uses the task specification mentioned above. \n Task description: This task specification allows to control the angular and linear velocity the end effector via a 6D joystick (a.k.a. spacemouse)."
+          "description":"Task Specification: vla_spacemouse_blend.etasl.lua\nSet to true to indicate that the task uses the task specification mentioned above. \n Task description: Shared control: blends spacemouse Cartesian velocity with VLA joint targets. Alpha=0 → pure VLA, Alpha=1 → pure spacemouse. Alpha is provided dynamically via ScalarInputHandler (/shared_control/alpha)."
         }
       }
     }
