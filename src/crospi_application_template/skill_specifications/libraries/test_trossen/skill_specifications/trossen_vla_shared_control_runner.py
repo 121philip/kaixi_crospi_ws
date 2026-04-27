@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+"""Active BeTFSM runner for the CroSPI VLA shared-control skill.
+
+The runner loads trossen_vla_shared_control.json, moves the follower home, then
+starts the spacemouse_shared_control_vla eTaSL task. The task itself consumes
+the ROS2 inputs configured in trossen_vla_shared_control.setup.json.
+"""
 
 #  Copyright (c) 2025 KU Leuven, Belgium
 #

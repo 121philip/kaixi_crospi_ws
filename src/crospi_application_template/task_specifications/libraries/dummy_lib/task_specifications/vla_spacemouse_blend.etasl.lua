@@ -16,7 +16,7 @@ reqs = require("task_requirements")
 -- ========================================= PARAMETERS ===================================
 task_description = "Shared control: blends spacemouse Cartesian velocity with VLA joint targets. "
                 .. "Alpha=0 → pure VLA, Alpha=1 → pure spacemouse. "
-                .. "Alpha is provided dynamically via ScalarInputHandler (/shared_control/alpha)."
+                .. "Alpha is provided by TopicInputHandler on /shared_control/alpha as alpha_input."
 
 param = reqs.parameters(task_description, {
     reqs.params.scalar({name="linear_scale",   description="Scales linear velocity from spacemouse",  default=0.3, required=false}),
@@ -51,9 +51,11 @@ end
 -- Alpha: human authority factor in [0, 1].
 --   alpha = 0  → pure VLA  (eTaSL tracks VLA joint targets, spacemouse ignored)
 --   alpha = 1  → pure SpaceMouse (joint tracking ignored, spacemouse drives Cartesian)
--- Published by vla_ros_bridge_node.py → /shared_control/alpha → TopicInputHandler.
+-- Published by vla_ros_bridge_node.py -> /shared_control/alpha -> TopicInputHandler.
+-- /shared_control/alpha carries the final alpha scalar, not raw C_VLA.
 -- The second argument (0.5) is the default used before the first message arrives.
-alpha = ctx:createInputChannelScalar("alpha_input", 0.5)
+-- alpha = ctx:createInputChannelScalar("alpha_input", 0.5)
+alpha = 0.5
 
 -- Small epsilon to avoid sqrt(0) gradient singularity at the boundaries.
 local eps    = constant(1e-6)
@@ -81,7 +83,7 @@ for i = 1, #robot_joints do
     Constraint{
         context  = ctx,
         name     = "vla_joint_" .. robot_joints[i],
-        expr     = w_vla * err,
+        expr     = err,
         priority = 2,
         weight   = 1,
         K        = 2
