@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/robot_models/robot_specifications/kuka_iiwa.etasl.lua

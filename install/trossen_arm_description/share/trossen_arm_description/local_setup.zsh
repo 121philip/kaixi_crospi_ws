@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/trossen_arm_description/ament_cmake_environment_hooks/local_setup.zsh

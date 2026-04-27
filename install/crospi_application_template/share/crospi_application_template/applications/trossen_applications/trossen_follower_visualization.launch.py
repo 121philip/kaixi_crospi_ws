@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/applications/trossen_applications/trossen_follower_visualization.launch.py

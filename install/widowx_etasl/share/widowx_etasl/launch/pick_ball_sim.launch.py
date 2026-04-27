@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/widowx_etasl/launch/pick_ball_sim.launch.py

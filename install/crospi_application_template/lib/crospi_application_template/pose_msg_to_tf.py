@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/src/crospi_application_template/example_nodes/pose_msg_to_tf.py

@@ -1,1 +1,0 @@
-/home/masterthesis/kaixi_crospi_ws/build/crospi_application_template/ament_cmake_core/crospi_application_templateConfig-version.cmake
