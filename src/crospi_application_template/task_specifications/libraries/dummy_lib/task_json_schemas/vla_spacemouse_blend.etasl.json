@@ -120,7 +120,7 @@
         "is-vla_spacemouse_blend":{
           "const":true,
           "type":"boolean",
-          "description":"Task Specification: vla_spacemouse_blend.etasl.lua\nSet to true to indicate that the task uses the task specification mentioned above. \n Task description: Shared control: blends spacemouse Cartesian velocity with VLA joint targets. Alpha=0 → pure VLA, Alpha=1 → pure spacemouse. Alpha is provided dynamically via ScalarInputHandler (/shared_control/alpha)."
+          "description":"Task Specification: vla_spacemouse_blend.etasl.lua\nSet to true to indicate that the task uses the task specification mentioned above. \n Task description: Shared control: blends spacemouse Cartesian velocity with VLA joint targets. Alpha=0 → pure VLA, Alpha=1 → pure spacemouse. Alpha is provided by TopicInputHandler on /shared_control/alpha as alpha_input."
         }
       }
     }

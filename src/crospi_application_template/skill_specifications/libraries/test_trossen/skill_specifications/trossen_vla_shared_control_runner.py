@@ -85,6 +85,12 @@ class MyStateMachine(TickingStateMachine):
 
         self.add_state(
             eTaSL_StateMachine("MovingHome","MovingHome",node=None),
+            transitions={SUCCEED: "Wait",
+                        ABORT: ABORT}
+        )
+
+        self.add_state(
+            TimedWait("Wait", Duration(seconds=5)),
             transitions={SUCCEED: "spacemouse_shared_control_vla",
                         ABORT: ABORT}
         )
@@ -94,6 +100,18 @@ class MyStateMachine(TickingStateMachine):
             transitions={SUCCEED: SUCCEED,
                         ABORT: ABORT}
         )
+        
+        # self.add_state(
+        #     eTaSL_StateMachine("MovingHome","MovingHome",node=None),
+        #     transitions={SUCCEED: "spacemouse_shared_control_vla",
+        #                 ABORT: ABORT}
+        # )
+
+        # self.add_state(
+        #     eTaSL_StateMachine("spacemouse_control","spacemouse_control",node=None),
+        #     transitions={SUCCEED: SUCCEED,
+        #                 ABORT: ABORT}
+        # )
 
 
 

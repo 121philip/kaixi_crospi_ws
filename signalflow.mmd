@@ -1,0 +1,59 @@
+---
+config:
+  theme: dark
+  themeVariables:
+    fontSize: 14px
+  layout: dagre
+---
+flowchart LR
+ subgraph VLAPROC["lerobot_trossen  (Python 3.12)"]
+        INF["inference_thread<br>SmolVLA → chunk [50,7]<br>C_VLA → α"]
+        ACT["actor_thread  30 Hz<br>ActionQueue → VLA step<br>send_action() no-op"]
+        PUB["rviz_publisher<br>send UDP :9788<br>recv UDP :9789"]
+  end
+ subgraph ROSBRIDGE["vla_ros_bridge_node  (System Python 3.10)"]
+        BRG["UDP → ROS2<br>/joint_states_VLA<br>/shared_control/alpha<br>/predicted_ee_marker"]
+  end
+ subgraph CROSPIBLOCK["CroSPI / eTaSL"]
+        ETASL["vla_spacemouse_blend.lua<br>WLN-QP  100 Hz<br>weight_VLA = (1−α)<br>weight_SM  = α"]
+  end
+    CAM["Camera ×2"] -. images .-> INF
+    FOL["Follower Arm<br>WidowX"] -. /joint_states .-> BRG
+    FOL -. /joint_states .-> ETASL
+    INF -- ActionQueue --> ACT
+    INF -- MSG_PREDICTED [N,7]<br>MSG_ALPHA [1] --> PUB
+    ACT -- MSG_ACTUAL [7] --> PUB
+    PUB -- UDP :9788 --> BRG
+    BRG -. UDP :9789<br>joint_states .-> PUB
+    PUB -. joint_obs .-> INF
+    SM["SpaceMouse Compact<br>v_sm  Cartesian velocity<br>btn_l / btn_r  gripper"] -- /spacenav/twist --> ETASL
+    SM -- /spacenav/joy<br>(gripper stub) --> BRG
+    BRG -- /joint_states_VLA --> ETASL
+    BRG -- /shared_control/alpha --> ETASL
+    ETASL -- q_cmd --> FOL
+    n1["Language"] --> INF
+
+    subgraph LEGEND["图例"]
+        direction TB
+        LF1(["·"]) -. 传感器 / 反馈 .-> LF2(["·"])
+        LI1(["·"]) -- 内部数据流 --> LI2(["·"])
+        LC1(["·"]) -- 控制指令 → 机械臂 --> LC2(["·"])
+    end
+
+    n1@{ shape: rect}
+     INF:::vla
+     ACT:::vla
+     PUB:::vla
+     BRG:::bridge
+     ETASL:::crospi
+     CAM:::hw
+     FOL:::hw
+     SM:::hw
+     n1:::hw
+    classDef hw     fill:#ddeeff,stroke:#336699,color:#000
+    classDef vla    fill:#e8f5e9,stroke:#2e7d32,color:#000
+    classDef bridge fill:#fce4ec,stroke:#c62828,color:#000
+    classDef crospi fill:#fff3e0,stroke:#e65100,color:#000
+    linkStyle 0,1,2,7,8,15 stroke:#4fc3f7,stroke-width:2px
+    linkStyle 6,11,12,13,17 stroke:#ffb300,stroke-width:2px
+    linkStyle 16 stroke:#aaaaaa,stroke-width:1.5px

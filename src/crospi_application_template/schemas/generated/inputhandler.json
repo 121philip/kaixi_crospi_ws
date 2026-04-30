@@ -21,6 +21,9 @@
         },
         {
             "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/TFInputHandler.schema.json"
+        },
+        {
+            "$ref": "/opt/ros2_crospi_ws/install/crospi_default_plugins/share/crospi_default_plugins/json_schemas/JointStateInputHandler.schema.json"
         }
     ]
 }

@@ -54,13 +54,18 @@ end
 -- Published by vla_ros_bridge_node.py -> /shared_control/alpha -> TopicInputHandler.
 -- /shared_control/alpha carries the final alpha scalar, not raw C_VLA.
 -- The second argument (0.5) is the default used before the first message arrives.
+
 -- alpha = ctx:createInputChannelScalar("alpha_input", 0.5)
 alpha = 0.5
 
--- Small epsilon to avoid sqrt(0) gradient singularity at the boundaries.
-local eps    = constant(1e-6)
-local w_vla  = sqrt(constant(1.0) - alpha + eps)   -- sqrt(1-α): VLA effective weight   = (1-α)
-local w_human = sqrt(alpha + eps)                   -- sqrt(α):   human effective weight = α
+-- Blending weights for WLN-QP: placed directly in Constraint{weight=...}.
+-- The solver minimises sum_i(weight_i * expr_i^2), so weight = (1-α) / α gives linear blending.
+-- No sqrt needed here (sqrt was only required when weights lived inside expr).
+local eps     = constant(1e-6)
+-- local w_vla   = constant(1.0) - alpha + eps   -- (1-α): VLA effective weight
+local w_vla   = 1   -- (1-α): VLA effective weight
+local w_human = 0                 -- α:     human effective weight
+-- local w_human = alpha + eps                   -- α:     human effective weight
 
 
 -- ========================================= Current joint expressions ===================================
@@ -76,7 +81,7 @@ end
 
 
 -- ========================================= VLA joint-tracking constraints ===================================
--- Effective weight = (1-α).  When α=0: full VLA.  When α=1: expr→0, constraint inactive.
+-- Effective weight = (1-α).  When α=0: full VLA.  When α=1: weight→0, constraint inactive.
 tracking_error = {}
 for i = 1, #robot_joints do
     local err = joint_expressions[i] - target_joint_pos[i]
@@ -85,7 +90,7 @@ for i = 1, #robot_joints do
         name     = "vla_joint_" .. robot_joints[i],
         expr     = err,
         priority = 2,
-        weight   = 1,
+        weight   = w_vla,
         K        = 2
     }
     tracking_error[i] = err   -- raw (unscaled) for output monitoring
@@ -97,7 +102,7 @@ tf_inst = task_frame
 
 
 -- ========================================= SpaceMouse Cartesian velocity constraints ===================================
--- Effective weight = α.  When α=1: full spacemouse.  When α=0: expr→0, constraint inactive.
+-- Effective weight = α.  When α=1: full spacemouse.  When α=0: weight→0, constraint inactive.
 if param.get("activate_linear") then
 
     desired_vel_x = coord_x(transvel(joystick_input)) * linear_scale
@@ -107,25 +112,25 @@ if param.get("activate_linear") then
     Constraint{
         context  = ctx,
         name     = "x_velocity",
-        expr     = w_human * (coord_x(origin(tf_inst)) - desired_vel_x * time),
+        expr     = coord_x(origin(tf_inst)) - desired_vel_x * time,
         K        = 0,
-        weight   = 1,
+        weight   = w_human,
         priority = 2
     }
     Constraint{
         context  = ctx,
         name     = "y_velocity",
-        expr     = w_human * (coord_y(origin(tf_inst)) - desired_vel_y * time),
+        expr     = coord_y(origin(tf_inst)) - desired_vel_y * time,
         K        = 0,
-        weight   = 1,
+        weight   = w_human,
         priority = 2
     }
     Constraint{
         context  = ctx,
         name     = "z_velocity",
-        expr     = w_human * (coord_z(origin(tf_inst)) - desired_vel_z * time),
+        expr     = coord_z(origin(tf_inst)) - desired_vel_z * time,
         K        = 0,
-        weight   = 1,
+        weight   = w_human,
         priority = 2
     }
 else
@@ -150,25 +155,25 @@ if param.get("activate_angular") then
     Constraint{
         context  = ctx,
         name     = "x_angular",
-        expr     = w_human * (coord_x(getRotVec(rotation(tf_inst))) - desired_omega_x * time),
+        expr     = coord_x(getRotVec(rotation(tf_inst))) - desired_omega_x * time,
         K        = 0,
-        weight   = 1,
+        weight   = w_human,
         priority = 2
     }
     Constraint{
         context  = ctx,
         name     = "y_angular",
-        expr     = w_human * (coord_y(getRotVec(rotation(tf_inst))) - desired_omega_y * time),
+        expr     = coord_y(getRotVec(rotation(tf_inst))) - desired_omega_y * time,
         K        = 0,
-        weight   = 1,
+        weight   = w_human,
         priority = 2
     }
     Constraint{
         context  = ctx,
         name     = "z_angular",
-        expr     = w_human * (coord_z(getRotVec(rotation(tf_inst))) - desired_omega_z * time),
+        expr     = coord_z(getRotVec(rotation(tf_inst))) - desired_omega_z * time,
         K        = 0,
-        weight   = 1,
+        weight   = w_human,
         priority = 2
     }
 else

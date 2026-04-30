@@ -5,7 +5,7 @@ Active CroSPI-side UDP receiver and ROS2 bridge.
 It consumes UDP packets from lerobot_trossen/important_code/inference/
 rviz_publisher.py and republishes the active runtime interfaces:
   - /joint_states_VLA for eTaSL VLA target tracking
-  - /actual/joint_states_VLA and /predicted_ee_marker for RViz
+  - /actual/joint_states_rviz and /predicted_ee_marker for RViz
   - /shared_control/alpha as CrospiInput(names=["alpha_input"], data=[alpha])
   - /shared_control/alpha_monitor as Float64 for quick debugging
 
@@ -15,7 +15,7 @@ VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
 
 职责：
   1. UDP 接收 VLA 动作 → 发布 /joint_states_VLA（6-DOF，供 eTaSL 跟踪）
-  2. 订阅 /joint_states（真实反馈）→ 发布 /actual/joint_states_VLA（RViz 蓝色机器人）
+  2. 订阅 /joint_states（真实反馈）→ 发布 /actual/joint_states_rviz（RViz 蓝色机器人）
   3. UDP 接收预测块 → FK → 发布 /predicted_ee_marker（橙色轨迹）
   4. 管理 alpha → 发布 /shared_control/alpha（CrospiInput 格式，供 TopicInputHandler）
   5. SpaceMouse 按钮检测 → 夹爪 STUB
@@ -41,12 +41,14 @@ sys.path.insert(0, "/opt/ros/humble/lib/python3.10/site-packages")
 import numpy as np
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import JointState, Joy
 from std_msgs.msg import Float64
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import Point
 from builtin_interfaces.msg import Duration
 from crospi_interfaces.msg import Input as CrospiInput
+# from trossen_widowx_interfaces.srv import ControlGripper
 
 # ---------------------------------------------------------------------------
 # SpaceMouse button detector
@@ -108,6 +110,7 @@ class _SpaceMouseArbiter:
 # ---------------------------------------------------------------------------
 _UDP_HOST      = "127.0.0.1"
 _UDP_PORT      = 9788
+_UDP_PORT_JS   = 9789  # 反向：bridge → lerobot 关节状态
 _MSG_ACTUAL    = 0   # shape [7,]  — VLA current action
 _MSG_PREDICTED = 1   # shape [N,7] — VLA predicted chunk
 _MSG_ALPHA     = 2   # shape [1,]  — final shared-control alpha
@@ -166,24 +169,31 @@ class VLABridgeNode(Node):
         super().__init__("vla_ros_bridge")
 
         self.declare_parameter("alpha", 0.5)
+        self.declare_parameter("enable_gripper", False)
         self._alpha: float = float(
             self.get_parameter("alpha").get_parameter_value().double_value
+        )
+        self._enable_gripper: bool = bool(
+            self.get_parameter("enable_gripper").get_parameter_value().bool_value
         )
 
         # Publishers
         self._vla_cmd_pub    = self.create_publisher(JointState,   "/joint_states_VLA",        10)
-        self._actual_pub     = self.create_publisher(JointState,   "/actual/joint_states_VLA", 10)
+        self._actual_pub     = self.create_publisher(JointState,   "/actual/joint_states_rviz", 10)
         self._marker_pub     = self.create_publisher(Marker,       "/predicted_ee_marker",     10)
         self._alpha_etasl_pub  = self.create_publisher(CrospiInput, "/shared_control/alpha",   10)
         self._alpha_monitor_pub = self.create_publisher(Float64,   "/shared_control/alpha_monitor", 10)
 
         # Subscribers
         self.create_subscription(Float64,    "/override/alpha", self._override_alpha_cb, 10)
-        self.create_subscription(JointState, "/joint_states",   self._joint_states_cb,   10)
+        self.create_subscription(JointState, "/joint_states",   self._joint_states_cb,   qos_profile_sensor_data)
         self.create_subscription(Joy,        "/spacenav/joy",   self._joy_cb,            10)
 
-        # Gripper STUB
-        # TODO: self._gripper_client = self.create_client(...) when gripper is enabled
+        # self._gripper_client = (
+        #     self.create_client(ControlGripper, "widowX/control_gripper")
+        #     if self._enable_gripper
+        #     else None
+        # )
 
         self._arbiter = _SpaceMouseArbiter()
         self._latest_joy_buttons = (False, False)
@@ -192,6 +202,9 @@ class VLABridgeNode(Node):
         self._sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self._sock.bind((_UDP_HOST, _UDP_PORT))
         self._sock.setblocking(False)
+
+        # 反向通道：将 /joint_states 转发给 lerobot_trossen（供 VLA 观测使用）
+        self._js_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
         self._latest_actual_joints: JointState | None = None
         self._latest_chunk: np.ndarray | None = None
@@ -210,6 +223,19 @@ class VLABridgeNode(Node):
 
     def _joint_states_cb(self, msg: JointState):
         self._latest_actual_joints = msg
+        # 转发给 lerobot_trossen：按 _JOINT_NAMES_7 顺序提取 7 个关节位置
+        name_to_pos = dict(zip(msg.name, msg.position))
+        joint_array = np.array(
+            [name_to_pos.get(n, 0.0) for n in _JOINT_NAMES_7], dtype=np.float64
+        )
+        # print(joint_array)
+        try:
+            self._js_sock.sendto(
+                pickle.dumps(joint_array, protocol=4), (_UDP_HOST, _UDP_PORT_JS)
+            )
+        except OSError:
+            print("Error sending UDP")
+            pass
 
     def _joy_cb(self, msg: Joy):
         self._latest_joy_buttons = (
@@ -336,6 +362,7 @@ class VLABridgeNode(Node):
 
     def destroy_node(self):
         self._sock.close()
+        self._js_sock.close()
         super().destroy_node()
 
 

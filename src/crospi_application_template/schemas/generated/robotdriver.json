@@ -5,6 +5,9 @@
     "description": "Robotdriver interfaces robot hardware with eTaSL and runs in a separate thread, communicating via shared memory for reduced latency",
     "oneOf": [
         {
+            "$ref": "/home/masterthesis/kaixi_crospi_ws/install/trossen_widowx_driver_crospi/share/trossen_widowx_driver_crospi/json_schemas/trossen_widowx_driver_crospi.schema.json"
+        },
+        {
             "$ref": "/opt/ros2_crospi_ws/install/template_driver_crospi/share/template_driver_crospi/json_schemas/template_driver_crospi.schema.json"
         }
     ]
