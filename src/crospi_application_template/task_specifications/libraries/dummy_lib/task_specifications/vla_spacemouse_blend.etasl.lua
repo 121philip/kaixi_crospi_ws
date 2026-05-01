@@ -64,7 +64,7 @@ alpha = 0.5
 local eps     = constant(1e-6)
 -- local w_vla   = constant(1.0) - alpha + eps   -- (1-α): VLA effective weight
 local w_vla   = 1   -- (1-α): VLA effective weight
-local w_human = 0                 -- α:     human effective weight
+local w_human = 1                 -- α:     human effective weight
 -- local w_human = alpha + eps                   -- α:     human effective weight
 
 
@@ -91,7 +91,7 @@ for i = 1, #robot_joints do
         expr     = err,
         priority = 2,
         weight   = w_vla,
-        K        = 2
+        K        = 1
     }
     tracking_error[i] = err   -- raw (unscaled) for output monitoring
 end
