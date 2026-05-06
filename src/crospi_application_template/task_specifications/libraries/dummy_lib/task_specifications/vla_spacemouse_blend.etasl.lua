@@ -48,6 +48,17 @@ for i = 1, #robot_joints do
     target_joint_pos[i] = ctx:createInputChannelScalar("target_joint_" .. i)
 end
 
+-- Future VLA end-effector pose target.
+-- vla_ros_bridge_node.py can compute FK from the incoming VLA joint state and
+-- publish geometry_msgs/msg/Pose on /pose_VLA:
+--   position    = [x, y, z]
+--   orientation = [qx, qy, qz, qw]
+-- A PoseInputHandler should expose that topic as a frame input channel named
+-- "pose_VLA". Keep this disabled for now; the active implementation below
+-- still tracks /joint_states_VLA.
+--
+-- pose_VLA = ctx:createInputChannelFrame("pose_VLA")
+
 -- Alpha: human authority factor in [0, 1].
 --   alpha = 0  → pure VLA  (eTaSL tracks VLA joint targets, spacemouse ignored)
 --   alpha = 1  → pure SpaceMouse (joint tracking ignored, spacemouse drives Cartesian)
@@ -89,12 +100,34 @@ for i = 1, #robot_joints do
         context  = ctx,
         name     = "vla_joint_" .. robot_joints[i],
         expr     = err,
-        priority = 2,
+        K        = 1,
         weight   = w_vla,
-        K        = 1
+        priority = 2
     }
     tracking_error[i] = err   -- raw (unscaled) for output monitoring
 end
+
+-- ========================================= Future VLA Cartesian pose-tracking constraints ===================================
+-- Use this block after enabling /pose_VLA in vla_ros_bridge_node.py and adding
+-- a PoseInputHandler in trossen_vla_shared_control.setup.json.
+--
+-- Constraint{
+--     context  = ctx,
+--     name     = "vla_pose_translation",
+--     expr     = origin(task_frame) - origin(pose_VLA),
+--     K        = 1,
+--     weight   = w_vla,
+--     priority = 2
+-- }
+--
+-- Constraint{
+--     context  = ctx,
+--     name     = "vla_pose_orientation",
+--     expr     = inv(rotation(pose_VLA)) * rotation(task_frame),
+--     K        = 1,
+--     weight   = w_vla,
+--     priority = 2
+-- }
 
 
 -- =============================== Cartesian frame ==============================

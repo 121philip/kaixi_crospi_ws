@@ -46,6 +46,7 @@ from sensor_msgs.msg import JointState, Joy
 from std_msgs.msg import Float64
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import Point
+# from geometry_msgs.msg import Pose
 from builtin_interfaces.msg import Duration
 from crospi_interfaces.msg import Input as CrospiInput
 # from trossen_widowx_interfaces.srv import ControlGripper
@@ -149,14 +150,61 @@ def _rot3(axis, angle: float) -> np.ndarray:
     ])
 
 
-def _fk_ee(q7: np.ndarray) -> np.ndarray:
+def _fk_ee_transform(q7: np.ndarray) -> np.ndarray:
     T = np.eye(4)
     for j, qi in zip(_FK_JOINTS, q7[:6]):
         Tji = np.eye(4)
         Tji[:3, :3] = _rot3(j["axis"], float(qi))
         Tji[:3, 3]  = j["xyz"]
         T = T @ Tji
-    return T[:3, :3] @ _EE_OFFSET + T[:3, 3]
+
+    Tee = np.eye(4)
+    Tee[:3, 3] = _EE_OFFSET
+    return T @ Tee
+
+
+def _fk_ee(q7: np.ndarray) -> np.ndarray:
+    T = _fk_ee_transform(q7)
+    return T[:3, 3]
+
+
+def _quat_xyzw_from_rot(R: np.ndarray) -> np.ndarray:
+    trace = float(np.trace(R))
+    if trace > 0.0:
+        s = np.sqrt(trace + 1.0) * 2.0
+        qw = 0.25 * s
+        qx = (R[2, 1] - R[1, 2]) / s
+        qy = (R[0, 2] - R[2, 0]) / s
+        qz = (R[1, 0] - R[0, 1]) / s
+    else:
+        diag = np.diagonal(R)
+        if diag[0] > diag[1] and diag[0] > diag[2]:
+            s = np.sqrt(1.0 + R[0, 0] - R[1, 1] - R[2, 2]) * 2.0
+            qw = (R[2, 1] - R[1, 2]) / s
+            qx = 0.25 * s
+            qy = (R[0, 1] + R[1, 0]) / s
+            qz = (R[0, 2] + R[2, 0]) / s
+        elif diag[1] > diag[2]:
+            s = np.sqrt(1.0 + R[1, 1] - R[0, 0] - R[2, 2]) * 2.0
+            qw = (R[0, 2] - R[2, 0]) / s
+            qx = (R[0, 1] + R[1, 0]) / s
+            qy = 0.25 * s
+            qz = (R[1, 2] + R[2, 1]) / s
+        else:
+            s = np.sqrt(1.0 + R[2, 2] - R[0, 0] - R[1, 1]) * 2.0
+            qw = (R[1, 0] - R[0, 1]) / s
+            qx = (R[0, 2] + R[2, 0]) / s
+            qy = (R[1, 2] + R[2, 1]) / s
+            qz = 0.25 * s
+
+    quat = np.array([qx, qy, qz, qw], dtype=np.float64)
+    return quat / np.linalg.norm(quat)
+
+
+def _fk_ee_pose(q7: np.ndarray) -> np.ndarray:
+    """Return end-effector pose as [x, y, z, qx, qy, qz, qw]."""
+    T = _fk_ee_transform(q7)
+    return np.concatenate((T[:3, 3], _quat_xyzw_from_rot(T[:3, :3])))
 
 
 # ---------------------------------------------------------------------------
@@ -179,6 +227,8 @@ class VLABridgeNode(Node):
 
         # Publishers
         self._vla_cmd_pub    = self.create_publisher(JointState,   "/joint_states_VLA",        10)
+        # Future Cartesian VLA target:
+        # self._vla_pose_pub = self.create_publisher(Pose, "/pose_VLA", 10)
         self._actual_pub     = self.create_publisher(JointState,   "/actual/joint_states_rviz", 10)
         self._marker_pub     = self.create_publisher(Marker,       "/predicted_ee_marker",     10)
         self._alpha_etasl_pub  = self.create_publisher(CrospiInput, "/shared_control/alpha",   10)
@@ -305,6 +355,20 @@ class VLABridgeNode(Node):
         msg.name     = _JOINT_NAMES_6
         msg.position = q7[:6].tolist()
         self._vla_cmd_pub.publish(msg)
+
+        # Future Cartesian VLA target from FK.
+        # Keep this disabled for now: eTaSL still consumes /joint_states_VLA.
+        #
+        # pose_vla = _fk_ee_pose(np.asarray(q7, dtype=np.float64))
+        # pose_msg = Pose()
+        # pose_msg.position.x = float(pose_vla[0])
+        # pose_msg.position.y = float(pose_vla[1])
+        # pose_msg.position.z = float(pose_vla[2])
+        # pose_msg.orientation.x = float(pose_vla[3])
+        # pose_msg.orientation.y = float(pose_vla[4])
+        # pose_msg.orientation.z = float(pose_vla[5])
+        # pose_msg.orientation.w = float(pose_vla[6])
+        # self._vla_pose_pub.publish(pose_msg)
 
     def _publish_actual_viz(self, now):
         src = self._latest_actual_joints

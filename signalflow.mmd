@@ -12,7 +12,7 @@ flowchart LR
         PUB["rviz_publisher<br>send UDP :9788<br>recv UDP :9789"]
   end
  subgraph ROSBRIDGE["vla_ros_bridge_node  (System Python 3.10)"]
-        BRG["UDP → ROS2<br>/joint_states_VLA<br>/shared_control/alpha<br>/predicted_ee_marker"]
+        BRG["UDP → ROS2<br>/joint_states_VLA<br>/pose_VLA FK commented<br>/shared_control/alpha<br>/predicted_ee_marker"]
   end
  subgraph CROSPIBLOCK["CroSPI / eTaSL"]
         ETASL["vla_spacemouse_blend.lua<br>WLN-QP  100 Hz<br>weight_VLA = (1−α)<br>weight_SM  = α"]
@@ -29,6 +29,7 @@ flowchart LR
     SM["SpaceMouse Compact<br>v_sm  Cartesian velocity<br>btn_l / btn_r  gripper"] -- /spacenav/twist --> ETASL
     SM -- /spacenav/joy<br>(gripper stub) --> BRG
     BRG -- /joint_states_VLA --> ETASL
+    BRG -. /pose_VLA FK commented .-> ETASL
     BRG -- /shared_control/alpha --> ETASL
     ETASL -- q_cmd --> FOL
     n1["Language"] --> INF
