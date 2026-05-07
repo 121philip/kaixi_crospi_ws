@@ -33,21 +33,24 @@ execution_time = param.get("execution_time")
 
 
 -- ======================================== Robot model ========================================
-robot        = reqs.robot_model({param.get("task_frame")})
+robot        = reqs.robot_model({param.get("task_frame"), "gripper_frame"})
 robot_joints = robot.robot_joints
 task_frame   = robot.getFrame(param.get("task_frame"))
+gripper_F = robot.getFrame("gripper_frame")
 
-
+print("+++++++++++++++++++++ helloooooooooo 1")
 -- ========================================= Input channels ===================================
 -- Spacemouse twist (Cartesian velocity)
 joystick_input = ctx:createInputChannelTwist("joystick_input")
 
+print("+++++++++++++++++++++ helloooooooooo 2")
 -- VLA joint targets (one scalar per joint, published via JointStateInputHandler)
 target_joint_pos = {}
 for i = 1, #robot_joints do
     target_joint_pos[i] = ctx:createInputChannelScalar("target_joint_" .. i)
 end
 
+print("+++++++++++++++++++++ helloooooooooo 3")
 -- Future VLA end-effector pose target.
 -- vla_ros_bridge_node.py can compute FK from the incoming VLA joint state and
 -- publish geometry_msgs/msg/Pose on /pose_VLA:
@@ -75,7 +78,7 @@ alpha = 0.5
 local eps     = constant(1e-6)
 -- local w_vla   = constant(1.0) - alpha + eps   -- (1-α): VLA effective weight
 local w_vla   = 1   -- (1-α): VLA effective weight
-local w_human = 1                 -- α:     human effective weight
+local w_human = 5                 -- α:     human effective weight
 -- local w_human = alpha + eps                   -- α:     human effective weight
 
 
@@ -90,17 +93,18 @@ if #robot_joints ~= #target_joint_pos then
           ") must equal robot joints (" .. tostring(#robot_joints) .. ")")
 end
 
-
+print("+++++++++++++++++++++ helloooooooooo 4")
 -- ========================================= VLA joint-tracking constraints ===================================
 -- Effective weight = (1-α).  When α=0: full VLA.  When α=1: weight→0, constraint inactive.
 tracking_error = {}
+k_joint = {0.5,0.5,0.5,0.5,0.5,0.5,2}
 for i = 1, #robot_joints do
     local err = joint_expressions[i] - target_joint_pos[i]
     Constraint{
         context  = ctx,
         name     = "vla_joint_" .. robot_joints[i],
         expr     = err,
-        K        = 1,
+        K        = k_joint[i],
         weight   = w_vla,
         priority = 2
     }

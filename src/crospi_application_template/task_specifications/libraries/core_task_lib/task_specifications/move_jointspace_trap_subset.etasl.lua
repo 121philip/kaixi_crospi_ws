@@ -49,7 +49,7 @@ target_joints = param.get("target_joints")
 robot_joints = param.get("robot_joints")
 
 
-if #robot.robot_joints <= #target_joints then
+if #robot.robot_joints < #target_joints then
     error("The number of target_joints (" .. tostring(#target_joints) .. ") must be less than or equal to the number of specified robot.robot_joints (" .. tostring(#robot.robot_joints) ..  ")")
 end
 
@@ -174,11 +174,11 @@ Monitor{
 ctx:setOutputExpression("time",time)
 
 
-for i=1,#robot.robot_joints do
-    ctx:setOutputExpression("jpos"..i,ctx:getScalarExpr(robot.robot_joints[i]))
-end
+-- for i=1,#robot.robot_joints do
+--     ctx:setOutputExpression("jpos"..i,ctx:getScalarExpr(robot.robot_joints[i]))
+-- end
 
 
-for i=1,#robot_joints do
-    ctx:setOutputExpression("tracking_error_"..robot_joints[i],tracking_error[i])
-end
+-- for i=1,#robot_joints do
+--     ctx:setOutputExpression("tracking_error_"..robot_joints[i],tracking_error[i])
+-- end

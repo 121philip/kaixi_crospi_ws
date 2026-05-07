@@ -14,7 +14,7 @@ Important: /shared_control/alpha is final alpha only; it is not C_VLA.
 VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
 
 职责：
-  1. UDP 接收 VLA 动作 → 发布 /joint_states_VLA（6-DOF，供 eTaSL 跟踪）
+  1. UDP 接收 VLA 动作 → 发布 /joint_states_VLA（7-DOF，含夹爪，供 eTaSL 跟踪）
   2. 订阅 /joint_states（真实反馈）→ 发布 /actual/joint_states_rviz（RViz 蓝色机器人）
   3. UDP 接收预测块 → FK → 发布 /predicted_ee_marker（橙色轨迹）
   4. 管理 alpha → 发布 /shared_control/alpha（CrospiInput 格式，供 TopicInputHandler）
@@ -121,9 +121,32 @@ _MSG_ALPHA     = 2   # shape [1,]  — final shared-control alpha
 # ---------------------------------------------------------------------------
 _JOINT_NAMES_7 = [
     "joint_0", "joint_1", "joint_2", "joint_3",
-    "joint_4", "joint_5", "left_carriage_joint",
+    "joint_4", "joint_5", "joint_6",
 ]
-_JOINT_NAMES_6 = _JOINT_NAMES_7[:6]
+_JOINT_COUNT = len(_JOINT_NAMES_7)
+
+
+def _normalize_joint_vector(joints: np.ndarray) -> np.ndarray:
+    """Return a flat 7-joint vector with gripper as the final element."""
+    arr = np.asarray(joints, dtype=np.float64).reshape(-1)
+    if arr.size != _JOINT_COUNT:
+        raise ValueError(
+            f"Expected {_JOINT_COUNT} joints including gripper, got {arr.size}"
+        )
+    return arr
+
+
+def _normalize_joint_chunk(chunk: np.ndarray) -> np.ndarray:
+    """Return an Nx7 joint chunk with gripper in column 6."""
+    arr = np.asarray(chunk, dtype=np.float64)
+    if arr.ndim == 1:
+        return _normalize_joint_vector(arr).reshape(1, _JOINT_COUNT)
+    if arr.ndim != 2 or arr.shape[1] != _JOINT_COUNT:
+        raise ValueError(
+            f"Expected predicted chunk shape (N, {_JOINT_COUNT}) including gripper, "
+            f"got {arr.shape}"
+        )
+    return arr
 
 # ---------------------------------------------------------------------------
 # Forward kinematics (extracted from wxai_follower.urdf)
@@ -350,10 +373,16 @@ class VLABridgeNode(Node):
         self.get_logger().info(f"[vla_bridge] alpha udp {self._alpha:.3f}")
 
     def _publish_vla_cmd(self, q7: np.ndarray, now):
+        try:
+            joints = _normalize_joint_vector(q7)
+        except ValueError as exc:
+            self.get_logger().warning(f"[vla_bridge] dropping invalid VLA command: {exc}")
+            return
+
         msg = JointState()
         msg.header.stamp = now
-        msg.name     = _JOINT_NAMES_6
-        msg.position = q7[:6].tolist()
+        msg.name     = _JOINT_NAMES_7
+        msg.position = joints.tolist()
         self._vla_cmd_pub.publish(msg)
 
         # Future Cartesian VLA target from FK.
@@ -397,6 +426,12 @@ class VLABridgeNode(Node):
         chunk = self._latest_chunk
         if chunk is None:
             return
+        try:
+            chunk = _normalize_joint_chunk(chunk)
+        except ValueError as exc:
+            self.get_logger().warning(f"[vla_bridge] dropping invalid predicted chunk: {exc}")
+            return
+
         ee_pts = [_fk_ee(q) for q in chunk]
         pts = [Point(x=float(p[0]), y=float(p[1]), z=float(p[2])) for p in ee_pts]
 

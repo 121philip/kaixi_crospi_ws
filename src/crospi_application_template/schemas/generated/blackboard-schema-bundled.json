@@ -317,7 +317,9 @@
                         "required": [
                           "ip_address",
                           "control_mode",
-                          "periodicity"
+                          "periodicity",
+                          "is_control_gripper",
+                          "initialize_with_gripper_opened"
                         ],
                         "properties": {
                           "ip_address": {
@@ -338,6 +340,16 @@
                             "description": "Periodicity in which the integration will be performed in seconds. 1/periodicity is the update frequency in Hz.",
                             "type": "number",
                             "default": 0.005
+                          },
+                          "is_control_gripper_continuously": {
+                            "description": "To indicate if the gripper joint should be also continuously controlled by crospi (i.e. robot becomes 7 DOF instead of 6)",
+                            "type": "boolean",
+                            "default": false
+                          },
+                          "initialize_with_gripper_opened": {
+                            "description": "To indicate if the gripper should open automatically during initialization",
+                            "type": "boolean",
+                            "default": true
                           }
                         }
                       }

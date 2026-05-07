@@ -5,13 +5,14 @@
             "name": "MovingHome",
             "task_specification": {
                 "from-core_task_lib-version-0.1.0": true,
-                "is-move_jointspace_trap": true,
-                "file_path": "$[crospi_application_template]/task_specifications/libraries/core_task_lib/task_specifications/move_jointspace_trap.etasl.lua",
+                "is-move_jointspace_trap_subset": true,
+                "file_path": "$[crospi_application_template]/task_specifications/libraries/core_task_lib/task_specifications/move_jointspace_trap_subset.etasl.lua",
                 "parameters": {
                     "maxacc": 0.1,
                     "maxvel": 0.3,
                     "target_joints": [0, 1.0472, 0.5236, 0.6283, 0, 0],
-                    "units": "radians"
+                    "units": "radians",
+                    "robot_joints": ["joint_0", "joint_1", "joint_2", "joint_3", "joint_4", "joint_5"]
                 }
             }
         },

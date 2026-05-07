@@ -9,7 +9,7 @@ VLA + SpaceMouse Shared Control — Visualisation Launch File
 
 Starts:
   1. vla_ros_bridge_node   — UDP 9788 receiver:
-       • publishes /joint_states_VLA  (6-DOF VLA target for eTaSL)
+       • publishes /joint_states_VLA  (7-DOF VLA target for eTaSL, including gripper)
        • publishes /actual/joint_states_rviz  (real blended robot state for RViz)
        • publishes /predicted_ee_marker  (orange EE trajectory from VLA chunk)
        • manages alpha and gripper stub
