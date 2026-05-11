@@ -15,8 +15,8 @@ reqs = require("task_requirements")
 
 -- ========================================= PARAMETERS ===================================
 task_description = "Shared control: blends spacemouse Cartesian velocity with VLA joint targets. "
-                .. "Alpha=0 → pure VLA, Alpha=1 → pure spacemouse. "
-                .. "Alpha is provided by TopicInputHandler on /shared_control/alpha as alpha_input."
+                .. "Defaults preserve the previous log-only behavior before live weights arrive. "
+                .. "Runtime weights w_vla and w_human are provided on /shared_control/weights."
 
 param = reqs.parameters(task_description, {
     reqs.params.scalar({name="linear_scale",   description="Scales linear velocity from spacemouse",  default=0.3, required=false}),
@@ -62,24 +62,15 @@ print("+++++++++++++++++++++ helloooooooooo 3")
 --
 -- pose_VLA = ctx:createInputChannelFrame("pose_VLA")
 
--- Alpha: human authority factor in [0, 1].
---   alpha = 0  → pure VLA  (eTaSL tracks VLA joint targets, spacemouse ignored)
---   alpha = 1  → pure SpaceMouse (joint tracking ignored, spacemouse drives Cartesian)
--- Published by vla_ros_bridge_node.py -> /shared_control/alpha -> TopicInputHandler.
--- /shared_control/alpha carries the final alpha scalar, not raw C_VLA.
--- The second argument (0.5) is the default used before the first message arrives.
-
--- alpha = ctx:createInputChannelScalar("alpha_input", 0.5)
-alpha = 0.5
+-- Sentinel direct weights.  The bridge publishes /shared_control/weights as
+-- CrospiInput(names=["w_vla", "w_human"], data=[...]).
+-- Defaults preserve the previous hard-coded test weights until live values arrive.
 
 -- Blending weights for WLN-QP: placed directly in Constraint{weight=...}.
--- The solver minimises sum_i(weight_i * expr_i^2), so weight = (1-α) / α gives linear blending.
--- No sqrt needed here (sqrt was only required when weights lived inside expr).
-local eps     = constant(1e-6)
--- local w_vla   = constant(1.0) - alpha + eps   -- (1-α): VLA effective weight
-local w_vla   = 1   -- (1-α): VLA effective weight
-local w_human = 5                 -- α:     human effective weight
--- local w_human = alpha + eps                   -- α:     human effective weight
+-- The solver minimises sum_i(weight_i * expr_i^2). Sentinel writes these
+-- weights directly instead of routing through alpha.
+local w_vla   = ctx:createInputChannelScalar("w_vla", 1.0)
+local w_human = ctx:createInputChannelScalar("w_human", 5.0)
 
 
 -- ========================================= Current joint expressions ===================================
@@ -95,9 +86,10 @@ end
 
 print("+++++++++++++++++++++ helloooooooooo 4")
 -- ========================================= VLA joint-tracking constraints ===================================
--- Effective weight = (1-α).  When α=0: full VLA.  When α=1: weight→0, constraint inactive.
 tracking_error = {}
-k_joint = {0.5,0.5,0.5,0.5,0.5,0.5,2}
+
+k_joint = {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 2}
+
 for i = 1, #robot_joints do
     local err = joint_expressions[i] - target_joint_pos[i]
     Constraint{
@@ -228,6 +220,8 @@ end
 -- ======================================== Output expressions ========================================
 quat_tf = toQuat(rotation(task_frame))
 ctx:setOutputExpression("time",   time)
+ctx:setOutputExpression("w_vla_runtime",   w_vla)
+ctx:setOutputExpression("w_human_runtime", w_human)
 ctx:setOutputExpression("x_tf",   coord_x(origin(task_frame)))
 ctx:setOutputExpression("y_tf",   coord_y(origin(task_frame)))
 ctx:setOutputExpression("z_tf",   coord_z(origin(task_frame)))

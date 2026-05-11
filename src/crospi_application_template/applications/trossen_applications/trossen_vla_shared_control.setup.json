@@ -97,6 +97,10 @@
                         "topic-name": "/joint_states_VLA",
                         "when_unpublished": "use_default",
                         "varname_prefix": "target_joint"
+                    },
+                    {
+                        "is-TopicInputHandler": true,
+                        "topic-name": "/shared_control/weights"
                     }
                 ]
             }

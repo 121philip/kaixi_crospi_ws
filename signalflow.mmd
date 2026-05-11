@@ -1,60 +1,86 @@
 ---
 config:
-  theme: dark
+  theme: neo
   themeVariables:
     fontSize: 14px
   layout: dagre
 ---
 flowchart LR
  subgraph VLAPROC["lerobot_trossen  (Python 3.12)"]
-        INF["inference_thread<br>SmolVLA → chunk [50,7]<br>C_VLA → α"]
-        ACT["actor_thread  30 Hz<br>ActionQueue → VLA step<br>send_action() no-op"]
-        PUB["rviz_publisher<br>send UDP :9788<br>recv UDP :9789"]
+        INF["inference_thread<br>SmolVLA synchronous chunk [50,7]"]
+        CONF["confidence.py<br>Regression-CBC default<br>raw/speed-norm CBC for ablation<br>A-VI / A-AI / jerk diagnostics"]
+        SENT["SentinelRuntime optional<br>fast: C_action from action metrics<br>slow: C_progress from VLM<br>R = EMA(min(C_action, C_progress))<br>w_vla = R + eps<br>w_human = 1 - R + eps<br>default: log-only"]
+        ACT["actor_thread<br>ActionQueue -&gt; VLA step<br>send_action() no-op"]
+        PUB["rviz_publisher<br>UDP send :9788<br>UDP recv :9789"]
   end
- subgraph ROSBRIDGE["vla_ros_bridge_node  (System Python 3.10)"]
-        BRG["UDP → ROS2<br>/joint_states_VLA<br>/pose_VLA FK commented<br>/shared_control/alpha<br>/predicted_ee_marker"]
+ subgraph ROSBRIDGE["vla_ros_bridge_node  (System Python 3.10 / ROS2)"]
+        BRG["UDP -&gt; ROS2 bridge<br>MSG_ACTUAL -&gt; /joint_states_VLA<br>MSG_PREDICTED -&gt; /predicted_ee_marker<br>MSG_ALPHA -&gt; /shared_control/alpha + monitor<br>MSG_WEIGHTS -&gt; /shared_control/weights"]
   end
  subgraph CROSPIBLOCK["CroSPI / eTaSL"]
-        ETASL["vla_spacemouse_blend.lua<br>WLN-QP  100 Hz<br>weight_VLA = (1−α)<br>weight_SM  = α"]
+        SETUP["trossen_vla_shared_control.setup.json<br>/spacenav/twist TwistInputHandler<br>/joint_states_VLA JointStateInputHandler<br>/shared_control/weights TopicInputHandler"]
+        ETASL["vla_spacemouse_blend.etasl.lua<br>WLN-QP sample_time 0.01 s<br>VLA joint constraints: weight = w_vla<br>SpaceMouse velocity constraints: weight = w_human<br>defaults: w_vla=1.0, w_human=5.0"]
   end
-    CAM["Camera ×2"] -. images .-> INF
-    FOL["Follower Arm<br>WidowX"] -. /joint_states .-> BRG
-    FOL -. /joint_states .-> ETASL
+ subgraph LEGEND["Legend"]
+    direction TB
+        LF2(["."])
+        LF1(["."])
+        LI2(["."])
+        LI1(["."])
+        LC2(["."])
+        LC1(["."])
+  end
+    LANG["Language / task prompt"] --> INF
+    CAM["Camera x2<br>wrist + right"] -. images .-> INF
+    INF -. recent wrist/right frames .-> SENT
+    SENT -. frame grid + task prompt .-> CLOUD["Cloud VLM<br>OpenAI / Gemini<br>slow progress monitor"]
+    CLOUD -. failure_likelihood<br>C_progress .-> SENT
+    INF -- full action chunk --> CONF
     INF -- ActionQueue --> ACT
-    INF -- MSG_PREDICTED [N,7]<br>MSG_ALPHA [1] --> PUB
-    ACT -- MSG_ACTUAL [7] --> PUB
+    CONF -- selected C_VLA score<br>-> C_action --> SENT
+    CONF -- final alpha scalar [1]<br>compat/debug only --> PUB
+    INF -- predicted chunk [N,7] --> PUB
+    ACT -- actual VLA step [7] --> PUB
+    SENT -. MSG_WEIGHTS [w_vla,w_human]<br>live weights only .-> PUB
     PUB -- UDP :9788 --> BRG
-    BRG -. UDP :9789<br>joint_states .-> PUB
+    BRG -. UDP :9789<br>joint feedback .-> PUB
     PUB -. joint_obs .-> INF
-    SM["SpaceMouse Compact<br>v_sm  Cartesian velocity<br>btn_l / btn_r  gripper"] -- /spacenav/twist --> ETASL
-    SM -- /spacenav/joy<br>(gripper stub) --> BRG
-    BRG -- /joint_states_VLA --> ETASL
-    BRG -. /pose_VLA FK commented .-> ETASL
-    BRG -- /shared_control/alpha --> ETASL
-    ETASL -- q_cmd --> FOL
-    n1["Language"] --> INF
+    SM["SpaceMouse Compact<br>6-DOF Cartesian velocity<br>buttons: gripper stub"] -- /spacenav/twist --> SETUP
+    SM -- /spacenav/joy<br>gripper stub --> BRG
+    BRG -- /joint_states_VLA --> SETUP
+    BRG -- /shared_control/weights --> SETUP
+    BRG -. /shared_control/alpha<br>published, not consumed by current setup/Lua .-> DBG["Debug / visualization<br>alpha_monitor<br>predicted_ee_marker"]
+    BRG -. /predicted_ee_marker .-> DBG
+    BRG -. /pose_VLA disabled .-> FUT["Future path<br>/pose_VLA FK publisher<br>PoseInputHandler commented"]
+    SETUP --> ETASL
+    ETASL -- q_cmd --> FOL["Follower Arm<br>Trossen WidowX"]
+    FOL -. /joint_states .-> BRG
+    LF1 -. sensor / feedback / optional .-> LF2
+    LI1 -- active data flow --> LI2
+    LC1 -- control command --> LC2
 
-    subgraph LEGEND["图例"]
-        direction TB
-        LF1(["·"]) -. 传感器 / 反馈 .-> LF2(["·"])
-        LI1(["·"]) -- 内部数据流 --> LI2(["·"])
-        LC1(["·"]) -- 控制指令 → 机械臂 --> LC2(["·"])
-    end
-
-    n1@{ shape: rect}
      INF:::vla
+     CONF:::vla
+     SENT:::sentinel
      ACT:::vla
      PUB:::vla
      BRG:::bridge
+     SETUP:::crospi
      ETASL:::crospi
+     LANG:::hw
      CAM:::hw
-     FOL:::hw
+     CLOUD:::cloud
      SM:::hw
-     n1:::hw
-    classDef hw     fill:#ddeeff,stroke:#336699,color:#000
-    classDef vla    fill:#e8f5e9,stroke:#2e7d32,color:#000
-    classDef bridge fill:#fce4ec,stroke:#c62828,color:#000
-    classDef crospi fill:#fff3e0,stroke:#e65100,color:#000
-    linkStyle 0,1,2,7,8,15 stroke:#4fc3f7,stroke-width:2px
-    linkStyle 6,11,12,13,17 stroke:#ffb300,stroke-width:2px
-    linkStyle 16 stroke:#aaaaaa,stroke-width:1.5px
+     DBG:::debug
+     FUT:::future
+     FOL:::hw
+    classDef hw       fill:#ddeeff,stroke:#336699,color:#000
+    classDef cloud    fill:#e3f2fd,stroke:#1565c0,color:#000
+    classDef vla      fill:#e8f5e9,stroke:#2e7d32,color:#000
+    classDef sentinel fill:#ede7f6,stroke:#512da8,color:#000
+    classDef bridge   fill:#fce4ec,stroke:#c62828,color:#000
+    classDef crospi   fill:#fff3e0,stroke:#e65100,color:#000
+    classDef debug    fill:#eeeeee,stroke:#616161,color:#000
+    classDef future   fill:#fafafa,stroke:#9e9e9e,stroke-dasharray: 4 4,color:#000
+    linkStyle 1,2,3,4,11,13,14,19,20,21,24,25 stroke:#1e88e5,stroke-width:2px
+    linkStyle 0,5,6,7,8,9,10,12,15,16,17,18,22,26 stroke:#43a047,stroke-width:2px
+    linkStyle 23,27 stroke:#fb8c00,stroke-width:2.5px

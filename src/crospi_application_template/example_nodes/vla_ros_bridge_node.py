@@ -8,6 +8,7 @@ rviz_publisher.py and republishes the active runtime interfaces:
   - /actual/joint_states_rviz and /predicted_ee_marker for RViz
   - /shared_control/alpha as CrospiInput(names=["alpha_input"], data=[alpha])
   - /shared_control/alpha_monitor as Float64 for quick debugging
+  - /shared_control/weights as CrospiInput(names=["w_vla", "w_human"], data=[...])
 
 Important: /shared_control/alpha is final alpha only; it is not C_VLA.
 
@@ -115,6 +116,7 @@ _UDP_PORT_JS   = 9789  # 反向：bridge → lerobot 关节状态
 _MSG_ACTUAL    = 0   # shape [7,]  — VLA current action
 _MSG_PREDICTED = 1   # shape [N,7] — VLA predicted chunk
 _MSG_ALPHA     = 2   # shape [1,]  — final shared-control alpha
+_MSG_WEIGHTS   = 3   # shape [2,]  Sentinel direct eTaSL weights
 
 # ---------------------------------------------------------------------------
 # Joint names
@@ -124,6 +126,7 @@ _JOINT_NAMES_7 = [
     "joint_4", "joint_5", "joint_6",
 ]
 _JOINT_COUNT = len(_JOINT_NAMES_7)
+_WEIGHT_COUNT = 2
 
 
 def _normalize_joint_vector(joints: np.ndarray) -> np.ndarray:
@@ -147,6 +150,16 @@ def _normalize_joint_chunk(chunk: np.ndarray) -> np.ndarray:
             f"got {arr.shape}"
         )
     return arr
+
+
+def _normalize_weights(weights: np.ndarray) -> np.ndarray:
+    """Return non-negative Sentinel weights [w_vla, w_human]."""
+    arr = np.asarray(weights, dtype=np.float64).reshape(-1)
+    if arr.size != _WEIGHT_COUNT:
+        raise ValueError(f"Expected {_WEIGHT_COUNT} Sentinel weights, got {arr.size}")
+    if not np.all(np.isfinite(arr)):
+        raise ValueError("Sentinel weights must be finite")
+    return np.maximum(arr, 0.0)
 
 # ---------------------------------------------------------------------------
 # Forward kinematics (extracted from wxai_follower.urdf)
@@ -244,6 +257,8 @@ class VLABridgeNode(Node):
         self._alpha: float = float(
             self.get_parameter("alpha").get_parameter_value().double_value
         )
+        # 没收到 Sentinel 权重前，先用旧的测试权重
+        self._weights = np.array([1.0, 5.0], dtype=np.float64)
         self._enable_gripper: bool = bool(
             self.get_parameter("enable_gripper").get_parameter_value().bool_value
         )
@@ -255,6 +270,7 @@ class VLABridgeNode(Node):
         self._actual_pub     = self.create_publisher(JointState,   "/actual/joint_states_rviz", 10)
         self._marker_pub     = self.create_publisher(Marker,       "/predicted_ee_marker",     10)
         self._alpha_etasl_pub  = self.create_publisher(CrospiInput, "/shared_control/alpha",   10)
+        self._weights_etasl_pub = self.create_publisher(CrospiInput, "/shared_control/weights", 10)
         self._alpha_monitor_pub = self.create_publisher(Float64,   "/shared_control/alpha_monitor", 10)
 
         # Subscribers
@@ -339,6 +355,8 @@ class VLABridgeNode(Node):
                 self._latest_chunk = array
             elif data[0] == _MSG_ALPHA:
                 self._update_alpha_from_udp(array)
+            elif data[0] == _MSG_WEIGHTS:
+                self._update_weights_from_udp(array)
 
         if self._latest_actual_joints is not None:
             self._publish_actual_viz(now)
@@ -359,6 +377,11 @@ class VLABridgeNode(Node):
         etasl_msg.data  = [self._alpha]
         self._alpha_etasl_pub.publish(etasl_msg)
 
+        weights_msg = CrospiInput()
+        weights_msg.names = ["w_vla", "w_human"]
+        weights_msg.data = self._weights.tolist()
+        self._weights_etasl_pub.publish(weights_msg)
+
         monitor = Float64()
         monitor.data = self._alpha
         self._alpha_monitor_pub.publish(monitor)
@@ -371,6 +394,17 @@ class VLABridgeNode(Node):
             return
         self._alpha = float(np.clip(alpha_array[0], 0.0, 1.0))
         self.get_logger().info(f"[vla_bridge] alpha udp {self._alpha:.3f}")
+
+    def _update_weights_from_udp(self, array: np.ndarray):
+        try:
+            self._weights = _normalize_weights(array)
+        except ValueError as exc:
+            self.get_logger().warning(f"[vla_bridge] dropping invalid Sentinel weights: {exc}")
+            return
+        self.get_logger().info(
+            "[vla_bridge] weights udp w_vla=%.3f w_human=%.3f"
+            % (self._weights[0], self._weights[1])
+        )
 
     def _publish_vla_cmd(self, q7: np.ndarray, now):
         try:
