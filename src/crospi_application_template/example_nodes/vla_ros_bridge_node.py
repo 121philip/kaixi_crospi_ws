@@ -258,7 +258,7 @@ class VLABridgeNode(Node):
             self.get_parameter("alpha").get_parameter_value().double_value
         )
         # 没收到 Sentinel 权重前，先用旧的测试权重
-        self._weights = np.array([1.0, 5.0], dtype=np.float64)
+        self._weights = np.array([1.0, 1.0], dtype=np.float64)
         self._enable_gripper: bool = bool(
             self.get_parameter("enable_gripper").get_parameter_value().bool_value
         )

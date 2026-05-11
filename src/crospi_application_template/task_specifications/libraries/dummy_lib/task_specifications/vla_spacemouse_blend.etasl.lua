@@ -70,7 +70,7 @@ print("+++++++++++++++++++++ helloooooooooo 3")
 -- The solver minimises sum_i(weight_i * expr_i^2). Sentinel writes these
 -- weights directly instead of routing through alpha.
 local w_vla   = ctx:createInputChannelScalar("w_vla", 1.0)
-local w_human = ctx:createInputChannelScalar("w_human", 5.0)
+local w_human = ctx:createInputChannelScalar("w_human", 0.0)
 
 
 -- ========================================= Current joint expressions ===================================

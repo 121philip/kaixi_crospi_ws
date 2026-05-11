@@ -91,15 +91,15 @@ class MyStateMachine(TickingStateMachine):
 
         self.add_state(
             TimedWait("Wait", Duration(seconds=5)),
-            transitions={SUCCEED: "spacemouse_control",
-                        ABORT: ABORT}
-        )
-
-        self.add_state(
-            eTaSL_StateMachine("spacemouse_control","spacemouse_control",node=None),
             transitions={SUCCEED: "spacemouse_shared_control_vla",
                         ABORT: ABORT}
         )
+
+        # self.add_state(
+        #     eTaSL_StateMachine("spacemouse_control","spacemouse_control",node=None),
+        #     transitions={SUCCEED: "spacemouse_shared_control_vla",
+        #                 ABORT: ABORT}
+        # )
 
         self.add_state(
             eTaSL_StateMachine("spacemouse_shared_control_vla","spacemouse_shared_control_vla",node=None),
