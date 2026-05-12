@@ -8,7 +8,8 @@ rviz_publisher.py and republishes the active runtime interfaces:
   - /actual/joint_states_rviz and /predicted_ee_marker for RViz
   - /shared_control/alpha as CrospiInput(names=["alpha_input"], data=[alpha])
   - /shared_control/alpha_monitor as Float64 for quick debugging
-  - /shared_control/weights as CrospiInput(names=["w_vla", "w_human"], data=[...])
+  - /shared_control/weights as CrospiInput(names=["w_vla", "w_human", "w_gripper"], data=[...])
+  - /shared_control/mode as String for quick button-mode debugging
 
 Important: /shared_control/alpha is final alpha only; it is not C_VLA.
 
@@ -44,7 +45,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import JointState, Joy
-from std_msgs.msg import Float64
+from std_msgs.msg import Float64, String
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import Point
 # from geometry_msgs.msg import Pose
@@ -53,58 +54,136 @@ from crospi_interfaces.msg import Input as CrospiInput
 # from trossen_widowx_interfaces.srv import ControlGripper
 
 # ---------------------------------------------------------------------------
-# SpaceMouse button detector
+# SpaceMouse button and operator authority state
 # ---------------------------------------------------------------------------
 
-_LONG_PRESS_S = 0.6
+_MODE_SHARED = "SHARED"
+_MODE_HUMAN_ONLY = "HUMAN_ONLY"
+_BUTTON_DEBOUNCE_S = 0.15
+_RESUME_RAMP_S = 0.4
+_GRIPPER_CLOSED_POS = 0.001
+_GRIPPER_OPEN_POS = 0.035
+_OPERATOR_HUMAN_WEIGHT = 1.0
+_OPERATOR_GRIPPER_WEIGHT = 1.0
 
 
-class _ArbiterResult:
-    __slots__ = ('gripper_close', 'gripper_open', 'override_long', 'resume_long')
+class _ButtonEvents:
+    __slots__ = ("left_press", "right_press")
 
-    def __init__(self, gripper_close, gripper_open, override_long, resume_long):
-        self.gripper_close = gripper_close
-        self.gripper_open  = gripper_open
-        self.override_long = override_long
-        self.resume_long   = resume_long
+    def __init__(self, left_press: bool, right_press: bool):
+        self.left_press = left_press
+        self.right_press = right_press
 
 
-class _SpaceMouseArbiter:
-    """Detects short-press (gripper) and long-press (mode) events from SpaceMouse buttons."""
+class _SpaceMouseButtonDetector:
+    """Detect rising-edge button presses from SpaceMouse buttons."""
 
-    def __init__(self):
-        self._btn_l_t: Optional[float] = None
-        self._btn_r_t: Optional[float] = None
-        self._btn_l_was = False
-        self._btn_r_was = False
+    def __init__(self, debounce_s: float = _BUTTON_DEBOUNCE_S):
+        self._debounce_s = float(debounce_s)
+        self._left_was = False
+        self._right_was = False
+        self._last_left_press = -float("inf")
+        self._last_right_press = -float("inf")
 
-    def update(self, btn_l: bool, btn_r: bool, now: Optional[float] = None) -> _ArbiterResult:
+    def update(self, btn_l: bool, btn_r: bool, now: Optional[float] = None) -> _ButtonEvents:
         if now is None:
             now = time.monotonic()
 
-        gc = go = ol = rl = False
+        left_press = btn_l and not self._left_was and (now - self._last_left_press) >= self._debounce_s
+        right_press = btn_r and not self._right_was and (now - self._last_right_press) >= self._debounce_s
 
-        if btn_l and not self._btn_l_was:
-            self._btn_l_t = now
-        if not btn_l and self._btn_l_was:
-            if (now - (self._btn_l_t or now)) >= _LONG_PRESS_S:
-                ol = True
-            else:
-                gc = True
-            self._btn_l_t = None
-        self._btn_l_was = btn_l
+        if left_press:
+            self._last_left_press = now
+        if right_press:
+            self._last_right_press = now
 
-        if btn_r and not self._btn_r_was:
-            self._btn_r_t = now
-        if not btn_r and self._btn_r_was:
-            if (now - (self._btn_r_t or now)) >= _LONG_PRESS_S:
-                rl = True
-            else:
-                go = True
-            self._btn_r_t = None
-        self._btn_r_was = btn_r
+        self._left_was = btn_l
+        self._right_was = btn_r
+        return _ButtonEvents(left_press, right_press)
 
-        return _ArbiterResult(gc, go, ol, rl)
+
+class _OperatorAuthority:
+    """Owns SpaceMouse button authority over VLA arm and gripper commands."""
+
+    def __init__(
+        self,
+        *,
+        gripper_closed_pos: float = _GRIPPER_CLOSED_POS,
+        gripper_open_pos: float = _GRIPPER_OPEN_POS,
+        operator_human_weight: float = _OPERATOR_HUMAN_WEIGHT,
+        operator_gripper_weight: float = _OPERATOR_GRIPPER_WEIGHT,
+        resume_ramp_s: float = _RESUME_RAMP_S,
+    ):
+        self.mode = _MODE_SHARED
+        self.gripper_override_active = False
+        self.gripper_closed = False
+        self.gripper_target: Optional[float] = None
+        self._gripper_closed_pos = float(gripper_closed_pos)
+        self._gripper_open_pos = float(gripper_open_pos)
+        self._operator_human_weight = float(operator_human_weight)
+        self._operator_gripper_weight = float(operator_gripper_weight)
+        self._resume_ramp_s = max(0.0, float(resume_ramp_s))
+        self._awaiting_fresh_vla = False
+        self._resume_started_at: Optional[float] = None
+
+    def toggle_gripper(self) -> float:
+        self.gripper_override_active = True
+        self.gripper_closed = not self.gripper_closed
+        self.gripper_target = (
+            self._gripper_closed_pos if self.gripper_closed else self._gripper_open_pos
+        )
+        return self.gripper_target
+
+    def toggle_human_only(self, now: Optional[float] = None) -> str:
+        if now is None:
+            now = time.monotonic()
+        if self.mode == _MODE_HUMAN_ONLY:
+            self.mode = _MODE_SHARED
+            self._awaiting_fresh_vla = True
+            self._resume_started_at = None
+        else:
+            self.mode = _MODE_HUMAN_ONLY
+            self._awaiting_fresh_vla = False
+            self._resume_started_at = None
+        return self.mode
+
+    def note_vla_command(self, now: Optional[float] = None) -> None:
+        if now is None:
+            now = time.monotonic()
+        if self._awaiting_fresh_vla:
+            self._awaiting_fresh_vla = False
+            self._resume_started_at = now
+
+    def apply_gripper_override(self, joints: np.ndarray) -> np.ndarray:
+        out = np.asarray(joints, dtype=np.float64).copy()
+        if self.gripper_override_active and self.gripper_target is not None:
+            out[-1] = self.gripper_target
+        return out
+
+    def _vla_resume_scale(self, now: float) -> float:
+        if self.mode == _MODE_HUMAN_ONLY or self._awaiting_fresh_vla:
+            return 0.0
+        if self._resume_started_at is None or self._resume_ramp_s <= 0.0:
+            return 1.0
+        scale = (now - self._resume_started_at) / self._resume_ramp_s
+        if scale >= 1.0:
+            self._resume_started_at = None
+            return 1.0
+        return float(np.clip(scale, 0.0, 1.0))
+
+    def runtime_weights(self, sentinel_weights: np.ndarray, now: Optional[float] = None) -> np.ndarray:
+        if now is None:
+            now = time.monotonic()
+        sentinel_weights = _normalize_weights(sentinel_weights)
+        if self.mode == _MODE_HUMAN_ONLY:
+            w_vla = 0.0
+            w_human = self._operator_human_weight
+            w_gripper = self._operator_gripper_weight if self.gripper_override_active else 0.0
+        else:
+            w_vla = float(sentinel_weights[0]) * self._vla_resume_scale(now)
+            w_human = float(sentinel_weights[1])
+            w_gripper = self._operator_gripper_weight if self.gripper_override_active else w_vla
+        return np.array([w_vla, w_human, w_gripper], dtype=np.float64)
 
 
 # ---------------------------------------------------------------------------
@@ -126,7 +205,7 @@ _JOINT_NAMES_7 = [
     "joint_4", "joint_5", "joint_6",
 ]
 _JOINT_COUNT = len(_JOINT_NAMES_7)
-_WEIGHT_COUNT = 2
+_SENTINEL_WEIGHT_COUNT = 2
 
 
 def _normalize_joint_vector(joints: np.ndarray) -> np.ndarray:
@@ -155,8 +234,8 @@ def _normalize_joint_chunk(chunk: np.ndarray) -> np.ndarray:
 def _normalize_weights(weights: np.ndarray) -> np.ndarray:
     """Return non-negative Sentinel weights [w_vla, w_human]."""
     arr = np.asarray(weights, dtype=np.float64).reshape(-1)
-    if arr.size != _WEIGHT_COUNT:
-        raise ValueError(f"Expected {_WEIGHT_COUNT} Sentinel weights, got {arr.size}")
+    if arr.size != _SENTINEL_WEIGHT_COUNT:
+        raise ValueError(f"Expected {_SENTINEL_WEIGHT_COUNT} Sentinel weights, got {arr.size}")
     if not np.all(np.isfinite(arr)):
         raise ValueError("Sentinel weights must be finite")
     return np.maximum(arr, 0.0)
@@ -272,6 +351,7 @@ class VLABridgeNode(Node):
         self._alpha_etasl_pub  = self.create_publisher(CrospiInput, "/shared_control/alpha",   10)
         self._weights_etasl_pub = self.create_publisher(CrospiInput, "/shared_control/weights", 10)
         self._alpha_monitor_pub = self.create_publisher(Float64,   "/shared_control/alpha_monitor", 10)
+        self._mode_pub = self.create_publisher(String, "/shared_control/mode", 10)
 
         # Subscribers
         self.create_subscription(Float64,    "/override/alpha", self._override_alpha_cb, 10)
@@ -284,7 +364,8 @@ class VLABridgeNode(Node):
         #     else None
         # )
 
-        self._arbiter = _SpaceMouseArbiter()
+        self._button_detector = _SpaceMouseButtonDetector()
+        self._operator = _OperatorAuthority()
         self._latest_joy_buttons = (False, False)
 
         self._sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -365,11 +446,16 @@ class VLABridgeNode(Node):
             self._publish_predicted_markers(now)
 
         # Buttons → gripper
-        arb = self._arbiter.update(*self._latest_joy_buttons)
-        if arb.gripper_close:
-            self._trigger_gripper(True)
-        if arb.gripper_open:
-            self._trigger_gripper(False)
+        button_events = self._button_detector.update(*self._latest_joy_buttons)
+        if button_events.left_press:
+            target = self._operator.toggle_gripper()
+            self.get_logger().info(
+                "[vla_bridge] SpaceMouse left toggle -> gripper %s target=%.4f"
+                % ("close" if self._operator.gripper_closed else "open", target)
+            )
+        if button_events.right_press:
+            mode = self._operator.toggle_human_only(time.monotonic())
+            self.get_logger().info(f"[vla_bridge] SpaceMouse right toggle -> mode={mode}")
 
         # Alpha → eTaSL
         etasl_msg = CrospiInput()
@@ -378,13 +464,18 @@ class VLABridgeNode(Node):
         self._alpha_etasl_pub.publish(etasl_msg)
 
         weights_msg = CrospiInput()
-        weights_msg.names = ["w_vla", "w_human"]
-        weights_msg.data = self._weights.tolist()
+        runtime_weights = self._operator.runtime_weights(self._weights, time.monotonic())
+        weights_msg.names = ["w_vla", "w_human", "w_gripper"]
+        weights_msg.data = runtime_weights.tolist()
         self._weights_etasl_pub.publish(weights_msg)
 
         monitor = Float64()
         monitor.data = self._alpha
         self._alpha_monitor_pub.publish(monitor)
+
+        mode_msg = String()
+        mode_msg.data = self._operator.mode
+        self._mode_pub.publish(mode_msg)
 
     # Publishers
 
@@ -412,6 +503,9 @@ class VLABridgeNode(Node):
         except ValueError as exc:
             self.get_logger().warning(f"[vla_bridge] dropping invalid VLA command: {exc}")
             return
+
+        self._operator.note_vla_command(time.monotonic())
+        joints = self._operator.apply_gripper_override(joints)
 
         msg = JointState()
         msg.header.stamp = now
@@ -488,10 +582,6 @@ class VLABridgeNode(Node):
         dots.color = line.color; dots.lifetime = self._marker_lifetime
         dots.points = pts
         self._marker_pub.publish(dots)
-
-    def _trigger_gripper(self, close: bool):
-        # STUB: TODO: self._gripper_client.call_async(ControlGripperRequest(close=close))
-        self.get_logger().info(f"[GRIPPER STUB] {'close' if close else 'open'}")
 
     def destroy_node(self):
         self._sock.close()

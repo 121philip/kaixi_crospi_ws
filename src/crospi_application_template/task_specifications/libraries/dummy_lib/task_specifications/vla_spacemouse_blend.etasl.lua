@@ -16,7 +16,7 @@ reqs = require("task_requirements")
 -- ========================================= PARAMETERS ===================================
 task_description = "Shared control: blends spacemouse Cartesian velocity with VLA joint targets. "
                 .. "Defaults preserve the previous log-only behavior before live weights arrive. "
-                .. "Runtime weights w_vla and w_human are provided on /shared_control/weights."
+                .. "Runtime weights w_vla, w_human, and w_gripper are provided on /shared_control/weights."
 
 param = reqs.parameters(task_description, {
     reqs.params.scalar({name="linear_scale",   description="Scales linear velocity from spacemouse",  default=0.3, required=false}),
@@ -62,8 +62,8 @@ print("+++++++++++++++++++++ helloooooooooo 3")
 --
 -- pose_VLA = ctx:createInputChannelFrame("pose_VLA")
 
--- Sentinel direct weights.  The bridge publishes /shared_control/weights as
--- CrospiInput(names=["w_vla", "w_human"], data=[...]).
+-- Runtime weights.  The bridge publishes /shared_control/weights as
+-- CrospiInput(names=["w_vla", "w_human", "w_gripper"], data=[...]).
 -- Defaults preserve the previous hard-coded test weights until live values arrive.
 
 -- Blending weights for WLN-QP: placed directly in Constraint{weight=...}.
@@ -71,6 +71,7 @@ print("+++++++++++++++++++++ helloooooooooo 3")
 -- weights directly instead of routing through alpha.
 local w_vla   = ctx:createInputChannelScalar("w_vla", 1.0)
 local w_human = ctx:createInputChannelScalar("w_human", 0.0)
+local w_gripper = ctx:createInputChannelScalar("w_gripper", 1.0)
 
 
 -- ========================================= Current joint expressions ===================================
@@ -92,12 +93,16 @@ k_joint = {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 2}
 
 for i = 1, #robot_joints do
     local err = joint_expressions[i] - target_joint_pos[i]
+    local joint_weight = w_vla
+    if i == #robot_joints then
+        joint_weight = w_gripper
+    end
     Constraint{
         context  = ctx,
         name     = "vla_joint_" .. robot_joints[i],
         expr     = err,
         K        = k_joint[i],
-        weight   = w_vla,
+        weight   = joint_weight,
         priority = 2
     }
     tracking_error[i] = err   -- raw (unscaled) for output monitoring
@@ -222,6 +227,7 @@ quat_tf = toQuat(rotation(task_frame))
 ctx:setOutputExpression("time",   time)
 ctx:setOutputExpression("w_vla_runtime",   w_vla)
 ctx:setOutputExpression("w_human_runtime", w_human)
+ctx:setOutputExpression("w_gripper_runtime", w_gripper)
 ctx:setOutputExpression("x_tf",   coord_x(origin(task_frame)))
 ctx:setOutputExpression("y_tf",   coord_y(origin(task_frame)))
 ctx:setOutputExpression("z_tf",   coord_z(origin(task_frame)))
