@@ -58,8 +58,8 @@ python3 trossen_vla_shared_control_runner.py
 | `kaixi_crospi_ws/src/.../dummy_lib/task_json_schemas/vla_spacemouse_blend.etasl.json` | 上述 Lua 任务规范的 JSON Schema 参数校验文件；定义并验证启动该任务所需的配置参数 |
 | `kaixi_crospi_ws/src/.../test_trossen/trossen_vla_shared_control_runner.py` | betfsm 入口：MovingHome → TimedWait(5s) → spacemouse_control → spacemouse_shared_control_vla |
 | `kaixi_crospi_ws/src/.../test_trossen/tasks/trossen_vla_shared_control.json` | betfsm 任务列表：指向 vla_spacemouse_blend.etasl.lua |
-| `lerobot_trossen/important_code/inference/run_inference_rtc.py` | VLA 推理主入口（Python 3.12 venv）；--crospi 切换机器人类 |
-| `lerobot_trossen/important_code/inference/actor_thread.py` | 执行线程：30 Hz 从队列取动作 → send_action()（CroSPI 模式下为 no-op）→ put_actual() |
+| `lerobot_trossen/important_code/inference/run_inference.py` | VLA 推理主入口（Python 3.12 venv）；`run_inference_rtc.py` 不存在，勿混淆；`--crospi` 切换机器人类；`--rtc` 默认 False |
+| `lerobot_trossen/important_code/inference/actor_thread.py` | 执行线程：**10 Hz**（默认 --control-fps=10）从队列取动作 → send_action() → put_actual() |
 | `lerobot_trossen/important_code/inference/rviz_publisher.py` | UDP 发送端：三类消息（ACTUAL/PREDICTED/ALPHA）始终启动 |
 | `lerobot_trossen/packages/.../crospi_follower.py` | 新机器人类：观测从 trossen SDK 读取（只读），send_action() 为空操作 |
 | `lerobot_trossen/packages/.../config_crospi_follower.py` | CroSPIFollower 配置（无运动控制参数） |
@@ -71,11 +71,16 @@ python3 trossen_vla_shared_control_runner.py
 - 类型 2 (MSG_ALPHA)：shape [1,]，共享控制 alpha → /shared_control/alpha → eTaSL
 - 反向 9789（已实施）：vla_ros_bridge_node `_joint_states_cb` → pickle([7,] float64) → lerobot `rviz_publisher._recv_loop` → `get_latest_joints()` → inference_thread 覆盖 raw_obs joint 字段
 
-### eTaSL 混合权重（当前状态：alpha 硬编码，动态权重已写好但未激活）
+### eTaSL 混合权重（当前状态：动态权重已激活）
 
 WLN-QP 最小化 `sum_i(weight_i × expr_i²)`，权重放在 Constraint{weight=} 字段：
-- VLA 关节跟踪：`weight = w_vla`（当前 `w_vla = 1`，硬编码）
-- SpaceMouse 笛卡尔：`weight = w_human`（当前 `w_human = 1`，硬编码）
+- VLA 关节跟踪：`weight = w_vla`（arm joints 0-5），`weight = w_gripper`（joint_6）
+- SpaceMouse 笛卡尔：`weight = w_human`
+
+**权重是相对的（非绝对）：** `w_vla=w_human=1` → VLA:SpaceMouse = 50:50；`w_vla=2,w_human=1` → VLA 占 2/3。
+默认值：`w_vla=1, w_human=1, w_gripper=1`（初始）。
+
+CroSPI 驱动频率：**200 Hz**（setup.json `periodicity: 0.005`）。eTaSL QP：~100 Hz（`periodicity: 0.01`）。
 
 **当前 lua 文件实际状态**（`vla_spacemouse_blend.etasl.lua` 第 58-67 行）：
 ```lua

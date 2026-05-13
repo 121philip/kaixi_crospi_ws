@@ -60,7 +60,9 @@ from crospi_interfaces.msg import Input as CrospiInput
 _MODE_SHARED = "SHARED"
 _MODE_HUMAN_ONLY = "HUMAN_ONLY"
 _BUTTON_DEBOUNCE_S = 0.15
-_RESUME_RAMP_S = 0.4
+_RESUME_RAMP_S = 1.5       # seconds to ramp w_vla back up after HUMAN_ONLY
+_GRIPPER_RAMP_S = 0.6      # seconds to ramp gripper joint to new open/close target
+_ALIGN_DURATION_S = 1.5    # seconds to hold actual joints as VLA target after HUMAN_ONLY
 _GRIPPER_CLOSED_POS = 0.001
 _GRIPPER_OPEN_POS = 0.035
 _OPERATOR_HUMAN_WEIGHT = 1.0
@@ -113,6 +115,8 @@ class _OperatorAuthority:
         operator_human_weight: float = _OPERATOR_HUMAN_WEIGHT,
         operator_gripper_weight: float = _OPERATOR_GRIPPER_WEIGHT,
         resume_ramp_s: float = _RESUME_RAMP_S,
+        gripper_ramp_s: float = _GRIPPER_RAMP_S,
+        align_duration_s: float = _ALIGN_DURATION_S,
     ):
         self.mode = _MODE_SHARED
         self.gripper_override_active = False
@@ -125,13 +129,22 @@ class _OperatorAuthority:
         self._resume_ramp_s = max(0.0, float(resume_ramp_s))
         self._awaiting_fresh_vla = False
         self._resume_started_at: Optional[float] = None
+        # Gripper ramp: smooth transition from current position to new open/close target
+        self._gripper_ramp_s = max(0.0, float(gripper_ramp_s))
+        self._gripper_ramp_start: Optional[float] = None
+        self._gripper_ramp_started_at: Optional[float] = None
+        # Alignment window: hold actual joints as VLA target after returning from HUMAN_ONLY
+        self._align_duration_s = max(0.0, float(align_duration_s))
+        self._align_until: Optional[float] = None
 
-    def toggle_gripper(self) -> float:
+    def toggle_gripper(self, current_pos: float, now: float) -> float:
         self.gripper_override_active = True
         self.gripper_closed = not self.gripper_closed
         self.gripper_target = (
             self._gripper_closed_pos if self.gripper_closed else self._gripper_open_pos
         )
+        self._gripper_ramp_start = float(current_pos)
+        self._gripper_ramp_started_at = now
         return self.gripper_target
 
     def toggle_human_only(self, now: Optional[float] = None) -> str:
@@ -141,10 +154,12 @@ class _OperatorAuthority:
             self.mode = _MODE_SHARED
             self._awaiting_fresh_vla = True
             self._resume_started_at = None
+            self._align_until = None  # set by note_vla_command when first VLA arrives
         else:
             self.mode = _MODE_HUMAN_ONLY
             self._awaiting_fresh_vla = False
             self._resume_started_at = None
+            self._align_until = None
         return self.mode
 
     def note_vla_command(self, now: Optional[float] = None) -> None:
@@ -153,12 +168,26 @@ class _OperatorAuthority:
         if self._awaiting_fresh_vla:
             self._awaiting_fresh_vla = False
             self._resume_started_at = now
+            self._align_until = now + self._align_duration_s
 
-    def apply_gripper_override(self, joints: np.ndarray) -> np.ndarray:
+    def apply_gripper_override(self, joints: np.ndarray, now: Optional[float] = None) -> np.ndarray:
         out = np.asarray(joints, dtype=np.float64).copy()
-        if self.gripper_override_active and self.gripper_target is not None:
+        if not self.gripper_override_active or self.gripper_target is None:
+            return out
+        if now is None:
+            now = time.monotonic()
+        if (self._gripper_ramp_started_at is not None
+                and self._gripper_ramp_start is not None
+                and self._gripper_ramp_s > 0.0):
+            t = float(np.clip((now - self._gripper_ramp_started_at) / self._gripper_ramp_s, 0.0, 1.0))
+            out[-1] = self._gripper_ramp_start + t * (self.gripper_target - self._gripper_ramp_start)
+        else:
             out[-1] = self.gripper_target
         return out
+
+    @property
+    def is_aligning(self) -> bool:
+        return self._align_until is not None and time.monotonic() < self._align_until
 
     def _vla_resume_scale(self, now: float) -> float:
         if self.mode == _MODE_HUMAN_ONLY or self._awaiting_fresh_vla:
@@ -336,8 +365,11 @@ class VLABridgeNode(Node):
         self._alpha: float = float(
             self.get_parameter("alpha").get_parameter_value().double_value
         )
-        # 没收到 Sentinel 权重前，先用旧的测试权重
+        
+        # 没收到 Sentinel 权重前，先用旧的测试权重: [w_vla, w_human]
+        # w_gripper 由 _OperatorAuthority.runtime_weights() 根据夹爪 override 状态派生。
         self._weights = np.array([1.0, 1.0], dtype=np.float64)
+        
         self._enable_gripper: bool = bool(
             self.get_parameter("enable_gripper").get_parameter_value().bool_value
         )
@@ -419,6 +451,7 @@ class VLABridgeNode(Node):
         now = self.get_clock().now().to_msg()
 
         # Drain UDP
+        vla_cmd_published = False
         while True:
             try:
                 data, _ = self._sock.recvfrom(65535)
@@ -432,6 +465,7 @@ class VLABridgeNode(Node):
                 continue
             if data[0] == _MSG_ACTUAL:
                 self._publish_vla_cmd(array, now)
+                vla_cmd_published = True
             elif data[0] == _MSG_PREDICTED:
                 self._latest_chunk = array
             elif data[0] == _MSG_ALPHA:
@@ -448,14 +482,25 @@ class VLABridgeNode(Node):
         # Buttons → gripper
         button_events = self._button_detector.update(*self._latest_joy_buttons)
         if button_events.left_press:
-            target = self._operator.toggle_gripper()
+            mono_now = time.monotonic()
+            current_gripper = self._get_current_gripper_pos()
+            target = self._operator.toggle_gripper(current_gripper, mono_now)
             self.get_logger().info(
-                "[vla_bridge] SpaceMouse left toggle -> gripper %s target=%.4f"
-                % ("close" if self._operator.gripper_closed else "open", target)
+                "[vla_bridge] SpaceMouse left toggle -> gripper %s target=%.4f (from %.4f)"
+                % ("close" if self._operator.gripper_closed else "open", target, current_gripper)
             )
         if button_events.right_press:
             mode = self._operator.toggle_human_only(time.monotonic())
             self.get_logger().info(f"[vla_bridge] SpaceMouse right toggle -> mode={mode}")
+
+        # When VLA is not running but gripper override is active, publish arm-hold +
+        # gripper-target to /joint_states_VLA so eTaSL can actuate the gripper.
+        if (
+            self._operator.gripper_override_active
+            and not vla_cmd_published
+            and self._latest_actual_joints is not None
+        ):
+            self._publish_gripper_hold_cmd(now)
 
         # Alpha → eTaSL
         etasl_msg = CrospiInput()
@@ -504,8 +549,18 @@ class VLABridgeNode(Node):
             self.get_logger().warning(f"[vla_bridge] dropping invalid VLA command: {exc}")
             return
 
-        self._operator.note_vla_command(time.monotonic())
-        joints = self._operator.apply_gripper_override(joints)
+        mono = time.monotonic()
+        self._operator.note_vla_command(mono)
+        joints = self._operator.apply_gripper_override(joints, mono)
+
+        # During alignment window, hold arm joints at actual position so eTaSL sees
+        # zero tracking error while VLA adapts to the arm's current pose.
+        if self._operator.is_aligning and self._latest_actual_joints is not None:
+            name_to_pos = dict(zip(
+                self._latest_actual_joints.name, self._latest_actual_joints.position
+            ))
+            for i, n in enumerate(_JOINT_NAMES_7[:-1]):  # joints 0-5 only, keep gripper
+                joints[i] = name_to_pos.get(n, joints[i])
 
         msg = JointState()
         msg.header.stamp = now
@@ -526,6 +581,30 @@ class VLABridgeNode(Node):
         # pose_msg.orientation.z = float(pose_vla[5])
         # pose_msg.orientation.w = float(pose_vla[6])
         # self._vla_pose_pub.publish(pose_msg)
+
+    def _publish_gripper_hold_cmd(self, now):
+        """Publish current arm joints + gripper override target when VLA is not running."""
+        src = self._latest_actual_joints
+        if src is None:
+            return
+        name_to_pos = dict(zip(src.name, src.position))
+        joints = np.array(
+            [name_to_pos.get(n, 0.0) for n in _JOINT_NAMES_7], dtype=np.float64
+        )
+        joints = self._operator.apply_gripper_override(joints)
+        msg = JointState()
+        msg.header.stamp = now
+        msg.name = _JOINT_NAMES_7
+        msg.position = joints.tolist()
+        self._vla_cmd_pub.publish(msg)
+
+    def _get_current_gripper_pos(self) -> float:
+        if self._latest_actual_joints is None:
+            return _GRIPPER_OPEN_POS
+        name_to_pos = dict(zip(
+            self._latest_actual_joints.name, self._latest_actual_joints.position
+        ))
+        return float(name_to_pos.get(_JOINT_NAMES_7[-1], _GRIPPER_OPEN_POS))
 
     def _publish_actual_viz(self, now):
         src = self._latest_actual_joints

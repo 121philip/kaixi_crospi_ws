@@ -56,7 +56,7 @@
                     "is-trossen_widowx_driver_crospi": true,
                     "control_mode": "JOINT_POSITION",
                     "ip_address": "192.168.2.3",
-                    "periodicity": 0.005,
+                    "periodicity": 0.01,
                     "robot_joints": [
                         "joint_0", "joint_1", "joint_2",
                         "joint_3", "joint_4", "joint_5", "joint_6"

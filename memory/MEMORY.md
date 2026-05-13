@@ -6,3 +6,4 @@
 - [lerobot–CroSPI 集成决策与修复记录](project_crospi_lerobot_integration.md) — eTaSL weight bug 修复、CroSPIFollower 设计、架构选型理由、RViz 独立可视化分析、UDP 桥接的 Python ABI 不兼容根因（Humble=Py3.10 vs LeRobot=Py3.12）；旧名文件已删除，session 中出现旧名是缓存
 - [bridge node FK 正向运动学分析结论](project_fk_analysis_verified.md) — FK 参数已验证正确；predicted_ee_marker 偏差是共享控制预期行为，非 Bug；改进方向
 - [WidowX AI Follower 运动学链结构](project_urdf_kinematic_chain.md) — 完整关节链、EE 路径、gripper 分支、7-DOF 顺序
+- [VLA 按钮触发抖动调试记录](project_vla_button_shaking_debug.md) — 频率全景(CroSPI 200Hz/VLA 10Hz)、权重相对语义、左键/右键抖动根因、已实施修复、待改进项(_ALIGN_DURATION_S 应为 3.0s)
