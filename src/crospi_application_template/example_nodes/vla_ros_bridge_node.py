@@ -151,6 +151,7 @@ class _OperatorAuthority:
             self._awaiting_fresh_vla = True
             self._resume_started_at = None
             self._align_until = None  # set by note_vla_command when first VLA arrives
+            self.gripper_override_active = False  # VLA resumes gripper control
         else:
             self.mode = _MODE_HUMAN_ONLY
             self._awaiting_fresh_vla = False
@@ -464,9 +465,9 @@ class VLABridgeNode(Node):
         if self._latest_chunk is not None:
             self._publish_predicted_markers(now)
 
-        # Buttons → gripper
+        # Buttons → gripper (left button only active in HUMAN_ONLY mode)
         button_events = self._button_detector.update(*self._latest_joy_buttons)
-        if button_events.left_press:
+        if button_events.left_press and self._operator.mode == _MODE_HUMAN_ONLY:
             mono_now = time.monotonic()
             current_gripper = self._get_current_gripper_pos()
             target = self._operator.toggle_gripper(current_gripper, mono_now)
