@@ -1,9 +1,10 @@
 """
 Active CroSPI visualization launch for the VLA + SpaceMouse pipeline.
 
-Start this before the VLA process when using run_inference_rtc.py --rviz.
-The bridge receives UDP from the VLA side, republishes alpha/VLA targets for
-CroSPI, and publishes RViz markers for runtime debugging.
+Start this before the VLA process when using run_inference.py --crospi.
+The bridge receives UDP from the VLA side, republishes VLA targets and direct
+shared-control weights for CroSPI, and publishes RViz markers for runtime
+debugging.
 
 VLA + SpaceMouse Shared Control — Visualisation Launch File
 
@@ -12,17 +13,18 @@ Starts:
        • publishes /joint_states_VLA  (7-DOF VLA target for eTaSL, including gripper)
        • publishes /actual/joint_states_rviz  (real blended robot state for RViz)
        • publishes /predicted_ee_marker  (orange EE trajectory from VLA chunk)
-       • manages alpha and gripper stub
+       • manages direct weights, shared-control mode, and gripper override
   2. robot_state_publisher — renders the blue actual robot in RViz
        (URDF colour-patched to blue, link names prefixed with "actual/")
   3. RViz2                 — trajectory_viz.rviz config
 
 Usage:
   Terminal 1:  ros2 launch crospi_application_template trossen_follower_visualization.launch.py
-  Terminal 2:  python run_inference_rtc.py --rviz --task "..."
+  Terminal 2:  python run_inference.py --crospi --task "..."
 
-Alpha override (manual test):
-  ros2 topic pub /override/alpha std_msgs/msg/Float64 "{data: 0.5}"
+Runtime checks:
+  ros2 topic echo /shared_control/weights --once
+  ros2 topic echo /shared_control/mode --once
 """
 
 import os

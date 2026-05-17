@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Active CroSPI-side UDP receiver and ROS2 bridge.
 
@@ -6,12 +6,8 @@ It consumes UDP packets from lerobot_trossen/important_code/inference/
 rviz_publisher.py and republishes the active runtime interfaces:
   - /joint_states_VLA for eTaSL VLA target tracking
   - /actual/joint_states_rviz and /predicted_ee_marker for RViz
-  - /shared_control/alpha as CrospiInput(names=["alpha_input"], data=[alpha])
-  - /shared_control/alpha_monitor as Float64 for quick debugging
   - /shared_control/weights as CrospiInput(names=["w_vla", "w_human", "w_gripper"], data=[...])
   - /shared_control/mode as String for quick button-mode debugging
-
-Important: /shared_control/alpha is final alpha only; it is not C_VLA.
 
 VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
 
@@ -19,8 +15,8 @@ VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
   1. UDP 接收 VLA 动作 → 发布 /joint_states_VLA（7-DOF，含夹爪，供 eTaSL 跟踪）
   2. 订阅 /joint_states（真实反馈）→ 发布 /actual/joint_states_rviz（RViz 蓝色机器人）
   3. UDP 接收预测块 → FK → 发布 /predicted_ee_marker（橙色轨迹）
-  4. 管理 alpha → 发布 /shared_control/alpha（CrospiInput 格式，供 TopicInputHandler）
-  5. SpaceMouse 按钮检测 → 夹爪 STUB
+  4. Manage direct weights -> publish /shared_control/weights (CrospiInput)
+  5. SpaceMouse buttons -> mode toggle and gripper override
 
 完整启动顺序（本节点由步骤3启动，步骤1-2需先完成）：
   步骤 1: ros2 run crospi_core crospi_node --ros-args \
@@ -28,7 +24,7 @@ VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
   步骤 2: python3 .../trossen_vla_shared_control_runner.py
   步骤 3: ros2 launch crospi_application_template trossen_follower_visualization.launch.py  ← 本节点
   步骤 4: ros2 launch spacenav classic-launch.py
-  步骤 5: python lerobot_trossen/important_code/inference/run_inference_rtc.py --rviz --alpha-mode constant --alpha-const 0.5
+  步骤 5: python lerobot_trossen/important_code/inference/run_inference.py --crospi
 """
 
 import pickle
@@ -45,7 +41,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import JointState, Joy
-from std_msgs.msg import Float64, String
+from std_msgs.msg import String
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import Point
 # from geometry_msgs.msg import Pose
@@ -209,6 +205,8 @@ class _OperatorAuthority:
             w_human = self._operator_human_weight
             w_gripper = self._operator_gripper_weight if self.gripper_override_active else 0.0
         else:
+            # _vla_resume_scale linearly ramps 0→1 over resume_ramp_s seconds
+            # after the operator releases HUMAN_ONLY mode, preventing a weight step.
             w_vla = float(sentinel_weights[0]) * self._vla_resume_scale(now)
             w_human = float(sentinel_weights[1])
             w_gripper = self._operator_gripper_weight if self.gripper_override_active else w_vla
@@ -223,8 +221,7 @@ _UDP_PORT      = 9788
 _UDP_PORT_JS   = 9789  # 反向：bridge → lerobot 关节状态
 _MSG_ACTUAL    = 0   # shape [7,]  — VLA current action
 _MSG_PREDICTED = 1   # shape [N,7] — VLA predicted chunk
-_MSG_ALPHA     = 2   # shape [1,]  — final shared-control alpha
-_MSG_WEIGHTS   = 3   # shape [2,]  Sentinel direct eTaSL weights
+_MSG_WEIGHTS   = 2   # shape [2,]  Sentinel direct eTaSL weights
 
 # ---------------------------------------------------------------------------
 # Joint names
@@ -295,6 +292,13 @@ def _rot3(axis, angle: float) -> np.ndarray:
 
 
 def _fk_ee_transform(q7: np.ndarray) -> np.ndarray:
+    """Chain 4x4 homogeneous transforms along the kinematic chain.
+
+    Each joint contributes: rotation about its axis (angle qi) followed by the fixed
+    translation to the next joint origin, both extracted from wxai_follower.urdf.
+    The gripper joint (q7[6]) does not affect EE position so only q7[:6] are used.
+    Finally appends the fixed EE offset relative to joint_5's frame.
+    """
     T = np.eye(4)
     for j, qi in zip(_FK_JOINTS, q7[:6]):
         Tji = np.eye(4)
@@ -360,12 +364,8 @@ class VLABridgeNode(Node):
     def __init__(self):
         super().__init__("vla_ros_bridge")
 
-        self.declare_parameter("alpha", 0.5)
         self.declare_parameter("enable_gripper", False)
-        self._alpha: float = float(
-            self.get_parameter("alpha").get_parameter_value().double_value
-        )
-        
+
         # 没收到 Sentinel 权重前，先用旧的测试权重: [w_vla, w_human]
         # w_gripper 由 _OperatorAuthority.runtime_weights() 根据夹爪 override 状态派生。
         self._weights = np.array([1.0, 1.0], dtype=np.float64)
@@ -380,21 +380,12 @@ class VLABridgeNode(Node):
         # self._vla_pose_pub = self.create_publisher(Pose, "/pose_VLA", 10)
         self._actual_pub     = self.create_publisher(JointState,   "/actual/joint_states_rviz", 10)
         self._marker_pub     = self.create_publisher(Marker,       "/predicted_ee_marker",     10)
-        self._alpha_etasl_pub  = self.create_publisher(CrospiInput, "/shared_control/alpha",   10)
         self._weights_etasl_pub = self.create_publisher(CrospiInput, "/shared_control/weights", 10)
-        self._alpha_monitor_pub = self.create_publisher(Float64,   "/shared_control/alpha_monitor", 10)
         self._mode_pub = self.create_publisher(String, "/shared_control/mode", 10)
 
         # Subscribers
-        self.create_subscription(Float64,    "/override/alpha", self._override_alpha_cb, 10)
         self.create_subscription(JointState, "/joint_states",   self._joint_states_cb,   qos_profile_sensor_data)
         self.create_subscription(Joy,        "/spacenav/joy",   self._joy_cb,            10)
-
-        # self._gripper_client = (
-        #     self.create_client(ControlGripper, "widowX/control_gripper")
-        #     if self._enable_gripper
-        #     else None
-        # )
 
         self._button_detector = _SpaceMouseButtonDetector()
         self._operator = _OperatorAuthority()
@@ -414,14 +405,10 @@ class VLABridgeNode(Node):
 
         self.create_timer(1.0 / 30.0, self._timer_cb)
         self.get_logger().info(
-            f"[vla_bridge] UDP {_UDP_HOST}:{_UDP_PORT}  alpha={self._alpha:.2f}"
+            f"[vla_bridge] UDP {_UDP_HOST}:{_UDP_PORT}"
         )
 
     # Callbacks
-
-    def _override_alpha_cb(self, msg: Float64):
-        self._alpha = float(np.clip(msg.data, 0.0, 1.0))
-        self.get_logger().info(f"[vla_bridge] alpha → {self._alpha:.3f}")
 
     def _joint_states_cb(self, msg: JointState):
         self._latest_actual_joints = msg
@@ -468,8 +455,6 @@ class VLABridgeNode(Node):
                 vla_cmd_published = True
             elif data[0] == _MSG_PREDICTED:
                 self._latest_chunk = array
-            elif data[0] == _MSG_ALPHA:
-                self._update_alpha_from_udp(array)
             elif data[0] == _MSG_WEIGHTS:
                 self._update_weights_from_udp(array)
 
@@ -502,34 +487,17 @@ class VLABridgeNode(Node):
         ):
             self._publish_gripper_hold_cmd(now)
 
-        # Alpha → eTaSL
-        etasl_msg = CrospiInput()
-        etasl_msg.names = ["alpha_input"]
-        etasl_msg.data  = [self._alpha]
-        self._alpha_etasl_pub.publish(etasl_msg)
-
         weights_msg = CrospiInput()
         runtime_weights = self._operator.runtime_weights(self._weights, time.monotonic())
         weights_msg.names = ["w_vla", "w_human", "w_gripper"]
         weights_msg.data = runtime_weights.tolist()
         self._weights_etasl_pub.publish(weights_msg)
 
-        monitor = Float64()
-        monitor.data = self._alpha
-        self._alpha_monitor_pub.publish(monitor)
-
         mode_msg = String()
         mode_msg.data = self._operator.mode
         self._mode_pub.publish(mode_msg)
 
     # Publishers
-
-    def _update_alpha_from_udp(self, array: np.ndarray):
-        alpha_array = np.asarray(array, dtype=np.float64).reshape(-1)
-        if alpha_array.size < 1:
-            return
-        self._alpha = float(np.clip(alpha_array[0], 0.0, 1.0))
-        self.get_logger().info(f"[vla_bridge] alpha udp {self._alpha:.3f}")
 
     def _update_weights_from_udp(self, array: np.ndarray):
         try:
