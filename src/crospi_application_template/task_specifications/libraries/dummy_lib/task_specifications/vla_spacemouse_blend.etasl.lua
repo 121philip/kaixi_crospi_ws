@@ -25,11 +25,13 @@ param = reqs.parameters(task_description, {
     reqs.params.bool(  {name="activate_linear",  description="Enable linear velocity from spacemouse",  default=true,  required=true}),
     reqs.params.bool(  {name="activate_angular", description="Enable angular velocity from spacemouse", default=false, required=true}),
     reqs.params.scalar({name="execution_time", description="Task duration in seconds (0 = infinite)", default=0, required=false, minimum=0}),
+    reqs.params.bool(  {name="use_pose_vla",   description="true=Cartesian pose VLA (arm via /pose_VLA, gripper via joint); false=joint states VLA (all joints via /joint_states_VLA)", default=true, required=false}),
 })
 
 linear_scale   = constant(param.get("linear_scale"))
 angular_scale  = constant(param.get("angular_scale"))
 execution_time = param.get("execution_time")
+local use_pose_vla = param.get("use_pose_vla")
 
 
 -- ======================================== Robot model ========================================
@@ -44,23 +46,17 @@ print("+++++++++++++++++++++ helloooooooooo 1")
 joystick_input = ctx:createInputChannelTwist("joystick_input")
 
 print("+++++++++++++++++++++ helloooooooooo 2")
--- VLA joint targets (one scalar per joint, published via JointStateInputHandler)
+-- VLA joint targets — always created; in pose mode only target_joint_N (gripper) is used.
 target_joint_pos = {}
 for i = 1, #robot_joints do
     target_joint_pos[i] = ctx:createInputChannelScalar("target_joint_" .. i)
 end
 
 print("+++++++++++++++++++++ helloooooooooo 3")
--- Future VLA end-effector pose target.
--- vla_ros_bridge_node.py can compute FK from the incoming VLA joint state and
--- publish geometry_msgs/msg/Pose on /pose_VLA:
---   position    = [x, y, z]
---   orientation = [qx, qy, qz, qw]
--- A PoseInputHandler should expose that topic as a frame input channel named
--- "pose_VLA". Keep this disabled for now; the active implementation below
--- still tracks /joint_states_VLA.
---
--- pose_VLA = ctx:createInputChannelFrame("pose_VLA")
+-- VLA end-effector pose target (pose mode only).
+if use_pose_vla then
+    pose_VLA = ctx:createInputChannelFrame("pose_VLA")
+end
 
 -- Runtime weights.  The bridge publishes /shared_control/weights as
 -- CrospiInput(names=["w_vla", "w_human", "w_gripper"], data=[...]).
@@ -86,49 +82,58 @@ if #robot_joints ~= #target_joint_pos then
 end
 
 print("+++++++++++++++++++++ helloooooooooo 4")
--- ========================================= VLA joint-tracking constraints ===================================
+-- ========================================= VLA tracking constraints ===================================
 tracking_error = {}
 
-k_joint = {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 2}
+k_joint = {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 1}
 
+-- Joint errors always computed (used for gripper constraint and output monitoring).
+local joint_errors = {}
 for i = 1, #robot_joints do
-    local err = joint_expressions[i] - target_joint_pos[i]
-    local joint_weight = w_vla
-    if i == #robot_joints then
-        joint_weight = w_gripper
-    end
-    Constraint{
-        context  = ctx,
-        name     = "vla_joint_" .. robot_joints[i],
-        expr     = err,
-        K        = k_joint[i],
-        weight   = joint_weight,
-        priority = 2
-    }
-    tracking_error[i] = err   -- raw (unscaled) for output monitoring
+    joint_errors[i] = joint_expressions[i] - target_joint_pos[i]
+    tracking_error[i] = joint_errors[i]
 end
 
--- ========================================= Future VLA Cartesian pose-tracking constraints ===================================
--- Use this block after enabling /pose_VLA in vla_ros_bridge_node.py and adding
--- a PoseInputHandler in trossen_vla_shared_control.setup.json.
---
--- Constraint{
---     context  = ctx,
---     name     = "vla_pose_translation",
---     expr     = origin(task_frame) - origin(pose_VLA),
---     K        = 1,
---     weight   = w_vla,
---     priority = 2
--- }
---
--- Constraint{
---     context  = ctx,
---     name     = "vla_pose_orientation",
---     expr     = inv(rotation(pose_VLA)) * rotation(task_frame),
---     K        = 1,
---     weight   = w_vla,
---     priority = 2
--- }
+if use_pose_vla then
+    -- Arm: Cartesian pose constraints (switch use_pose_vla=false to revert to joint tracking).
+    Constraint{
+        context  = ctx,
+        name     = "vla_pose_translation",
+        expr     = origin(task_frame) - origin(pose_VLA),
+        K        = 1,
+        weight   = w_vla,
+        priority = 2
+    }
+    Constraint{
+        context  = ctx,
+        name     = "vla_pose_orientation",
+        expr     = inv(rotation(pose_VLA)) * rotation(task_frame),
+        K        = 1,
+        weight   = w_vla,
+        priority = 2
+    }
+    -- Gripper: always tracked as joint constraint regardless of arm mode.
+    Constraint{
+        context  = ctx,
+        name     = "vla_joint_" .. robot_joints[#robot_joints],
+        expr     = joint_errors[#robot_joints],
+        K        = k_joint[#robot_joints],
+        weight   = w_gripper,
+        priority = 2
+    }
+else
+    -- Joint tracking mode: track all joints (set use_pose_vla=true to switch to Cartesian).
+    for i = 1, #robot_joints do
+        Constraint{
+            context  = ctx,
+            name     = "vla_joint_" .. robot_joints[i],
+            expr     = joint_errors[i],
+            K        = k_joint[i],
+            weight   = (i == #robot_joints) and w_gripper or w_vla,
+            priority = 2
+        }
+    end
+end
 
 
 -- =============================== Cartesian frame ==============================
@@ -136,7 +141,6 @@ tf_inst = task_frame
 
 
 -- ========================================= SpaceMouse Cartesian velocity constraints ===================================
--- Effective weight = α.  When α=1: full spacemouse.  When α=0: weight→0, constraint inactive.
 if param.get("activate_linear") then
 
     desired_vel_x = coord_x(transvel(joystick_input)) * linear_scale

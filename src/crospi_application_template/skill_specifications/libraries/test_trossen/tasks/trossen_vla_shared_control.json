@@ -46,7 +46,8 @@
                     "activate_linear": true,
                     "angular_scale": 0.3,
                     "linear_scale": 0.3,
-                    "execution_time": 0
+                    "execution_time": 0,
+                    "use_pose_vla": true
                 }
 
             }

@@ -44,7 +44,7 @@ from sensor_msgs.msg import JointState, Joy
 from std_msgs.msg import String
 from visualization_msgs.msg import Marker
 from geometry_msgs.msg import Point
-# from geometry_msgs.msg import Pose
+from geometry_msgs.msg import Pose
 from builtin_interfaces.msg import Duration
 from crospi_interfaces.msg import Input as CrospiInput
 # from trossen_widowx_interfaces.srv import ControlGripper
@@ -59,7 +59,7 @@ _BUTTON_DEBOUNCE_S = 0.15
 _RESUME_RAMP_S = 1.5       # seconds to ramp w_vla back up after HUMAN_ONLY
 _GRIPPER_RAMP_S = 0.6      # seconds to ramp gripper joint to new open/close target
 _ALIGN_DURATION_S = 1.5    # seconds to hold actual joints as VLA target after HUMAN_ONLY
-_GRIPPER_CLOSED_POS = 0.001
+_GRIPPER_CLOSED_POS = 0.015
 _GRIPPER_OPEN_POS = 0.035
 _OPERATOR_HUMAN_WEIGHT = 1.0
 _OPERATOR_GRIPPER_WEIGHT = 1.0
@@ -234,6 +234,11 @@ _JOINT_NAMES_7 = [
 _JOINT_COUNT = len(_JOINT_NAMES_7)
 _SENTINEL_WEIGHT_COUNT = 2
 
+# URDF joint limits with 1 mm / 1 mrad safety margin so FP conversion in
+# the motor driver never produces a value at exactly the hardware boundary.
+_JOINT_LOWER = np.array([-3.0533, 1e-3,   1e-3,   -1.5698, -1.5698, -3.1406, _GRIPPER_CLOSED_POS])
+_JOINT_UPPER = np.array([ 3.0533, 3.1406, 2.3552,  1.5698,  1.5698,  3.1406, 0.043              ])
+
 
 def _normalize_joint_vector(joints: np.ndarray) -> np.ndarray:
     """Return a flat 7-joint vector with gripper as the final element."""
@@ -366,19 +371,23 @@ class VLABridgeNode(Node):
         super().__init__("vla_ros_bridge")
 
         self.declare_parameter("enable_gripper", False)
+        self.declare_parameter("use_pose_vla", True)
 
         # 没收到 Sentinel 权重前，先用旧的测试权重: [w_vla, w_human]
         # w_gripper 由 _OperatorAuthority.runtime_weights() 根据夹爪 override 状态派生。
         self._weights = np.array([1.0, 1.0], dtype=np.float64)
-        
+
         self._enable_gripper: bool = bool(
             self.get_parameter("enable_gripper").get_parameter_value().bool_value
         )
+        self._use_pose_vla: bool = bool(
+            self.get_parameter("use_pose_vla").get_parameter_value().bool_value
+        )
 
         # Publishers
-        self._vla_cmd_pub    = self.create_publisher(JointState,   "/joint_states_VLA",        10)
-        # Future Cartesian VLA target:
-        # self._vla_pose_pub = self.create_publisher(Pose, "/pose_VLA", 10)
+        # self._vla_cmd_pub  = self.create_publisher(JointState, "/joint_states_VLA", 10)  # legacy: all 7 arm+gripper joints
+        self._gripper_cmd_pub = self.create_publisher(JointState, "/joint_states_VLA", 10)
+        self._vla_pose_pub    = self.create_publisher(Pose,       "/pose_VLA",         10)
         self._actual_pub     = self.create_publisher(JointState,   "/actual/joint_states_rviz", 10)
         self._marker_pub     = self.create_publisher(Marker,       "/predicted_ee_marker",     10)
         self._weights_etasl_pub = self.create_publisher(CrospiInput, "/shared_control/weights", 10)
@@ -531,25 +540,40 @@ class VLABridgeNode(Node):
             for i, n in enumerate(_JOINT_NAMES_7[:-1]):  # joints 0-5 only, keep gripper
                 joints[i] = name_to_pos.get(n, joints[i])
 
-        msg = JointState()
-        msg.header.stamp = now
-        msg.name     = _JOINT_NAMES_7
-        msg.position = joints.tolist()
-        self._vla_cmd_pub.publish(msg)
+        if self._use_pose_vla:
+            # Pose mode: arm via FK → /pose_VLA; gripper still via /joint_states_VLA
+            pose_vla = _fk_ee_pose(np.asarray(q7, dtype=np.float64))
+            pose_msg = Pose()
+            pose_msg.position.x = float(pose_vla[0])
+            pose_msg.position.y = float(pose_vla[1])
+            pose_msg.position.z = float(pose_vla[2])
+            pose_msg.orientation.x = float(pose_vla[3])
+            pose_msg.orientation.y = float(pose_vla[4])
+            pose_msg.orientation.z = float(pose_vla[5])
+            pose_msg.orientation.w = float(pose_vla[6])
+            self._vla_pose_pub.publish(pose_msg)
+            # JointStateInputHandler expects 7 slots; arm slots (0-5) filled with actual
+            # positions so tracking error = 0 if arm constraints ever re-enabled.
+            if self._latest_actual_joints is not None:
+                name_to_pos = dict(zip(
+                    self._latest_actual_joints.name, self._latest_actual_joints.position
+                ))
+                js_positions = np.array(
+                    [name_to_pos.get(n, 0.0) for n in _JOINT_NAMES_7], dtype=np.float64
+                )
+            else:
+                js_positions = joints.copy()
+            js_positions[-1] = joints[-1]  # slot 6 = gripper VLA target (with override)
+        else:
+            # Joint mode (legacy): all 7 joints via /joint_states_VLA
+            js_positions = joints
 
-        # Future Cartesian VLA target from FK.
-        # Keep this disabled for now: eTaSL still consumes /joint_states_VLA.
-        #
-        # pose_vla = _fk_ee_pose(np.asarray(q7, dtype=np.float64))
-        # pose_msg = Pose()
-        # pose_msg.position.x = float(pose_vla[0])
-        # pose_msg.position.y = float(pose_vla[1])
-        # pose_msg.position.z = float(pose_vla[2])
-        # pose_msg.orientation.x = float(pose_vla[3])
-        # pose_msg.orientation.y = float(pose_vla[4])
-        # pose_msg.orientation.z = float(pose_vla[5])
-        # pose_msg.orientation.w = float(pose_vla[6])
-        # self._vla_pose_pub.publish(pose_msg)
+        js_positions = np.clip(js_positions, _JOINT_LOWER, _JOINT_UPPER)
+        gripper_msg = JointState()
+        gripper_msg.header.stamp = now
+        gripper_msg.name = _JOINT_NAMES_7
+        gripper_msg.position = js_positions.tolist()
+        self._gripper_cmd_pub.publish(gripper_msg)
 
     def _publish_gripper_hold_cmd(self, now):
         """Publish current arm joints + gripper override target when VLA is not running."""
@@ -561,11 +585,13 @@ class VLABridgeNode(Node):
             [name_to_pos.get(n, 0.0) for n in _JOINT_NAMES_7], dtype=np.float64
         )
         joints = self._operator.apply_gripper_override(joints)
+        joints = np.clip(joints, _JOINT_LOWER, _JOINT_UPPER)
+        # self._vla_cmd_pub.publish(...)  # legacy reference
         msg = JointState()
         msg.header.stamp = now
         msg.name = _JOINT_NAMES_7
         msg.position = joints.tolist()
-        self._vla_cmd_pub.publish(msg)
+        self._gripper_cmd_pub.publish(msg)
 
     def _get_current_gripper_pos(self) -> float:
         if self._latest_actual_joints is None:
