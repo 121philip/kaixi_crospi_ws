@@ -98,7 +98,12 @@ install(DIRECTORY applications task_specifications skill_specifications robot_mo
   DESTINATION share/${PROJECT_NAME})
 
 # Install Python node scripts
-install(PROGRAMS example_nodes/pose_msg_to_tf.py example_nodes/sine_wave_tf.py
+install(PROGRAMS
+  example_nodes/pose_msg_to_tf.py
+  example_nodes/sine_wave_tf.py
+  example_nodes/spacemouse_logger_node.py
+  example_nodes/calibrate_spacemouse_vmax.py
+  example_nodes/check_csv.py
   DESTINATION lib/${PROJECT_NAME})
 
 
