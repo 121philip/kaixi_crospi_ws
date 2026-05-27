@@ -90,7 +90,7 @@
                     },
                     {
                         "is-JointStateInputHandler": true,
-                        "default_joint_states": [0,0,0,0,0,0,0],
+                        "default_joint_states": [0,0,0,0,0,0,0.001],
                         "depth": 1,
                         "number_of_joints": 7,
                         "number_of_tries": 10,

@@ -59,7 +59,7 @@ _BUTTON_DEBOUNCE_S = 0.15
 _RESUME_RAMP_S = 1.5       # seconds to ramp w_vla back up after HUMAN_ONLY
 _GRIPPER_RAMP_S = 0.6      # seconds to ramp gripper joint to new open/close target
 _ALIGN_DURATION_S = 1.5    # seconds to hold actual joints as VLA target after HUMAN_ONLY
-_GRIPPER_CLOSED_POS = 0.015
+_GRIPPER_CLOSED_POS = 0.005
 _GRIPPER_OPEN_POS = 0.035
 _OPERATOR_HUMAN_WEIGHT = 1.0
 _OPERATOR_GRIPPER_WEIGHT = 1.0
@@ -375,7 +375,7 @@ class VLABridgeNode(Node):
 
         # 没收到 Sentinel 权重前，先用旧的测试权重: [w_vla, w_human]
         # w_gripper 由 _OperatorAuthority.runtime_weights() 根据夹爪 override 状态派生。
-        self._weights = np.array([1.0, 1.0], dtype=np.float64)
+        self._weights = np.array([1.0, 0.0], dtype=np.float64)
 
         self._enable_gripper: bool = bool(
             self.get_parameter("enable_gripper").get_parameter_value().bool_value

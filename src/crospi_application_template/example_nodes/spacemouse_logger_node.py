@@ -66,6 +66,10 @@ _BTN_MODE = 1
 # Expected vmax YAML keys.
 _VMAX_KEYS = ("vx", "vy", "vz", "wx", "wy", "wz")
 
+# Maximum trial duration. If t_start has been set and this many seconds pass
+# without a Ctrl+C, the node finalises and exits automatically.
+_MAX_TRIAL_S = 180.0
+
 
 # --- Pure helpers (unit-testable, no ROS imports needed) ---------------------
 
@@ -141,6 +145,7 @@ class SpaceMouseLoggerNode(Node):
         # Trial state
         self._t_start: Optional[float] = None
         self._t_end: Optional[float] = None
+        self._timeout_fired = False
 
         # Aggregates
         self._samples = []          # list of (ts_rel, s_t) for CE_velocity integration
@@ -148,6 +153,8 @@ class SpaceMouseLoggerNode(Node):
         self._n_mode_press = 0
         self._prev_gripper = 0
         self._prev_mode = 0
+
+        self.create_timer(1.0, self._watchdog_cb)
 
         # Subscriptions
         self._sub_twist = self.create_subscription(
@@ -214,6 +221,16 @@ class SpaceMouseLoggerNode(Node):
         # Used only to start the clock if VLA produces output before the operator moves.
         if self._t_start is None:
             self._maybe_start(time.time(), "joint_states_VLA")
+
+    def _watchdog_cb(self):
+        if self._t_start is None or self._timeout_fired:
+            return
+        if time.time() - self._t_start >= _MAX_TRIAL_S:
+            self._timeout_fired = True
+            self.get_logger().warning(
+                f"[LOGGER] Trial timeout ({_MAX_TRIAL_S:.0f} s). Auto-finalising."
+            )
+            rclpy.shutdown()
 
     # -- shutdown finalisation ------------------------------------------------
 
