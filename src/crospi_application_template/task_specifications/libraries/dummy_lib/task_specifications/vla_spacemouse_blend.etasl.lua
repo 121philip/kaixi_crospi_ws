@@ -14,7 +14,7 @@ reqs = require("task_requirements")
 
 
 -- ========================================= PARAMETERS ===================================
-task_description = "Shared control: blends spacemouse Cartesian velocity with VLA joint targets. "
+task_description = "Shared control: blends spacemouse Cartesian velocity with VLA Cartesian pose targets. "
                 .. "Defaults preserve the previous log-only behavior before live weights arrive. "
                 .. "Runtime weights w_vla, w_human, and w_gripper are provided on /shared_control/weights."
 
@@ -172,7 +172,7 @@ if param.get("activate_linear") then
         priority = 2
     }
 else
-    -- When linear is disabled AND alpha→1, keep translation fixed.
+    -- When linear SpaceMouse control is disabled, keep translation fixed.
     Constraint{
         context  = ctx,
         name     = "keep_translation_constant",

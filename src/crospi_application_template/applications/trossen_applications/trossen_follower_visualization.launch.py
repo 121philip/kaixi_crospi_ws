@@ -20,7 +20,8 @@ Starts:
 
 Usage:
   Terminal 1:  ros2 launch crospi_application_template trossen_follower_visualization.launch.py
-  Terminal 2:  python run_inference.py --crospi --task "..."
+  Terminal 2:  cd lerobot_trossen
+  Terminal 2:  python important_code/inference/run_inference.py --sentinel --no-sentinel-log-only --crospi --display-data
 
 Runtime checks:
   ros2 topic echo /shared_control/weights --once

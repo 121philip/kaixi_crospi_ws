@@ -4,7 +4,8 @@ Active CroSPI-side UDP receiver and ROS2 bridge.
 
 It consumes UDP packets from lerobot_trossen/important_code/inference/
 rviz_publisher.py and republishes the active runtime interfaces:
-  - /joint_states_VLA for eTaSL VLA target tracking
+- /pose_VLA for eTaSL VLA arm pose tracking
+- /joint_states_VLA for gripper target tracking and legacy joint slots
   - /actual/joint_states_rviz and /predicted_ee_marker for RViz
   - /shared_control/weights as CrospiInput(names=["w_vla", "w_human", "w_gripper"], data=[...])
   - /shared_control/mode as String for quick button-mode debugging
@@ -12,19 +13,21 @@ rviz_publisher.py and republishes the active runtime interfaces:
 VLA–CroSPI Bridge Node（系统 Python 3.10 运行）
 
 职责：
-  1. UDP 接收 VLA 动作 → 发布 /joint_states_VLA（7-DOF，含夹爪，供 eTaSL 跟踪）
+1. UDP 接收 VLA 动作 → arm 经 FK 发布 /pose_VLA，gripper 发布 /joint_states_VLA
   2. 订阅 /joint_states（真实反馈）→ 发布 /actual/joint_states_rviz（RViz 蓝色机器人）
   3. UDP 接收预测块 → FK → 发布 /predicted_ee_marker（橙色轨迹）
   4. Manage direct weights -> publish /shared_control/weights (CrospiInput)
   5. SpaceMouse buttons -> mode toggle and gripper override
 
-完整启动顺序（本节点由步骤3启动，步骤1-2需先完成）：
-  步骤 1: ros2 run crospi_core crospi_node --ros-args \
-              -p config_file:="$[crospi_application_template]/.../trossen_vla_shared_control.setup.json"
-  步骤 2: python3 .../trossen_vla_shared_control_runner.py
+完整启动顺序：
+  步骤 1: ros2 launch spacenav classic-launch.py
+  步骤 2: ros2 run crospi_core crospi_node --ros-args \
+              -p config_file:="$[crospi_application_template]/.../trossen_vla_shared_control.setup.json" \
+              -p simulation:=false
   步骤 3: ros2 launch crospi_application_template trossen_follower_visualization.launch.py  ← 本节点
-  步骤 4: ros2 launch spacenav classic-launch.py
-  步骤 5: python lerobot_trossen/important_code/inference/run_inference.py --crospi
+  步骤 4: python3 kaixi_crospi_ws/src/crospi_application_template/skill_specifications/libraries/test_trossen/skill_specifications/trossen_vla_shared_control_runner.py
+  步骤 5: ros2 run crospi_application_template spacemouse_logger_node.py --condition B1 --trial 1 --out-dir ./logs --vmax-yaml ./vmax.yaml  # optional
+  步骤 6: cd lerobot_trossen && python important_code/inference/run_inference.py --sentinel --no-sentinel-log-only --crospi --display-data
 """
 
 import pickle

@@ -21,21 +21,15 @@ Constraint{ expr = vel_err, weight = w_human, K = 0 }   -- SpaceMouse
 ```
 Santiago 确认：`weight` 字段接受动态 eTaSL 表达式（不仅限于常数）。
 
-**当前运行状态（硬编码，未激活动态混合）**：
-```lua
-alpha   = 0.5          -- 硬编码；动态读取行已注释
-w_vla   = 1            -- 硬编码；(1-alpha+eps) 行已注释
-w_human = 1            -- 硬编码；(alpha+eps) 行已注释
-```
-结果：VLA 和 SpaceMouse 当前各 50% 固定权重，无法实时调整。
+**当前运行状态（direct weights 已激活）**：
 
-**激活动态 α（TODO，两步）**：
-1. `vla_spacemouse_blend.etasl.lua` 第 58-67 行：取消注释 3 行动态表达式，注释掉 3 个硬编码值
-2. `trossen_vla_shared_control.setup.json` inputhandlers 末尾追加：
-   ```json
-   {"is-TopicInputHandler": true, "topic-name": "/shared_control/alpha"}
-   ```
-Bridge 侧已就绪：`vla_ros_bridge_node.py` 一直在 30Hz 发布 `/shared_control/alpha`（CrospiInput 格式，names=["alpha_input"]）。
+```lua
+local w_vla = ctx:createInputChannelScalar("w_vla", 1.0)
+local w_human = ctx:createInputChannelScalar("w_human", 1.0)
+local w_gripper = ctx:createInputChannelScalar("w_gripper", 1.0)
+```
+
+`trossen_vla_shared_control.setup.json` 通过 `/shared_control/weights` 接收 `crospi_interfaces/Input(names=["w_vla","w_human","w_gripper"], data=[...])`。`MSG_ALPHA` 和 `/shared_control/alpha` 已从 active path 移除，只作为历史设计保留。
 
 ### 2. 新建 CroSPIFollower 机器人类
 
@@ -45,18 +39,18 @@ Bridge 侧已就绪：`vla_ros_bridge_node.py` 一直在 30Hz 发布 `/shared_co
 
 **与 WidowXAIFollower 的关键差异**：
 - `configure()`：只读取当前关节位置记录，不移动机械臂（eTaSL/CroSPI FSM 负责初始化动作）
-- `send_action()`：空操作，直接返回 action dict；actor_thread 仍以 30 Hz 调用并转发给 rviz_publisher.put_actual() → MSG_ACTUAL → /joint_states_VLA → eTaSL
+- `send_action()`：空操作，直接返回 action dict；actor_thread 以 10 Hz 调用并转发给 `rviz_publisher.put_actual()` -> `MSG_ACTUAL` -> `/joint_states_VLA` / `/pose_VLA` -> eTaSL
 - `disconnect()`：只调用 driver.cleanup()，不移动机械臂
 - `is_connected`：只检查相机，SDK 连接通过 `_arm_connected` 单独跟踪
 - 支持 `connect(connect_arm=False)`：可跳过 SDK 连接，joint_states 改由 bridge 的反向 UDP 提供
 
 **Config 精简**：去掉 `max_relative_target`、`min_time_to_move_multiplier`、`loop_rate`、`staged_positions`——这些由 CroSPI 负责。
 
-### 3. run_inference_rtc.py 变更
+### 3. run_inference.py 变更
 
 - 新增 `--crospi` 标志：使用 CroSPIFollowerConfig 替代 WidowXAIFollowerConfig
 - 删除 `--rviz` 标志：RVizPublisher 始终启动（UDP fire-and-forget，无接收方时无副作用）
-- 新增 `--print-publish` 标志：单独测试时在 stdout 打印 ACTUAL/PREDICTED/ALPHA 内容
+- 新增 `--print-publish` 标志：单独测试时在 stdout 打印 ACTUAL/PREDICTED/WEIGHTS 内容
 - `--crospi` 模式连接机械臂：`cast(CroSPIFollower, robot).connect(connect_arm=False)`（cast 让 Pylance 识别 connect_arm 参数，运行时无开销）
 
 ### 4. 反向 UDP 通道实现（:9789，bridge → lerobot）
@@ -81,10 +75,10 @@ while True:
     arr = pickle.loads(data[1:])
     if t == 0: print(f'[ACTUAL] {np.round(arr,4).tolist()}')
     elif t == 1: print(f'[PREDICTED] shape={np.asarray(arr).shape}')
-    elif t == 2: print(f'[ALPHA] {float(arr[0]):.4f}')
+    elif t == 2: print(f'[WEIGHTS] {np.round(arr,4).tolist()}')
 "
 # 同时启动 lerobot
-python important_code/inference/run_inference_rtc.py --dry-run --print-publish --task "..."
+python important_code/inference/run_inference.py --dry-run --print-publish --task "..."
 ```
 
 ## 架构选型：为什么新文件放在 lerobot_trossen 而不是 CroSPI 侧
@@ -110,7 +104,7 @@ python important_code/inference/run_inference_rtc.py --dry-run --print-publish -
 
 lerobot-ros 能直接 import rclpy 的原因：Jazzy 的 rclpy 编译目标是 Python 3.12，与 LeRobot venv 的 Python 版本一致。
 
-**结论**：UDP 桥接是两个不兼容 Python 运行时之间 IPC 的标准方案，不是"意大利面"。本机 loopback UDP 延迟 < 1ms，对 30Hz 控制循环无影响。若未来升级到 ROS2 Jazzy，可消除 UDP 层，直接仿照 lerobot-ros 的方案。
+**结论**：UDP 桥接是两个不兼容 Python 运行时之间 IPC 的标准方案，不是"意大利面"。本机 loopback UDP 延迟 < 1ms，对 10 Hz VLA actor loop 和 100 Hz CroSPI/eTaSL 执行层不是主要瓶颈。若未来升级到 ROS2 Jazzy，可消除 UDP 层，直接仿照 lerobot-ros 的方案。
 
 **Why:** Santiago 未意识到 Humble vs Jazzy 的 Python 版本差异，误以为两个环境下的解法等价。
 
@@ -168,7 +162,7 @@ self.create_subscription(JointState, "/joint_states", self._joint_states_cb, qos
 
 **设计原则确定**：无需 FSM 状态机（VLA_AUTONOMOUS / SHARED_CONTROL / HUMAN_ONLY 是过度工程），α ∈ [0,1] 本身即是控制比，α=0 纯 VLA、α=1 纯 SpaceMouse 只是连续谱的边界。
 
-**删除 `/shared_control/mode` 话题**：bridge node 原有 `_control_mode` 字段和该话题是 FSM 删除后的残留，已完全移除。
+**当前 `/shared_control/mode` 话题**：bridge node 发布 `SHARED` / `HUMAN_ONLY`，用于右键模式切换的 runtime debugging；它不是 alpha path。
 
 **文件重命名（可读性提升）**：
 | 旧名 | 新名 |
